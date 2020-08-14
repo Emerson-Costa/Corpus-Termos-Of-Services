@@ -3,6 +3,9 @@ import scrapy
 class CorpusExtract(scrapy.Spider):
     # deve ser o mesmo nome dado a classe
     name = 'corpusExtract'
+    
+    nome_da_categoria = ''
+    
 
     start_urls = ['https://play.google.com/store/apps']
 
@@ -10,44 +13,43 @@ class CorpusExtract(scrapy.Spider):
         links = response.css('li.KZnDLd a::attr(href)').getall()
         for link in links:
             yield scrapy.Request(
-            # o método urljoin concatena a url extaída com a url raíz da página 
-               response.urljoin(link), callback=self.parse_category
+               response.urljoin(link), callback=self.appsCategoria
             )
     
-    # métodos para as chamadas de call backs
-    def parse_category(self, response):
-        news = response.css('a.poRVub::attr(href)').getall()
-        for new_url in news:
-            
+    def appsCategoria(self, response):
+        links = response.css('a.poRVub::attr(href)').getall()
+        for link in links:
             yield scrapy.Request(
-                response.urljoin(new_url), callback=self.parse_termosUsers
-            )
-    
-    def parse_termosUsers(self, response):
-        news = response.xpath('//div//a[re:test(@href,"privacy-policy")]/@href').getall()
-        for new_url in news:
-            
-            yield scrapy.Request(
-                response.urljoin(new_url), callback=self.parse_termsPage
-            )
-            
-    # retornando um discionário com os dados das URLS
-    def parse_termsPage(self, response):
-        nome_da_categoria = response.css('.TwyJFf::text').get()
-        nome_do_app = response.css('.AHFaub span::text').get()
-        link_da_politica_de_privacidade = response.xpath('//div//a[re:test(@href,"privacy-policy")]/@href').get()
+                response.urljoin(link), callback=self.nomeApp_CatApp
+            )     
+
+    def nomeApp_CatApp(self, response):
+        item = response.css('.R8zArc::text').getall()
+
+        nomeApp =  item[0]
+        categoriaApp = item[1]
+
+        informacoes = response.css('span.htlgb::text').getall()
+        
+        atualizada = informacoes[0]
+        tamanho = informacoes[1]
+        instalacoes = informacoes[2]
+        versao_atual = informacoes[3]
+        requer_android = informacoes[4]
+        classificacao = informacoes[5]
+
+        politica_privacidade = response.xpath('//div//a[re:test(@href,"privacy")]/@href').get()
+
         yield{
-            'nomeCategoryApp': nome_da_categoria,
-            'nomeApp': nome_do_app,
-            'PoliticaPrivacy': link_da_politica_de_privacidade
+            'Nome': nomeApp,
+            'Categoria': categoriaApp,
+            'Atualizada': atualizada ,
+            'Tamanho': tamanho,
+            'Instalacoes': instalacoes,
+            'Versao Atual': versao_atual,
+            'Requer Android': requer_android,
+            'Classificacao': classificacao,
+            'Politica de Privacidade': politica_privacidade
         }
 
-    '''
-        Atributos:
-
-            - nome da categoria = response.css('.TwyJFf::text').get()
-            - nome do app = response.css('.AHFaub span::text').get()
-            - link da politica de privacidade = response.xpath('//div//a[re:test(@href,"privacy-policy")]/@href').get()
-
-    '''
-    
+        
