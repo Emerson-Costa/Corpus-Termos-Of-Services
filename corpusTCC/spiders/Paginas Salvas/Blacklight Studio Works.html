@@ -1,0 +1,592 @@
+	<!DOCTYPE html>
+	<html lang="en" class="no-js" ng-app="blacklightsw">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+
+		<title>Blacklight Studio Works</title>
+
+		<link href="http://www.blacklightsw.com/assets/Content/loading.css" rel="stylesheet" />
+
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/hinted-ChampagneLimousines.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/hinted-ChampagneLimousines.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/hinted-ChampagneLimousines.ttf" as="font" type="font/ttf" crossorigin>
+
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/hinted-TitilliumWeb-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/hinted-TitilliumWeb-Regular.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/hinted-TitilliumWeb-Regular.ttf" as="font" type="font/ttf" crossorigin>
+
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/hinted-TitilliumWeb-Thin.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/hinted-TitilliumWeb-Thin.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/hinted-TitilliumWeb-Thin.ttf" as="font" type="font/ttf" crossorigin>
+
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/hinted-ChocolateCoveredRaindrops.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/hinted-ChocolateCoveredRaindrops.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/hinted-ChocolateCoveredRaindrops.ttf" as="font" type="font/ttf" crossorigin>
+
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/MaterialIcons-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/MaterialIcons-Regular.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/MaterialIcons-Regular.ttf" as="font" type="font/ttf" crossorigin>
+
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/glyphicons-halflings-regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/glyphicons-halflings-regular.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="http://www.blacklightsw.com/assets/fonts/glyphicons-halflings-regular.ttf" as="font" type="font/ttf" crossorigin>
+
+
+		<link href="http://www.blacklightsw.com/assets/Content/fonts.css" rel="stylesheet" />
+		<link href="http://www.blacklightsw.com/assets/Content/angular-csp.css" rel="stylesheet" />
+		<link href="http://www.blacklightsw.com/assets/Content/bootstrap.min.css" rel="stylesheet" />
+		<link href="http://www.blacklightsw.com/assets/Content/bootstrap-theme.min.css" rel="stylesheet" />
+		<link href="http://www.blacklightsw.com/assets/Content/material-icons.css" rel="stylesheet" />
+		<link href="http://www.blacklightsw.com/assets/Content/font-awesome.min.css" rel="stylesheet" />
+		<link href="http://www.blacklightsw.com/assets/Content/tether.min.css" rel="stylesheet" />
+		<link href="http://www.blacklightsw.com/assets/Content/tether-theme-arrows.min.css" rel="stylesheet" />
+		<link href="http://www.blacklightsw.com/assets/Content/tether-theme-arrows-dark.min.css" rel="stylesheet" />
+		<link href="http://www.blacklightsw.com/assets/Content/tether-theme-basic.min.css" rel="stylesheet" />
+		<link href="http://www.blacklightsw.com/assets/Content/animate.min.css" rel="stylesheet" />
+		<link href="http://www.blacklightsw.com/assets/Content/custom.css" rel="stylesheet" />
+		<link href="http://www.blacklightsw.com/assets/Content/animation.css" rel="stylesheet" />
+		<link href="http://www.blacklightsw.com/assets/Content/mediaqueries.css" rel="stylesheet" />
+		<script>
+			var base_url = 'http://www.blacklightsw.com/';
+
+		</script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/preload.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+
+		<div id="wrapper" ng-controller="homeController">
+			<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            Menu <button id="menu-close" class="btn btn-default btn-lg pull-right toggle"><i class="material-icons">&#xE5CD;</i></button>
+        </li>
+        <li>
+            <a href="" data-toggle="modal" onclick="menuBackDrop(event)" data-target="#AboutModal">About</a>
+        </li>
+        <li>
+            <a href="" data-toggle="modal" onclick="menuBackDrop(event)" data-target="#ContactModal">Contact</a>
+        </li>
+			 <li>
+            <a href="" data-toggle="modal" onclick="menuBackDrop(event)" data-target="#privacyPolicyModal">Privacy Policy</a>
+        </li>
+    </ul>
+    <ul class="socials_list">
+        <li><a href="https://play.google.com/store/apps/developer?id=BlackLight+Studio+Works" target="_blank" ><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.facebook.com/pages/BlackLight-Studio-Works/313462352036236" target="_blank" ><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+        <li><a href="https://twitter.com/#!/BlackLightSW" target="_blank" ><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+        <li><a href="http://in.linkedin.com/pub/blacklight-studio-works/53/370/b9" target="_blank" ><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+        <li><a href="http://vimeo.com/user23400299" target="_blank" ><i class="fa fa-vimeo-square" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCjdeois61JeM9861CEjR0Dw" target="_blank" ><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+    </ul>
+</div><button id="menu-toggle"><i class="material-icons">&#xE5D2;</i></button>
+<div class="container-fluid p-n">
+    <header class="text-center">
+        <div class="container"><h1>Privacy Policy</h1></div>      
+    </header>
+<section class="container" style="color:#444;">
+    <br/>
+<h3>Your privacy is important to us.</h3>
+<p>As an Indian company operating globally, we strictly comply with Indian privacy laws but we also strive for global best practice.
+</p>
+<p>This privacy policy sets out how we handle your privacy. By using our Services you consent to the practices set out in this policy.</p>
+
+<dl>
+<dt><b>Children:</b></dt>
+<dd>Remember to be smart and safe online. Never give someone your information without first asking your parent/guardian if it is OK. Unless you have permission, don't give anyone your photo, or tell anyone your name, email, home address, telephone, your school or any other information about you that they could use to contact you either online or in the real world. If you want to enter one of our competitions, make sure you ask permission from your parent/guardian before you enter.
+</dd>
+<dt><b>Parents:</b></dt>
+<dd>We are committed to the safety and privacy of the children who use our Services. We encourage parents/guardians to actively monitor their children's online activities. See more information below about children's privacy.
+</dd>
+</dl>
+<br />
+<h3>1. What Information Do We Collect?</h3>
+<h4>1.1 Information You Give To Us</h4>
+<p>We receive and store any information you give to us, such as when you: </p>
+<ul>
+<li>download our games</li>
+<li>enter our competitions</li>
+<li>are involved in our special events (e.g. focus testing days)</li>
+<li>interact with us on social media such as Facebook and Twitter</li>
+<li>enter information on our Website</li>
+<li> purchase our merchandise</li>
+<li>subscribe to our newsletters or other information feeds</li>
+<li>purchase Services through an online store</li>
+<li>make an in-app purchase</li>
+<li>request technical support, make a compliment or complaint, or otherwise contact us directly</li>
+<li>give us your information in another way.</li>
+</ul>
+
+<h4>1.2 Information Collected Automatically</h4>
+<p> We receive and store certain types of information automatically when you interact with us, such as: </p>
+<ul>
+<li>information about how you use our Services. We use this information to help us continually improve our games, social features and our Services to you. When you sign-in to our games with Facebook, Google+ or another provider, we use the identity and friends from that provider so that you can play the same game on different devices, pick up where you left-off, and interact with your friends</li>
+<li>information about the device you use to access our Services such as its model, operating system, screen resolution, web browser, IP address, Media Access Control (MAC) address, Advertising Identifier, language and other technical information such as cookies and randomly generated unique identifiers (i.e. DB ID, Device ID). You can disable cookies through your web or phone browser settings but you may find that you are not able to enjoy all of the features of our Services if you do so</li>
+<li>your location so we know what language to use and so that we can provide the relevant games/features/promotions/advertisements that are applicable to your location</li>
+<li>if you "tell a friend," "email this page," or use another similar features, we will collect information to perform this feature for you.</li>
+</ul>
+
+<h4>1.3 Information From Third Parties</h4>
+<p>Sometimes we collect information about you from third parties, such as Apple, Inc, Facebook, or Google, Inc. We collect this information so that we can deliver services to you that you have requested. We collect this information: </p>
+<ul>
+<li>when you purchase our Services via the App Store, or Google Play Store, or other Storefront. We receive information about you such as the country you are in</li>
+<li> if you log into our Services through a social media account (such as Facebook) we will collect your basic profile information such as your current profile picture and your friend list, this lets you interact with your friends who are also using our Services</li>
+<li>when you use in-app features such Game Center we will collect information such as your user name.</li>
+</ul>
+
+<h3>2. How Do We Use Your Information?</h3>
+<h4> We use the information we collect about you: </h4>
+
+<ul>
+<li>for the purpose it was collected for (eg. if you participate in our focus testing, we will use that information to assist in the development and launch of our games, if you buy our merchandise we will use your information to complete the purchase, if you email us we will use your name and email to respond)</li>
+<li>to deliver our Services to you</li>
+<li>to personalise and continually improve your experience of our Services</li>
+<li>to offer our Services to you and to tell you about new Service offerings, updates and other information about our Services that might be relevant to you</li>
+<li> to advertise our Services to you</li>
+<li> to aggregate de-identified information across the different Services offered by us</li>
+<li>to provide multiplayer gaming, social networking and gaming console services to you. To do this we will exchange your information with third parties (such as Facebook, Sony PS or Game Center) for the purpose of delivering these Services</li>
+<li>to perform our own analytics and to enable analytics provided by third parties. We use analytical information for supporting business analysis and operations, business intelligence, product development, improving products and services, personalizing content, providing advertising, and making recommendations. We may provide aggregated or anonymous information to third parties for the purposes of developing and delivering targeted advertising. We do not provide your personal information to advertisers.</li>
+<li>We may use information held about you to verify your compliance with our Terms of Service.</li>
+</ul>
+
+<h4>2.1 When Do We Disclose Information</h4>
+<p>We may disclose the personal information we hold about you in the following circumstances:</p>
+<ul>
+<li>if we are required or authorised to disclose by law or by a law enforcement agency</li>
+<li> to our business partners in the course of providing our Services to you, or generally in the conduct of our business. This may include organisations who provide services to us, such as payment processors or hosting services. We direct all our business partners to protect your privacy and to comply with privacy laws. Please see below for more information about third party services</li>
+<li>to avoid, lessen or prevent a serious emergency or crime. If we use or disclose personal information about you in those circumstances we will make a written record of such use or disclosure.</li>
+</ul>
+<h4>2.2 Childrens' Privacy</h4>
+<p> We do not knowingly contact or collect information from children under 13 without the explicit permission of their parent/guardians. If you believe that we have inadvertently collected such information, please contact us so we can promptly obtain parental/guardian consent or delete the information. Our child-safe games: </p>
+<ul>
+<li>have no registration process</li>
+<li>don't collect personally identifiable information</li>
+<li>don't ask for email, zip, age, post code or username</li>
+<li>don't run sweepstakes or contests that require information</li>
+<li>don't include social sharing ie. no links to Facebook, Twitter or Game Centre</li>
+<li>don't have chat or message boards or other functions that let users post content</li>
+<li>don't have advertising</li>
+<li>don't cross-promote other apps</li>
+<li>don't have in-app purchases </li>
+<li>don't have analytics</li>
+<li> don't have links to external sites or apps If you permit your child to use one of our Services that is not labelled Child Safe, you should disable in-app purchases on your phone and actively monitor your child’s use. You should also familiarise yourself with this privacy policy, as by permitting your child to use the Service you consent to this privacy policy on their behalf. If you don’t agree, please do not permit your child to use this Service. </li>
+</ul>
+
+
+<h4>2.3 Third Party Services</h4>
+<p> When you use our Services, you might also use third party services, such as Facebook, Twitter, Game Center and companies that advertise in our games. We do not control how they interact with you and you should ensure that you consent to the terms of use and privacy policies offered by the third party services before providing them with your information. You acknowledge that we are not liable when third party services use information you provide to them. We encourage you to be careful about the protection of your own personal information when using third party services such as social media platforms. We work with certain business partners and information collected from you may be shared through these partnerships. Where we share your information with our business partners, we direct them to protect your information in the same way we protect your information and require them to comply with all applicable laws when handling your information. Some of our business partners are outside Australia. Below is a list of some, but not all, third parties that we actively share user information and site usage data with (this list is subject to change): </p>
+
+<div><b>Google</b>, Located in Italy. <a target="_blank" href="https://www.google.co.in/intl/en-GB/policies/privacy/">Read their Privacy Policy</a></div>
+<div><b>Flurry</b>, Located in United States. <a target="_blank" href="http://www.flurry.com/privacy-policy.html">Read their Privacy Policy</a></div>
+<div><b>Chartboost</b>, Located in United States & United Kingdom. <a target="_blank" href="https://help.chartboost.com/legal/privacy">Read their Privacy Policy</a></div>
+<div><b>Nexage</b>. <a target="_blank" href="http://www.nexage.com/privacy-policy">Read their Privacy Policy</a> <br /></div>
+<div> <b>Inmobi</b> with servers in United States. <a target="_blank" href="http://www.inmobi.com/privacy-policy/">Read their Privacy Policy</a></div>
+<div> <b>Scoreloop</b>, Located in United States & United Kingdom. <a target="_blank" href="http://www.scoreloop.com/privacy/">Read their Privacy Policy</a></div>
+
+<h4>2.4 Marketing, In-app Purchases & Opting-Out</h4>
+<h5> 2.4.1 Direct Marketing </h5>
+<p>Sometimes we will use your information to tell you about our Services and our news, such as new games we are launching, events we are running, or merchandise we sell. You can opt-out if you don’t want to receive this information.</p>
+
+<h5> 2.4.2 In-app Purchase </h5>
+<p> Some of our games offer in-app purchases. Examples of in-app purchases are items you can purchase (for real or in-game currency) or other additional features. If you don’t want to make in-app purchases, don’t use these paid-for options and consider disabling in-app purchases on your device.</p>
+
+<h5>2.4.3 Opting-out</h5>
+<p>Ways to opt-out of our Services:</p>
+<ul>
+<li> if we send you an email, there will be an unsubscribe link; <br /> • if we post updates via Facebook you can 'unlike' our page and you will no longer get updates</li>
+<li>if you receive one of our tweets you can stop following us on Twitter</li>
+<li>if we use another type of social media you can opt-out using that service.</li>
+</ul>
+<p>If you need help opting-out please contact us at <a href="mailto:privacy@blacklightsw.com">privacy@blacklightsw.com</a>.</p>
+
+<h4>2.5 Storage & Security</h4>
+<p>We store information on servers in Australia and in the Unites States. Security is important to us and we strive to protect both your information and our information in the best possible ways. But there are inherent risks in transmitting information over the Internet and it is possible that we could be hacked. You should feel comfortable with this level of risk before you provide information to us, or use our Services. If you are not comfortable with this risk, please do not use our Services.</p>
+
+<h4>2.6 Access & Correction</h4>
+<p>You may request access to your personal information at any time by sending a written request to our Privacy Officer by mail at BlackLight Studio Works Pvt. Ltd., P-39, South Extension, Part 2, New Delhi - 110049, India by email to <a href="mailto:privacy@blacklightsw.com">privacy@blacklightsw.com</a>. We may charge a small fee for providing access if it requires a significant amount of time to locate your information or to collect or present it in an appropriate form. We may decline your access if there are reasonable grounds for us to do so.If your information changes, let us know so that we can update our records. If you would like us to de-activate your records that we hold, please tell us. Once de-activated your data will not be accessible. However, due to system backups to various types of data storage media, your data may in some circumstances remain on these types of data storage media. There may be circumstances where we decline to de-activate your records.</p>
+
+<h3>3. Complaints</h3>
+<label> If you have any concerns or complaints about your privacy please contact us by: </label>
+<blockquote>
+<p><b>1.</b> Sending a written request to our Privacy Officer by mail at:</p>
+<address>
+BlackLight Studios Works P-39, South Extension, Part 2 New Delhi - 110049, India
+</address>
+</blockquote>
+<blockquote>
+<p><b> 2.</b> Email to <a href="mailto:privacy@blacklightsw.com">privacy@blacklightsw.com</a></p>
+<p> Our Privacy Officer will respond to your complaint within a reasonable time after we receive it, provided you supply return contact details. If you do not provide return contact details, we will be unable to respond to your complaint, although we will consider its content. </p>
+</blockquote>
+
+<h3>4. Updates to this Policy</h3>
+<p> We will update this Privacy Policy from time to time. These updates, will take effect from the date of issue on our website at blacklightsw.com. Please check back regularly for updates.</p>
+
+<h3>5. Addendum: Definitions</h3>
+<p><b>Advertising Identifier</b></p>
+<p> A unique ID that is generated for your device to track activity by advertising companies to improve their service in game.</p>
+
+<p><b>Analytics</b> </p>
+<p> Interpretation and interpolation of unidentified data to predict and isolate trends relating to game play and app use.</p>
+<p><b>Disable</b> </p>
+<p> Remove and further restrict access provided by our Services by actioning the specific request.</p>
+
+<p><b>Game Center</b> </p>
+<p> A central game hub that retains information regarding game play statistics that is openly shared with the user. This includes high scores, global leader boards, friend’s lists and in-game achievements.</p>
+<p><b>In-app purchase</b></p>
+<p> An in-game system that allows exchanging real money for virtual goods or in-game currency.</p>
+<p><b>BlackLight ("us")</b></p>
+<p> BlackLight Studios Works Pvt. Ltd., its assignees, licensees, successors in title and subsidiaries.</p>
+
+<p><b>Media Access Control (MAC) address</b> </p>
+<p> Is a unique identifier assigned to network interfaces for communications on the physical network layer.</p>
+
+<p><b>Services</b></p>
+<p> Services offered by us and includes our games, websites and related services. </p>
+
+<p><b>Stop Following</b></p>
+<p> An action provided by Twitter and Facebook that allows a user to remove their name from a persons follower list. As a result, the user will not receive further communication or further tweets from the person they have stopped following.</p>
+
+<p><b>Storefront</b> </p>
+<p> An online business presence for sales. We work with the Apple App Store and Google Play storefronts as their primary storefront for sales but our games are also available on Amazon App Store and Windows Phone Store, among others.
+</p>
+
+<p><b>Terms of Service</b> </p>
+<p> Rules and conduct standards that are defined that one must comply with to use the service.</p>
+<p><b>Third Party Services</b> </p>
+<p> Services provided by a provider that is not owned or controlled by BlackLignt</p>
+<p><b>Tweets</b> </p>
+<p> Text based comments provided by users on the Twitter platform</p>
+<p><b>Unlike</b> </p>
+<p> By clicking 'unlike' on Facebook you are removing your connection with the business, brand or product's page that you had previously liked, you will no longer receive updates from that page and your name will be removed from their list of likes.</p>
+</section>
+<footer>
+    <div class="footer_bottom container">
+        <div class="row">
+            <div class="copyright col-lg-6 col-md-6 col-sm-6 col-xs-12">© BlackLight Studio Works. All Rights Reserved.</div>
+            <div class="socials col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <ul class="socials_list">
+                    <li><a href="https://play.google.com/store/apps/developer?id=BlackLight+Studio+Works" target="_blank" ><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/pages/BlackLight-Studio-Works/313462352036236" target="_blank" ><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/#!/BlackLightSW" target="_blank" ><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li><a href="http://in.linkedin.com/pub/blacklight-studio-works/53/370/b9" target="_blank" ><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                    <li><a href="http://vimeo.com/user23400299" target="_blank" ><i class="fa fa-vimeo-square" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCjdeois61JeM9861CEjR0Dw" target="_blank" ><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+</footer></div>
+				<div id="loading" class="text-center">
+					<div id="fountainG">
+						<div id="fountainG_1" class="fountainG"></div>
+						<div id="fountainG_2" class="fountainG"></div>
+						<div id="fountainG_3" class="fountainG"></div>
+						<div id="fountainG_4" class="fountainG"></div>
+						<div id="fountainG_5" class="fountainG"></div>
+						<div id="fountainG_6" class="fountainG"></div>
+						<div id="fountainG_7" class="fountainG"></div>
+						<div id="fountainG_8" class="fountainG"></div>
+						<div id="fountainG_9" class="fountainG hidden-xs"></div>
+						<div id="fountainG_10" class="fountainG hidden-xs"></div>
+						<div id="fountainG_11" class="fountainG hidden-xs"></div>
+						<div id="fountainG_12" class="fountainG hidden-xs"></div>
+						<div id="fountainG_13" class="fountainG hidden-xs"></div>
+						<div id="fountainG_14" class="fountainG hidden-xs"></div>
+						<div id="fountainG_15" class="fountainG hidden-xs"></div>
+						<div id="fountainG_16" class="fountainG hidden-xs"></div>
+
+					</div>
+				</div>
+				<div class="hidden">
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/cape1.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/cape2.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/cape3.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/cape4.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/cape5.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/cape6.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/cape7.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/cape8.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/cape9.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/cape10.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/cape11.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/cape12.png" />
+
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/img_mobile/cape1.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/img_mobile/cape2.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/img_mobile/cape3.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/img_mobile/cape4.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/img_mobile/cape5.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/img_mobile/cape6.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/img_mobile/cape7.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/img_mobile/cape8.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/img_mobile/cape9.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/img_mobile/cape10.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/img_mobile/cape11.png" />
+					<img class="hidden" src="http://www.blacklightsw.com/assets/img/img_mobile/cape12.png" />
+				</div>
+
+				<div class="modal" id="AboutModal" role="dialog">
+					<div id="aboutModalDialog" class="modal-dialog modal-lg animated 1 fadeIn">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-body">
+								<h1 class="text-center">Genesis</h1><button type="button" class="close" data-dismiss="modal"><i class="material-icons">&#xE5CD;</i></button>
+								<p style="height: 30vh;overflow:scroll;">
+									<b>BlackLight Studio Works (BSW)</b> is a rapidly growing mobile app development company. Our development center is located in capital and heart of India, New Delhi. At BSW, we design and develop casual puzzle games with a target appeal, which are pick-up-and-play like, allowing people to enjoy the app, then move on with their day and pick up their game later. All our game apps are free, with an option of in-app purchases.
+									<br> <br> We are mainly focused on cross-platform application development in Android ®, iOS, BlackBerry®, Windows® mobile application and J2ME. With our elite team of technology and business professionals we provide development services to help our clients run with efficiency and peak productivity. Our approach to every project and every client is with a fresh perspective and dedicated attention, balancing and combining software products and services delivery.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal " id="ContactModal" role="dialog">
+					<div id='ContactModalDialog' class="modal-dialog modal-lg animated 1 fadeIn">
+						<div class="modal-content" style="padding: 0;">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"><i class="material-icons">&#xE5CD;</i></button>
+								<h1 class="text-center">Get in touch!</h1>
+								<p class="text-center">Thanks for visiting. So you liked our work? E-mail us or drop by our office. We love hearing appreciation!</p>
+							</div>
+							<div class="modal-body" style="padding: 0;height: 30vh;">
+								<div id="map"></div>
+							</div>
+							<div class="modal-footer">
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center animated 1 fadeIn">
+									<i class="material-icons" style="padding: 15px;border: 2px solid #000;border-radius: 50%;font-size: 14px;">&#xE88A;</i><br /><span>C-48, Sector-10, Noida, UP-201301</span>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center animated 1 fadeIn">
+									<a class="color_black text-decoration-none" href="mailto:contact@blacklightsw.com">
+										<i class="material-icons" style="padding: 15px;font-size: 14px;border: 2px solid #000;border-radius: 50%;">&#xE0BE;</i><br /><span>contact@blacklightsw.com</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="modal" id="privacyPolicyModal" role="dialog">
+					<div id="privacyPolicyModalDialog" class="modal-dialog modal-lg animated 1 fadeIn">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-body">
+								<h1 class="text-center">Privacy Policy</h1><button type="button" class="close" data-dismiss="modal"><i class="material-icons">&#xE5CD;</i></button>
+								<div style="height: 50vh;overflow:scroll;">
+									<h3>Your privacy is important to us.</h3>
+									<p>As an Indian company operating globally, we strictly comply with Indian privacy laws but we also strive for global best practice.
+									</p>
+									<p>This privacy policy sets out how we handle your privacy. By using our Services you consent to the practices set out in this policy.</p>
+
+									<dl>
+										<dt><b>Children:</b></dt>
+										<dd>Remember to be smart and safe online. Never give someone your information without first asking your parent/guardian if it is OK. Unless you have permission, don't give anyone your photo, or tell anyone your name, email, home address, telephone, your school or any other information about you that they could use to contact you either online or in the real world. If you want to enter one of our competitions, make sure you ask permission from your parent/guardian before you enter.
+										</dd>
+										<dt><b>Parents:</b></dt>
+										<dd>We are committed to the safety and privacy of the children who use our Services. We encourage parents/guardians to actively monitor their children's online activities. See more information below about children's privacy.
+										</dd>
+									</dl>
+									<br />
+									<h3>1. What Information Do We Collect?</h3>
+									<h4>1.1 Information You Give To Us</h4>
+									<p>We receive and store any information you give to us, such as when you: </p>
+									<ul>
+										<li>download our games</li>
+										<li>enter our competitions</li>
+										<li>are involved in our special events (e.g. focus testing days)</li>
+										<li>interact with us on social media such as Facebook and Twitter</li>
+										<li>enter information on our Website</li>
+										<li> purchase our merchandise</li>
+										<li>subscribe to our newsletters or other information feeds</li>
+										<li>purchase Services through an online store</li>
+										<li>make an in-app purchase</li>
+										<li>request technical support, make a compliment or complaint, or otherwise contact us directly</li>
+										<li>give us your information in another way.</li>
+									</ul>
+
+									<h4>1.2 Information Collected Automatically</h4>
+									<p> We receive and store certain types of information automatically when you interact with us, such as: </p>
+									<ul>
+										<li>information about how you use our Services. We use this information to help us continually improve our games, social features and our Services to you. When you sign-in to our games with Facebook, Google+ or another provider, we use the identity and friends from that provider so that you can play the same game on different devices, pick up where you left-off, and interact with your friends</li>
+										<li>information about the device you use to access our Services such as its model, operating system, screen resolution, web browser, IP address, Media Access Control (MAC) address, Advertising Identifier, language and other technical information such as cookies and randomly generated unique identifiers (i.e. DB ID, Device ID). You can disable cookies through your web or phone browser settings but you may find that you are not able to enjoy all of the features of our Services if you do so</li>
+										<li>your location so we know what language to use and so that we can provide the relevant games/features/promotions/advertisements that are applicable to your location</li>
+										<li>if you "tell a friend," "email this page," or use another similar features, we will collect information to perform this feature for you.</li>
+									</ul>
+
+									<h4>1.3 Information From Third Parties</h4>
+									<p>Sometimes we collect information about you from third parties, such as Apple, Inc, Facebook, or Google, Inc. We collect this information so that we can deliver services to you that you have requested. We collect this information: </p>
+									<ul>
+										<li>when you purchase our Services via the App Store, or Google Play Store, or other Storefront. We receive information about you such as the country you are in</li>
+										<li> if you log into our Services through a social media account (such as Facebook) we will collect your basic profile information such as your current profile picture and your friend list, this lets you interact with your friends who are also using our Services</li>
+										<li>when you use in-app features such Game Center we will collect information such as your user name.</li>
+									</ul>
+
+									<h3>2. How Do We Use Your Information?</h3>
+									<h4> We use the information we collect about you: </h4>
+
+									<ul>
+										<li>for the purpose it was collected for (eg. if you participate in our focus testing, we will use that information to assist in the development and launch of our games, if you buy our merchandise we will use your information to complete the purchase, if you email us we will use your name and email to respond)</li>
+										<li>to deliver our Services to you</li>
+										<li>to personalise and continually improve your experience of our Services</li>
+										<li>to offer our Services to you and to tell you about new Service offerings, updates and other information about our Services that might be relevant to you</li>
+										<li> to advertise our Services to you</li>
+										<li> to aggregate de-identified information across the different Services offered by us</li>
+										<li>to provide multiplayer gaming, social networking and gaming console services to you. To do this we will exchange your information with third parties (such as Facebook, Sony PS or Game Center) for the purpose of delivering these Services</li>
+										<li>to perform our own analytics and to enable analytics provided by third parties. We use analytical information for supporting business analysis and operations, business intelligence, product development, improving products and services, personalizing content, providing advertising, and making recommendations. We may provide aggregated or anonymous information to third parties for the purposes of developing and delivering targeted advertising. We do not provide your personal information to advertisers.</li>
+										<li>We may use information held about you to verify your compliance with our Terms of Service.</li>
+									</ul>
+
+									<h4>2.1 When Do We Disclose Information</h4>
+									<p>We may disclose the personal information we hold about you in the following circumstances:</p>
+									<ul>
+										<li>if we are required or authorised to disclose by law or by a law enforcement agency</li>
+										<li> to our business partners in the course of providing our Services to you, or generally in the conduct of our business. This may include organisations who provide services to us, such as payment processors or hosting services. We direct all our business partners to protect your privacy and to comply with privacy laws. Please see below for more information about third party services</li>
+										<li>to avoid, lessen or prevent a serious emergency or crime. If we use or disclose personal information about you in those circumstances we will make a written record of such use or disclosure.</li>
+									</ul>
+									<h4>2.2 Childrens' Privacy</h4>
+									<p> We do not knowingly contact or collect information from children under 13 without the explicit permission of their parent/guardians. If you believe that we have inadvertently collected such information, please contact us so we can promptly obtain parental/guardian consent or delete the information. Our child-safe games: </p>
+									<ul>
+										<li>have no registration process</li>
+										<li>don't collect personally identifiable information</li>
+										<li>don't ask for email, zip, age, post code or username</li>
+										<li>don't run sweepstakes or contests that require information</li>
+										<li>don't include social sharing ie. no links to Facebook, Twitter or Game Centre</li>
+										<li>don't have chat or message boards or other functions that let users post content</li>
+										<li>don't have advertising</li>
+										<li>don't cross-promote other apps</li>
+										<li>don't have in-app purchases </li>
+										<li>don't have analytics</li>
+										<li> don't have links to external sites or apps If you permit your child to use one of our Services that is not labelled Child Safe, you should disable in-app purchases on your phone and actively monitor your child’s use. You should also familiarise yourself with this privacy policy, as by permitting your child to use the Service you consent to this privacy policy on their behalf. If you don’t agree, please do not permit your child to use this Service. </li>
+									</ul>
+
+
+									<h4>2.3 Third Party Services</h4>
+									<p> When you use our Services, you might also use third party services, such as Facebook, Twitter, Game Center and companies that advertise in our games. We do not control how they interact with you and you should ensure that you consent to the terms of use and privacy policies offered by the third party services before providing them with your information. You acknowledge that we are not liable when third party services use information you provide to them. We encourage you to be careful about the protection of your own personal information when using third party services such as social media platforms. We work with certain business partners and information collected from you may be shared through these partnerships. Where we share your information with our business partners, we direct them to protect your information in the same way we protect your information and require them to comply with all applicable laws when handling your information. Some of our business partners are outside Australia. Below is a list of some, but not all, third parties that we actively share user information and site usage data with (this list is subject to change): </p>
+
+									<div><b>Google</b>, Located in Italy. <a target="_blank" href="https://www.google.co.in/intl/en-GB/policies/privacy/">Read their Privacy Policy</a></div>
+									<div><b>Flurry</b>, Located in United States. <a target="_blank" href="http://www.flurry.com/privacy-policy.html">Read their Privacy Policy</a></div>
+									<div><b>Chartboost</b>, Located in United States & United Kingdom. <a target="_blank" href="https://help.chartboost.com/legal/privacy">Read their Privacy Policy</a></div>
+									<div><b>Nexage</b>. <a target="_blank" href="http://www.nexage.com/privacy-policy">Read their Privacy Policy</a> <br /></div>
+									<div> <b>Inmobi</b> with servers in United States. <a target="_blank" href="http://www.inmobi.com/privacy-policy/">Read their Privacy Policy</a></div>
+									<div> <b>Scoreloop</b>, Located in United States & United Kingdom. <a target="_blank" href="http://www.scoreloop.com/privacy/">Read their Privacy Policy</a></div>
+
+									<h4>2.4 Marketing, In-app Purchases & Opting-Out</h4>
+									<h5> 2.4.1 Direct Marketing </h5>
+									<p>Sometimes we will use your information to tell you about our Services and our news, such as new games we are launching, events we are running, or merchandise we sell. You can opt-out if you don’t want to receive this information.</p>
+
+									<h5> 2.4.2 In-app Purchase </h5>
+									<p> Some of our games offer in-app purchases. Examples of in-app purchases are items you can purchase (for real or in-game currency) or other additional features. If you don’t want to make in-app purchases, don’t use these paid-for options and consider disabling in-app purchases on your device.</p>
+
+									<h5>2.4.3 Opting-out</h5>
+									<p>Ways to opt-out of our Services:</p>
+									<ul>
+										<li> if we send you an email, there will be an unsubscribe link; <br /> • if we post updates via Facebook you can 'unlike' our page and you will no longer get updates</li>
+										<li>if you receive one of our tweets you can stop following us on Twitter</li>
+										<li>if we use another type of social media you can opt-out using that service.</li>
+									</ul>
+									<p>If you need help opting-out please contact us at <a href="mailto:privacy@blacklightsw.com">privacy@blacklightsw.com</a>.</p>
+
+									<h4>2.5 Storage & Security</h4>
+									<p>We store information on servers in Australia and in the Unites States. Security is important to us and we strive to protect both your information and our information in the best possible ways. But there are inherent risks in transmitting information over the Internet and it is possible that we could be hacked. You should feel comfortable with this level of risk before you provide information to us, or use our Services. If you are not comfortable with this risk, please do not use our Services.</p>
+
+									<h4>2.6 Access & Correction</h4>
+									<p>You may request access to your personal information at any time by sending a written request to our Privacy Officer by mail at BlackLight Studio Works Pvt. Ltd., P-39, South Extension, Part 2, New Delhi - 110049, India by email to <a href="mailto:privacy@blacklightsw.com">privacy@blacklightsw.com</a>. We may charge a small fee for providing access if it requires a significant amount of time to locate your information or to collect or present it in an appropriate form. We may decline your access if there are reasonable grounds for us to do so.If your information changes, let us know so that we can update our records. If you would like us to de-activate your records that we hold, please tell us. Once de-activated your data will not be accessible. However, due to system backups to various types of data storage media, your data may in some circumstances remain on these types of data storage media. There may be circumstances where we decline to de-activate your records.</p>
+
+									<h3>3. Complaints</h3>
+									<label> If you have any concerns or complaints about your privacy please contact us by: </label>
+									<blockquote>
+										<p><b>1.</b> Sending a written request to our Privacy Officer by mail at:</p>
+										<address>
+				BlackLight Studios Works P-39, South Extension, Part 2 New Delhi - 110049, India
+			</address>
+									</blockquote>
+									<blockquote>
+										<p><b> 2.</b> Email to <a href="mailto:privacy@blacklightsw.com">privacy@blacklightsw.com</a></p>
+										<p> Our Privacy Officer will respond to your complaint within a reasonable time after we receive it, provided you supply return contact details. If you do not provide return contact details, we will be unable to respond to your complaint, although we will consider its content. </p>
+									</blockquote>
+
+									<h3>4. Updates to this Policy</h3>
+									<p> We will update this Privacy Policy from time to time. These updates, will take effect from the date of issue on our website at blacklightsw.com. Please check back regularly for updates.</p>
+
+									<h3>5. Addendum: Definitions</h3>
+									<p><b>Advertising Identifier</b></p>
+									<p> A unique ID that is generated for your device to track activity by advertising companies to improve their service in game.</p>
+
+									<p><b>Analytics</b> </p>
+									<p> Interpretation and interpolation of unidentified data to predict and isolate trends relating to game play and app use.</p>
+									<p><b>Disable</b> </p>
+									<p> Remove and further restrict access provided by our Services by actioning the specific request.</p>
+
+									<p><b>Game Center</b> </p>
+									<p> A central game hub that retains information regarding game play statistics that is openly shared with the user. This includes high scores, global leader boards, friend’s lists and in-game achievements.</p>
+									<p><b>In-app purchase</b></p>
+									<p> An in-game system that allows exchanging real money for virtual goods or in-game currency.</p>
+									<p><b>BlackLight ("us")</b></p>
+									<p> BlackLight Studios Works Pvt. Ltd., its assignees, licensees, successors in title and subsidiaries.</p>
+
+									<p><b>Media Access Control (MAC) address</b> </p>
+									<p> Is a unique identifier assigned to network interfaces for communications on the physical network layer.</p>
+
+									<p><b>Services</b></p>
+									<p> Services offered by us and includes our games, websites and related services. </p>
+
+									<p><b>Stop Following</b></p>
+									<p> An action provided by Twitter and Facebook that allows a user to remove their name from a persons follower list. As a result, the user will not receive further communication or further tweets from the person they have stopped following.</p>
+
+									<p><b>Storefront</b> </p>
+									<p> An online business presence for sales. We work with the Apple App Store and Google Play storefronts as their primary storefront for sales but our games are also available on Amazon App Store and Windows Phone Store, among others.
+									</p>
+
+									<p><b>Terms of Service</b> </p>
+									<p> Rules and conduct standards that are defined that one must comply with to use the service.</p>
+									<p><b>Third Party Services</b> </p>
+									<p> Services provided by a provider that is not owned or controlled by BlackLignt</p>
+									<p><b>Tweets</b> </p>
+									<p> Text based comments provided by users on the Twitter platform</p>
+									<p><b>Unlike</b> </p>
+									<p> By clicking 'unlike' on Facebook you are removing your connection with the business, brand or product's page that you had previously liked, you will no longer receive updates from that page and your name will be removed from their list of likes.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		<script>
+			if (window.location.pathname !== '/') {
+				document.getElementById('loading').style.display = 'none';
+		}
+		</script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/jquery-3.1.1.min.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/angular.min.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/angular-animate.min.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/angular-aria.min.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/angular-cookies.min.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/angular-loader.min.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/angular-message-format.min.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/angular-messages.min.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/angular-parse-ext.min.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/angular-resource.min.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/angular-route.min.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/angular-sanitize.min.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/angular-touch.min.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/bootstrap.min.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/tether.min.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/wow.min.js"></script>
+
+
+		<script src="http://www.blacklightsw.com/assets/Scripts/controller/homeController.js"></script>
+
+		<script src="http://www.blacklightsw.com/assets/Scripts/blacklightsw.js"></script>
+		<script src="http://www.blacklightsw.com/assets/Scripts/custom.js"></script>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBySCJsQNjyLF28CXsaOSl6Ojb6UNWr22E&callback=initMap" async defer></script>
+
+	</body>
+
+	</html>

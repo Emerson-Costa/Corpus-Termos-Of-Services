@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"5f173b0daa",applicationID:"458752206"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(c(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(5),c=e(6),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,n){s[n]=i(p+n,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(l+"tracer",[u.now(),e,t],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&d("lcp",[t[t.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var n=Math.round(e.timeStamp),t={type:e.type};n<=p.now()?t.fid=p.now()-n:n>p.offset&&n<=Date.now()?(n-=p.offset,t.fid=p.now()-n):n=p.now(),g=!0,d("timing",["fi",n,t])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(4),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e){function n(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,n,!1)}n.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],5:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],6:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],7:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function t(t,r,i,o){if(!p.aborted||o){e&&e(t,r,i);for(var a=n(i),c=v(t),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[t]];return d&&d.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(t)}function y(e,n){u(e,function(e,t){n=n||"feature",w[t]=n,n in s||(s[n]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(5),s={},d={},p=n.exports=i();p.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(w,function(n,t){e[n]||(e[n]=t)});var t=a();f("mark",["onload",t+E.offset],null,"api"),f("timing",["load",t]);var r=l.createElement("script");r.src="https://"+e.agent,n.parentNode.insertBefore(r,n)}}function i(){"complete"===l.readyState&&o()}function o(){f("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-E.offset}var c=(new Date).getTime(),f=e("handle"),u=e(5),s=e("ee"),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,y=g&&g.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var h=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1177.min.js"},b=g&&y&&y[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:c,now:a,origin:h,features:{},xhrWrappable:b,userAgent:d};e(1),e(2),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),f("mark",["firstbyte",c],null,"api");var x=0,O=e(7)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(6),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof t?t(r,a):t||{}}catch(u){p([u,"",[r,a,i],c])}s(n+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(n+"err",[r,a,d],c),d}finally{s(n+"end",[r,a,f],c)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<n.length;f++)c=n[f],a=e[c],r(a)||(e[c]=t(a,u?c+i:i,o,c))}function s(t,r,i){if(!f||n){var o=f;f=!0;try{e.emit(t,r,i,n)}catch(a){p([a,t,r,i])}f=o}}function d(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){p([r])}for(var i in e)c.call(e,i)&&(n[i]=e[i]);return n}function p(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:title" content="Kumu - Where Authentic Connections Happen" />
+    <meta property="og:description" content="Kumu is a pinoy community platform where you can just hang out, explore the many livestreams the Kumunity has to offer, meet and chat with fellow Filipinos all around the world" />
+    <meta property="og:image" content="https://kumu.ph/images/kumu-meta.jpeg" />
+        <title>Privacy Policy - Kumu</title>
+    <meta name="csrf-param" content="_csrf">
+<meta name="csrf-token" content="cT1JCNVToPX07sb_4v51swvNzyKlkaKniYukx1vFSlEobQFn7D_InKGgt4bQqjzEWfS-SMf4ke3MvuzxNrQVYA==">
+
+<link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
+<link href="/css/custom.css" rel="stylesheet">
+<link href="/css/fontawesome-all.min.css" rel="stylesheet">
+<link href="/css/owl.carousel.min.css" rel="stylesheet">
+<link href="/css/owl.theme.default.min.css" rel="stylesheet">
+    <script type="text/javascript">
+     var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
+    // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+    clevertap.account.push({"id": "W88-495-KR5Z"});
+    clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
+    clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agrees to share their IP data
+    (function () {
+            var wzrk = document.createElement('script');
+            wzrk.type = 'text/javascript';
+            wzrk.async = true;
+            wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wzrk, s);
+    })();
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1HSE8RGC0W"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1HSE8RGC0W');
+    
+    </script>
+
+     <!-- Facebook Pixel Code -->
+     <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '320177136011813'); 
+    fbq('track', 'PageView');
+
+        
+    </script>
+    <noscript>
+    <img height="1" width="1" 
+    src="https://www.facebook.com/tr?id=320177136011813&ev=PageView
+    &noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body>
+
+<body data-spy="scroll" data-target="#hright" data-offset="100" class="blue-bg ">	  
+	  
+	<div id="pheadbg" class="img-bg">
+		<img src="/images/post-placeholder.jpg" width="100%">
+	</div>	 	  
+	  
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 logo">
+                <i id="mmenu" class="fas fa-bars"></i> 
+                <a href="/site/index"><!--<img src="images/kumu-logo-rainbow.png">--><img class="logo-txt" src="/images/kumu-logo-txt.png"></a>
+            </div>
+            <nav id="hright" class="col-md-10">			 
+                <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/site/livestreams">Livestreams</a>
+                </li>	
+                <li class="nav-item">
+                    <a class="nav-link" href="/site/about" data-scroll>About Us</a>
+                </li>					 
+                <li class="nav-item">
+                    <a class="nav-link" href="/site/index#hiw" data-scroll>How It Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/site/earn-real-money" data-scroll>How To Earn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://blog.kumu.ph/" data-scroll>Blog</a>
+                </li>			 
+                <li class="nav-item">
+                    <a class="nav-link" href="https://blog.kumu.ph/coins/" data-scroll>Buy Coins</a>
+                </li>					 
+                <li class="nav-item">
+                    <a class="nav-link" href="https://kumu.zendesk.com/" data-scroll>FAQs</a>
+                </li>					 
+                <li class="nav-item">
+                    <a class="nav-link" href="#contactus" data-toggle="modal">Contact Us</a>
+                </li>					 
+                <li class="nav-item">
+                    <a class="nav-link btn btn-custom gblue-bg white-txt" id="downloadAppBtn" href="#downloadapp" data-toggle="modal">Download the App</a>
+                </li>					 
+                </ul>
+            </nav>	 
+        </div>
+    </header>
+
+        
+    <div id="pgcont" class="cat-cont"> 
+          <section id="hero" class="container">
+    <div class="row">
+        <div class="col-md-7 offset-md-1 white-txt img-top">
+            <h1>Privacy Policy</h1>
+        </div>
+        <div class="col-md-4 h-right white-txt">
+            <img src="/images/karlito-mf-page.png" width="100%">
+        </div>					
+    </div>
+</section>	
+
+<div id="pgsplitter">
+    <img src="/images/hilltop-pg.png" width="100%">
+</div>	  
+
+<section id="pgsec" class="container-fluid section white-bg">
+    <div class="container">
+        <div class="row">	
+            <div class="breadcrumbs col-12">
+                <ul class="nav">
+                    <li><a href="/site/index" class="gray-txt">Home</a> <i class="fas fa-chevron-right"></i></li>							
+                    <li class="purple-txt">Privacy Policy</li>							
+                </ul>
+            </div>					
+            <div class="col-12">
+                <p class="gray-txt"><br />1. Introduction to this Privacy Policy</p>
+                <p class="gray-txt">1.1 At Kumu, Inc., we take your privacy very seriously. We are committed to complying with Republic Act No. 10173, otherwise known as the Data Privacy Act of 2012, and its Implementing Rules and Regulations.<br />1.2 In the course of providing you with the Services or access to the Platform (as defined in our Terms of Use), we will be collecting, using, disclosing, storing, and/or processing data, including your personal data.<br />1.3 This Privacy Policy exists to keep you informed about how we collect, use, disclose, store, and/or process the data we collect and receive during the course of providing the Services or access to the Platform to you, our user. We will only collect, use, disclose, store, and/or process your personal data in accordance with this Privacy Policy.<br />1.4 It is important that you read this Privacy Policy together with any other applicable notices we may provide on specific occasions when we are collecting, using, disclosing, and/or processing personal data about you, so that you are fully aware of how and why we are using your personal data.<br />1.5 BY CLICKING OR CHECKING “SIGN UP”, “I AGREE TO KUMU’S PRIVACY POLICY”, “I AGREE AND CONSENT TO THE COLLECTION, USE, DISCLOSURE, STORAGE, AND/OR PROCESSING OF MY PERSONAL DATA FOR THE PURPOSE STATED IN, AND UNDER THE TERMS OF, KUMU’S PRIVACY POLICY” OR SIMILAR STATEMENTS AVAILABLE ON THE KUMU REGISTRATION PAGE, YOU ACKNOWLEDGE THAT YOU HAVE BEEN NOTIFIED OF AND UNDERSTOOD THE TERMS OF THIS PRIVACY POLICY AND THAT YOU HAVE AGREED AND CONSENTED TO THE COLLECTION, USE, DICLOSURE, AND/OR PROCESSING OF YOUR PERSONAL DATA AS DESCRIBED AND UNDER THE TERMS HEREIN. IF YOU DO NOT AGREE WITH THE TERMS OF THIS PRIVACY POLICY, PLEASE DO NOT ACCESS THE PLATFORM.<br />1.6 We may update this Privacy Policy from time to time. Any changes we make to this Privacy Policy in the future will be posted on this page and notified to you, whereupon your consent to said changes, continued use of the Services or access to the Platform, including placing Orders on the Platform, shall constitute your acknowledgment and acceptance of the changes we make to this Privacy Policy. Please check back frequently to see any updates or changes to this Privacy Policy.<br />1.7 This Privacy Policy applies in conjunction with other notices, contractual clauses, and consent clauses that apply in relation to the collection, storage, use, disclosure, and/or processing of your personal data by us and is not intended to override them unless we expressly state otherwise.<br />1.8 This Privacy Policy does not apply to the third-party online/mobile store from which you install the Kumu mobile application or make payments, including any in-game virtual items, which may also collect and use data about you. We are not responsible for any of the data collected by any such third party.<br />1.9 You can visit the Platform and browse without having to provide personal details. However, you will be required to sign up for an account if you wish to use the Services.</p>
+                <p class="gray-txt">2. The Personal Data We Collect From You</p>
+                <p class="gray-txt">2.1 Personal Data means any information, whether recorded in a material form or not, from which the identity of an individual is apparent or can be reasonably and directly ascertained by the entity holding the information, or when put together with other information would directly, indirectly, and certainly identify an individual.<br />2.2 During the course of your use of the Platform and the provision of the Services, we may collect Personal Data from you, which includes but is not limited to:<br />(a) identity data, such as your name, gender, profile picture, and date of birth;<br />(b) contact data, such as billing address, delivery address, email address, and phone numbers;<br />(c) account data, such as bank account and payment details;<br />(d) transaction data, such as details about orders and payments to and from you, and other details of products and Services that you have purchased or obtained through the Platform;<br />(e) technical data, such as Internet protocol (IP) address, your login data, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform, international mobile equipment identity, device identifier, and other information and technology on the devices you use to access the Platform;<br />(f) profile data, such as your username and password, purchases or orders made by you, your interests, preferences, feedback, and survey responses, and other information you may provide when entering contests or giveaways;<br />(g) usage data, such as information on how you use the Platform, products, and Services or view any content on the Platform;<br />(h) location data, such as when you capture and share your location with us in the form of photographs or videos and upload such content to the Platform or GPS information from your mobile device;<br />(i) biometric data, such as voice files when you use our voice search function, and facial and other bodily features and voice of yourself and/or another other persons featured in your video when you upload videos onto the Platform; and<br />(j) marketing and communications data, such as your preferences in receiving marketing from us and/or third parties and your communication preferences.<br />2.3 During the course of your use of the Platform and the provision of the Services, we may receive Personal Data from you in the following situations:<br />(a) When you create an account with us;<br />(b) When you apply for any of the Services or purchase any products available on the Platform;<br />(c) When you use any of the features or functions available on the Platform or Services;<br />(d) When you record any user-generated content which is uploaded on the Platform;<br />(e) When you use the chat function on the Platform;<br />(f) When you post messages in the comment sections or in our forums; <br />(g) When you like posts;<br />(h) When you subscribe to our publications or marketing collaterals;<br />(i) When you enter a competition, promotion, or survey or send feedback;<br />(j) When you participate in any activity or campaign on the Platform;<br />(k) When you log in to your account on the Platform or otherwise interact with us via an external service or application, such as Facebook or Google;<br />(l) When any other user of the Platform posts any comments on the content you have uploaded on the Platform or when you post any comments on other users’ content uploaded to the Platform;<br />(m) When a third party files a complaint against you or the content you have posted on the Platform;<br />(n) When you access or use mobile games on the Platform; and<br />(o) When you interact with us offline, including when you interact with our outsourced customer service agents.<br />2.4 During the course of your use of the Platform and the provision of the Services, you expressly consent to the transfer of your Personal Data from third parties to Kumu for the purposes set out in this Privacy Policy or any other terms.<br />2.5 You must only submit Personal Data which is accurate and not misleading and you must keep it up to date and inform us of any changes to the Personal Data you have provided to us. We shall have the right to request for documentation to verify the Personal Data provided by you as part of our user verification processes.<br />2.6 We will only be able to collect your Personal Data if you voluntarily submit the Personal Data to us or as otherwise provided for under this Privacy Policy. Unfortunately, if you choose not to submit your Personal Data to us or subsequently withdraw your consent to our use of your Personal Data, we may not be able to provide you with the Services or access to the Platform.<br />2.7 We may request access or permission to certain features from your mobile device, including your mobile device’s bluetooth, camera, contacts, microphone, reminders, social media accounts, storage, and other features. If you wish to change our access or permissions, you may do so in your device’s settings. <br />2.8 We may request to send you push notifications regarding your account or the Platform. If you wish to opt-out from receiving these types of communications, you may turn them off in your device’s settings.<br />2.9 You may access and update your personal information submitted to us at any time as described below.<br />2.10 If you provide Personal Data of any third party to us, you represent and warrant that you have obtained the necessary consent, license, and permissions from that third party to share and transfer his/her Personal Data to us, and for us to collect, store, use, and disclose that data in accordance with this Privacy Policy.<br />2.11 If you sign up to be a user on our Platform using your social media account or link your Kumu account to your social media account or use certain other Kumu social media features, we may access Personal Data about you which you have voluntarily provided to your social media provider in accordance with the provider&#8217;s policies and we will manage your Personal Data in accordance with this Privacy Policy.<br />2.12 If you choose to share data about yourself via your profile, online chat, or other interactive areas of the Platform, please be advised that all data you disclose in these areas is public and that your data will be accessible to anyone who accesses the Platform.</p>
+                <p class="gray-txt">3. Use and Disclosure of Personal Data</p>
+                <p class="gray-txt">3.1 The Personal Data we collect from you or via third parties may be used by us, or shared with or transferred to third parties (including related companies, third-party service providers, and their service providers and related companies, companies located both inside and outside your home country, third-party sellers, and other users), for certain purposes, which include but are not limited to the following:<br />(a) To facilitate your use of the Services or access to the Platform;<br />(b) To enable user-to-user communications;<br />(c) To respond to your queries, feedback, claims, disputes, troubleshoot problems, or product and customer service requests, whether directly or through outsourced customer service agents;<br />(d) To process orders you submit through the Platform (payments that you make through the Platform for products will be processed by our agents);<br />(e) To deliver the products you have purchased through the Platform. We may pass your personal information on to a third party in order to make delivery of the product to you;<br />(f) To update you on the delivery of the products and for customer support purposes;<br />(g) To compare information and verify with third parties in order to ensure that the information is accurate;<br />(h) To improve the efficiency and operation of the Platform and/or Services;<br />(i) To ascertain your identity for fraud detection purposes and prevent fraudulent transactions, monitor against theft, and protect against criminal activity;<br />(j) To facilitate the takedown of prohibited and controlled items from our Platform;<br />(k) To create and administer your account (if any) with us;<br />(l) To generate a personal profile about you;<br />(m) To verify and carry out financial transactions in relation to payments you make online;<br />(n) To audit the downloading of data from the Platform;<br />(o) To improve the layout or content of the pages of the Platform and customize them for users;<br />(p) To identify visitors on the Platform;<br />(q) To carry out research on our users’ demographics and behavior and monitor and analyze usage and trends to improve your experience with the Platform;<br />(r) To notify you of updates to the Platform;<br />(s) To provide you with information we think you may find useful or which you have requested from us, including information about third-party sellers’ products and services, provided you have indicated that you have not objected to being contacted for these purposes;<br />(t) To display your name, username, or profile on the Platform;<br />(u) To allow other users to identify you (via the &#8220;Find my friends&#8221; or any other similar function) as a user of the Service, to allow you to find other users and to connect with them on the Platform, and to support the socializing function of the Services;<br />(v) To promote the Services and use information that you give to us, such as user-generated content that you can choose to upload or broadcast on our Platform which will be accessible on the Internet and may be shared by the public (the latter of which is not within our control), as part of our advertising and marketing campaigns to promote the Platform;<br />(w) To process any complaints, feedback, enforcement action, and take-down requests in relation to any content you have uploaded to the Platform;<br />(x) To display on scoreboards on the Platform in relation to campaigns, mobile games, or any other activity;<br />(y) To derive further attributes relating to you based on Personal Data provided by you (whether to us or third parties), in order to provide you with more targeted and/or relevant information;<br />(z) To send you newsletters and/or marketing or promotional materials about third-party sellers’ products and services from time to time and to offer new products, services, mobile applications, and/or recommendations to you; and<br />(aa) To request feedback and contact you about your use of the Platform or solicit support for the Platform.<br />We may also conduct automated decision-making processes in accordance with any of these purposes.<br />3.2 For the avoidance of doubt, you acknowledge and consent to Kumu sharing anonymized information such as but not limited to those in the following circumstances:<br />(a) Aggregated information. We may conduct joint data analytics projects with selected third-party providers using anonymized information to predict user interests and provide users with more targeted and/or relevant information based on aggregated information about that user’s activities outside the Platform.<br />(b) Behavioral-based advertising. We may collaborate with selected third parties using anonymized information to derive certain models that would facilitate more accurate advertising to selected users.<br />3.3 You may unsubscribe from receiving marketing information at any time by using the unsubscribe function within the electronic marketing material. We may use your contact information to send newsletters from us and from our related companies.<br />3.4 If you interact with other users of the Platform, those users may see your name, profile photo, and descriptions of your activity, including sending invitations to other users, chatting with other users, liking posts, and following blogs.<br />3.5 When you post comments, contributions, or other content to the Platform, your posts may be viewed by all users and may be publicly and/or permanently distributed outside the Platform.<br />3.6 We may share your information with our affiliates, which include our parent company and any subsidiaries, joint venture partners, or other companies controlled by us or under common control with us.<br />3.7 If we reorganize or sell all or any portion of our assets, undergo a merger, or are acquired by another entity, we may transfer your information to the successor entity. In the event that we cease business operations or enter bankruptcy, your information shall become an asset to be transferred or acquired by a third party. You acknowledge that such transfers may occur and that the transferee may decline to honor the commitments made in this Privacy Policy. <br />We are not responsible for the actions of third parties with whom you share personal or sensitive data, and we have no authority to manage or control third-party solicitations. If you no longer wish to receive correspondence, emails, or other communications from third parties, you are responsible for contacting the third party directly.<br />3.8 In exceptional circumstances, we may be required to disclose personal information, such as when there are grounds to believe that the disclosure is necessary to prevent a threat to life or health, to investigate or remedy potential or actual violations of our policies, to protect the rights, property, and safety of others, or for law enforcement purposes, or for fulfillment of legal and regulatory requirements and requests.<br />3.9 We may share and/or permit the sharing of your Personal Data with third parties and our affiliates for any of the abovementioned purposes, including but not limited to facilitating your use of the Services, completing a transaction with you, managing your account and our relationship with you, fraud protection and credit risk reduction, marketing, and fulfilling any legal or regulatory requirements and requests as deemed necessary by us. In sharing your Personal Data with them, we endeavor to ensure that the third parties and our affiliates keep your Personal Data secure from unauthorized access, collection, use, disclosure, processing, or similar risks and that your Personal Data be retained only for as long as needed in order to achieve the abovementioned purposes.<br />3.10 If you are located in the Philippines, we may transfer or permit the transfer of your Personal Data outside of the Philippines for any of the purposes set out in this Privacy Policy.</p>
+                <p class="gray-txt">4. Rights of User</p>
+                <p class="gray-txt">4.1 As a user you have the right to:<br />(a) withdraw your consent to the continued use, disclosure, and/or processing of your Personal Data;<br />(b) request erasure or blocking of your Personal Data;<br />(c) request correction of inaccurate or erroneous Personal Data, unless such request is vexatious or unreasonable;<br />(d) request for reasonable access to your Personal Data; and<br />(e) request indemnification for damages sustained due to such inaccurate, incomplete, outdated, false, unlawfully obtained, or unauthorized use of Personal Data.<br />4.2 If you wish to withdraw your consent, or request for erasure or blocking of your Personal Data at any time, you may do so by contacting us at dataprivacy@kumu.com.ph.<br />4.3 Please note that if you exercise any of your rights set out above, we may not be in a position to continue to provide the Services to you or perform on any contract we may have with you, and we will not be liable in the event that we do not continue to provide the Services to or perform our contract with you. Our legal rights and remedies are expressly reserved in such an event.<br />4.4 If you no longer wish to receive correspondence, emails, or other communications from us, you may opt-out by: <br />(a) noting your preferences at the time you register your account with the Platform;<br />(b) logging into your account settings and updating your preferences; or<br />(c) contacting us at support@kumu.ph.<br />4.5 If you no longer wish to receive correspondence, emails, or other communications from third parties, you are responsible for contacting the third party directly.<br />4.6 You may terminate your account at any time by contacting us at support@kumu.ph. Upon your request to terminate your account, we will deactivate or delete your account and information from our active databases. However, some information may be retained in our files in order to prevent fraud, troubleshoot problems, assist with any investigations, enforce our Terms of Use, and/or comply with legal requirements.</p>
+                <p class="gray-txt">5. Updating Your Personal Data </p>
+                <p class="gray-txt">5.1 It is important that the Personal Data you provide to us is accurate and complete for you to continue using the Platform and for us to provide the Services. You are responsible for informing us of changes to your Personal Data, or in the event you believe that the Personal Data we have about you is inaccurate, incomplete, misleading, or out of date.<br />5.2 You can review and/or update your Personal Data at any time by accessing your account on the Platform.<br />5.3 We take steps to share the updates to your Personal Data with third parties and our affiliates with whom we may have shared your Personal Data if necessary for any of the aforementioned purposes.</p>
+                <p class="gray-txt">6. Accessing Your Personal Data </p>
+                <p class="gray-txt">6.1 You may request information about your Personal Data which we have collected, or inquire about the ways in which your Personal Data may have been used, disclosed, stored, or processed by us within the past year. In order to facilitate processing of your request, it may be necessary for us to request further information relating to your request.<br />6.2 We reserve the right to charge a reasonable administrative fee for the retrieval of your Personal Data records. In any case, you shall be informed of the fee before any such request is processed.<br />6.3 We will respond to your request as soon as reasonably possible. Should we not be able to respond to your request within twenty-one (21) days from the date of your request, we shall inform you in writing. If we are unable to provide you with any personal data or to make a correction requested by you, we shall generally inform you of the reasons why we are unable to do so (except where we are not required to do so under the applicable data protection laws).</p>
+                <p class="gray-txt">7. Security of Your Personal Data </p>
+                <p class="gray-txt">7.1 To safeguard your Personal Data from unauthorized access, collection, use, disclosure, processing, copying, modification, disposal, loss, misuse, modification, or similar risks, we have introduced appropriate administrative, physical, and technical measures such as:<br />(a) restricting access to Personal Data to individuals who require access;<br />(b) maintaining technology products and systems to prevent unauthorized computer access; and<br />(c) using encryption technology when processing your financial details.<br />7.2 If you believe that your privacy has been breached by Kumu, please contact us immediately.<br />7.3 You should be aware, however, that no method of transmission over the Internet or method of electronic storage is completely secure. While security cannot be guaranteed, we strive to protect the security of your information and are constantly reviewing and enhancing our information security measures.<br />7.4 Your password is the key to your account. Please use unique numbers, letters, and special characters, and do not share your Kumu password to anyone. If you do share your password with others, you shall be responsible for all actions taken in the name of your account and the consequences. If you lose control of your password, you may lose substantial control over your Personal Data and other data submitted to Kumu. You may also be subject to legally binding actions taken on your behalf. Therefore, if your password has been compromised for any reason or if you have grounds to believe that your password has been compromised, you should immediately contact us and change your password. You are reminded to log out of your account and close the web browser when you are finished, especially if using a shared computer.</p>
+                <p class="gray-txt">8. Retention of Personal Data </p>
+                <p class="gray-txt">8.1 We shall only retain your Personal Data for as long as either is required of us by law or is relevant for the purposes for which it was collected.<br />8.2 We shall cease to retain your Personal Data, or remove the means by which the data can be associated with you, as soon as it is reasonable to assume that such retention no longer serves the purposes for which the Personal Data was collected and is no longer necessary for any legal or business purpose.</p>
+                <p class="gray-txt">9. Minors</p>
+                <p class="gray-txt">9.1 Kumu does not sell products for purchase by minors (which is to be determined based on the applicable law), nor does it intend to provide any of the Services or the use of the Platform to minors. We do not knowingly collect any Personal Data relating to minors.<br />9.2 You hereby confirm and warrant that you are above the age of minority and you are capable of understanding and accepting the terms of this Privacy Policy. If you are a minor, you may use our Platform only with the consent and involvement of a parent or legal guardian.<br />9.3 As a parent or legal guardian, please do not allow minors under your care to submit Personal Data to Kumu. In the event that such Personal Data of a minor is disclosed to Kumu, you hereby consent to the processing of the minor’s Personal Data and accept and agree to be bound by this Privacy Policy and take responsibility for his or her actions.<br />9.4 We will not be responsible for any unauthorized use of the Services on the Platform by yourself, users who act on your behalf, or any unauthorized users. It is your responsibility to make your own informed decisions about the use of the Services on the Platform and take the necessary steps to prevent any misuse of the Services on the Platform.</p>
+                <p class="gray-txt">10. Collection of Computer Data </p>
+                <p class="gray-txt">10.1 We or our authorized service providers may use cookies, web beacons, and other similar technologies for storing data to help provide you with a better, faster, safer, and personalized experiences when you use the Services or access the Platform.<br />10.2 When you visit the Platform through your computer, mobile device, or any other device with Internet connectivity, our company servers will automatically record data that your browser sends whenever you visit a website. This data may include:<br />(a) your computer or device&#8217;s IP address;<br />(b) browser type;<br />(c) webpage you were visiting before you came to the Platform;<br />(d) the pages within the Platform which you visit; and<br />(e) the time spent on those pages, items and data searched for on the Platform, access times and dates, and other statistics.<br />10.3 This data is collected for analysis and evaluation in order to help us improve our Platform and the services and products we provide.<br />10.4 Cookies are small text files (typically made up of letters and numbers) placed in the memory of your browser or device when you visit a website or view a message. They allow us to recognize a particular device or browser and help us to personalize the content to match your preferred interests more quickly, and to make the Services and the Platform more convenient and useful to you.<br />10.5 You may be able to manage and delete cookies through your browser or device settings. For more information on how to do so, visit the help material of your browser or device.<br />10.6 Web beacons are small graphic images that may be included on our Service and the Platform. They allow us to count users who have viewed these pages so that we can better understand your preference and interests.<br />10.7 Most web browsers and some mobile operating systems include a Do-Not-Track (“DNT”) feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. No uniform technology standard for recognizing and implementing DNT signals has been finalized. As such, we do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online. If a standard for online tracking is adopted and implemented for us to follow in the future, we shall inform you about that practice in a revised version of this Privacy Policy.</p>
+                <p class="gray-txt">11. Kumu’s Right to Disclose Personal Data</p>
+                <p class="gray-txt">11.1 You acknowledge and agree that Kumu has the right to disclose your Personal Data to any legal, regulatory, governmental, tax, law enforcement or other authorities, or the relevant right owners, if Kumu has reasonable grounds to believe that the disclosure of your Personal Data is necessary for the purpose of meeting any obligations, requirements, or arrangements, whether voluntary or mandatory, as a result of cooperating with an order, investigation, and/or request of any nature made by such parties. To the extent permissible by applicable law, you agree not to take any action and/or waive your rights to take any action against Kumu for the disclosure of your Personal Data in these circumstances.</p>
+                <p class="gray-txt">12. Third-Party Sites</p>
+                <p class="gray-txt">12.1 The Platform may contain links to other websites and applications of interest operated by other parties not affiliated with us, such as merchants or payment gateways. We are not responsible for the privacy and security practices and policies of websites, services, or applications operated by any third parties which may be linked to or from the Platform. You are advised to check on the applicable privacy policies of those websites, services, or applications to determine how those third parties will handle any information they may collect from you.</p>
+                <p class="gray-txt">13. Questions, Feedback, Concerns, Suggestions, or Complaints</p>
+                <p class="gray-txt">13.1 If you have any questions on personal data protection or data privacy, please refer to our list of frequently asked questions.<br />13.2 If your question is not covered in our FAQs, or if you have any feedback, concerns, suggestions, or complaints in relation to Personal Data, please feel free to contact us at dataprivacy@kumu.ph.</p>
+                <p class="gray-txt">CONTACT US</p>
+
+
+
+                <p class="gray-txt">If you have questions or comments about this Privacy Policy, please contact us at:<br /><br />KUMUMedia Technologies Inc.<br />919 North Market Street, Suite 950<br />Wilmington, DE 19801<br /><br />support@kumu.ph</p>
+            </div>										
+        </div>
+    </div>				
+</section>	
+        <footer id="contact" class="container-fluid dpurple-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<ul class="nav">
+                            <li><a href="https://workbean.co/company/kumu">Careers</a></li>	
+                            <li><a href="/privacy-policy">Privacy Policy</a></li>
+                            <li><a href="/terms-of-use">Terms of Use</a></li>               
+						</ul>
+					</div>
+					<div class="col-md-3 text-center">
+						<a href="/site/index"><img class="f-logo" src="/images/kumu-logo-footer.png" width="200"></a>				
+					</div>
+					<div class="col-md-6 text-center">
+						<div class="row">
+							<div class="col-12"><h3 class="white-txt">Download Now</h3></div>
+							<div class="bimg col-md-4 offset-md-0 col-8 offset-2"><a href="#downloadapp" data-toggle="modal"><img src="/images/google-play-badge.png" width="100%"></a></div>
+							<div class="bimg col-md-4 offset-md-0 col-8 offset-2"><a href="#downloadapp" data-toggle="modal"><img src="/images/app-store-badge.png" width="100%"></a></div>
+							<div class="bimg col-md-4 offset-md-0 col-8 offset-2"><a href="http://cdc.hispace.hicloud.com/000000gp"><img src="/images/huawei-app-gallery-badge.png" width="100%"></a></div>
+						</div>	
+					</div>	
+					<div class="col-md-3 social-links text-center">
+						<div class="row">
+							<div class="col-12"><h3 class="white-txt">Follow Us</h3></div>
+							<div class="bimg col-2"><a href="https://facebook.com/kumuph"><i class="fab fa-facebook-f"></i></a></div>
+							<div class="bimg col-2"><a href="https://twitter.com/kumuph"><i class="fab fa-twitter"></i></a></div>
+							<div class="bimg col-2"><a href="https://www.youtube.com/channel/UCM-QFXNeptQJTYnLvX3vC0A"><i class="fab fa-youtube"></i></a></div>
+							<div class="bimg col-2"><a href="https://www.linkedin.com/company/11325190/"><i class="fab fa-linkedin-in"></i></a></div>
+                            <div class="bimg col-2"><a href="https://instagram.com/kumuph"><i class="fab fa-instagram"></i></a></div>								
+                            <div class="bimg col-2 pt-2 ml-n2">
+                                <a href="https://www.tiktok.com/@kumu_ph">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 48 48">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill="#00F2EA" d="M20.023 18.111v-1.703a13.17 13.17 0 0 0-1.784-.13c-7.3 0-13.239 5.94-13.239 13.24 0 4.478 2.238 8.442 5.652 10.839a13.187 13.187 0 0 1-3.555-9.014c0-7.196 5.77-13.064 12.926-13.232"/>
+                                            <path fill="#00F2EA" d="M20.335 37.389c3.257 0 5.914-2.591 6.035-5.82l.011-28.825h5.266a9.999 9.999 0 0 1-.17-1.825h-7.192l-.012 28.826c-.12 3.228-2.778 5.818-6.034 5.818a6.006 6.006 0 0 1-2.805-.694 6.037 6.037 0 0 0 4.901 2.52M41.484 12.528v-1.602a9.943 9.943 0 0 1-5.449-1.62 10.011 10.011 0 0 0 5.45 3.222"/>
+                                            <path fill="#FF004F" d="M36.035 9.305a9.962 9.962 0 0 1-2.461-6.56h-1.927a10.025 10.025 0 0 0 4.388 6.56M18.239 23.471a6.053 6.053 0 0 0-6.046 6.046 6.05 6.05 0 0 0 3.24 5.352 6.007 6.007 0 0 1-1.144-3.526 6.053 6.053 0 0 1 6.046-6.047c.623 0 1.22.103 1.784.28v-7.343a13.17 13.17 0 0 0-1.784-.13c-.105 0-.208.006-.312.008v5.64a5.944 5.944 0 0 0-1.784-.28"/>
+                                            <path fill="#FF004F" d="M41.484 12.528v5.59c-3.73 0-7.185-1.193-10.007-3.218v14.617c0 7.3-5.938 13.239-13.238 13.239-2.821 0-5.437-.89-7.587-2.4a13.201 13.201 0 0 0 9.683 4.225c7.3 0 13.239-5.939 13.239-13.238V16.726a17.107 17.107 0 0 0 10.007 3.218V12.75c-.72 0-1.42-.078-2.097-.223"/>
+                                            <path fill="#FFF" d="M31.477 29.517V14.9a17.103 17.103 0 0 0 10.007 3.218v-5.59a10.011 10.011 0 0 1-5.449-3.223 10.025 10.025 0 0 1-4.388-6.56h-5.266L26.37 31.57c-.121 3.228-2.778 5.819-6.035 5.819a6.038 6.038 0 0 1-4.901-2.52 6.05 6.05 0 0 1-3.241-5.352 6.053 6.053 0 0 1 6.046-6.046c.622 0 1.219.102 1.784.28v-5.64c-7.156.168-12.926 6.036-12.926 13.232 0 3.48 1.352 6.648 3.555 9.014a13.16 13.16 0 0 0 7.587 2.399c7.3 0 13.238-5.939 13.238-13.239"/>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+						</div>	
+					</div>
+					<div class="col-12 text-center copyr">
+						<p class="white-txt">Copyright 2020 KumuMedia Technologies Inc. All Rights Reserved</p>
+					</div>
+				</div>
+			</div>				
+		</footer>
+                    <!-- <a id="floatingsubs" href="#subscribe" data-toggle="modal"><img src="/images/floating-subs.png"></a> -->
+        	</div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="inquire" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Inquiry Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Name:</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Full Name">
+                </div>			
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address:</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email Address">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Message:</label>
+                    <textarea class="form-control" placeholder="Enter Email Address"></textarea>
+                </div>			
+                <button type="submit" class="btn btn-lg btn-custom btn-outline-gray gblue-bg white-txt">Submit</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+        <!-- Modal -->
+    <div class="modal fade" id="contactus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Contact Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                                        
+                    <form id="contact-form" action="/site/contact" method="post">
+<input type="hidden" name="_csrf" value="cT1JCNVToPX07sb_4v51swvNzyKlkaKniYukx1vFSlEobQFn7D_InKGgt4bQqjzEWfS-SMf4ke3MvuzxNrQVYA==">                        <div class="form-group">
+                            <div class="form-group field-contactform-name required">
+<label class="control-label" for="contactform-name">Name</label>
+<input type="text" id="contactform-name" class="form-control" name="ContactForm[name]" autofocus placeholder="Enter Full Name" aria-required="true">
+
+<p class="help-block help-block-error"></p>
+</div>                        </div>		
+                        <div class="form-group">
+                            <div class="form-group field-contactform-email required">
+<label class="control-label" for="contactform-email">Email</label>
+<input type="text" id="contactform-email" class="form-control" name="ContactForm[email]" placeholder="Enter Email Address" aria-required="true">
+
+<p class="help-block help-block-error"></p>
+</div>                        </div>
+                        <div class="form-group">
+                            <div class="form-group field-contactform-message required">
+<label class="control-label" for="contactform-message">Message</label>
+<textarea id="contactform-message" class="form-control" name="ContactForm[message]" rows="3" placeholder="Enter Message" aria-required="true"></textarea>
+
+<p class="help-block help-block-error"></p>
+</div>                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" name="contact-button">Submit</button>                        </div>
+
+                    </form>                </div>
+            </div>
+        </div>
+    </div>
+        
+    <!-- Modal -->
+    <div class="modal fade" id="downloadapp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Send Me The App</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="https://kumu-alternate.app.link/PNQg4Z7Qu0?__branch_flow_type=deepview_tmta&amp;__branch_flow_id=768771099283776860&amp;__branch_desktop_deepview_type=1" method="POST">		
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Enter your Mobile Number:</label>
+                    <input name="phone" id="phone" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ex. 639177480908"> 
+                </div>		
+                <button id="phone_submit" type="submit" class="btn btn-lg btn-custom btn-outline-gray gblue-bg white-txt">Send</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>	
+
+    <!-- Subscribe Modal -->
+    <div class="modal fade" id="subscribe" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Stay Up to Date</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>		
+                <div class="form-group">
+                    <label for="subscribe_now_email">Email address:</label>
+                    <input type="email" class="form-control" id="subscribe_now_email" aria-describedby="emailHelp" placeholder="Enter Email Address">
+                </div>		
+                <button type="submit" class="btn btn-lg btn-custom btn-outline-gray purple-bg white-txt">Subscribe</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>	
+
+     <!-- Sahre livestream to social media Modal -->
+     <div class="modal fade" id="shareStream" tabindex="-1" role="dialog" aria-labelledby="shareStreamLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="shareStreamLabel">Share this to:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-4 text-center shareToSocMed" data-socmed="messenger">
+                            <img src="/images/social-media-icons/messenger.png" width="50" height="50">
+                        </div>
+                        <div class="col-4 text-center shareToSocMed" data-socmed="facebook">
+                            <img src="/images/social-media-icons/facebook.png" width="50" height="50">
+                        </div>
+                        <div class="col-4 text-center shareToSocMed" data-socmed="whatsapp">
+                            <img src="/images/social-media-icons/whatsapp.png" width="50" height="50">
+                        </div>
+                        <!-- <div class="col-3 text-center shareToSocMed" data-socmed="instagram">
+                            <img src="/images/social-media-icons/instagram.png" width="50" height="50">
+                        </div> -->
+                        <!-- <div class="col-3 text-center shareToSocMed" data-socmed="copy">
+                            <div class="bg-secondary rounded-circle hw-50">
+                                <i class="fas fa-link text-white p-3"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <input type="text" class="form-control form-control-sm" id="copyLink" value="">
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="/assets/1181226c/jquery.js"></script>
+<script src="/assets/351cb241/yii.js"></script>
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap-4.4.1.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/smooth-scroll.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/agora-rtm-sdk.js"></script>
+<script src="/js/agora-rtc-sdk-3.1.0.js"></script>
+<script src="/assets/351cb241/yii.validation.js"></script>
+<script src="/assets/351cb241/yii.activeForm.js"></script>
+<script>jQuery(function ($) {
+jQuery('#contact-form').yiiActiveForm([{"id":"contactform-name","name":"name","container":".field-contactform-name","input":"#contactform-name","error":".help-block.help-block-error","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Name cannot be blank."});}},{"id":"contactform-email","name":"email","container":".field-contactform-email","input":"#contactform-email","error":".help-block.help-block-error","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Email cannot be blank."});yii.validation.email(value, messages, {"pattern":/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/,"fullPattern":/^[^@]*<[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?>$/,"allowName":false,"message":"Email is not a valid email address.","enableIDN":false,"skipOnEmpty":1});}},{"id":"contactform-message","name":"message","container":".field-contactform-message","input":"#contactform-message","error":".help-block.help-block-error","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Message cannot be blank."});}}], []);
+});</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5f173b0daa","applicationID":"458752206","transactionName":"MQBSbUBUXEoEURFcCwhKZUtbGh1QC1YATUoWDUA=","queueTime":0,"applicationTime":13,"atts":"HUdRGwhOT0Q=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+<script>
+    
+    $('#contactus').on('hidden.bs.modal', function () {
+        $('#contactusNotification').addClass('d-none');
+    });
+    
+    $('#downloadAppBtn, .openInAppBtn').click(function() {
+        fbq('trackCustom', 'AppInstallAttempt');
+    });
+</script>

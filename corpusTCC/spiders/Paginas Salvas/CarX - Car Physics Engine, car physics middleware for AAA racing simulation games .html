@@ -1,0 +1,639 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=Windows-1251">
+    <meta http-equiv="Content-language" content="en"> 
+    <meta name="keywords" content="car physics engine, car physics middleware, CarX engine, drift simulation, car simulation physics engine, car physics for driving games, car physics engine for virtual reality system, racing simulator, driving simulator ">
+    <link rel="stylesheet" type="text/css" href="./style.css"> 
+    <title>CarX - Car Physics Engine, car physics middleware for AAA racing simulation games </title>
+    <meta name="description" content="Car physics engine CarX is middleware for AAA racing games. CarX car physics engine simulates car driving physics like real life. CarX physics engine is best middleware solution for racing and driving simulators.">
+    <meta name="revisit-after" content="8 days"> 
+    <meta name="robots" content="index, follow"> 
+
+
+
+   
+    
+    <!-- Разместите этот тег в теге head или непосредственно перед закрывающим тегом body -->
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24787311-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+     <!--
+<script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject.js"></script>
+		<script type="text/javascript">
+		
+		function GetUnity() {
+			if (typeof unityObject != "undefined") {
+				return unityObject.getObjectById("unityPlayer");
+			}
+			return null;
+		}
+		if (typeof unityObject != "undefined") {
+			var params = {
+				disableContextMenu: true
+			};
+			unityObject.embedUnity("unityPlayer", "http://www.carx-tech.com/webplayer/webplayer.unity3d", 1024, 768, params);
+			
+		}
+		
+</script>
+    -->  
+    
+
+
+</head>
+<body>
+    <center>
+        <table cellpadding="0" cellspacing="0" >
+            <tr>
+                <td  align="right"  style="background-image:url(../../bord_left.jpg);background-repeat:repeat-y;background-color:rgb(0,0,0)" >
+                </td>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0" width="799">
+                        <!--
+                        <tr>
+                            <td valign="top">
+                                <img border="0" src="top.gif" width="455" height="90" alt="car physics engine">
+								</td>
+                            <td valign="top" >
+                                <img border="0" src="top_right.gif" width="522" height="90" alt="carx physics simulation engine ">
+								</td>
+                                 </tr>
+                            -->  
+                        
+                         <!--  -->  
+                         <tr>
+                            <td valign="top"><a href="/" ><img border="0" src="top3.gif" width="977" height="90" alt="car physics engine for driving simulators" ></a> </td>
+                         </tr>   
+                                 
+
+                                
+                       
+                    </table>
+                </td>
+               <td  align="left"  style="background-image:url(../../bord_right.jpg);background-repeat:repeat-y;background-color:rgb(30,60,190)" >
+                </td>
+            </tr>
+			
+            <tr>
+               <td  align="right"  style="background-image:url(../../bord_left.jpg);background-repeat:repeat-y;background-color:rgb(30,60,190)" >
+                </td>
+                <td>
+                    <table border="0" width="977" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <!-- rgb(253,250,241) -->
+                            <td valign="top" width="150" height = "600" style="background-image:url(../../white_carbon1.jpg);background-repeat:repeat; background-position: center top; background-color:rgb(30,30,30)" >
+                                <div align=left>
+
+<table width="206" >
+<!-- 
+<tr><td>
+<center>
+<a href="home-car-physics-engine-ru" class="Lang" style="font-size:12px;">Language: RU</a>
+<a href="home-car-physics-engine-eng" class="Lang" style="font-size:12px;">[ENG]</a>
+</center>
+</td></tr>
+-->
+
+
+
+<!-- <tr><td class="linkTd"><a href="home-car-physics-engine-eng"  class="MenuButton" >Car physics engine</a></td></tr>-->
+<tr><td class="linkTd"><a href="carx_drift_racing-car-physics-engine-eng"  class="MenuButton">CarX Drift Racing</a></td></tr>
+<!--<tr><td class="linkTd"><a href="products-car-physics-engine-eng"  class="MenuButton">CarX Product</a></td></tr>-->
+<!--<tr><td class="linkTd"><a href="trafx-car-physics-engine-eng"  class="MenuButton">TrafX Product</a></td></tr>-->
+<!-- <tr><td class="linkTd"><a href="features-car-physics-engine-eng"  class="MenuButton">Features</a></td></tr>-->
+<tr><td class="linkTd"><a href="download-car-physics-engine-eng"  class="MenuButton">Download PC Demo</a></td></tr>
+<tr><td class="linkTd"><a href="testimonials-car-physics-engine-eng"  class="MenuButton">Testimonials</a></td></tr>
+ <tr><td class="linkTd"><a href="licensing-car-physics-engine-eng"  class="MenuButton">Licensing (Buy CarX)</a></td></tr>
+<!-- <tr><td class="linkTd"><a href="support-car-physics-engine-eng"  class="MenuButton">Support</a></td></tr>-->
+<!--<tr><td class="linkTd"><a href="clients-car-physics-engine-eng"  class="MenuButton">Clients</a></td></tr>-->
+<tr><td class="linkTd"><a href="team-car-physics-engine-eng"   class="MenuButton">Company</a></td></tr>
+<tr><td class="linkTd"><a href="contacts-car-physics-engine-eng"   class="MenuButton">Contacts</a></td></tr>
+<tr><td class="linkTd"><a href="faq-car-physics-engine-eng"  class="MenuButton">FAQ</a></td></tr>
+<tr><td class="linkTd"><a href="forums-car-physics-engine-eng"  class="MenuButton">CarX on Forums</a></td></tr>
+<!--<tr><td class="linkTd"><a href="appstore-car-physics-engine-eng"  class="MenuButton">CarX on App Store</a></td></tr>-->
+
+<tr  bgcolor = "881100"  ><td  >
+<br>
+
+
+<!-- Begin MailChimp Signup Form -->
+<link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:200px;}
+
+#mc_embed_signup input.button {
+display: block;
+margin: 0 0 11px 0;
+width: 170px;
+min-width: 190PX;
+margin-left: 1px;
+}
+
+#mc_embed_signup .button {
+clear: both;
+background-color: #aa0000;
+border: 0 none;
+border-radius: 4px;
+color: white;
+font-size: 15px;
+font-weight: bold;
+height: 34px;
+line-height: 31px;
+padding: 0;
+text-align: center;
+text-decoration: none;
+vertical-align: top;
+white-space: nowrap;
+}
+	
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="http://carx-tech.us1.list-manage.com/subscribe/post?u=afcf5eed1f3a1b7d6bd64c338&amp;id=968651336b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	<b>Get CarX Test-Drive NOW!</b>
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group">
+	<label for="mce-FNAME">First Name  <span class="asterisk">*</span>
+</label>
+	<input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+</div>
+<div class="mc-field-group">
+	<label for="mce-LNAME">Last Name </label>
+	<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+</div>
+<div class="mc-field-group">
+	<label for="mce-MMERGE4">CompanyName </label>
+	<input type="text" value="" name="MMERGE4" class="" id="mce-MMERGE4">
+</div>
+<div class="mc-field-group input-group">
+    <strong>I want: </strong>
+    <ul><li><input type="checkbox" value="1" name="group[3181][1]" id="mce-group[3181]-3181-0"><label for="mce-group[3181]-3181-0">play games powered by CarX</label></li>
+<li><input type="checkbox" value="2" name="group[3181][2]" id="mce-group[3181]-3181-1"><label for="mce-group[3181]-3181-1">develop games using CarX</label></li>
+<li><input type="checkbox" value="4" name="group[3181][4]" id="mce-group[3181]-3181-2"><label for="mce-group[3181]-3181-2">partnership with CarX (for game publishers etc.)</label></li>
+</ul>
+</div>
+<div id="mce-responses" class="clear">
+<div class="response" id="mce-error-response" style="display:none"></div>
+<div class="response" id="mce-success-response" style="display:none"></div>
+</div>
+
+<div class="clear"><input type="submit" value="Get free demo now!" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+<div align="center"><script type="text/javascript" src="http://carx-tech.us1.list-manage.com/subscriber-count?b=3&u=a17de1c1-1df0-4bfd-9d24-f80a319589ea&id=968651336b"></script></div>	
+</form>
+</div>
+<script type="text/javascript">
+var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[3]='MMERGE3';ftypes[3]='date';fnames[5]='MMERGE5';ftypes[5]='text';
+try {
+    var jqueryLoaded=jQuery;
+    jqueryLoaded=true;
+} catch(err) {
+    var jqueryLoaded=false;
+}
+var head= document.getElementsByTagName('head')[0];
+if (!jqueryLoaded) {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
+    head.appendChild(script);
+    if (script.readyState && script.onload!==null){
+        script.onreadystatechange= function () {
+              if (this.readyState == 'complete') mce_preload_check();
+        }    
+    }
+}
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
+head.appendChild(script);
+var err_style = '';
+try{
+    err_style = mc_custom_error_style;
+} catch(e){
+    err_style = '#mc_embed_signup input.mce_inline_error{border-color:#6B0505;} #mc_embed_signup div.mce_inline_error{margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff;}';
+}
+var head= document.getElementsByTagName('head')[0];
+var style= document.createElement('style');
+style.type= 'text/css';
+if (style.styleSheet) {
+  style.styleSheet.cssText = err_style;
+} else {
+  style.appendChild(document.createTextNode(err_style));
+}
+head.appendChild(style);
+setTimeout('mce_preload_check();', 250);
+
+var mce_preload_checks = 0;
+function mce_preload_check(){
+    if (mce_preload_checks>40) return;
+    mce_preload_checks++;
+    try {
+        var jqueryLoaded=jQuery;
+    } catch(err) {
+        setTimeout('mce_preload_check();', 250);
+        return;
+    }
+    try {
+        var validatorLoaded=jQuery("#fake-form").validate({});
+    } catch(err) {
+        setTimeout('mce_preload_check();', 250);
+        return;
+    }
+    mce_init_form();
+}
+function mce_init_form(){
+    jQuery(document).ready( function($) {
+      var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
+      var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
+      $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
+      options = { url: 'http://carx-tech.us1.list-manage.com/subscribe/post-json?u=afcf5eed1f3a1b7d6bd64c338&id=968651336b&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+                    beforeSubmit: function(){
+                        $('#mce_tmp_error_msg').remove();
+                        $('.datefield','#mc_embed_signup').each(
+                            function(){
+                                var txt = 'filled';
+                                var fields = new Array();
+                                var i = 0;
+                                $(':text', this).each(
+                                    function(){
+                                        fields[i] = this;
+                                        i++;
+                                    });
+                                $(':hidden', this).each(
+                                    function(){
+                                        var bday = false;
+                                        if (fields.length == 2){
+                                            bday = true;
+                                            fields[2] = {'value':1970};//trick birthdays into having years
+                                        }
+                                    	if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
+                                    		this.value = '';
+									    } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
+                                    		this.value = '';
+									    } else {
+									        if (/\[day\]/.test(fields[0].name)){
+    	                                        this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;									        
+									        } else {
+    	                                        this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+	                                        }
+	                                    }
+                                    });
+                            });
+                        return mce_validator.form();
+                    }, 
+                    success: mce_success_cb
+                };
+      $('#mc-embedded-subscribe-form').ajaxForm(options);
+      
+      
+    });
+}
+function mce_success_cb(resp){
+    $('#mce-success-response').hide();
+    $('#mce-error-response').hide();
+    if (resp.result=="success"){
+        $('#mce-'+resp.result+'-response').show();
+        $('#mce-'+resp.result+'-response').html(resp.msg);
+        $('#mc-embedded-subscribe-form').each(function(){
+            this.reset();
+    	});
+    } else {
+        var index = -1;
+        var msg;
+        try {
+            var parts = resp.msg.split(' - ',2);
+            if (parts[1]==undefined){
+                msg = resp.msg;
+            } else {
+                i = parseInt(parts[0]);
+                if (i.toString() == parts[0]){
+                    index = parts[0];
+                    msg = parts[1];
+                } else {
+                    index = -1;
+                    msg = resp.msg;
+                }
+            }
+        } catch(e){
+            index = -1;
+            msg = resp.msg;
+        }
+        try{
+            if (index== -1){
+                $('#mce-'+resp.result+'-response').show();
+                $('#mce-'+resp.result+'-response').html(msg);            
+            } else {
+                err_id = 'mce_tmp_error_msg';
+                html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
+                
+                var input_id = '#mc_embed_signup';
+                var f = $(input_id);
+                if (ftypes[index]=='address'){
+                    input_id = '#mce-'+fnames[index]+'-addr1';
+                    f = $(input_id).parent().parent().get(0);
+                } else if (ftypes[index]=='date'){
+                    input_id = '#mce-'+fnames[index]+'-month';
+                    f = $(input_id).parent().parent().get(0);
+                } else {
+                    input_id = '#mce-'+fnames[index];
+                    f = $().parent(input_id).get(0);
+                }
+                if (f){
+                    $(f).append(html);
+                    $(input_id).focus();
+                } else {
+                    $('#mce-'+resp.result+'-response').show();
+                    $('#mce-'+resp.result+'-response').html(msg);
+                }
+            }
+        } catch(e){
+            $('#mce-'+resp.result+'-response').show();
+            $('#mce-'+resp.result+'-response').html(msg);
+        }
+    }
+}
+
+</script>
+<!--End mc_embed_signup-->
+
+</td></tr>
+
+
+
+
+<tr  bgcolor = "FFFFFF"  >
+<td  >
+<br>
+<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fcarx2&amp;width=200&amp;height=290&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;show_border=false&amp;header=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:290px;" allowTransparency="true"></iframe>
+<br>
+<br>
+
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?96"></script>
+<br>
+<!-- VK Widget -->
+<div id="vk_groups"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 2, width: "200", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 54691464);
+</script>
+
+<br>
+
+<a class="twitter-timeline" width="200" height="300" href="https://twitter.com/carx_technology" data-widget-id="343300763637919744">Твиты пользователя @carx_technology</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<br>
+ 
+<br>
+<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/CompanyProfile" data-id="542536" data-format="hover" data-text="CarX Technologies"></script>
+<script type="IN/RecommendProduct" data-company="542536" data-product="1835980" data-counter="right"></script>
+
+
+<br>
+
+
+<iframe src="https://banners.itunes.apple.com/banner.html?partnerId=&aId=11luvx&id=644907661&c=us&l=en-US&bt=catalog&t=catalog_white&w=180&h=150" frameborder=0 style="overflow-x:hidden;overflow-y:hidden;width:180px;height:150px;border:0px"></iframe>
+
+
+<br>
+<!-- Разместите этот тег в том месте, где должна отображаться кнопка +1 -->
+<g:plusone></g:plusone>
+
+
+</td></tr>
+
+</table>
+
+</div>
+                                
+                               <div id="fb-root"></div>
+
+                            </td>
+                                    <!--  rgb(243,240,231)  -->
+                                  <td  valign="top"   style="background-image:url(../../white_carbon.jpg);background-repeat:repeat;background-color:rgb(240,240,240);border: "
+                             class="data" >
+                             
+
+<h1>Privacy Policy</h1>
+<br>
+
+<div class="maintext">
+
+<p>This Privacy Policy governs the manner in which CarX Technologies collects, uses, maintains and discloses information collected from users (each, a &#8220;User&#8221;) of the Services offered by CarX Technologies. This privacy policy applies to the CarX Drift Racing mobile game, CarX PC demo and other products and services offered by CarX Technologies.</p>
+<p>Personal identification information</p>
+<p>We may collect personal identification information from Users in a variety of ways in connection with activities, services, features or resources we make available on our Services. We will collect personal identification information from Users only if they voluntarily submit such information to us. Users can always refuse to supply personally identification information, except that it may prevent them from engaging in certain activities.</p>
+<p>Non-personal identification information</p>
+<p>We may collect non-personal identification information about Users whenever they interact with our Services. Non-personal identification information may include the browser name, the type of computer and technical information about Users means of connection to our Services, such as the operating system and the Internet service providers utilized and other similar information.</p>
+<p>Web browser cookies</p>
+<p>Our Services may use &#8220;cookies&#8221; to enhance User experience. User&#8217;s web browser places cookies on their hard drive for record-keeping purposes and sometimes to track information about them. User may choose to set their web browser to refuse cookies, or to alert you when cookies are being sent. If they do so, note that some parts of our Services may not function properly.</p>
+<p>How we use collected information</p>
+<p>CarX Technologies may collect and use Users personal information for the following purposes:</p>
+<p>- To improve customer service<br />
+Information you provide helps us respond to your customer service requests and support needs more efficiently.<br />
+- To improve our Site<br />
+We may use feedback you provide to improve our products and services.<br />
+- To send periodic emails<br />
+We may use the email address to send User information and updates pertaining to their order. It may also be used to respond to their inquiries, questions, and/or other requests. If User decides to opt-in to our mailing list, they will receive emails that may include company news, updates, related product or service information, etc.</p>
+<p>Sharing your personal information</p>
+<p>We do not sell, trade, or rent Users personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners, trusted affiliates and advertisers for the purposes outlined above.</p>
+<p>Third party websites</p>
+<p>Users may find advertising or other content on our Services that link to the sites and services of our partners, suppliers, advertisers, sponsors, licensors and other third parties. We do not control the content or links that appear on these sites and are not responsible for the practices employed by websites linked to or from our Services. In addition, these sites or services, including their content and links, may be constantly changing. These sites and services may have their own privacy policies and customer service policies. Browsing and interaction on any other website, including websites which have a link to our Services, is subject to that website&#8217;s own terms and policies.</p>
+<p>Advertising</p>
+<p>Ads appearing on our services may be delivered to Users by advertising partners, who may set cookies. These cookies allow the ad server to recognize your computer each time they send you an online advertisement to compile non personal identification information about you or others who use your computer. This information allows ad networks to, among other things, deliver targeted advertisements that they believe will be of most interest to you. This privacy policy does not cover the use of cookies by any advertisers.</p>
+
+<p>Changes to this privacy policy</p>
+<p>CarX Technologies has the discretion to update this privacy policy at any time. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.</p>
+<p>Your acceptance of these terms</p>
+<p>By using our Services, you signify your acceptance of this policy. If you do not agree to this policy, please do not use our Services. Your continued use of our Services following the posting of changes to this policy will be deemed your acceptance of those changes.</p>
+<p>Contacting us</p>
+<p>If you have any questions about this Privacy Policy, the practices of our Services, or your dealings with our Services, please contact us at:<br />
+CarX Technologies<br />
+
+<a href="mailto:support@carx-tech.com" target="_blank">support@carx-tech.com</a></p>
+
+
+
+
+</div>
+
+
+
+<br><br>
+
+
+<h1> End-User License Agreement (EULA)</h1>
+<br>
+
+<div class="maintext">
+
+Accessing the Service <br> <br> 
+
+Before accessing or using the Service, including browsing any CarX Technologies website or accessing a game, you must agree to these Terms of Service and the Privacy Policy. You may also be required to register an account on the Service (an "Account"), have a valid account on the social networking service ("SNS") through which you connect to the Service, or have an account with the applications provider for your mobile device. If you are between the ages of 13 and 17, you represent that your legal guardian has reviewed and agreed to these Terms. You must provide all equipment and software necessary to connect to the Service, including, but not limited to, a mobile device that is suitable to connect with and use the Service, in cases where the Service offers a mobile component. You are responsible for any fees, including internet connection or mobile fees that you incur when accessing the Service. <br> <br> 
+
+Use of the Service <br> <br> 
+
+The following restrictions apply to the use of the Service: <br> <br> 
+
+a. You shall not create an Account or access the Service if you are under the age of 13;
+b. You shall monitor your Account to restrict use by minors, and you will deny access to children under the age of 13. You accept full responsibility for any unauthorized use of the Service by minors. You are responsible for any use of your credit card or other payment instrument (e.g. paypal) by minors;<br> <br> 
+
+
+
+You agree that you will not, under any circumstances: <br> <br> 
+
+a. Engage in any act that CarX Technologies deems to be in conflict with the spirit or intent of the Services, including but not limited to circumventing or manipulating these Terms, our game rules, game mechanics or policies;<br> 
+b. Make improper use of CarX Technologies’ support services, including by submitting false abuse reports.<br> <br> 
+
+
+CHEATING AND HACKING - You agree that you will not, under any circumstances:<br> <br> 
+
+c. Use cheats, exploits, automation software, bots, hacks, mods or any unauthorized third-party software designed to modify or interfere with the Services, any CarX Technologies Game or any CarX Technologies game experience;<br> 
+d. Post on third party resources and websites any information that contains data about cheats, exploits, hacks, mods or any unauthorized third-party software designed to modify or interfere with the Services, any CarX Technologies Game or any CarX Technologies game experience;<br> 
+e. Use the Services in order to design or assist in the design of cheats, automation software, bots, hacks, mods or any other unauthorized third-party software designed to modify or interfere with the Services, any CarX Technologies game or any CarX Technologies game experience;<br> 
+f. Without CarX Technologies’ express written consent, modify or cause to be modified any files that are a part of the Services or any CarX Technologies game;<br> 
+g. Disrupt, overburden, or aid or assist in the disruption or overburdening of (1) any computer or server used to offer or support the Services or any CarX Technologies game environment (each a "Server"); or (2) the enjoyment of the Services or any CarX Technologies game by any other person;<br> 
+h. Institute, assist, or become involved in any type of attack, including without limitation distribution of a virus, denial of services attacks upon the Services, or other attempts to disrupt the Services or any other person’s use or enjoyment of the Services; or<br> 
+i. Attempt to gain unauthorized access to the Services, Accounts registered to others or to the computers, Servers, or networks connected to the Services by any means other than the user interface provided by CarX Technologies, including but not limited to, by circumventing or modifying, attempting to circumvent or modify, or encouraging or assisting any other person to circumvent or modify, any security, technology, device, or software that is part of the Services;<br> <br> 
+
+OFFENSIVE OR INFRINGING CONTENT - You agree that you will not, under any circumstances:<br> <br> 
+
+j. Post any information that is abusive, threatening, obscene, defamatory, libelous, or racially, sexually, religiously, or otherwise objectionable or offensive;<br> 
+k. Post any information that contains nudity, excessive violence, or offensive subject matter or that contains a link to such content;<br> 
+l. Attempt to, or harass, abuse, or harm, or advocate or incite harassment, abuse, or harm of another person, group, including CarX Technologies employees, including CarX Technologies’ customer services representatives; or<br> 
+m. Make available through the Services any material or information that infringes any copyright, trademark, patent, trade secret, right of privacy, right of publicity, or other right of any person or entity or impersonates any other person, including without limitation a CarX Technologies employee;<br> <br> 
+COMMERCIAL ACTIVITY - You agree that you will not, under any circumstances:<br> <br> 
+
+n. Without CarX Technologies’ express written consent, use the Services, any CarX Technologies game, or any part thereof for any commercial purpose, including but not limited to, (1) permitting, authorizing, or offering use of the Services, any CarX Technologies game, or any part thereof at a cyber cafe, computer gaming center or any other commercial establishment provided however that, for clarity, providing the means for users to access the Internet is not prohibited by the forgoing, (2) communicating or facilitating any commercial advertisement or solicitation, or (3) gathering in-game currency, items or resources for sale;<br> 
+o. Use the Services, any CarX Technologies game, or any part thereof for performing in-game services, such as power-leveling and item collection services, in exchange for payment outside the Services;<br> 
+p. Transmit unauthorized communications through the Services, including junk mail, chain letters, spam and any materials that promote malware, spyware and downloadable items; or<br> <br> 
+
+UNAUTHORIZED USE OR CONNECTION TO THE SERVICES - You agree that you will not, under any circumstances:<br> <br> 
+
+q. Interfere or attempt to interfere with the proper functioning of the Services or connect to or use the Services or any CarX Technologies game in any way not expressly permitted by these Terms of Services;<br> 
+r. Use any unauthorized third-party software that accesses, intercepts, "mines", or otherwise collects information from or through the Services or that is in transit from or to the Services, including, without limitation, any software that reads areas of RAM or streams of network traffic used by the Services or any CarX Technologies game to store information about CarX Technologies game characters, elements, or environment. CarX Technologies may, at its sole and absolute discretion, allow the use of certain third party user interfaces;<br> 
+s. Intercept, examine or otherwise observe any proprietary communications protocol used by a client, a Server, or the Services, whether through the use of a network analyzer, packet sniffer or other device;<br> 
+t. Make any automated use of the system, or take any action that imposes or may impose (in our sole discretion) an unreasonable or disproportionately large load on our infrastructure;<br> 
+u. Bypass any robot exclusion headers or other measures we take to restrict access to the services or use any software, technology, or device to send content or messages, scrape, spider, or crawl the Services, or harvest or manipulate data;<br> 
+v. Use, facilitate, create, or maintain any unauthorized connection to the Services, including without limitation (1) any connection to any unauthorized server that emulates, or attempts to emulate any part of the Services, or (2) any connection using programs, tools, or software not expressly approved by CarX Technologies;<br> 
+w. Reverse engineer, decompile, disassemble, decipher or otherwise attempt to derive the source code for any underlying software or other intellectual property used to provide the Services or any CarX Technologies game, or to obtain any information from the Services or any CarX Technologies game using any method not expressly permitted by CarX Technologies; or<br> 
+x. Copy, modify or distribute rights or content from any CarX Technologies site or game, or CarX Technologies’ copyrights or trademarks or use any method to copy or distribute the content of the Services except as specifically allowed in these Terms of Services;<br> <br> 
+
+COLLECTION AND PUBLICATION OF PERSONAL INFORMATION - You agree that you will not, under any circumstances:<br> <br> 
+
+y. Solicit or attempt to solicit personal information from other users of the Services or any CarX Technologies game; or<br> 
+z. Collect, harvest or post anyone’s private information, including personally identifiable information (whether in text, image or video form), identification documents, or financial information through the Services.<br> 
+aa. upload or transmit (or attempt to upload or to transmit), without CarX Technologies’ express permission, any material that acts as a passive or active information collection or transmission mechanism, including, without limitation, clear graphics interchange formats ("gifs"), 1x1 pixels, bugs, cookies or other similar devices (sometimes referred to as "spyware," "passive collection mechanisms" or "pcms").<br>
+
+
+</div>
+
+
+
+<br><br>
+
+  
+<h2>See also:</h2>
+<div class="maintext" >
+<p><a href = "http://www.carx-tech.com/home-car-physics-engine-eng">Latest NEWS about CarX</a></p>
+<p><a href = "http://www.facebook.com/carx2">Join CarX news page on Facebook</a></p>
+
+
+</div> 
+                </td>
+                        </tr>
+                    </table>
+                    
+                  
+
+                    
+				</td>
+                 <td  align="left"  style="background-image:url(../../bord_right.jpg);background-repeat:repeat-y;background-color:rgb(30,60,190)" >
+                </td>
+            </tr>
+			
+            <tr>
+                  <td  align="right"  style="background-image:url(../../bord_left.jpg);background-repeat:repeat-y;background-color:rgb(30,60,190)" >
+                </td>
+                <td style="background-image:url(../../white_carbon1.jpg);background-repeat:repeat-x;background-color:rgb(30,30,30)" >
+                    <center>
+                        <font color="ffffff" size="1">
+                        <p> 
+                        Copyright © 2015 CarX Technologies. All rights reserved.
+                        <a href="/privacy-car-physics-engine-eng" target="_blank"><font size="1" color="white" face="Arial">Private Policy</b></font>
+</a>      
+<a href="/privacy-car-physics-engine-eng" target="_blank"><font size="1" color="white" face="Arial">End-User License Agreement</b></font>
+</a>
+
+                        </p>  </font>
+                    </center>
+                </td>
+                 <td  align="left"  style="background-image:url(../../bord_right.jpg);background-repeat:repeat-y;background-color:rgb(30,60,190)" >
+                </td>
+            </tr>
+			
+            <tr>
+               <td  height="0" width="0" style="background-image:url(../../bord_left_ag.jpg)" >
+                </td>
+                 <td  valign="top"  style="background-image:url(../../white_carbon.jpg);background-repeat:repeat-x;background-color:rgb(30,60,190)" >
+                </td>
+                <td  height="0" width="0" style="background-image:url(../../bord_right_ag.jpg)" >
+                </td>
+            </tr>
+			
+        </table>
+        
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t25.5;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border='0' width='88' height='15'><\/a>")
+//--></script><!--/LiveInternet-->
+
+
+
+
+
+
+    </center>
+    
+
+ <!--
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+try {
+_uacct = "UA-24787311-1";  
+urchinTracker();
+} catch(err) {}</script>
+-->
+
+
+</body>
+</html>
+
+
+

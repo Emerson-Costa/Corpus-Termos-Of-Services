@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" class="m0 p0 bgE pR ffSs oH hp100">
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# limeroad: http://ogp.me/ns/limeroad#">
+		<script>
+  if("language" in navigator && navigator.language.split("-")[0] == 'hi'){
+    document.cookie = "locale=hi; path=/";
+    document.cookie = "log_locale=by_device; path=/";
+    window.location.href = window.location.href;
+  }
+  window.defferedTrackList = window.defferedTrackList || [];
+  function trackAbandons(type, event) {
+    // if(navigator && navigator.sendBeacon){
+    //   var headers = {
+    //     // type: 'application/json'
+    //     type: 'text/plain;charset=UTF-8'
+    //   };
+    //   var blob = new Blob([JSON.stringify(data)], headers);
+    //   navigator.sendBeacon(url, blob);
+    // }
+    window.defferedTrackList.push(
+      [{"name":type, "dest": "dw"},{"type":"", "id":"", "extra":""},{"type":"", "id":"", "extra":""}]
+    );
+    // console.log(type);
+  };
+  document.addEventListener('visibilitychange', function(event){
+    trackAbandons('webBackground', event);
+  });
+  document.addEventListener('unload', function(event){
+    trackAbandons('webAbandon', event);
+  });
+  if(window.PerformanceObserver){
+    try{
+      var desiredMetric = ['paint' /*, 'mark', 'measure', 'longtask'/*, 'resource'*/];
+      var observer = new PerformanceObserver(function(list) {
+        for (var entry of list.getEntries()) {
+          var metricName = entry.name;
+          if(metricName && (metricName != 'self' && metricName != 'unknown')){
+            var time = Math.round(entry.startTime + entry.duration);
+            window.defferedTrackList.push(
+              [{"name":"performanceMetrics", "dest": "dw"},{"type":metricName, "id":time, "extra":JSON.stringify(entry.attribution)},{"type":"", "id":"", "extra":""}]
+            );
+            // console.log('performanceMetrics', metricName, time);
+          }
+        }
+      });
+      try{
+        observer.observe({entryTypes: desiredMetric});
+      }catch(e){
+        // console.log(e);
+      }
+      // performance.mark('registered-observer');
+    }catch(e){}
+  }
+</script>		<meta charset="utf-8">
+		<link rel="alternate" href="https://www.limeroad.com/privacypolicy?locale=hi" hreflang="hi-in"/>
+	<link rel="alternate" href="https://www.limeroad.com" hreflang="x-default"/>
+	<meta name="google" content="notranslate"/>
+
+<meta id="vp" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<title id="ttl">Love.Create.Share.Shop @ Limeroad!</title>
+
+
+<meta name="robots" content="noodp" />
+
+	<link rel="manifest" href="https://img1.junaroad.com/assets/web-manifest/manifest_noPRA.json">
+<meta class="theCo" name="theme-color" content="#111111">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192" href="https://img1.junaroad.com/assets/images/sprite/icon-192.png">
+<link rel="search" href="/search.xml" type="application/opensearchdescription+xml" title="Limeroad"/>
+<meta name="google-site-verification" content="HPCLTY_ilEcVv_49uDx9pn9wZpWdgmAZ_DmXjHb1GKQ" />
+	<script type="application/ld+json">
+	  {
+	    "@context": "http://schema.org",
+	    "@type": "Organization",
+	    "url": "https://www.limeroad.com",
+	    "name": "LimeRoad",
+	    "description": "Online shopping like never before! Get the latest trends ruling the charts in India. With the most fashionable range of apparels, accessories, and more, Limeroad will be your favourite of all online shopping sites.",
+	    "logo": "https://img1.junaroad.com/assets/images/sprite/icon-192.png",
+	    "sameAs": [
+	           "https://www.facebook.com/Limeroadcom",
+	           "https://twitter.com/limeroadcom",
+	           "https://www.instagram.com/limeroad",
+	           "https://in.linkedin.com/company/limeroad-com",
+	           "https://in.pinterest.com/limeroadcom",
+	           "https://en.wikipedia.org/wiki/Limeroad"
+	    ]
+	  }
+	</script>
+	<script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https://www.limeroad.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.limeroad.com/search/{search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+<meta property="fb:app_id" content=107038696116311>		<style id="sty">
+    html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizelegibility;cursor:default;font-size:100%}
+    .tlF{table-layout:fixed}.ofC{object-fit:cover}.vipRecc .anSelect,.adj .anSelect{border-bottom:2px solid #9C3}
+    .ffSs{font-family:"Roboto",Roboto,"Helvetica",Helvetica,"Arial",Arial,sans-serif}/*.ffCs{font-family:"Delius",Delius,"Comic Sans MS","Comic Sans",Comic Sans MS,Comic Sans,Cambria,Georgia,serif}*/.ffS{font-family:"Cambria",Cambria,"Georgia",Georgia,serif}/*.ffR{font-family:'Rubik',sans-serif}*/
+    .wsN{white-space:nowrap}
+    .bxs{box-shadow:rgba(0,0,0,.05) 1px 1px 2px 1px}
+    .vdoIframe{max-width:960px;margin:auto}
+    .ytShare{width:20px;height:20px;right:30px;top:14px}
+    .ytShare:hover{background:url('//img1.junaroad.com/assets/images/mobileNotif/1543821197872.jpg') no-repeat center center;background-size:contain}
+    .conW{max-width:1280px;margin:auto}.hbxs:hover{box-shadow:rgba(0,0,0,.2) 1px 1px 2px 1px}.hcurP:hover{cursor:pointer}.hcP:hover{color:#D3145A}.hcL:hover{color:#99CC33}.hfL:hover{fill:#99CC33}.hbg:hover .hbgL{background:#9c3}.hc0:hover{color:#000000}.hc3:hover{color:#333333}.htdU:hover{text-decoration:underline}[data-menu="true"] .adj{left:240px}[data-menu="true"] #views{margin-left:240px}[data-menu="true"] #ldr{left:240px}#menuBG{display:none}::-webkit-scrollbar{height:16px;overflow:visible;width:16px}::-webkit-scrollbar-button{height:0;width:0}::-webkit-scrollbar-track{background-clip:padding-box;border:solid transparent;border-width:0 0 0 4px}::-webkit-scrollbar-track:horizontal{border-width:4px 0 0}::-webkit-scrollbar-track:hover{background-color:rgba(0,0,0,.05);box-shadow:inset 1px 0 0 rgba(0,0,0,.1)}::-webkit-scrollbar-track:horizontal:hover{box-shadow:inset 0 1px 0 rgba(0,0,0,.1)}::-webkit-scrollbar-track:active{background-color:rgba(0,0,0,.05);box-shadow:inset 1px 0 0 rgba(0,0,0,.14),inset -1px 0 0 rgba(0,0,0,.07)}::-webkit-scrollbar-track:horizontal:active{box-shadow:inset 0 1px 0 rgba(0,0,0,.14),inset 0 -1px 0 rgba(0,0,0,.07)}::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,.2);background-clip:padding-box;border:solid transparent;border-width:1px 1px 1px 6px;min-height:28px;padding:100px 0 0;box-shadow:inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07)}::-webkit-scrollbar-thumb:horizontal{border-width:6px 1px 1px;padding:0 0 0 100px;box-shadow:inset 1px 1px 0 rgba(0,0,0,.1),inset -1px 0 0 rgba(0,0,0,.07)}::-webkit-scrollbar-thumb:hover{background-color:rgba(0,0,0,.4);box-shadow:inset 1px 1px 1px rgba(0,0,0,.25)}::-webkit-scrollbar-thumb:active{background-color:rgba(0,0,0,0.5);box-shadow:inset 1px 1px 3px rgba(0,0,0,0.35)}::-webkit-scrollbar-corner{background:transparent}.hscr:after{pointer-events:none;content:"";position:fixed;width:12px;z-index:0;top:0;bottom:0;right:0;opacity:1;transition:opacity 0.2s ease}.hscr:hover:after{opacity:0}.flat-form.hscr:after,.menua.hscr:after{background:#FBFBFB;left:228px;top:48px}.menua.hscr.mt148:after{top:148px}.conn.hscr:after{background:#EEE}.conn{margin-left:16px;}select.goog-te-combo{border:0;background:#FBFBFB}.oyH{overflow-y:hidden}.an-srlx:after{content:"";position:absolute;height:16px;left:0;right:0;bottom:0;background:#eee} 
+    .hp100.mt60{height:calc(100vh - 60px)} 
+    .hp100.mt48{height:calc(100vh - 48px)}.hp100.mt72{height:calc(100vh - 72px)}.hp100.mt84{height:calc(100vh - 84px)}.hp100.mt108{height:calc(100vh - 108px)} 
+              
+    .trnsR,.trnsL,.trnsU,.trnsD{display:none}                
+        .fg2t{width:312px}
+    
+    
+    .zoom #imgH{height: 100%;margin: 0;width: 100%;padding:12px 300px 12px 12px}
+    
+</style>
+<script type="text/an-js" id="FBstyle">
+    #hdr,.ssHdr,#vHdr,.zmIMG,.FBbg{background:#3B5998!important}
+    .thmC{fill:#FFF!important}
+    .FBc,.thmC{color:#FFF!important;border-color:#FFF!important}
+    #ansh,.ansh{display:none!important}
+</script>
+
+
+
+		<script type="text/javascript">
+	!function(){"use strict";var p,i=[
+    "p:R,A,F;position;relative,absolute,fixed",
+    "z:1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20;z-index;1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1014,1015,1016,1017,1018,1019,1020",
+    "t:0,2,4,8,6,12,30,40,48,50,52,60,70,16,40n,48n,100n,78,80,84,88,96,108;top;0,2,4,8,6,12,30,40,48,50,52,60,70,16,-40,-48,-100,78,80,84,88,96,108:px",
+    "tp:49;top;49%",
+    "l:0,4,8,12,16,40,44,48,60,80,88,90,96,108,120,132,144,160,200,228,230,240,248,272;left;-:px",
+    "r:0,4,6,8,10,12,16,22,40,44,46,48,60,80,88,90,94,96,100,110,120,132,144,160,192,200,260,265,24n,8n,18n;right;0,4,6,8,10,12,16,22,40,44,46,48,60,80,88,90,94,96,100,110,120,132,144,160,192,200,260,265,-24,-8,-18:px",
+    "b:0,3,9,46,73,90,96,106,100n;bottom;0,3,9,46,73,90,96,106,-100:px",
+    "bm:0,3,9,12,16,40,46,72,73,84,90,96,106,100n,112,136,198,260;bottom;0,3,9,12,16,40,46,72,73,84,90,96,106,-100,112,136,198,260:px",
+    "d:B,Ib,T,Tc,Tr,N,fFs;display;block,inline-block,table,table-cell,table-row,none,block",
+    "v:T,M,B;vertical-align;top,middle,bottom",
+    "o:H,A,S;overflow;hidden,auto,scroll",
+    "bs;box-sizing;border-box",
+    "w:0,4,12,16,18,20,24,28,30,32,36,40,44,48,64,72,80,88,96,100,110,120,125,134,136,142,144,150,151,171,180,184,60,90,160,200,222,228,230,232,234,238,240,242,245,250,260,270,280,289,290,300,310,420,480,560,624;width;-:px",
+    "wp:100,98,96,90,80,75,68,66,60,50,40,33,25,24,20;width;-:%",
+    "mnw:90,60,40,152,160;min-width;-:px",
+    "mxw:240,310,480,640,720,960;max-width;-:px",
+    "h:1,2,12,16,18,20,22,24,28,40,46,48,30,32,36,54,60,72,80,100,120,124,132,136,140,150,156,160,166,178,180,188,192,195,217,222,227,200,260,305,370,316,321,324,325,330,332,334,341,346,348,360,364,371,382,395,400,412,428,430,436,456,464,466,476,482,496,224,227,244,254,265,280,0;height;-:px",
+    "hp:20,80,50,78,80,100,120;height;-:%",
+    "hvh:100;height;-:vh",
+    "mnh:322,327,230,40,60,82,100,106,108,482;min-height;-:px",
+    "mxh:0;min-height;0:px",
+    "mxh:321;min-height;321:px",
+    "p:0,2,4,6,8,10,12,16;padding;-:px",
+    "p:20,40,012,80,410,08,036,24,240,04,05,160,48,84,812,048,1200,126,024,016;padding;2px 0,4px 0,0 12px,8px 0,4px 10px,0 8px,0 36px,2px 4px,24px 0,0 4px,0 5px,16px 0,4px 8px,8px 4px,8px 12px,0 48px,120px 0,12px 6px,0 24px,0 16px",
+    "pt:2,4,8,10,12,16,20,32,34,36,24,0,48,70,72,78,80,84,88,40,96,108,114,124,130,136,408;padding-top;-:px",
+    "pl:0,12,2,3,24,28,36,40,48,62;padding-left;-:px",
+    "pr:36;padding-right;-:px",
+    "pb:0,2,6,10,12,16,20,24,38,84,96;padding-bottom;-:px",
+    "bd:0,2E,L,dL,2L,3,E,F,P,2F,D,8E,8L,1G;border;0,2px solid #EEE,1px solid #9C3,1px solid #6FA40C,2px solid #9C3,1px solid #333,1px solid #EEE,1px solid #FFF,1px solid #D3145A,2px solid #FFF,1px solid #DDD,8px solid #EEE,8px solid #9C3,1px solid #CC9A47",
+    "bdr:E,0;border-right;1px solid #EEE,0",
+    "bdb:0,9,E,L,2E,2L,2P,3,F,2Ld,O;border-bottom;0,1px solid #999,1px solid #EEE,1px solid #99CC33,2px solid #EEE,2px solid #99CC33,2px solid #D3145A,1px solid #333,1px solid #FFF,2px solid #80ad21,1px solid #f8f1e6",
+    "bdt:2,3,E,D,O,2S,2E;border-top;1px solid #222,1px solid #333,1px solid #EEE,1px solid #DDD,1px solid #f8f1e6,2px solid #f5cb99,2px solid #EEE",
+    "bdl:E,4L,3,0;border-left;1px solid #EEE,4px solid #9C3,1px solid #333,0",
+    "br:4,8,10,12,18,20,0;border-radius;-:px",
+    "brp:50;border-radius;50%",
+    "m:0,2,4,6,8,10,12,14,16,18,20,24;margin;-:px",
+    "mp:1;margin;-:%",
+    "m:A,12A,40,60,02,804,08,04,014,80,160,128,188,200,48;margin;auto,12px auto,4px 0,6px 0,0 2px,80px 4px,0 8px,0 4px,0 14px,8px 0,16px 0,12px 10px,18px 8px,20px 0,4px 8px",
+    "mt:40,48,40n,1n,4n,6n,8n,12n,20n,60n,80n,0,6,8,10,12,16,24,60,70,72,84,148;margin-top;40,48,-40,-1,-4,-6,-8,-12,-20,-60,-80,0,6,8,10,12,16,24,60,70,72,84,148:px",
+    "mb:4,5,8,10,80,96,120,24,0,40;margin-bottom;-:px",
+    "mbn:4,8;margin-bottom;-4,-8:px",
+    "ml:n50p;margin-left;-50:%",
+    "mr:12;margin-right;12:px",
+    "mr:n50p;margin-right;-50:%",
+    "o0,o9;opacity;0,0.9",
+    "bg:E,0,1,2,3,6,7,8,F,L,P,BP,FB,D,B,Y,N,FA,F5,G,00,Bl,Bd,Gg,S,Wa,Tc,Pl;background;#EEE,#000,#111,#222,#333,#666,#777,#888,#FFF,#9C3,#D3145A,#FCEDF2,#FBFBFB,#DDD,#BBB,#E1F3EB,#FFFFE0,#FAFAFA,#F5F5F5,#CC9A47,transparent,#E8F3FE,#62ACF7,#f5BE1D,#f9EDE1,#20B93A,#0087ff,#FDEEEE",
+    "c:L,P,O,0,F,9,8,6,4,3,5,B,D,dL,FA,F5,G,Y,Wa,Pl;color;#9C3,#D3145A,#dd5c40,#000,#FFF,#999,#888,#666,#4B4B4B,#333,#555,#BBB,#DDD,#6FA40C,#FAFAFA,#F5F5F5,#CC9A47,#ffb818,#20B93A,#EB6060",
+    "c:F,0,1,2,3,5,6,9,L,P,O,G,Wa;fill;#FFF,#000,#111,#222,#333,#555,#666,#999,#9C3,#D3145A,#dd5c40,#CC9A47,#20B93A",
+    "ffS,ls1,ls5;letter-spacing;0.4px,1px,0.5px",
+    "fs:0,6,8,10,11,12,13,14,15,16,18,20,24,28,32,34,45;font-size;0,0.375,0.5,0.625,0.688,0.75,0.813,0.875,0.938,1,1.125,1.25,1.5,1.75,2,2.125,2.813:rem",
+    "fwL,ftwN,fwB,fw500;font-weight;lighter,normal,bold,500",
+    "fs:I,N;font-style;italic,normal",
+    "lh:0,6,8,10,11,12,13,14,15,16,18,20,24,28,32,34,36,40,45,48;line-height;-:px",
+    "ta:L,C,R;text-align;left,center,right",
+    "td:N,S,U;text-decoration;none,line-through,underline",
+    "toE;text-overflow;ellipsis",
+    "ws:N,R;white-space;nowrap,normal",
+    "tt:U,C,L;text-transform;uppercase,capitalize,lowercase"],
+    t="",x=i.length,o=document.getElementById("sty");for(p=0;p<x;p++){var l=i[p].split(";"),d="",n="",e=l[0].split(":"),r=l[2].split(":");e=(e=1<e.length?(d=e[0],e[1]):(d="",e[0])).split(","),n=1<r.length?r[1]:"",r="-"==r[0].split(",")[0]?e:r[0].split(",");var s,F=e.length;for(s=0;s<F;s++)t+="."+d+e[s]+"{"+l[1]+":"+r[s]+n+"}"}
+    o.innerHTML=t+".wA{width:auto}.mw660{max-width:660px}.mw840{max-width:840px}.mw460{max-width:460px}.mxh240{max-height:240px}.o3{opacity:0.1}.peN{pointer-events:none}.mw100p{min-width:100%}.mh100p{min-height:100%}.mh50p{min-height:50%}.w560c{width:calc(100% - 560px)}"+o.innerHTML,
+    t=i=null
+}();
+
+	var $ = {scroll:function(){},click:function(){},blur:function(){}};
+	var protocol = document.location.protocol;
+	window.anConstants={
+		protocol:protocol,
+		date:Date.now,
+        deviceWidth:Math.max(document.documentElement.clientWidth, window.innerWidth),
+        deviceHeight:Math.max(document.documentElement.clientHeight, window.innerHeight),
+		myfeedexp:1,
+		env_mode:"production",session_id:"39974991-29ca-43b8-8052-323a9bbae4d8",
+		test: false,
+		utm_object:{utm_medium:"",utm_source:"",utm_campaign:""},gender:"female",
+		anmb:"true",chrome:"false",ios:"",newAndroid:"",android:"false",ios:"",touch:"false",
+		log_url:"//tr.junaroad.com/",
+		src_id:"",
+		timeKeeper: {},
+		giveBounceDiscount: true,
+		giveMNQDiscount: true,
+		Useruuid:undefined,AffId:undefined,Usersource:"",Usermedium:""
+		,kyc:{
+			top_level:'Women'
+		},
+		liteCheckout:true,
+		criteo_email:'',
+		loadT:['450+ New Arrivals Everyday','2000+ Made in India Brands','Hand-picked Styles from the heart of India','Discover 500+ Banarasi Sarees','Discover Madras only on limeroad','Discover Calcutta only on limeroad','What you see is what you get'],
+		loadingScripts: [],
+	    webNotifMessages: {
+	        default: {
+	            1: 'Love what you see?',
+	            2: 'Check out our curated selection!'
+	        }
+    	},
+    	
+    	
+    	webReferral: false,
+    	magicURL: "",
+		app: false,
+		scripts: {
+				video: {src: "https://img3.junaroad.com/assets/0scripts/limeroad_video-9dbf3034c046cd4caf2ab3fe4ba531e7.js", module:"video", version: "0.0.5"},
+				vip: {src: "https://img3.junaroad.com/assets/0scripts/limeroad_vip-77f3c64659496e0420bfc0f8a00c683d.js", module:"vip", version: "0.0.9"},
+				voice: {src: "https://img3.junaroad.com/assets/0scripts/limeroad_voice-b6242b031a7e41d44c1c9a74b780d19b.js", module:"voice", version: "0.0.4"},
+				sw: {src: "https://img3.junaroad.com/assets/0scripts/limeroad_serviceWorker-9a7478537f705be69788da684d63fa26.js", module:"sw", version: "0.1.0"},
+				location: {src: "https://img3.junaroad.com/assets/0scripts/limeroad_location-37b945be067960c7d8d8aa16c42d0373.js", module:"location", version: "0.0.4"},
+				fingerPrint: {src: "https://img3.junaroad.com/assets/0scripts/limeroad_fingerPrint-c8099db9d1c3b9cb026965c5764b096e.js", module:"fingerPrint", version: "0.0.1"}
+		},
+		getDUID: true,
+		defferedTrackList: window.defferedTrackList || [],
+		
+		imageList: [],
+		trackList: [],
+		globalVoiceOutput:true,
+		connectionsCount: 0,
+		trackConnectionsCount: 0,
+		connections: 4,
+		pseudoBack: 0,
+		smsOTP: false,
+		whatsapp: '919821657914',
+		
+	};
+	window.videoWidth = window.anConstants.deviceWidth - 36 - (2*(window.anConstants.deviceWidth*0.01));
+</script>
+		<script type="text/javascript">
+			window.setUnloadedJs = 0; var errorFunc = function(targ){if (targ.src && window.setUnloadedJs < 5){window.setUnloadedJs +=1; var k = targ.src.split('.'); if(k[0].indexOf('img')>0){var gads = document.createElement('script'); if(window.setUnloadedJs == 1){k[0] = "https://img4"; k[1] = "limeroad"; }else{var m = k[0].split('img'); k[0] = m[0] + "img" +  ((parseInt(m[1]) + 1) % 5).toString(); k[1] = "junaroad"; } gads.src = k.join('.'); gads.onerror = function() {errorFunc(this); }; document.body.appendChild(gads); } } } 
+		</script>
+		<script  src='https://img3.junaroad.com/assets/0scripts/limeroad_main-94e620aaaee4e39fecaf40cff8b80e0d.js'  onerror="errorFunc && errorFunc(this);" async></script>
+		<meta charset="utf-8">
+<meta property="fb:app_id" content=107038696116311 >
+<meta property="og:type"   content= > 
+<meta property="og:url"    content="https://www.limeroad.com?&utm_source=facebook&utm_medium=social_unpaid&utm_campaign=share_fb">
+<meta property="og:title"  content="limeroad user"> 
+<meta property="og:image"  content="https://img1.junaroad.com/assets/images/facebookiconforhompage.jpg" >
+<meta property="og:description"  content="LimeRoad is India's most extensive lifestyle platform for Women's online shopping. Create scrapbooks, share your experiences and discover social shopping">
+<meta property="og:image:width"  content="600" >
+<meta property="og:image:height"  content="315">
+<meta property="al:android:url"  content="https://www.limeroad.com/privacypolicy">
+<meta property="al:android:package"  content="com.shopping.limeroad" >
+<meta property="al:android:app_name"  content="LimeRoad - Online Shopping">
+<meta property="al:ios:app_store_id" content="890803320" />
+<meta property="al:ios:url" content="https://www.limeroad.com/privacypolicy" />
+<meta property="al:ios:app_name" content="LimeRoad - Online Shopping" />
+			<script type="an-js" class="an-gtm-js">
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;d.body.append(j);})(window,document,'script','dataLayer','GTM-54WVMN7');
+		window.dataLayer = window.dataLayer || [];
+	    dataLayer.push({
+	      'siteType': 'd'
+	      ,'userType': 'old'
+	    });
+	    function gtag(){dataLayer.push(arguments)};
+	    gtag('js', $.anConstants.date());
+	    gtag('config', '988018314');
+	</script>
+	<script type="an-js" class="an-maps-js">
+	    if(typeof google != 'undefined' && google.maps){
+	    	$.getScript($.anConstants.scripts.location);
+		}else{
+	    	(function(d) {var m=d.createElement('script');m.onload=function(){$.view.getVenderScripts(['maps']);};m.onload=function(){ $.getScript($.anConstants.scripts.location);};m.src='//maps.googleapis.com/maps/api/js?key=AIzaSyDY6EpDcDQg0JXdZIY0KuZS78CjUcQsUkQ';m.async=true;d.body.append(m);})(document);
+	    }
+	</script>
+	</head>
+	<body data-page="aboutus_privacypolicyLR" class="m0 p0 pR an-body oH hp100" >
+	
+	<div id="vSt" class="dB oH hp100" data-menu="true">
+		<div data-pgn="Category Classification" data-obj='{"pre":1,"qry":"/get_nav_categories?ajax=true&page_name=aboutus_privacypolicyLR","nscrl":1,"con":"#views","click":"pagination","part":1}' an-ok="true" class="an-lma l0 mA o0 pA r0 t0 taC"><div class="h36 mA pR w36"><div class="lmaI dN"></div></div></div>
+<div id="seoCon" class="bgE bm0 bs c6 fs12 l0 pF r0 t48 z17 dN oA">
+  <div onclick="$('#seoCon').hide()" class="h48 pF t0 l0 r0"></div>
+  <footer>
+    <style type="text/css">.seocon p{margin:0}.seocon h1{font-weight:normal;font-size:18px;color:#000}.seocon a{text-decoration:none;color:#333}.seocon a:hover{color:#D3145A}</style>
+  </footer>
+</div>
+<form id="CM_fm" accept-charset="UTF-8" action="https://www.limeroad.com/auth/signinnew?ret=https%3A%2F%2Fwww.limeroad.com" class="dN" method="post">
+  <input id="utf8" name="utf8" type="hidden" value="✓" >
+  <input id="CM_ut" name="authenticity_token" type="hidden">
+  <input id="CM_em" name="user_id" type="hidden">
+  <input id="CM_pw" name="password" type="hidden">
+</form>
+  <div id="showVDO" onclick="$$.click(this,event)" data-obj='{"click":"ajax","href":"/video/upload","rplc":1,"vi":1}' class="bdD bgF bm198 brp50 h48 pF r12 w48 z11 dN">
+  <svg viewBox="0 0 24 24" class="w24 h24 c6 m12"><use xlink:href="#an-vdo"></use></svg>
+</div>
+<div id="seoVDO" onclick="$$.click(this,event)" data-obj='{"click":"vdoSEO,videoTool"}' class="bdD bgF brp50 h48 pF r12 w48 z11 dN bm260">
+  <div class="p160 taC fwB fs14 c3">SEO</div>
+</div>
+<div class="pF t0 l0 z12 r0 oH h48 bg1" id="vHdr">
+	<a href="/categories" data-obj="openMenu" onclick="$$.click(this,event)" class="tdN pA t0 l12 w24 h24 m128 z8 navBtn dN an-menu">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="thmC w24 h24 cF"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+	</a>
+	<div onclick="window.history.back()" class="pA t0 l0 w24 h24 m128 z8 bckbtn dN an-back">
+    	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="thmC w24 h24 cF"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+	</div>
+		<a data-pgn="Feed" href="/"  data-obj="impAjaxMenuClose" onclick="$$.click(this,event)"  class="l60 h22 bm0 mA pA t0 z5 wsN fs0">
+			<div class="lLogo dIb vM">
+		  		<svg viewBox="0 0 116 23" class="h22 thmC cF"><use xlink:href="#lLogo"></use></svg>
+			</div>
+		</a>
+	<a href="/search"  onclick="$$.click(this,event)" data-obj='{"sp":"true","click":"updateLayout","spdata":"srch","vi":1,"trns":"trnsU"}'  class="pA t0 r60 m128 w24 h24 srch z5 dN an-srch">
+	    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="thmC w24 h24 cF"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+	</a>
+	<a data-pgn="Cart Status" href="/shopping_cart" id="cartB"   data-obj="impCartAjaxMenuClose" onclick="$$.click(this,event)"  class="tdN cF w44 h48 pA t0 r12 z5 dN an-cart">
+	    <div class="bgP cF fs12 fwB r4 p24 pA taC z1 br4 t4 dN" id="cartI"></div>
+	    <div class="cart pA t0 l0 w24 h24 m128">
+	      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="thmC w24 h24 cF"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+	    </div>
+	</a>
+		<a data-obj="impAjaxMenuClose" onclick="$$.click(this,event)" href="/auth/login" id="createScrapbook" class="cF pA tdN z5 r110 skpTrSngUp dN an-create">
+			<div class="dT m10">
+			  	<div class="dTc vM">
+			  		<div class="h28 w28">
+			  			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="cF h24 p2 w24"><path d="M3,17.25V21h3.75L17.81,9.94l-3.75-3.75L3,17.25z M21.41,6.34l-3.75-3.75l-2.53,2.54l3.75,3.75L21.41,6.34z"></path></svg>
+			  		</div>
+			  	</div>
+			    <div class="dTc fs13 p08 vM fwB">Create Scrapbook</div>
+			</div>
+		</a>
+</div>
+
+<div id="notifOptInPopInit" data-obj='{"click":"accordion","open":1,"vi":1,"nscrl":1,"con":"#notifOptInPop"}' onclick="$.click(this,event)" class="dN">
+</div>
+<div class="dN pF t0 bm0 z17 l0 r0 bs bg0o2" id="notifOptInPop">
+  <div onclick="$.denyNotifPermission();$('#notifOptInPop').hide();$.view.pseudoBack();" class="pA t0 bm0 l0 r0"></div>
+  <div class="bgF bs h200 l0 mA pA oH br10 fadeInUp o0 t4e flat-form w310 l108">
+    <div class="p16">
+      <div class="taC c3 pt16">
+        <svg viewBox="0 0 120 23" class="h22 thmC">
+          <use xlink:href="#lLogo"></use>
+        </svg>
+      </div>
+      <div class="taC c3 p16 fs16">
+        <div id="optInLine1">
+          Love what you see?
+        </div>
+        <div id="optInLine2">
+          Check out our curated selection!
+        </div>
+      </div>
+    </div>
+    <div class="dT wp100 bdt3 pA bm0 l0 r0 tlF">
+      <div class="bs dTc fs0 vM wp50">
+        <div class="wsN p160 taC fwB fs14 c9" onclick="$.denyNotifPermission();$('#notifOptInPop').hide();$.view.pseudoBack();">Not now</div>
+      </div>
+      <div class="bs dTc fs0 vM bdl3 wp50">
+        <div class="wsN p160 taC fwB fs14" onclick="$.giveNotifPermission();$('#notifOptInPop').hide();$.view.pseudoBack();">Allow</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="authCon" class="dN bm0 l0 pF pR r0 t0 z17 viewOverlay"></div>
+		<main role="main" class="an-main dB oH hp100" id="views">
+			<style type="text/css">
+.an-menu
+,.an-cart
+,.an-srch
+
+{display:block}
+.an-back
+{display:none}
+</style>
+<div class="conn pR oA hp100 mt48" onscroll="$.scroll(this,event)">
+  <div class="bs conW p16">
+    <div class="bgF br4 bs bxs c6 fs15 mA mxw960 p16 taL">
+      <h2 class="m0 mb10 ttC">privacy policy</h2>
+      <div>We value the trust you place in limeroad.com. That's why we insist upon the highest standards for secure transactions and customer information privacy. Please read the following statement to learn about our information gathering and dissemination practices. By registering with limeroad.com, you acknowledge your acceptance of the terms of this policy, your consent to provide required personal information and that any information provided by you through limeroad.com is provided under a lawful contract.</div>
+      <div>Note: Our privacy policy is subject to change at any time without notice. To make sure you are aware of any changes, please review this policy periodically.</div>
+      <div class="fwB mt24 mb10">1. Collection of Personally Identifiable Information</div>
+      <div>We collect personally identifiable information (email address, name, phone number, etc.) from you when you set up a free account with limeroad.com. While you can browse some sections of our site without being a registered member, certain activities (such as placing an order) do require registration.</div>
+      <div class="fwB mt24 mb10">2. Use of Demographic and Profile Data</div>
+      <div>We use personal information to provide the services you request. To the extent we use your personal information to market to you, we will provide you the ability to opt-out of such uses. We use your personal information to resolve disputes; troubleshoot problems; help promote a safe service; collect fees owed; measure consumer interest in our products and services, inform you about online and offline offers, products, services, and updates; customize your experience; detect and protect us against error, fraud and other criminal activity; enforce our terms and conditions; and as otherwise described to you at the time of collection. In our efforts to continually improve our product and service offerings, we collect and analyze demographic, profile and usage data about our users' activity on our website. We identify and use your IP address to help diagnose problems with our server, and to administer our website. Your IP address is also used to help identify you and to gather broad demographic information. We will occasionally ask you to complete optional online surveys. These surveys may ask you for contact information and demographic information (like zip code, age, or income level). We use this data to tailor your experience at our site, providing you with content that we think you might be interested in and to display content according to your preferences</div>
+      <div>Cookies</div>
+      <div>A "cookie" is a small piece of information stored by a Web server on a Web browser so it can be later read back from that browser. Cookies are useful for enabling the browser to remember information specific to a given user. limeroad.com places both permanent and temporary cookies in your computer's hard drive. limeroad.com's cookies do not contain any of your personally identifiable information. You may choose to disable the cookies using the settings in your computer system. However, if you do so, you may not be able to use the full functionality of the site.</div>
+      <div class="fwB mt24 mb10">3. Sharing of personal information</div>
+      <div>We may share personal information with our other entities/agencies and affiliates to: help detect and prevent identity theft, fraud and other potentially illegal acts; correlate related or multiple accounts to prevent abuse of our services; and to facilitate joint or co-branded services that you request where such services are provided by more than one corporate entity or for analytical and IT services. Those entities and affiliates may not market to you as a result of such sharing unless you explicitly opt-in.</div>
+      <div>We may disclose personal information if required to do so by law or in the good faith belief that such disclosure is reasonably necessary to respond to subpoenas, court orders, or other legal process. We may disclose personal information to law enforcement offices, third party rights owners, or others in the good faith belief that such disclosure is reasonably necessary to: enforce our Terms or Privacy Policy; respond to claims that an advertisement, posting or other content violates the rights of a third party; or protect the rights, property or personal safety of our users or the general public.</div>
+      <div>LimeRoad.com and its affiliates will share some or all of your personal information with another business entity should we (or our assets) plan to merge with, or be acquired by that business entity. Should such a transaction occur, that other business entity (or the new combined entity) will be required to follow this privacy policy with respect to your personal information.</div>
+      <div>Any third party with whom we share the information shall maintain reasonable level of confidentiality and data security as required under law.</div>
+      <div class="fwB mt24 mb10">4. Links to Other Sites</div>
+      <div>Our site links to other websites that may collect personally identifiable information about you. Limeroad.com is not responsible for the privacy practices or the content of those linked websites.</div>
+      <div class="fwB mt24 mb10">5. Security Precautions</div>
+      <div>Our site has stringent security measures in place to protect the loss, misuse, and alteration of the information under our control. Whenever you change or access your account information, we offer the use of a secure server. Once your information is in our possession we adhere to strict security guidelines in compliance with the Information Technology Act, 2000, protecting it against unauthorized access.</div>
+      <div class="fwB mt24 mb10">6. Choice/Opt-Out</div>
+      <div>limeroad.com provides all users with the opportunity to opt-out of receiving non-essential (promotional, marketing-related) communications from us on behalf of our partners, and from us in general, after setting up an account. If you want to remove your contact information from all limeroad.com lists and newsletters, please visit <a class="tdN" href="//www.limeroad.com/">www.limeroad.com/unsubscribe</a></div>
+      <div class="fwB mt24 mb10">7. Advertisements on Limeroad.com</div>
+      <div>We use third-party advertising companies to serve ads when you visit our website. These companies may use information (not including your name, address, email address, or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you.</div>
+      <div class="fwB mt24 mb10">8. Contact our privacy department?</div>
+      <div>Should you have any discrepancies or grievances or questions  regarding this statement or with respect to personal identifiable information provided by you, please contact our grievance officer at the following address:<a class="tdN" href="mailto:support@limeroad.com"> support@limeroad.com</a></div>
+      <div class="fwB mt24 mb10 taC">INTELLECTUAL PROPERTY RIGHTS POLICY</div>
+      <div class="fwB mt24 mb10">
+        <span class="fwB">A.M. MARKETPLACES PRIVATE LIMITED</span>, a company incorporated under Companies Act, 1956 with CIN U74140DL2012PTC237075 and having its registered office at E-150, Lower Ground Floor, Greater Kailash II, New Delhi – 110048, India (“<span class="fwB">LimeRoad</span>”) owns and operates www.limeroad.com (“<span class="fwB">Website</span>”). LimeRoad is conscious of and is committed to helping people and organizations protect their Intellectual Property.
+      </div>
+      <div>Intellectual Property includes the following:</div>
+      <ul class="mt24 mb10">
+        <li class="mt12 mb12"><span class="fwB">“Trade Marks”</span> i.e. a mark capable of being represented graphically and which is capable of distinguishing the goods or services of one person from the others and may include service marks, logos, designs, trade dress, shape of goods, their packaging or combination of colours, as are duly registered and/or pending registration under the Trade Marks Act, 1999.</li>
+        <li class="mt12 mb12"><span class="fwB">“Copyrights”</span> in, copyrighted works and copyrighted materials i.e. literary, dramatic or musical work or artistic work, owned, acquired or validly licensed to any person in terms of the Copyright Act, 1957.</li>
+        <li lass="mt12 mb12">Other intellectual property rights legally valid and recognised in India such as trade secrets, proprietary know-how, any patentable or non-patentable inventions, discoveries or any modifications, adaptations, derivatives or improvements of each of the above.</li>
+      </ul>
+      <div class="fwB mt24 mb10 taC">PROTECTION OF INTELLECTUAL PROPERTY</div>
+      <div class="fwB mt24 mb10">Copyright in the Website belongs to LimeRoad. The Website contains the trademark <span class="fwB">“LimeRoad”</span>, other trademarks, logos,  trade name, service marks and other marks (collectively <span class="fwB">“Marks”</span>) which are the Intellectual Property of LimeRoad or its vendors or respective third parties.  LimeRoad uses contents, pictures, photographs and Marks of various vendors and third parties procured from the owner and/or distribution channel who might not be the original owners of Intellectual Property rights therein. All items and photographs advertised / listed and the contents therein are received by LimeRoad from vendors and are third party user generated contents. In this regard, LimeRoad shall not be liable and responsible for any actions or inactions of the vendors nor any breach of any third party intellectual property rights of the sellers or manufacturers or owners of the products and hereby expressly disclaim any and all responsibility and liability in this regard.</div>
+      <div class="fwB mt24 mb10">The users of the Website should assume that standard Intellectual Property rights protection applies to all materials and contents displayed on the Website. Any redistribution, modification or reproduction of part or all of the contents featured on the Website in any form is prohibited.</div>
+      <div class="fwB mt24 mb10">You are not permitted, except with the express written consent of LimeRoad, to distribute or commercially exploit the contents or use the Marks displayed on this Website. You are also prohibited from transmitting the contents or storing it in any other website or in other form of electronic retrieval system.</div>
+      <div class="fwB mt24 mb10">All copyright, Marks, domain name, trade dress including the “look and feel” of the Website, its text, graphics, button icons, interfaces, etc., and the arrangements thereof, is the property of LimeRoad or its vendors or the third party, as the case may be, unless otherwise indicated. All the contents are protected under copyright, trademark and other applicable Intellectual Property laws and may not be used by you, except as permitted by LimeRoad, its vendors or the concerned third party.</div>
+      <div class="fwB mt24 mb10">To facilitate and assist people and organizations protect their Intellectual Property rights and as a trust building exercise between LimeRoad and the users of the Website, LimeRoad has put in place a Protection of Intellectual Property Program (“<span class="fwB">PIP Program</span>”) to identify and remove infringing or unlicensed items and material listed on the Website if an owner of Intellectual Property reports to us.</div>
+      <div class="fwB mt24 mb10 tdU">Reporting – PIP Program</div>
+      <ul class="mt24 mb10">
+        <li class="mt12 mb12">Who can report to us?</li>
+        <div>You may report to us if you are the owner/valid licensee of an Intellectual Property in any content available/uploaded on the Website without your consent, or you believe that your content has been copied/misused in any way that constitutes infringement of your Intellectual Property rights. In case you are not the owner of the Intellectual Property, you can still help by getting in touch with relevant owner and encourage them to contract us.</div>
+        <li class="mt12 mb12">How to report?</li>
+        <div>You (the owner/licensee of Intellectual Property or any authorise representative of owner/licensee of Intellectual Property) are required to email us at <a class="tdN" href="mailto:heretohelp@limeroad.com"> heretohelp@limeroad.com</a>, a Notice of Infringement form specifying the allegedly infringing listings on our Website along with following details:</div>
+        <ul>
+          <li>Your personal details:</li>
+          <ul style="margin-left:25px;">
+              <li>Name</li>
+              <li>Constitution i.e. Individual/Company/LLP</li>
+              <li>Registration number (if any)</li>
+              <li>Residential/Registered Address</li>
+              <li>Name and designation of authorised representative (applicable for persons other than an individual) along with certified true copy of document evidencing the authority</li>
+              <li>Contact Details i.e. email id, phone/fax number</li>
+          </ul>
+          <li>Link of the product appearing on the Website which infringes your Intellectual Property rights;</li>
+          <li>Details of the product which infringes your Intellectual Property rights;</li>
+          <li>Details of your Intellectual Property rights existing as on date in India along with registration/application details, if any; and</li>
+          <li>Reasons for comprehending that the products in question violate your Intellectual Property rights and the basis of your decision such as test purchases, laboratory reports or such similar documentary proof.</li>
+        </ul>
+        <li class="mt12 mb12 fwB">Actions that LimeRoad will take on receipt of a Notice of Infringement</li>
+          <p>If LimeRoad is satisfied with the veracity and genuineness of a duly filled and complete Notice of Infringement, LimeRoad shall:</p>
+          <ul style="margin-left:25px;margin-top: 5px;">
+            <li>Immediately delist the infringing products from the Website;</li>
+            <li>Bar the relevant vendor/merchant/advertiser from accessing and transacting over the Website including listing of their products;</li>
+            <li>Provide all details of the relevant vendor/merchant/advertiser of the infringing products to the person submitting the Notice of Infringement; and</li>
+            <li>Provide, in its sole discretion, all reasonable cooperation and assistance to the person submitting the Notice of Infringement in taking appropriate action against the relevant vendor/merchant/advertiser.</li>
+          </ul>
+        <li class="mt12 mb12">Consequences of incomplete/frivolous reporting</li>
+            <p>If the Notice of Infringement is incomplete in any manner or LimeRoad is of the opinion, in its sole discretion, that the Notice of Infringement is frivolous and/or fake, Limeraod may not take any actions as stated above and may report to the concerned vendor/merchant.</p>
+            <p>If you believe that a report made against you is frivolous, you may intimate us about the same along with documentary proof thereof (“<span style="font-weight:bold;margin:20px 0 5px 0">Withdrawal Claim</span>”). However, LimeRoad will re-list your products on the Website only if it is satisfied, in its sole discretion, of the genuineness of your Withdrawal Claim. LimeRoad may require you to provide such information or documents, as it may deem fit for the purpose (including without limitation a final order of a court of competent jurisdiction, a withdrawal of claim letter of the person who alleged infringement against you etc.)</p>
+            <p style="margin:20px 0 5px 0">You acknowledge that LimeRoad will exercise its discretion based on the documents and information provided by you and shall not independently verify the genuineness of you claim. Accordingly, LimeRoad shall not be held liable in any manner for any act/omission, so far as LimeRoad exercises reasonable and due diligence with respect to any Notice of Infringement and/or a Withdrawal Claim. You acknowledge that LimeRoad shall not be liable for not taking any action, if the Notice of Infringement is incomplete and/or adequate information is not provided with a Withdrawal Claim.</p>
+        <li class="mt12 mb12 fwB">LimeRoad’s Limitation of Liability</li>
+            <p>PIP Program has been launched by LimeRoad to merely facilitate and assist people and organisations to protect their Intellectual Property rights. As mentioned above, LimeRoad is a mere technology and infrastructure service provider. LimeRoad provides merely platform to buyers and sellers to conclude their transactions online.</p>
+            <p>LimeRoad neither guarantees protection nor is responsible for infringement of Intellectual Property rights of any person. We are providing www.limeroad.com as is without any express or implied warranties including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, and non-infringement. LimeRoad is not responsible for the actions, content, information, or data of third parties and you release us, our shareholders, directors, officers, employees, and agents from any direct and/or indirect claims and damages, known and/or unknown, arising out of or in any way connected with any claim you have against any such third parties.</p>
+      </ul>
+      <p style="margin:20px 0 5px 0;">For any clarity contact:<a class="cu_link" href="mailto:heretohelp@limeroad.com"> heretohelp@limeroad.com</a></p>
+      <a href="/notice_of_infringement"><p class="cu_link" style="font-weight:bold;margin:20px 0 5px 0;text-align:center;font-size:14px;">Notice of Infringement</p></a>  
+    </div>
+    <div class="bs c6 fs14 mA mb40 mt48 mxw960 p12">
+        <span>Limeroad is offered in : </span>
+  <span class="dIb vM p2 bs tdU" onclick="$.translate('hi')"> हिन्दी </span>
+
+      <div class="mt24"><div class="c6 fs13 taC">
+</div></div>
+    </div>
+  </div>
+</div>
+<script type="text/an-js" class="an-js">
+ 
+</script>
+<script type="text/an-js" class="an-js-rm">
+    $('#cartI').html(" ").hide();
+  $.utilities.default.delayPushPerm("privacy_policy");
+</script>
+  	<script type="text/an-js" class="an-load-js">
+      $.getScript({src: "https://img3.junaroad.com/assets/0scripts/limeroad_main-94e620aaaee4e39fecaf40cff8b80e0d.js" ,module: "main" ,version: "0.2.9"}, false);
+  	</script>
+
+
+
+		</main>
+	</div>
+</body>
+
+</html>

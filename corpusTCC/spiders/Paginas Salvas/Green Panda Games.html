@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=0, initial-scale=1, minimum-scale=1, width=device-width, height=device-height">
+    <meta name="description" content="Leading mobile games publisher. Team of passionate mobile experts located in Paris, dedicated to publishing hyper-casual games.">
+    <title>Green Panda Games</title>
+    <script src="https://unpkg.com/vue-i18n@8.11.2/dist/vue-i18n.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/src/assets/img/favicon/favicon-32x32.png"/>
+
+    <style>
+
+      html {
+        font-size: 16px;
+      }
+      *::selection {
+        background: #328efc !important;
+      }
+      .container {
+        margin: 0 auto;
+      }
+      .select-lang {
+        height: 42px;
+        width: 120px;
+      }
+      .select-lang.v-select.searchable .dropdown-toggle {
+        width: 100%;
+        height: 42px;
+        border: 1px solid #ffffff;
+        border-radius: 100px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.7px;
+        padding-left: 10px;
+        padding-right: 2px;
+        cursor: pointer;
+      }
+      .select-lang.dropdown .dropdown-toggle .clear {
+        display: none;
+      }
+      .select-lang.v-select .open-indicator:before {
+        border-color: #ffffff;
+        border-width: 1.5px 1.5px 0 0;
+        width: 6px;
+        height: 6px;
+      }
+      .select-lang.v-select .selected-tag {
+        line-height: 31px;
+        color: #fff;
+      }
+      .select-lang.v-select input[type=search],
+      .select-lang.v-select input[type=search]:focus {
+        height: 0px;
+      }
+      .select-lang.v-select .dropdown-menu {
+        top: -90px;
+        overflow: hidden;
+        border-radius: 3px 3px 3px 3px;
+      }
+      .select-lang.v-select .dropdown-menu a {
+        text-decoration: none;
+      }
+      .select-lang.v-select .dropdown-menu .active a {
+        background: rgba(50,50,50,.1);
+        color: #333;
+      }
+      .select-lang.v-select .highlight a,
+      .select-lang.v-select li:hover a {
+        background: rgba(50,50,50,.5);
+        color: #fff;
+      }
+      .owl-carousel .owl-item img {
+        width: auto !important;
+      }
+      .owl-theme .owl-dots .owl-dot span {
+        background: #d8d8d8 !important;
+      }
+      .owl-theme .owl-dots .owl-dot.active span,
+      .owl-theme .owl-dots .owl-dot:hover span {
+        background: #4d4d4d !important;
+      }
+      @media (max-width: 960px) {
+        .owl-theme .owl-dots .owl-dot span {
+          width: 8px !important;
+          height: 8px !important;
+        }
+        .owl-theme .owl-nav.disabled + .owl-dots {
+          padding-top: 26px !important;
+          margin-top: -30px !important;
+          padding-bottom: 20px !important;
+        }
+      }
+      @media (min-width: 960px) {
+        .owl-theme .owl-nav.disabled + .owl-dots {
+          padding-top: 6px !important;
+        }
+      }
+      @media (min-width: 767px) and (max-width: 992px) {
+        .container {
+          max-width: 720px;
+        }
+      }
+      @media (min-width: 992px) and (max-width: 1200px) {
+        .container {
+          max-width: 960px;
+        }
+      }
+      @media (min-width: 1201px) and (max-width: 1280px) {
+        .container {
+          max-width: 1100px;
+        }
+      }
+      @media (min-width: 1281px) {
+        .container {
+          max-width: 1200px;
+        }
+      }
+
+      *::selection {
+        background: #328efc !important;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="app">
+      <router-view></router-view>
+    </div>
+    <script src="/dist/build.js"></script>
+  </body>
+</html>

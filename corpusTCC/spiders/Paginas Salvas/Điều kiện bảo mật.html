@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    
+    
+    
+    
+    <title>Điều kiện bảo mật</title>
+    <link rel="shortcut icon" href="https://comico-vn.gslb.toastoven.net/release/web/static/images/favicon.ico?v=1" type="image/x-icon">
+    <link rel="stylesheet" href="https://comico-vn.gslb.toastoven.net/release/web/static/css/style.css?v=1596526039542">
+    <link rel="stylesheet" href="/css/fonts.css?v=1596526039542">
+    <link rel="stylesheet" href="/css/icomoon.css?v=1596526039542">
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/lib/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/lib/jquery-cookie-1.4.1.min.js"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/lib/slick.min.js"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/lib/jquery.modal.min.js"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/lib/jquery-ui-1.12.1.min.js"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/lib/jquery.mark.min.js"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/lib/jquery.nicescroll.min.js"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/lib/mustache.min.js"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/function-util.js?v=1596526039542"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/security.js?v=1596526039542"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/lib/firebase-app-7.12.0.js"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/lib/firebase-auth-7.12.0.js"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/lib/firebase-analytics-7.12.0.js"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/lib/singular-sdk-1.1.1.js"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/lib/clickcr.js"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/lib/lcslogv2.js"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/main.js?v=1596526039542"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/modules/singular-tracking.js?v=1596526039542"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/modules/login.js?v=1596526039542"></script>
+    <script src="https://comico-vn.gslb.toastoven.net/release/web/static/js/modules/search.js?v=1596526039542"></script>
+    <script>
+        
+        var pageName = /*[${page}]*/"";
+
+        window.cacheVersion = 1596526039542;
+        window.cdnPath = "https:\/\/comico-vn.gslb.toastoven.net\/release\/web\/static";
+
+        /* localization for mustache templates */
+        window.mi18n = {"chapterBlockPaidFreeLabel":"T\u1EA3i \u1EE9ng d\u1EE5ng<br> COMICO","collectionTicketDesc3":"\u203B V\u00E9 Mua \u0111\u01B0\u1EE3c mua s\u1EBD \u0111\u01B0\u1EE3c \u01B0u ti\u00EAn s\u1EED d\u1EE5ng tr\u01B0\u1EDBc V\u00E9 Mua \u0111\u01B0\u1EE3c t\u1EB7ng.","profileTitle":"\u0110\u1ED5i \u1EA3nh \u0111\u1EA1i di\u1EC7n","collectionTicketDesc2":"\u203B V\u1EDBi nh\u1EEFng V\u00E9 mua b\u1EB1ng Coin, comico s\u1EBD c\u00F3 ch\u00EDnh s\u00E1ch ho\u00E0n v\u00E9 tr\u1EA3 Coin sau khi b\u1ED9 truy\u1EC7n k\u1EBFt th\u00FAc.","purchaseTicketResultDesc":"B\u1EA1n kh\u00F4ng \u0111\u1EE7 Coin \u0111\u1EC3 mua.<br> H\u00E3y n\u1EA1p th\u00EAm Coin nh\u00E9!","collectionTicketDesc1":"\u203B V\u00E9 mua c\u1EE7a m\u1ED7i truy\u1EC7n ch\u1EC9 \u0111\u01B0\u1EE3c d\u00F9ng cho duy nh\u1EA5t truy\u1EC7n \u0111\u00F3 v\u00E0 kh\u00F4ng th\u1EC3 d\u00F9ng \u0111\u1EC3 \u0111\u1ECDc truy\u1EC7n kh\u00E1c. B\u1EA1n n\u00EAn c\u00E2n nh\u1EAFc mua s\u1ED1 V\u00E9 v\u1EEBa \u0111\u1EE7 cho m\u1ED7i truy\u1EC7n.","loginMaintenanceTitle":"H\u1EC7 th\u1ED1ng \u0111ang \u0111\u01B0\u1EE3c b\u1EA3o tr\u00EC!","chapterBlockPaidDesc":"Xin l\u1ED7i v\u00EC s\u1EF1 b\u1EA5t ti\u1EC7n n\u00E0y. Hi\u1EC7n nay m\u1ED9t s\u1ED1 ch\u01B0\u01A1ng truy\u1EC7n tr\u1EA3 ph\u00ED tr\u00EAn website \u0111ang g\u1EB7p s\u1EF1 c\u1ED1.<br> Ch\u00FAng t\u00F4i s\u1EBD c\u1ED1 g\u1EAFng kh\u1EAFc ph\u1EE5c trong th\u1EDDi gian s\u1EDBm nh\u1EA5t. Xin vui l\u00F2ng t\u1EA3i \u1EE9ng d\u1EE5ng Comico \u0111\u1EC3 s\u1EED d\u1EE5ng t\u00EDnh n\u0103ng n\u00E0y!","successAlertDesc1":"B\u1EA1n \u0111\u00E3 \u0111\u1ED5i t\u00EAn hi\u1EC3n th\u1ECB th\u00E0nh c\u00F4ng","coinSMSPaymentTitle":"Thanh to\u00E1n b\u1EB1ng SMS","chapterCommentRemoveReplyTitle":"Xo\u00E1 tr\u1EA3 l\u1EDDi","purchaseLabel":"V\u00E9 hi\u1EC7n t\u1EA1i:","purchaseTicketResultDesc1":"B\u1EA1n kh\u00F4ng \u0111\u1EE7 Point \u0111\u1EC3 mua. Vui l\u00F2ng xem H\u1ED9p qu\u00E0 \u0111\u1EC3 ki\u1EC3m tra qu\u00E0 t\u1EB7ng Point.","purchaseTicketResultBtnAdd":"N\u1EA1p coin","coinExpireBalanceDesc":"Coins s\u1EBD h\u1EBFt h\u1EA1n v\u00E0o","chapterCommentInfoDesc":"B\u1EA1n \u0111\u00E3 g\u1EEDi b\u00E1o c\u00E1o cho b\u00ECnh lu\u1EADn n\u00E0y r\u1ED3i!","purchaseBtnCollect":"Mua ch\u01B0\u01A1ng","pointExpiryBalanceDesc":"Points s\u1EBD h\u1EBFt h\u1EA1n v\u00E0o","topupChoiceDesc":"Vui l\u00F2ng ch\u1ECDn s\u1EA3n ph\u1EA9m mu\u1ED1n thanh to\u00E1n!","infoAlertTitle":"UserID \u0111\u00E3 \u0111\u01B0\u1EE3c copy!","chapterCommentErrorMaxLength":"B\u1EA1n ch\u1EC9 \u0111\u01B0\u1EE3c ph\u00E9p nh\u1EADp t\u1ED1i \u0111a 400 k\u00FD t\u1EF1!","chapterReportField3":"Spam, Qu\u1EA5y r\u1ED1i","chapterReportField2":"Ti\u1EBFt l\u1ED9 th\u00F4ng tin c\u00E1 nh\u00E2n c\u1EE7a ng\u01B0\u1EDDi kh\u00E1c","chapterReportField1":"Qu\u1EA3ng c\u00E1o ho\u1EB7c gi\u1EDBi thi\u1EC7u s\u1EA3n ph\u1EA9m","chapterReportFieldOther":"Kh\u00E1c","errorAlertTitle":"\u0110\u1ED5i h\u00ECnh \u0111\u1EA1i di\u1EC7n th\u1EA5t b\u1EA1i!","chapterCommentErrorEmpty":"B\u1EA1n ch\u01B0a nh\u1EADp n\u1ED9i dung!","purchaseTicketSuccessTitle":"B\u1EA1n \u0111\u00E3 mua V\u00E9 th\u00E0nh c\u00F4ng!","collectionTicketLabel":"V\u00E9 mua \u0111\u01B0\u1EE3c d\u00F9ng \u0111\u1EC3 Mua ch\u01B0\u01A1ng truy\u1EC7n","errorAlertTitle1":"\u0110\u1ED5i t\u00EAn hi\u1EC3n th\u1ECB th\u1EA5t b\u1EA1i!","deleteFollowTitle":"Xo\u00E1 m\u1EE5c y\u00EAu th\u00EDch","collectionTicketTitle":"V\u00C9 MUA","chapterBlockPaidTitle":"Xin l\u1ED7i, \u0111\u00E3 c\u00F3 s\u1EF1 c\u1ED1","purchaseTicketResultBtnGift":"H\u1ED9p qu\u00E0","chapterReportBtnSend":"G\u1EEDi b\u00E1o c\u00E1o","successAlertTitle":"\u0110\u1ED5i h\u00ECnh \u0111\u1EA1i di\u1EC7n th\u00E0nh c\u00F4ng!","pointCurrentDesc":"(Hi\u1EC7n t\u1EA1i b\u1EA1n kh\u00F4ng c\u00F3 Points n\u00E0o)","btnCancel":"H\u1EE7y","purchaseTicketResultTitle":"Mua v\u00E9 kh\u00F4ng th\u00E0nh c\u00F4ng","addCoinTitle":"Kh\u00F4ng th\u1EC3 n\u1EA1p coin v\u1EDBi l\u1EF1a ch\u1ECDn tr\u00EAn l\u00FAc n\u00E0y. Vui l\u00F2ng th\u1EED l\u1EA1i ho\u1EB7c s\u1EED d\u1EE5ng l\u1EF1a ch\u1ECDn kh\u00E1c!","chapterBlockFreeTitle":"Xin l\u1ED7i, h\u00E3y t\u1EA3i \u1EE9ng d\u1EE5ng Comico<br> \u0111\u1EC3 ti\u1EBFp t\u1EE5c \u0111\u1ECDc","infoMessageTitle":"Th\u00F4ng tin","successAlertTitle1":"\u0110\u1ED5i t\u00EAn hi\u1EC3n th\u1ECB th\u00E0nh c\u00F4ng!","chapterReportLabel":"L\u00FD do <br class=\"d-none-sm\"> th\u00F4ng b\u00E1o","chapterCommentRemoveReplyDesc":"B\u1EA1n c\u00F3 ch\u1EAFc mu\u1ED1n xo\u00E1 tr\u1EA3 l\u1EDDi?","chapterBlockFreeDesc":"Hi\u1EC7n nay truy\u1EC7n tranh ch\u1EC9 cho ph\u00E9p \u0111\u1ECDc t\u1EEB ch\u01B0\u01A1ng 1 \u0111\u1EBFn ch\u01B0\u01A1ng 5 (Ch\u01B0\u01A1ng mi\u1EC5n ph\u00ED) N\u1EBFu b\u1EA1n mu\u1ED1n ti\u1EBFp t\u1EE5c \u0111\u1ECDc b\u1ED9 truy\u1EC7n n\u00E0y, b\u1EA1n h\u00E3y t\u1EA3i \u1EE9ng d\u1EE5ng Comico.","topupChoiceTitle":"Ch\u1ECDn g\u00F3i v\u1EADt ph\u1EA9m","chapterReportTitle":"B\u00E1o c\u00E1o b\u00ECnh lu\u1EADn kh\u00F4ng ph\u00F9 h\u1EE3p","chapterCommentRemoveTitle":"Xo\u00E1 b\u00ECnh lu\u1EADn","rentTicketDesc3":"\u203B V\u00E9 Thu\u00EA \u0111\u01B0\u1EE3c mua s\u1EBD \u0111\u01B0\u1EE3c \u01B0u ti\u00EAn s\u1EED d\u1EE5ng tr\u01B0\u1EDBc V\u00E9 Thu\u00EA \u0111\u01B0\u1EE3c t\u1EB7ng.","rentTicketDesc2":"\u203B V\u1EDBi nh\u1EEFng V\u00E9 mua b\u1EB1ng Coin, comico s\u1EBD c\u00F3 ch\u00EDnh s\u00E1ch ho\u00E0n v\u00E9 tr\u1EA3 Coin sau khi b\u1ED9 truy\u1EC7n k\u1EBFt th\u00FAc.","rentTicketDesc1":"\u203B V\u00E9 thu\u00EA c\u1EE7a m\u1ED7i truy\u1EC7n ch\u1EC9 \u0111\u01B0\u1EE3c d\u00F9ng cho duy nh\u1EA5t truy\u1EC7n \u0111\u00F3 v\u00E0 kh\u00F4ng th\u1EC3 d\u00F9ng \u0111\u1EC3 \u0111\u1ECDc truy\u1EC7n kh\u00E1c. B\u1EA1n n\u00EAn c\u00E2n nh\u1EAFc mua s\u1ED1 V\u00E9 v\u1EEBa \u0111\u1EE7 cho m\u1ED7i truy\u1EC7n.","chapterReportDesc":"\u0110\u1EC3 gi\u1EEF s\u1EF1 l\u00E0nh m\u1EA1nh trong m\u00F4i tr\u01B0\u1EDDng \u0111\u1ECDc truy\u1EC7n. N\u1EBFu b\u1EA1n th\u1EA5y b\u1EA5t k\u1EF3 b\u00ECnh lu\u1EADn n\u00E0o kh\u00F4ng ph\u00F9 h\u1EE3p h\u00E3y g\u1EEDi ph\u1EA3n h\u1ED3i cho ch\u00FAng t\u00F4i. Ng\u01B0\u1EDDi d\u00F9ng c\u00F3 b\u00ECnh lu\u1EADn kh\u00F4ng ph\u00F9 h\u1EE3p s\u1EBD b\u1ECB c\u1EA5m trong m\u1ED9t kho\u1EA3ng th\u1EDDi gian nh\u1EA5t \u0111\u1ECBnh.","newsTitle":"Xo\u00E1 tin t\u1EE9c","successAlertDesc":"B\u1EA1n \u0111\u00E3 \u0111\u1ED5i h\u00ECnh \u0111\u1EA1i di\u1EC7n th\u00E0nh c\u00F4ng","chapterReportField":"Ng\u00F4n t\u1EEB kh\u00F4ng ph\u00F9 h\u1EE3p, ph\u1EC9 b\u00E1ng, l\u0103ng m\u1EA1","newsDesc":"B\u1EA1n c\u00F3 mu\u1ED1n x\u00F3a tin t\u1EE9c n\u00E0y?","coinSMSPaymentDesc":"\u203B V\u00EC l\u00ED do c\u01B0\u1EDBc ph\u00ED d\u1ECBch v\u1EE5 thanh to\u00E1n kh\u00E1c nhau n\u00EAn qu\u00FD kh\u00E1ch thanh to\u00E1n b\u1EB1ng SMS s\u1EBD nh\u1EADn \u0111\u01B0\u1EE3c s\u1ED1 Coin th\u1EA5p h\u01A1n c\u00E1c ph\u01B0\u01A1ng th\u1EE9c kh\u00E1c.","unfollowTitle":"B\u1ECF theo d\u00F5i truy\u1EC7n","deleteFollowDesc":"B\u1EA1n c\u00F3 mu\u1ED1n xo\u00E1 y\u00EAu th\u00EDch?","btnOk":"\u0110\u1ED3ng \u00FD","coinSMSPaymentDesc3":"\u203B Vui l\u00F2ng ki\u1EC3m tra k\u0129 n\u1ED9i dung tin nh\u1EAFn. \u0110\u1ED1i v\u1EDBi nh\u1EEFng tin nh\u1EAFn sai c\u00FA ph\u00E1p ho\u1EB7c g\u1EEDi sai t\u1ED5ng \u0111\u00E0i nh\u1EADn, nh\u00E0 m\u1EA1ng s\u1EBD t\u00EDnh c\u01B0\u1EDBc ph\u00ED \u0111\u1ED1i v\u1EDBi b\u1EA1n, comico kh\u00F4ng \u0111\u1EA3m b\u1EA3o ho\u00E0n ti\u1EC1n ho\u1EB7c cung c\u1EA5p d\u1ECBch v\u1EE5 cho c\u00E1c tr\u01B0\u1EDDng h\u1EE3p k\u1EC3 tr\u00EAn.","coinSMSPaymentDesc2":"\u203B V\u1EDBi m\u1ED7i tin nh\u1EAFn, b\u1EA1n ch\u1EC9 \u0111\u01B0\u1EE3c n\u1EA1p t\u1ED1i \u0111a 20.000 \u0111 v\u00E0o t\u00E0i kho\u1EA3n comico v\u00E0 gi\u1EDBi h\u1EA1n theo ch\u00EDnh s\u00E1ch c\u1EE7a t\u1EEBng nh\u00E0 m\u1EA1ng.","coinSMSPaymentDesc1":"\u203B D\u1ECBch v\u1EE5 n\u1EA1p ti\u1EC1n b\u1EB1ng SMS c\u1EE7a comico h\u1ED7 tr\u1EE3 cho c\u00E1c thu\u00EA bao tr\u1EA3 tr\u01B0\u1EDBc thu\u1ED9c c\u00E1c nh\u00E0 m\u1EA1ng kh\u00E1c nhau: Viettel, Mobifone, Vinaphone.","collectionTicketDesc":"\u203B V\u00E9 Mua d\u00F9ng \u0111\u1EC3 mua v\u00E0 \u0111\u1ECDc ch\u01B0\u01A1ng truy\u1EC7n trong th\u1EDDi gian t\u1ED1i \u0111a 2 n\u0103m k\u1EC3 t\u1EEB l\u00FAc mua.","longDescriptionTitle":"M\u00F4 t\u1EA3","unfollowDesc":"B\u1EA1n mu\u1ED1n b\u1ECF theo d\u00F5i truy\u1EC7n n\u00E0y?","btnClose":"\u0110\u00F3ng","chapterCommentSuccessDesc":"C\u1EA3m \u01A1n b\u1EA1n \u0111\u00E3 g\u1EEDi b\u00E1o c\u00E1o cho ch\u00FAng t\u00F4i!","rentTicketDesc":"\u203B V\u00E9 thu\u00EA d\u00F9ng \u0111\u1EC3 thu\u00EA ch\u01B0\u01A1ng truy\u1EC7n trong th\u1EDDi gian nh\u1EA5t \u0111\u1ECBnh.","btnNotOpenToday":"Kh\u00F4ng m\u1EDF l\u1EA1i trong h\u00F4m nay","rentTicketLabel":"V\u00E9 thu\u00EA \u0111\u01B0\u1EE3c s\u1EED d\u1EE5ng \u0111\u1EC3 thu\u00EA ch\u01B0\u01A1ng truy\u1EC7n","purchaseBtnRent":"Thu\u00EA ch\u01B0\u01A1ng","chapterCommentRemoveDesc":"B\u1EA1n c\u00F3 ch\u1EAFc mu\u1ED1n xo\u00E1 b\u00ECnh lu\u1EADn. N\u1EBFu b\u1EA1n xo\u00E1 b\u00ECnh lu\u1EADn th\u00EC nh\u1EEFng tr\u1EA3 l\u1EDDi trong ph\u1EA7n b\u00ECnh lu\u1EADn c\u0169ng b\u1ECB xo\u00E1 theo!","errorMessageTitle":"Th\u00F4ng b\u00E1o l\u1ED7i","errorAlertDesc":"\u0110\u00E3 c\u00F3 l\u1ED7i x\u1EA3y ra trong qu\u00E1 tr\u00ECnh thay \u0111\u1ED5i h\u00ECnh \u0111\u1EA1i di\u1EC7n. Xin vui l\u00F2ng th\u1EED l\u1EA1i!","chapterCommentErrorTryAgain":"B\u1EA1n \u0111ang g\u1EEDi qu\u00E1 nhanh, h\u00E3y th\u1EED l\u1EA1i sau 10 gi\u00E2y n\u1EEFa","rentTicketTitle":"V\u00C9 THU\u00CA","infoAlertTitle1":"B\u1EA1n \u0111\u00E3 copy c\u00FA ph\u00E1p tin nh\u1EAFn!","errorAlertDesc1":"\u0110\u00E3 c\u00F3 l\u1ED7i x\u1EA3y ra trong qu\u00E1 tr\u00ECnh thay \u0111\u1ED5i t\u00EAn hi\u1EC3n th\u1ECB. Xin vui l\u00F2ng th\u1EED l\u1EA1i!","errorMessageDesc":"\u0110\u00E3 x\u1EA3y ra m\u1ED9t s\u1ED1 l\u1ED7i kh\u00F4ng mong mu\u1ED1n!<br class=\"d-none-sm\">Xin vui l\u00F2ng th\u1EED l\u1EA1i.","successMessageTitle":"Th\u00E0nh c\u00F4ng","loginErrorTitle":"\u0110\u00E3 c\u00F3 l\u1ED7i x\u1EA3y ra. Vui l\u00F2ng th\u1EED l\u1EA1i!"};
+        /* END localization for mustache templates */
+        
+        /* userID */
+        window.uid = "na";
+        /* END userID */
+
+        /* amount */
+        window.amountCoin = 0
+        window.amountPoint = 0
+        /* END amount */
+
+        /* cClicks settings */
+        window.nsc = "cc";
+        window.ccsrv = "cc.comico.jp";
+        /* END cClicks settings */
+
+        $(document).ready(function () {
+            $('body').slickSlider();
+
+            $('body').dropdown();
+
+            $('body').comicoApp({}, true);
+
+            $('body').heightContent();
+
+            $('body').termsComico();
+
+            if (pageName !== 'chapter' && pageName !== 'login') {
+                $('body').openMenu();
+            }
+
+            firebase.initializeApp({"apiKey":"AIzaSyC7_9BsyD-ug8GuuR9UCVxKNEIdiqNdjgI","authDomain":"comico-vn.firebaseapp.com","databaseURL":"https:\/\/comico-vn.firebaseio.com","projectId":"comico-vn","storageBucket":"comico-vn.appspot.com","messagingSenderId":"69898173666","appId":"1:69898173666:web:57f718236a8299a43af2bb","measurementId":"G-ZRTXD74RJX"});
+            firebase.analytics();
+
+            $('body').singularTracking("on",false);
+
+            $('body').login(false);
+
+            $('body').search();
+
+            $('body').backToTop();
+        });
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '286223719204185');
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-T2S5MS5');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-top fixed-top">
+        <div class="container">
+            <div class="screen-desktop">
+                <div class="logo">
+                    <a href="/">
+                        <!-- <script th:src="@{${cdnPath + '/js/modules/login.js?v=' + version}}"></script> -->
+                        <img src="https://comico-vn.gslb.toastoven.net/release/web/static/images/img-logo-white.svg" width="156" height="auto"
+                            alt="logo comico">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li>
+                        <div class="cursor-pointer"
+                            onclick="nClick(this, &#39;comicoVNWeb.home.ComicBT&#39;, &#39;&#39;, &#39;&#39;, event, &#39;/comic/weekly&#39;)">Truyện tranh</div>
+                    </li>
+                    <!-- <li
+                        th:classappend="|${type == 'novel' ? 'active': ''}${type == 'titleDetail' ? 'active': ''}${type == 'refillTicket' ? 'active': ''}|">
+                        <div class="cursor-pointer" th:attr="onclick=|nClick(this, 'comicoVNWeb.home.ComicBT', '', '', event, '/novel')|" th:inline="text">Tiểu thuyết</div>
+                    </li> -->
+                </ul>
+
+                <div class="search-desktop">
+                    <div class="input-search">
+                        <input type="text" maxlength="70" placeholder="Tìm tên truyện, tên tác giả." value="">
+                        <button type="button" class="btn-search cursor-default disabled"><i
+                                class="icon-search-o"></i></button>
+                    </div>
+                    <div class="wrapper-dropdown-search"></div>
+                </div>
+
+                <div class="dropdown dropdown-avatar">
+                    <div class="avatar parent-emotion">
+                        <img src="/images/emoticon/0_medium.png" width="50"
+                            height="50" alt="avatar">
+                        <span class="name">Đăng Nhập</span>
+                        <i class="icon-angle-down"></i>
+                    </div>
+                    <ul class="dropdown-menu modal-login scrollbar-custom">
+                        <li class="btn-login text-left">
+                            <a href="javascript:void(0)" class="item parent-emotion">
+                                <img src="/images/emoticon/0_medium.png"
+                                    width="50" height="50" alt="avatar">
+                                <span class="name font-weight-bold">Đăng Nhập</span>
+                                <i class="icon-angle-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="/profile/coin/add" class="item icon profile-balance-coin">
+                                        <span class="box-icon">
+                                            <i class="icon-coin"></i>
+                                        </span>
+                                        <span class="coin">Coin</span>
+                                        <span class="number font-weight-bold coin-balance" inlinet="text">0</span>
+                                        
+                                        <i class="icon-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/profile/coin/add" class="item icon profile-balance-rc">
+                                        <span class="box-icon">
+                                            <i class="icon-point"></i>
+                                        </span>
+                                        <span class="coin">Point</span>
+                                        <span class="number font-weight-bold rc-balance">0</span>
+                                        <small class="no-rc-balance">(Hiện tại bạn không có Point nào)</small>
+                                        
+                                        <i class="icon-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="/inbox/news" class="item icon">
+                                        <span class="box-icon">
+                                            <i class="icon-email"></i>
+                                        </span>
+                                        <span class="text">Hộp thư</span>
+                                        <i class="icon-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/gift/box" class="item icon">
+                                        <span class="box-icon">
+                                            <i class="icon-gift"></i>
+                                        </span>
+                                        <span class="text">Hộp quà</span>
+                                        <i class="icon-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/bookshelf/follow" class="item icon">
+                                        <span class="box-icon">
+                                            <i class="icon-bookshelf"></i>
+                                        </span>
+                                        <span class="text">Tủ sách</span>
+                                        <i class="icon-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <div class="item icon" onclick="nClick(this, &#39;comicoVNWeb.personal.UserTerms&#39;, &#39;&#39;, &#39;&#39;, event, &#39;/static/terms&#39;)">
+                                        <span class="box-icon">
+                                            <i class="icon-terms"></i>
+                                        </span>
+                                        <span class="text">Điều khoản sử dụng</span>
+                                        <i class="icon-angle-right"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item icon" onclick="nClick(this, &#39;comicoVNWeb.personal.PrivatePolicy&#39;, &#39;&#39;, &#39;&#39;, event, &#39;/static/privacy-policy&#39;)">
+                                        <span class="box-icon">
+                                            <i class="icon-privacy-policy"></i>
+                                        </span>
+                                        <span class="text">Điều kiện bảo mật</span>
+                                        <i class="icon-angle-right"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- <ul>
+                                <li>
+                                    <a href="" class="item icon hide-arrow">
+                                        <span class="box-icon">
+                                            <i class="icon-setting-o"></i>
+                                        </span>
+                                        <span class="text" th:inline="text">Kiểm tra thiết bị</span>
+                                        <i class="icon-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul> -->
+                            <ul class="block-icon-logout">
+                                <li>
+                                    <a href="" class="item icon hide-arrow btn-logout">
+                                        <span class="box-icon">
+                                            <i class="icon-logout-o"></i>
+                                        </span>
+                                        <span class="text text-left">Đăng xuất</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="screen-mobile">
+                <button type="button" id="btnOpenMenu" class="btn-menu-mobile">
+                    <span class="icon-menu">
+                        <span></span>
+                    </span>
+                </button>
+                <a href="/" class="logo">
+                    <img src="https://comico-vn.gslb.toastoven.net/release/web/static/images/img-logo-white.svg" width="128" height="auto" alt="logo comico">
+                </a>
+                <div class="search-mobile">
+                    <button type="button" class="btn-search-mobile"><i class="icon-search-o"></i></button>
+                    <div class="input-search">
+                        <input type="text" maxlength="70" placeholder="Tìm tên truyện, tên tác giả." value="">
+                        <button type="button" class="btn-search disabled cursor-default"><i class="icon-search-o"></i></button>
+                    </div>
+                    <div class="wrapper-dropdown-search"></div>
+                    <button type="button" class="btn-close"><span></span></button>
+                </div>
+
+                <ul class="nav-menu-mobile">
+                    <li>
+                        <button type="button" id="btnCloseMenu" class="btn-menu-mobile">
+                            <span class="icon-menu">
+                                <span></span>
+                            </span>
+                        </button>
+                        <ul class="modal-login">
+                            <li class="btn-login">
+                                <a href="/profile/update" class="item parent-emotion">
+                                    <img src="/images/emoticon/0_medium.png" width="50" height="50" alt="avatar">
+                                    <span class="name font-weight-bold">Đăng Nhập</span>
+                                    <i class="icon-angle-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li>
+                                        <a href="/profile/coin/add" class="item icon profile-balance-coin">
+                                            <span class="box-icon">
+                                                <i class="icon-coin"></i>
+                                            </span>
+                                            <span class="coin">Coin</span>
+                                            <span class="number font-weight-bold coin-balance"
+                                            inlinet="text">0</span>
+                                            
+                                            <i class="icon-angle-right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/profile/coin/add" class="item icon profile-balance-rc">
+                                            <span class="box-icon">
+                                                <i class="icon-point"></i>
+                                            </span>
+                                            <span class="coin">Point</span>
+                                            <span class="number font-weight-bold rc-balance">0</span>
+                                            <small class="no-rc-balance">(Hiện tại bạn không có Point nào)</small>
+                                            
+                                            <i class="icon-angle-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="/inbox/news" class="item icon">
+                                            <span class="box-icon">
+                                                <i class="icon-email"></i>
+                                            </span>
+                                            <span class="text">Hộp thư</span>
+                                            <i class="icon-angle-right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/gift/box" class="item icon">
+                                            <span class="box-icon">
+                                                <i class="icon-gift"></i>
+                                            </span>
+                                            <span class="text">Hộp quà</span>
+                                            <i class="icon-angle-right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/bookshelf/follow" class="item icon">
+                                            <span class="box-icon">
+                                                <i class="icon-bookshelf"></i>
+                                            </span>
+                                            <span class="text">Tủ sách</span>
+                                            <i class="icon-angle-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <div class="item icon" onclick="nClick(this, &#39;comicoVNWeb.personal.UserTerms&#39;, &#39;&#39;, &#39;&#39;, event, &#39;/static/terms&#39;)">
+                                            <span class="box-icon">
+                                                <i class="icon-terms"></i>
+                                            </span>
+                                            <span class="text">Điều khoản sử dụng</span>
+                                            <i class="icon-angle-right"></i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item icon" onclick="nClick(this, &#39;comicoVNWeb.personal.PrivatePolicy&#39;, &#39;&#39;, &#39;&#39;, event, &#39;/static/privacy-policy&#39;)">
+                                            <span class="box-icon">
+                                                <i class="icon-privacy-policy"></i>
+                                            </span>
+                                            <span class="text">Điều kiện bảo mật</span>
+                                            <i class="icon-angle-right"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- <ul>
+                                    <li>
+                                        <a href="" class="item icon hide-arrow">
+                                            <span class="box-icon">
+                                                <i class="icon-setting-o"></i>
+                                            </span>
+                                            <span class="text" th:inline="text">Kiểm tra thiết bị</span>
+                                            <i class="icon-angle-right"></i>
+                                        </a>
+                                    </li>
+                                </ul> -->
+                                <ul class="block-icon-logout">
+                                    <li>
+                                        <a href="" class="item icon hide-arrow btn-logout">
+                                            <span class="box-icon">
+                                                <i class="icon-logout-o"></i>
+                                            </span>
+                                            <span class="text text-left">Đăng xuất</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-bg-white d-none">
+        <div class="container">
+            
+
+            
+
+            
+            
+
+            
+        </div>
+    </div>
+</header>
+
+  <main>
+    <!-- <section class="wrapper-terms-comico">
+      <header>
+        <div class="container">
+          <h2 class="title">Privacy Policy</h2>
+          <p class="text">Effective Date: April 06, 2020</p>
+          <p class="desc">COMICOSVC VIETNAM COMPANY LIMITED (“COMICO VIETNAM”, “we” or “us”) with its principal place of business at Floor 19, Block Office, Indochina Park Tower, 04 Nguyen Dinh Chieu street, Dakao Ward, District 1, Hochiminh City respects the privacy rights of its customers and protects the personal data (hereinafter “Personal Information”) collected, stored and used in connection with COMICO VIETNAM’s products, services and websites (collectively, the "Service" or “Services”). To further this commitment, we have adopted this Privacy Policy ("Privacy Policy") to guide how we collect, store, and use the information you provide us.</p>
+        </div>
+      </header>
+      <article>
+        <div class="container">
+          <aside class="aside">
+            <nav class="left-menu">
+              <h5 class="title">Navigation</h5>
+              <ul>
+                <li class="active"><a href="#I">I. Scope of this privacy policy</a></li>
+                <li><a href="#II">II. Information collected</a></li>
+                <li><a href="#III">III. Collection method</a></li>
+                <li><a href="#IV">IV. Use and sharing of information collected</a></li>
+                <li><a href="#V">V. Collection and use of children’s personal information</a></li>
+                <li><a href="#VI">VI. Safeguards</a></li>
+                <li><a href="#VII">VII. Links to third party sites or services</a></li>
+                <li><a href="#VIII">VIII. Your rights</a></li>
+                <li><a href="#IX">IX. Limit the use or disclosure of your personal</a></li>
+                <li><a href="#X">X. Revoke your consent for processing your personal information</a></li>
+                <li><a href="#XI">XI. Storage and period of storage</a></li>
+                <li><a href="#XII">XII. Contact</a></li>
+              </ul>
+            </nav>
+          </aside>
+          <article class="article">
+            <ul>
+              <li>
+                <p class="title" id="I">I. Scope of this privacy policy</p>
+                <p class="text">This Privacy Policy describes COMICO VIETNAM’s collection and use of your Personal Information submitted and collected through the Services. The term Personal Information as used in this Privacy Policy includes any individually identifiable information about the user. This Privacy Policy apply to users who can use Vietnamese language.</p>
+                <p class="text">BY INSTALLING, USING, REGISTERING OR OTHERWISE ACCESSING THE SERVICES, YOU HEREBY ACCEPT THE TERMS OF THIS PRIVACY POLICY. If you do not agree to this Privacy Policy, please do not install, use, register or otherwise access the Services.</p>
+                <p class="text">Amendment to This Policy. COMICO VIETNAM reserves the right to modify this Privacy Policy at any time to respond to legal developments, or internal policies, so please review it frequently. If any additions, deletions or amendments are made to the Privacy Policy a notification will be posted within the Service at least seven (7) days in advance. However, for significant changes COMICO VIETNAM will post a notification thirty (30) days in advance. In any case, you will have the right to cancel or rectify your Personal Information, as to limit our use or disclosure.</p>
+              </li>
+              <li>
+                <p class="title" id="II">II. Geographic Scope</p>
+                <p class="text">COMICO VIETNAM may collect and process the following data about you:</p>
+                <p class="text tab"><span>Personal Information</span><br>
+                  COMICO VIETNAM may collect Personal Information that you voluntarily provide us when you engage in certain activities within the Services, which consist of your email address, gender (optional), and birth year.</p>
+                <p class="text tab"><span>Usage Information</span><br>
+                  COMICO VIETNAM collects details of your use of our Services and the resources that you access. Such usage information consists of information about how and when you access or use our Services, views, pages visited, or purchase of virtual items or contents.</p>
+                <p class="text tab"><span>Technical Information</span><br>
+                  COMICO VIETNAM collects general technical data pertaining to you such as information of device you use to access COMICO VIETNAM’s Services, IP address, operating system, browser type, and system information.</p>
+                <p class="text tab"><span>User Communication with</span> COMICO VIETNAM<br>
+                  If you contact COMICO VIETNAM or respond to messages and communications that COMICO VIETNAM sends you, COMICO VIETNAM may keep a record of that correspondence.</p>
+                <p class="text tab"><span>Information from Third Party Social Networks or Platforms</span><br>
+                  You may voluntary allow COMICO VIETNAM’s Services to interact with third party social network or platform such as Facebook, Instagram or Google which will provide data about you to COMICO VIETNAM. These applications or websites are created and maintained by a third party which is not a part of, or controlled by COMICO VIETNAM. You should ensure that you read their terms of service and privacy policies to understand how they treat your data and what data they might share with COMICO VIETNAM. COMICO VIETNAM will only use and collect the information that you voluntary authorize third party social networks to disclose to us.</p>
+                <p class="text tab"><span>Non-Personal Information</span><br>
+                  For purposes of this Privacy Policy, Non-Personal Information means information that does not directly identify you. COMICO VIETNAM may use tools or third party analytical software to automatically collect and use certain Non-Personal Information that does not directly enable COMICO VIETNAM to identify you.</p>
+                <p class="text tab"><span>Cookies</span><br>
+                  COMICO VIETNAM may use cookies in order to provide users with optimal Service. A "cookie" is a small bit of record-keeping information that sites often store on a user's computer. You can set your cookie settings from the web browser however opting to refuse cookie storage may affect your ability to login and use our Services. In order to set your cookie settings on the Internet Explorer, select the “Tools” tab and then select “Internet Options.” Select the “Privacy” tab and under “Settings,” move the slider to the top to block all cookies (or the bottom to allow all cookies), and then select OK.</p>  
+              </li>
+              <li>
+                <p class="title" id="III">III. Collection method</p>
+                <p class="text">COMICO VIETNAM may collect user’s Personal Information directly from users upon registration or use of the Services, from affiliated companies, or through tools that generate user’s information.</p>
+              </li>
+              <li>
+                <p class="title" id="IV">IV. Use and sharing of information collected</p>
+                <p class="text tab">
+                  <span>Use of Information Collected</span><br> 
+                  COMICO VIETNAM may use your Personal Information for the following purposes which give origin to and are considered necessary for the existence, maintenance and compliance of the legal relationship between COMICO VIETNAM and you: (i) identify users and prevent improper usage of Service: (ii) help you enjoy the Services more effectively;(iii) confirm user’s identity when COMICO VIETNAM receives an inquiry and respond to such inquiry (customer service), (iv) track payment and billing when a user purchases a virtual item/content, and (iv) send you important notifications when necessary.<br><br>
+                  Additionally, COMICO VIETNAM may use your Personal Information to: (i) generate statistical data pertaining to usage of the Service; (ii) conduct surveys and analyses, draw tickets and send out prizes for events, or (iii) disseminate advertisement information for events. Unless otherwise is indicated by you, by the continued use of our services you agree to our use of your Personal Information for such ancillary purposes. You may contact us in any moment if you do not want us to use your personal information for the purposes mentioned in this paragraph.
+                </p>
+                <p class="text tab"><span>Sharing of Information Collected</span><br>
+                  COMICO VIETNAM does not share Personal Information with third parties without acquiring your prior consent. As part of the activities related to the management and administration of COMICO VIETNAM, we may transfer your Personal Information to our holding company or/and some or all of our affiliates, subsidiaries, licensees and/or the same economic group, whenever they operate through the same processes and internal policies. Likewise, COMICO VIETNAM will share your information when subcontracting third parties; including lawyers, auditors, accountants or technical staff that need to process your Personal Information on behalf of COMICO VIETNAM and pursuant to its instructions. COMICO VIETNAM does not require your consent for these transfers.<br><br>
+                  Interactions with Third Party Social Networks or Platforms: You understand that where you allow COMICO VIETNAM to interact with third party social networks or platforms, COMICO VIETNAM may share data about you with them. <br><br>
+                  Compliance with Legal Obligations: Occasionally COMICO VIETNAM may be required by law enforcement or judicial authorities to provide Personal Information to the appropriate governmental authorities in your country or abroad. COMICO VIETNAM will disclose Personal Information upon receipt of a court order, subpoena, or to cooperate with a law enforcement investigation.
+                </p>
+              </li>
+              <li>
+                <p class="title" id="V">V. Collection and use of children’s personal information</p>
+                <p class="text">COMICO VIETNAM’s Services are not intended for children under the age of 13, and it does not knowingly collect any Personal Information from such children. Children under the age of 13 should not use or attempt to use the Services, and if you are under 13, please do not attempt to use the Services or send any information about yourself to COMICO VIETNAM.</p>
+                <p class="text">Further, in the event that COMICO VIETNAM receives Personal Information that COMICO VIETNAM discovers was provided by a child under the age of 13, COMICO VIETNAM will promptly delete such Personal Information in a secure manner. Parents, who believe that COMICO VIETNAM might have any information from or about a child under 13, may submit a request in writing to <a href="" class="text-link">help@comico.vn</a>.</p>
+                <p class="text">Please note that persons under the age of majority in their jurisdictions are required to have a parent or a legal guardian read and accept this Privacy Policy and the Terms of Use on their behalf. Parents are encouraged to supervise their children’s use of the Services and to become familiar with the types of content available through the Services. Parents should oversee their children’s use of e-mail, forum and other online communications. </p>
+              </li>
+              <li>
+                <p class="title" id="VI">VI. Safeguards</p>
+                <p class="text">COMICO VIETNAM maintains appropriate safeguards that ensure the security, integrity, and privacy of the Personal Information it collects and stores about its account holders. Personal Information collected by COMICO VIETNAM is stored in secure operating environments that are not available to the public and that are only accessible by authorized employees. In addition, COMICO VIETNAM uses industry-standard encryption to prevent unauthorized access to your Personal Information. COMICO VIETNAM also has security measures in place to protect the loss, misuse, and alteration of the information under its control (i.e., maintain data quality). Before COMICO VIETNAM allows its users to access their Personal Information, for example, COMICO VIETNAM verifies their identity by requesting that they submit information such as their username and password. COMICO VIETNAM also takes reasonable steps to ensure that third parties to whom COMICO VIETNAM transfer Personal Information, provide sufficient protection of such data. </p>
+              </li>
+              <li>
+                <p class="title" id="VII">VII. Links to third party sites or services</p>
+                <p class="text">You should be aware that the Services may from time to time contain links to third-party sites, products or services. COMICO VIETNAM is not responsible for the privacy practices or the content of such sites or services. If you are concerned about the privacy policy of a certain third party, COMICO VIETNAM recommends that you read the privacy policy of the site or service to which you link before you submit any Personal Information. Please consider that in the case of in-app purchases, your information will be managed by third parties and governed by their privacy policies; COMICO VIETNAM does not collect or manage your Financial Information.</p>
+              </li>
+              <li>
+                <p class="title" id="VIII">VIII. Your rights</p>
+                <p class="text">COMICO VIETNAM makes good faith efforts to enable you to review, update or correct your Personal Information in COMICO VIETNAM 's possession. In order to do so, please contact COMICO VIETNAM’s Privacy Policy Administrator at <a href="" class="text-link">help@comico.vn</a>. COMICO VIETNAM will need sufficient information from you to establish your identity and to verify your access request, and also to process your request. Please note that even if Personal Information is changed or deleted according to your request, COMICO VIETNAM may retain all or part of your Personal Information to resolve disputes, enforce terms and conditions set forth in the Terms of Use, comply with technical and legal requirements and constraints related to the security, integrity and operation of the Services. In accordance with the foregoing, you may access the Personal Information that we possess; rectify in case that such data is incomplete or inexact; cancel in case that such data is not required for some of the purposes mentioned in this Privacy Policy, or is being used for purposes that have not been consented by you, or refuse to their processing for specific purposes. For purposes of the foregoing, you may request to exercise your rights of access, rectification, suppression or rejection to the processing of your Personal Information (“Vietnam Law”) before COMICO VIETNAM according to the applicable law, and through a written request sent to our Privacy Policy Administrator, indicating: (i) name and address; (ii) copy of a valid official identification (Identification Card, Passport, ETC); (iii) clear and exact description of the Personal Information you wish to access or rectify, cancel or refuse to its processing, and any other element that might ease the localization of your data; (iv) your written signature; as well as (v) any other requirement provided by the Law and/or other applicable provisions.</p>
+                <p class="text">COMICO VIETNAM will give a response to requests within a maximum term of twenty (20) business days or any other longer term authorized by the applicable law. COMICO VIETNAM’s response will indicate if your request of access, rectification, cancellation or refusal is granted, and if it is the case, COMICO VIETNAM will make effective its determination within the fifteen (15) business days following such notice to you or your representative. Such terms may be extended as provided by the applicable law. COMICO VIETNAM will provide you with electronic copies of your Personal Information, if you exercise your right of access.</p>
+              </li>
+              <li>
+                <p class="title" id="IX">IX. Limit the use or disclosure of your personal</p>
+                <p class="text">You have the right to limit the use or disclosure of your Personal Information for the purposes that are not necessary for our legal relationship. Therefore, if you do not want to receive any communications about the Services, you can either uncheck the consent box under the settings page or send us an e-mail or mail addressed to our Privacy Policy Administrator, indicating us of that situation and we will include you in the no-contact registry of COMICO VIETNAM, and we will give you an electronic proof of your registration thereof, as requested.</p>
+              </li>
+              <li>
+                <p class="title" id="X">X. Revoke your consent for processing your personal information</p>
+                <p class="text">You may, at any time, revoke your consent granted for the processing of your Personal Information by contacting our Privacy Policy Administrator. We inform you that in the event you revoke your consent to the processing of your Personal Information, we may not be able to continue our legal relationship.</p>
+              </li>
+              <li>
+                <p class="title" id="XI">XI. Storage and period of storage</p>
+                <p class="text">COMICO VIETNAM, directly or through any other of its affiliates or subsidiaries, may store your Personal Information in data bases located in your country or abroad, with no limitation, except for the time periods provided by the applicable provisions, as well as to comply with the purposes provided in this Privacy Policy and the provisions of the applicable law, its regulations and any other applicable provisions.</p>
+                <p class="text">Please be informed that COMICO VIETNAM eliminates records of user’s Personal Information once the purpose for the collection and usage have been accomplished. However, in cases where records need to be stored according to COMICO VIETNAM’s policies or applicable law, it reserves the right to store the Personal Information for a certain period of time.</p>
+              </li>
+              <li>
+                <p class="title" id="XII">XII. Contact</p>
+                <p class="text">If you have questions about this Privacy Policy or your privacy, please contact COMICO VIETNAM at <a href="" class="text-link">help@comico.vn</a></p>
+              </li>
+            </ul>
+          </article>
+        
+        </div>
+    </article>
+    </section> -->
+    <section class="wrapper-terms-comico">
+      <header>
+        <div class="container">
+          <h2 class="title">Chính sách bảo mật</h2>
+          <p class="text">Ngày có hiệu lực: ngày 06 tháng 4 năm 2020</p>
+          <p class="desc">CÔNG TY TNHH COMICOSVC VIỆT NAM (COMICO VIỆT NAM, “chúng tôi”), trụ sở chính tại Tầng 19, Khu Văn Phòng, Tòa nhà Indochina Park Tower, số 04 Nguyễn Đình Chiểu, Phường Đa Kao, Quận 1, Hồ Chí Minh, Vietnam tôn trọng quyền riêng tư của khách hàng và bảo vệ dữ liệu cá nhân (sau đây gọi là Thông tin cá nhân trực tuyến) được thu thập, lưu trữ và sử dụng cùng với các sản phẩm, dịch vụ và trang web của COMICO VIỆT NAM (gọi chung là "Dịch vụ" hoặc dịch vụ trên mạng). Để tiếp tục cam kết này, chúng tôi đã áp dụng Chính sách quyền riêng tư này ("Chính sách bảo mật") để hướng dẫn cách chúng tôi thu thập, lưu trữ và sử dụng thông tin bạn cung cấp cho chúng tôi.</p>
+        </div>
+      </header>
+      <article>
+        <div class="container">
+          <aside class="aside">
+            <nav class="left-menu">
+              <h5 class="title">Mục lục</h5>
+              <ul>
+                <li class="active"><a href="#I">I. Phạm vi của chính sách quyền riêng tư này</a></li>
+                <li><a href="#II">II. Thông tin thu thập</a></li>
+                <li><a href="#III">III. Phương pháp thu thập</a></li>
+                <li><a href="#IV">IV. Sử dụng và chia sẻ thông tin thu thập được</a></li>
+                <li><a href="#V">V. Thu thập và sử dụng thông tin cá nhân của trẻ em</a></li>
+                <li><a href="#VI">VI. Bảo vệ</a></li>
+                <li><a href="#VII">VII. Liên kết đến các trang web hoặc dịch vụ của bên thứ ba</a></li>
+                <li><a href="#VIII">VIII. Quyền lợi của bạn</a></li>
+                <li><a href="#IX">IX. Hạn chế sử dụng hoặc tiết lộ thông tin cá nhân của bạn</a></li>
+                <li><a href="#X">X. Thu hồi sự đồng ý của bạn để xử lý thông tin cá nhân của bạn</a></li>
+                <li><a href="#XI">XI. Lưu trữ và thời gian lưu trữ</a></li>
+                <li><a href="#XII">XII. Tiếp xúc</a></li>
+              </ul>
+            </nav>
+          </aside>
+          <article class="article">
+            <ul>
+              <li>
+                <p class="title" id="I">I. Phạm vi của chính sách quyền riêng tư này</p>
+                <p class="text">Chính sách bảo mật này mô tả việc thu thập và sử dụng Thông tin cá nhân của COMICO VIỆT NAM được gửi và thu thập thông qua Dịch vụ. Thuật ngữ Thông tin cá nhân được sử dụng trong Chính sách bảo mật này bao gồm mọi thông tin nhận dạng cá nhân về người dùng. Chính sách bảo mật này áp dụng cho người dùng có thể sử dụng tiếng Việt.</p>
+                <p class="text">Bằng cách CÀI ĐẶT, SỬ DỤNG, ĐĂNG KÝ hoặc TRUY CẬP DỊCH VỤ, BẠN ĐÃ CHẤP NHẬN CÁC ĐIỀU KHOẢN CỦA CHÍNH SÁCH QUYỀN RIÊNG TƯ NÀY. Nếu bạn không đồng ý với Chính sách quyền riêng tư này, vui lòng không cài đặt, sử dụng, đăng ký hoặc truy cập Dịch vụ.</p>
+                <p class="text">COMICO VIỆT NAM có quyền sửa đổi Chính sách quyền riêng tư này bất cứ lúc nào để đáp ứng các phát triển pháp lý hoặc chính sách nội bộ, vì vậy vui lòng xem lại  thường xuyên. Nếu bất kỳ bổ sung, xóa hoặc sửa đổi nào được thực hiện cho Chính sách quyền riêng tư, một thông báo sẽ được đăng trong Dịch vụ trước ít nhất bảy (7) ngày. Tuy nhiên, đối với những thay đổi quan trọng, COMICO VIỆT NAM sẽ đăng thông báo trước ba mươi (30) ngày. Trong mọi trường hợp, bạn sẽ có quyền hủy bỏ hoặc chỉnh sửua Thông tin cá nhân của mình để hạn chế việc sử dụng hoặc tiết lộ của chúng tôi.</p>
+              </li>
+              <li>
+                <p class="title" id="II">II. Thông tin thu thập</p>
+                <p class="text">COMICO VIỆT NAM có thể thu thập và xử lý các dữ liệu sau về bạn:</p>
+                <p class="text tab"><span>Thông tin cá nhân</span><br>
+                  COMICO VIỆT NAM có thể thu thập Thông tin cá nhân mà bạn tự nguyện cung cấp cho chúng tôi khi bạn tham gia vào một số hoạt động nhất định trong Dịch vụ, bao gồm địa chỉ email, giới tính (tùy chọn) và năm sinh của bạn..</p>
+                <p class="text tab"><span>Thông tin sử dụng</span><br>
+                  COMICO VIỆT NAM thu thập chi tiết về việc bạn sử dụng Dịch vụ của chúng tôi và các tài nguyên mà bạn truy cập. Thông tin sử dụng này bao gồm thông tin về cách thức và thời điểm bạn truy cập hoặc sử dụng Dịch vụ, lượt xem, trang đã truy cập hoặc mua vật phẩm hoặc nội dung ảo của chúng tôi.</p>
+                <p class="text tab"><span>Thông tin kỹ thuật</span><br>
+                  COMICO VIỆT NAM thu thập dữ liệu kỹ thuật chung liên quan đến bạn như thông tin về thiết bị bạn sử dụng để truy cập Dịch vụ, địa chỉ IP, hệ điều hành, loại trình duyệt và thông tin hệ thống của COMICO VIỆT NAM.</p>
+                <p class="text tab"><span>Liên lạc của người dùng với</span> COMICO VIETNAM<br>
+                  Nếu bạn liên hệ với COMICO VIỆT NAM hoặc trả lời các tin nhắn và liên lạc mà COMICO VIỆT NAM gửi cho bạn, COMICO VIỆT NAM có thể lưu lại nội dung đó.</p>
+                <p class="text tab"><span>Thông tin từ Mạng xã hội hoặc Nền tảng của bên thứ ba</span><br>
+                  Bạn có thể tự nguyện cho phép Dịch vụ của COMICO VIỆT NAM tương tác với mạng xã hội hoặc nền tảng của bên thứ ba như Facebook, Instagram hoặc Google và các nền tảng này có thể sẽ cung cấp dữ liệu về bạn cho COMICO VIỆT NAM. Các ứng dụng hoặc trang web này được tạo và duy trì bởi bên thứ ba không phải là một phần của hoặc được kiểm soát bởi COMICO VIỆT NAM. Bạn nên đảm bảo rằng bạn đã đọc các điều khoản dịch vụ và chính sách quyền riêng tư của họ để hiểu cách họ xử lý dữ liệu của bạn và dữ liệu nào họ có thể chia sẻ với COMICO VIỆT NAM. COMICO VIỆT NAM sẽ chỉ sử dụng và thu thập thông tin mà bạn tự nguyện ủy quyền cho các mạng xã hội bên thứ ba tiết lộ cho chúng tôi.</p>
+                <p class="text tab"><span>Thông tin phi cá nhân</span><br>
+                  Theo mục đích của Chính sách bảo mật này, Thông tin phi cá nhân có nghĩa là thông tin không trực tiếp nhận dạng bạn. COMICO VIỆT NAM có thể sử dụng các công cụ hoặc phần mềm phân tích của bên thứ ba để tự động thu thập và sử dụng một số Thông tin phi cá nhân nhất định không trực tiếp cho phép COMICO VIỆT NAM nhận dạng bạn.</p>
+                <p class="text tab"><span>Cookies</span><br>
+                  COMICO VIỆT NAM có thể sử dụng cookie để cung cấp cho người dùng Dịch vụ tối ưu. "Cookie" là một chút thông tin lưu giữ hồ sơ mà các trang web thường lưu trữ trên máy tính của người dùng. Bạn có thể đặt cài đặt cookie từ trình duyệt web, tuy nhiên, việc chọn từ chối lưu trữ cookie có thể ảnh hưởng đến khả năng đăng nhập và sử dụng Dịch vụ của chúng tôi. </p>  
+              </li>
+              <li>
+                <p class="title" id="III">III. Phương pháp thu thập</p>
+                <p class="text">COMICO VIỆT NAM có thể thu thập Thông tin cá nhân của người dùng trực tiếp từ người dùng khi đăng ký hoặc sử dụng Dịch vụ, từ các công ty liên kết hoặc thông qua các công cụ tạo thông tin của người dùng.</p>
+              </li>
+              <li>
+                <p class="title" id="IV">IV. Sử dụng và chia sẻ thông tin thu thập được</p>
+                <p class="text tab">
+                  <span>Sử dụng Thông tin được Thu thập</span><br> 
+                  COMICO VIỆT NAM có thể sử dụng Thông tin cá nhân của bạn cho các mục đích sau đây có nguồn gốc và được coi là cần thiết cho sự tồn tại, duy trì và tuân thủ mối quan hệ pháp lý giữa COMICO VIỆT NAM và bạn: (i) xác định người dùng và ngăn chặn việc sử dụng không đúng cách Dịch vụ: (ii) giúp bạn tận hưởng Dịch vụ nội dung hiệu quả hơn và (iv) gửi cho bạn các thông báo quan trọng khi cần thiết.<br><br>
+                  Ngoài ra, COMICO VIỆT NAM có thể sử dụng Thông tin cá nhân của bạn để: (i) tạo dữ liệu thống kê liên quan đến việc sử dụng Dịch vụ; (ii) tiến hành khảo sát và phân tích, rút thăm và gửi giải thưởng cho các sự kiện hoặc (iii) phổ biến thông tin quảng cáo cho các sự kiện. Trừ khi được chỉ định bởi bạn theo một cách khác, bằng việc tiếp tục sử dụng các dịch vụ của chúng tôi bạn đồng ý với việc chúng tôi sử dụng Thông tin cá nhân của bạn cho các mục đích phụ trợ như trên. Bạn có thể liên hệ với chúng tôi bất cứ lúc nào nếu bạn không muốn chúng tôi sử dụng thông tin cá nhân của bạn cho các mục đích được đề cập trong đoạn này.
+                </p>
+                <p class="text tab"><span>Chia sẻ thông tin Thu thập</span><br>
+                  COMICO VIỆT NAM không chia sẻ Thông tin cá nhân với bên thứ ba mà không có được sự đồng ý trước của bạn. Là một phần của các hoạt động liên quan đến quản lý và điều hành COMICO VIỆT NAM, chúng tôi có thể chuyển Thông tin cá nhân của bạn cho công ty mẹ của chúng tôi hoặc / và một số hoặc tất cả các chi nhánh, công ty con, bên cấp phép và / hoặc cùng một nhóm kinh tế, bất cứ khi nào họ hoạt động thông qua các quy trình và chính sách nội bộ tương tự. Tương tự, COMICO VIỆT NAM sẽ chia sẻ thông tin của bạn khi ký hợp đồng phụ của bên thứ ba; bao gồm luật sư, kiểm toán viên, kế toán viên hoặc nhân viên kỹ thuật cần xử lý Thông tin cá nhân của bạn thay mặt cho COMICO VIỆT NAM và theo hướng dẫn của họ. COMICO VIỆT NAM không yêu cầu sự đồng ý của bạn cho các chuyển khoản này.<br><br>
+                  Tương tác với Mạng hoặc Nền tảng xã hội của bên thứ ba: Bạn hiểu rằng nơi bạn cho phép COMICO VIỆT NAM tương tác với các mạng hoặc nền tảng xã hội của bên thứ ba, COMICO VIỆT NAM có thể chia sẻ dữ liệu về bạn với họ. <br><br>
+                  Tuân thủ các nghĩa vụ pháp lý: Đôi khi COMICO VIỆT NAM có thể được yêu cầu bởi cơ quan thực thi pháp luật hoặc cơ quan tư pháp để cung cấp Thông tin cá nhân cho các cơ quan chính phủ thích hợp ở nước bạn hoặc nước ngoài. COMICO VIỆT NAM sẽ tiết lộ Thông tin cá nhân khi nhận được lệnh của tòa án, trát đòi hầu tòa hoặc hợp tác với một cuộc điều tra thực thi pháp luật.
+                </p>
+              </li>
+              <li>
+                <p class="title" id="V">V. Thu thập và sử dụng thông tin cá nhân của trẻ em</p>
+                <p class="text">Dịch vụ của COMICO VIỆT NAM không dành cho trẻ em dưới 13 tuổi và không cố ý thu thập bất kỳ Thông tin cá nhân nào từ những trẻ em đó. Trẻ em dưới 13 tuổi không nên sử dụng hoặc cố gắng sử dụng Dịch vụ và nếu bạn dưới 13 tuổi, vui lòng không thử sử dụng Dịch vụ hoặc gửi bất kỳ thông tin nào về bản thân bạn đến COMICO VIỆT NAM.</p>
+                <p class="text">Ngoài ra, trong trường hợp COMICO VIỆT NAM nhận được Thông tin cá nhân mà COMICO VIỆT NAM phát hiện được cung cấp bởi người dưới 13 tuổi, COMICO VIỆT NAM sẽ nhanh chóng xóa Thông tin cá nhân đó một cách an toàn. Phụ huynh, những người tin rằng COMICO VIỆT NAM có thể có bất kỳ thông tin nào từ hoặc về một người dưới 13 tuổi, có thể gửi yêu cầu bằng văn bản tới <a href="" class="text-link">help@comico.vn</a>.</p>
+                <p class="text">Xin lưu ý rằng những người dưới độ tuổi được quy định trong khu vực tài phán của họ bắt buộc phải có cha mẹ hoặc người giám hộ hợp pháp đọc và chấp nhận Chính sách quyền riêng tư này và Điều khoản sử dụng thay mặt họ. Phụ huynh được khuyến khích giám sát việc sử dụng Dịch vụ của con em mình và làm quen với các loại nội dung có sẵn thông qua Dịch vụ. Phụ huynh nên giám sát việc sử dụng e-mail, diễn đàn và các thông tin liên lạc trực tuyến khác.</p>
+              </li>
+              <li>
+                <p class="title" id="VI">VI. Bảo vệ</p>
+                <p class="text">COMICO VIỆT NAM duy trì các biện pháp bảo vệ phù hợp để đảm bảo tính bảo mật, tính toàn vẹn và quyền riêng tư của Thông tin cá nhân mà họ thu thập và lưu trữ về chủ tài khoản của mình. Thông tin cá nhân được COMICO VIỆT NAM thu thập được lưu trữ trong môi trường hoạt động an toàn không có sẵn cho công chúng và chỉ có thể truy cập bởi các nhân viên được ủy quyền. Ngoài ra, COMICO VIỆT NAM sử dụng mã hóa theo tiêu chuẩn ngành để ngăn chặn truy cập trái phép vào Thông tin cá nhân của bạn. COMICO VIỆT NAM cũng có các biện pháp bảo mật để bảo vệ sự mất mát, lạm dụng và thay đổi thông tin dưới sự kiểm soát của mình (nghĩa là duy trì chất lượng dữ liệu). Trước khi COMICO VIỆT NAM cho phép người dùng truy cập Thông tin cá nhân của họ, ví dụ, COMICO VIỆT NAM xác minh danh tính của họ bằng cách yêu cầu họ gửi thông tin như tên người dùng và mật khẩu của họ. COMICO VIỆT NAM cũng thực hiện các bước hợp lý để đảm bảo rằng các bên thứ ba mà COMICO VIỆT NAM chuyển Thông tin cá nhân cung cấp đầy đủ các biện pháp bảo vệ các dữ liệu đó.</p>
+              </li>
+              <li>
+                <p class="title" id="VII">VII. Liên kết đến các trang web hoặc dịch vụ của bên thứ ba</p>
+                <p class="text">Thỉnh thoảng, bạn nên biết rằng Dịch vụ có thể chứa các liên kết đến các trang web, sản phẩm hoặc dịch vụ của bên thứ ba. COMICO VIỆT NAM không chịu trách nhiệm đối với các thông lệ về quyền riêng tư hoặc nội dung của các trang web hoặc dịch vụ đó. Nếu bạn lo ngại về chính sách quyền riêng tư của một bên thứ ba nào đó, COMICO VIỆT NAM khuyên bạn nên đọc chính sách quyền riêng tư của trang web hoặc dịch vụ mà bạn liên kết trước khi gửi bất kỳ Thông tin cá nhân nào. Vui lòng xem xét rằng trong trường hợp mua trong ứng dụng, thông tin của bạn sẽ được quản lý bởi các bên thứ ba và chịu sự chi phối của chính sách bảo mật của họ; COMICO VIỆT NAM không thu thập hoặc quản lý Thông tin tài chính của bạn.</p>
+              </li>
+              <li>
+                <p class="title" id="VIII">VIII. Quyền lợi của bạn</p>
+                <p class="text">COMICO VIỆT NAM nỗ lực rất tốt để cho phép bạn xem xét, cập nhật hoặc chỉnh sửa Thông tin cá nhân của bạn trong quyền sở hữu của COMICO VIỆT NAM. Để thực hiện việc này, vui lòng liên hệ với Quản trị viên chính sách bảo mật của COMICO VIỆT NAM tại <a href="" class="text-link">help@comico.vn</a>. COMICO VIỆT NAM sẽ cần thông tin đầy đủ từ bạn để thiết lập danh tính của bạn và để xác minh yêu cầu truy cập của bạn và cũng để xử lý yêu cầu của bạn. Xin lưu ý rằng ngay cả khi Thông tin cá nhân bị thay đổi hoặc bị xóa theo yêu cầu của bạn, COMICO VIỆT NAM vẫn có thể giữ lại tất cả hoặc một phần Thông tin cá nhân của bạn để giải quyết tranh chấp, thực thi các điều khoản và điều kiện được quy định trong Điều khoản sử dụng, tuân thủ các yêu cầu kỹ thuật và pháp lý và các ràng buộc liên quan đến bảo mật, tính toàn vẹn và hoạt động của Dịch vụ. Theo quy định ở trên, bạn có thể truy cập Thông tin cá nhân mà chúng tôi sở hữu; khắc phục trong trường hợp dữ liệu đó không đầy đủ hoặc không chính xác; hủy trong trường hợp dữ liệu đó không bắt buộc đối với một số mục đích được đề cập trong Chính sách bảo mật này hoặc đang được sử dụng cho các mục đích không được bạn đồng ý, hoặc từ chối xử lý chúng cho các mục đích cụ thể. Đối với các mục đích nêu trên, bạn có thể yêu cầu thực hiện các quyền truy cập, cải chính, xóa bỏ hoặc từ chối xử lý Thông tin cá nhân của bạn với COMICO VIỆT NAM theo luật hiện hành và thông qua một văn bản yêu cầu gửi đến Quản trị viên chính sách bảo mật của chúng tôi, cho biết: (i) tên và địa chỉ; (ii) bản sao giấy tờ tùy thân chính thức hợp lệ (CMND, Hộ chiếu, ETC); (iii) mô tả rõ ràng và chính xác về Thông tin cá nhân mà bạn muốn truy cập hoặc chỉnh sửa, hủy bỏ hoặc từ chối xử lý và bất kỳ yếu tố nào khác có thể giúp dễ dàng định vị dữ liệu của bạn; (iv) chữ ký của bạn; cũng như (v) bất kỳ yêu cầu nào khác được cung cấp bởi Luật và / hoặc các quy định hiện hành khác.</p>
+                <p class="text">COMICO VIỆT NAM sẽ trả lời các yêu cầu trong thời hạn tối đa là hai mươi (20) ngày làm việc hoặc bất kỳ điều khoản dài hạn nào khác được pháp luật hiện hành cho phép. Phản hồi của COMICO VIỆT NAM sẽ cho biết nếu yêu cầu truy cập, cải chính, hủy bỏ hoặc từ chối của bạn được chấp thuận hay không. Nếu có, COMICO VIỆT NAM sẽ đưa ra quyết định có hiệu lực trong vòng mười lăm (15) ngày làm việc sau thông báo đó cho bạn hoặc đại diện của bạn. Những điều khoản này có thể được thay đổi theo quy định của pháp luật hiện hành. COMICO VIỆT NAM sẽ cung cấp cho bạn các bản sao điện tử Thông tin cá nhân của bạn, nếu bạn thực hiện quyền truy cập của mình.</p>
+              </li>
+              <li>
+                <p class="title" id="IX">IX. Hạn chế sử dụng hoặc tiết lộ thông tin cá nhân của bạn</p>
+                <p class="text">Bạn có quyền giới hạn việc sử dụng hoặc tiết lộ Thông tin cá nhân của mình cho các mục đích không cần thiết cho mối quan hệ pháp lý của chúng tôi. Do đó, nếu bạn không muốn nhận bất kỳ thông tin liên lạc nào về Dịch vụ, bạn có thể bỏ chọn phần chấp thuận trong trang cài đặt hoặc gửi email tới Quản trị viên Chính sách bảo mật của chúng tôi, cho chúng tôi biết về tình huống đó và chúng tôi sẽ không bao gồm bạn trong danh sách đăng ký liên lạc của COMICO VIỆT NAM và chúng tôi sẽ cung cấp cho bạn bằng chứng điện tử về việc đăng ký của bạn, theo yêu cầu.</p>
+              </li>
+              <li>
+                <p class="title" id="X">X. Thu hồi sự đồng ý của bạn để xử lý thông tin cá nhân của bạn</p>
+                <p class="text">Bất cứ lúc nào bạn cũng có thể thu hồi sự đồng ý của bạn được cấp cho việc xử lý Thông tin cá nhân của bạn bằng cách liên hệ với Quản trị viên chính sách bảo mật của chúng tôi. Chúng tôi thông báo cho bạn rằng trong trường hợp bạn thu hồi sự đồng ý của bạn đối với việc xử lý Thông tin cá nhân của bạn, chúng tôi có thể không thể tiếp tục mối quan hệ pháp lý của chúng tôi và bạn.</p>
+              </li>
+              <li>
+                <p class="title" id="XI">XI. Lưu trữ và thời gian lưu trữ</p>
+                <p class="text">COMICO VIỆT NAM, trực tiếp hoặc thông qua bất kỳ chi nhánh hoặc công ty con nào khác, có thể lưu trữ Thông tin cá nhân của bạn trong các cơ sở dữ liệu ở nước bạn hoặc nước ngoài, không giới hạn, ngoại trừ các khoảng thời gian được cung cấp bởi các quy định hiện hành, cũng như tuân thủ các mục đích được cung cấp trong Chính sách quyền riêng tư này và các quy định của luật áp dụng, các quy định của nó và bất kỳ quy định hiện hành nào khác.</p>
+                <p class="text">Xin lưu ý rằng COMICO VIỆT NAM loại bỏ các hồ sơ về Thông tin cá nhân của người dùng sau khi hoàn thành mục đích thu thập và sử dụng. Tuy nhiên, trong trường hợp hồ sơ cần được lưu trữ theo chính sách hoặc luật áp dụng của COMICO VIỆT NAM, chúng tôi có quyền lưu trữ Thông tin cá nhân trong một khoảng thời gian nhất định.</p>
+              </li>
+              <li>
+                <p class="title" id="XII">XII. Tiếp xúc</p>
+                <p class="text">Nếu bạn có thắc mắc về Chính sách quyền riêng tư này hoặc quyền riêng tư của bạn, vui lòng liên hệ với COMICO VIỆT NAM tại <a href="" class="text-link">help@comico.vn</a></p>
+              </li>
+            </ul>
+          </article>
+        
+        </div>
+    </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <nav class="nav-footer">
+        <ul>
+          <li><div><a href="/companyinfo.html" target="_blank">Giới thiệu về công ty</a></div></li>
+          <li><div class="cursor-pointer" onclick="nClick(this, &#39;comicoVNWeb.personal.UserTerms&#39;, &#39;&#39;, &#39;&#39;, event, &#39;/static/terms&#39;)">Điều khoản sử dụng</div></li>
+          <li><div class="cursor-pointer" onclick="nClick(this, &#39;comicoVNWeb.personal.PrivatePolicy&#39;, &#39;&#39;, &#39;&#39;, event, &#39;/static/privacy-policy&#39;)">Điều kiện bảo mật</div></li>
+          <!-- <li><a href="" th:inline="text">Quy định thành viên</a></li>
+          <li><a href="" th:inline="text">Hỗ trợ</a></li> -->
+        </ul>
+      </nav>
+      <div class="logo-comico">
+        <img src="https://comico-vn.gslb.toastoven.net/release/web/static/images/img-logo-white.svg" width="166" height="auto" alt="">
+        <span class="text">VIETNAM</span>
+      </div>
+      <address>
+        Floor 19, Block Office, Indochina Park Tower, 04 Nguyen Dinh Chieu Street, <br>
+        Dakao Ward, District 1, Hochiminh City
+      </address>
+      <div class="social-comico">
+        <a href="https://www.facebook.com/comicoVN/" target="_blank"><i class="icon-facebook"></i></a>
+      </div>
+    </div>
+    <div class="copyright">Copyright © COMICO SVC VIETNAM. All rights reserved.</div>
+
+    <button type="button" class="btn-back-to-top">
+      <img src="https://comico-vn.gslb.toastoven.net/release/web/static/images/img-btn-top.svg" width="58" height="58" alt="Back to top">
+    </button>
+</footer>
+</body>
+
+</html>

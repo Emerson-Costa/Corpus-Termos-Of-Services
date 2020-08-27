@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人信息保护政策</title>
+    <script>
+        ; (function (win, doc) {
+            var UA = navigator.userAgent,
+                isAndroid = /android|adr/gi.test(UA),
+                isIos = /iphone|ipod|ipad/gi.test(UA) && !isAndroid;
+            var docEl = doc.documentElement;
+            var refreshRem = function () {
+                var w = docEl.getBoundingClientRect().width || 320;
+                var fs = w / 320 * 20;
+                fs = fs > 40 ? 40 : fs;
+                docEl.style.fontSize = fs + 'px';
+            }, refreshRemId;
+            win.addEventListener('resize', function () {
+                clearTimeout(refreshRemId);
+                refreshRemId = setTimeout(refreshRem, 100);
+            }, false);
+            win.addEventListener('pageshow', function (e) {
+                if (e.persisted) {
+                    clearTimeout(refreshRemId);
+                    refreshRemId = setTimeout(refreshRem, 100);
+                }
+            }, false);
+            refreshRem();
+        })(window, document);
+    </script>
+    <style>
+        html,
+        body,
+        div,
+        img,
+        h2,
+        h3,
+        p {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-weight: normal;
+        }
+
+        html,
+        body {
+            font-size: 20px;
+            font: normal 20px/1.5 'helvetica neue', 'Hiragino Sans GB', 'Microsoft YaHei', 'SimSun', arial, sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+            padding: 0.64rem;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        /* iPhone X and iOS11.1 */
+        html {
+            background-color: #fff;
+            padding-top: constant(safe-area-inset-top);
+            padding-left: constant(safe-area-inset-left);
+            padding-right: constant(safe-area-inset-right);
+            padding-bottom: constant(safe-area-inset-bottom);
+        }
+
+        /*p {margin-top: .5rem;font-size: .6rem; text-indent: .8rem;line-height: 1rem; color:#666;text-align: justify;}*/
+        h1 {
+            padding: 0.5rem 0;
+            font-size: 1.024rem;
+            line-height: 1.8rem;
+            color: #333;
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+            padding-top: .5rem;
+            font-size: .8rem;
+            line-height: 1.5rem;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            line-height: 2;
+            padding-left: 0;
+        }
+
+        ul li,
+        p {
+            margin-bottom: .5rem;
+            margin-top: .5rem;
+            font-size: .6rem;
+            text-indent: .8rem;
+            line-height: 1rem;
+            color: #666;
+        }
+
+        em {
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        strong {
+            font-style: normal;
+            font-weight: bold;
+            border-bottom: 1px solid #000;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .deliver {
+            margin: 40px 0;
+        }
+
+        .en p {
+            text-indent: 0;
+        }
+
+        @media only screen and (max-width: 360px) and (min-width: 321px) {
+            html {
+                font-size: 22.5px
+            }
+        }
+
+        @media only screen and (max-width: 375px) and (min-width: 361px) {
+            html {
+                font-size: 23.4px
+            }
+        }
+
+        @media only screen and (max-width: 415px) and (min-width: 391px) {
+            html {
+                font-size: 25.9px;
+            }
+        }
+
+        #zh,
+        #tw,
+        #en,
+        #jp,
+        #ko,
+        #hk {
+            display: none;
+        }
+        table {
+            border: 1px solid #000;
+            border-spacing: 0;
+        }
+        th {
+            border: 1px solid #000;
+        }
+        td {
+            border: 1px solid #000;
+        }
+        table p {
+            text-indent: 0;
+            margin: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="en" class="en">
+
+        
+        <h1>Privacy Policy</h1>
+        <p class="bold">Version: 3.1</p>
+        <p class="bold">Last Modified: 14 August 2020</p>
+        <p>Your privacy is important to us.</p>
+        <p>Meitu (China) Limited ("Meitu", "we", "us" or "our") is dedicated to protecting the privacy of our users
+            ("users" or "you"). This Privacy Policy (the "Policy") is meant to explain our practices regarding how we
+            collect, store, use, manage and protect your user information (including your personal information) as a
+            controller and/or business under applicable data protection laws during your use of BeautyCam application including all its features (the "Services").</p>
+        <p>Please note that the scope of this Policy is limited solely to your user information (including your personal
+            information) collected or received by Meitu when you are using the Services. In this Policy, "personal
+            information" refers to any information or combination of information that can be used to identify, contact
+            or locate an individual to whom the collected information pertains. Such personal information may include
+            your name, gender, phone number, email address, date of birth, images, geo-location, personal identity
+            number, identifiable biological information, and financial information (such as credit card or bank account
+            number, WeChat Pay or Alipay account information).</p>
+        <p class="bold underline">BY USING OUR SERVICES, YOU ARE AGREEING TO THIS POLICY AND THE COLLECTION, USE,
+            PROCESSING, RETENTION, DISCLOSURE AND SHARING OF YOUR USER INFORMATION, INCLUDING YOUR PERSONAL INFORMATION,
+            IN THE MANNER PROVIDED IN THIS POLICY. IF YOU DO NOT AGREE WITH ANY OF THE TERMS OF THIS POLICY OR ANY
+            SUBSEQUENT CHANGES TO THIS POLICY, PLEASE DO NOT USE OUR SERVICES.</p>
+        <p>Please note that it is mandatory for you to provide certain categories of data (as specified at the time of
+            collection). In the event that you do not provide any or sufficient data marked as mandatory, we may not be
+            able to complete the registration process or provide you with our Services. Also, please note that, unless
+            we define a term in this Policy, all capitalized terms used in this Policy have the same meanings as in our
+            <a href="./service.html">Terms of Service</a>. So, please make sure that you have read and understand our
+            Terms of Service. </p>
+        <p>If you have any questions regarding this Policy or any privacy-related matters, please contact our Data
+            Protection Officer via email at compliance@meitu.com (please quote “BeautyCam” in your email title) or via registered mail at
+            8106B, Level 81, International Commerce Centre, 1 Austin Road West, Kowloon, Hong Kong (attention: Legal
+            Department, Meitu).</p>
+
+        <h2>THE INFORMATION WE COLLECT</h2>
+        <p>In order to provide and improve the Services, Meitu will collect and process your personal information and
+            user information in accordance with this Policy. If you do not provide this information, we may be unable to
+            provide you with our products or Services. You should ensure that all personal information and user
+            information submitted to us is complete, accurate, true and correct. Failure on your part to do so may
+            result in our inability to provide you with all or some of the Services.</p>
+        <h2>The Information You Provide to Us</h2>
+        <p>When you use the Services, we might recommend you sign up for an Account to take full advantage of the
+            Services and all their features. When you create an Account, we will collect certain information that can be
+            used to identify you or provide the Services to you, such as your user name, gender, date of birth and
+            mobile phone number and location (collectively, “<span class="bold">Registration Data</span>”).</p>
+
+        <h2>Mobile Device Information</h2>
+        <p>When you use our Services on your mobile device, we will collect information about your device, including its
+            International Mobile Equipment Identity ("<span class="bold">IMEI</span>"), Unique Device Identifier (“<span
+                class="bold">UDID</span>”)or Android ID, Universally Unique Identifier (""<span class="bold">GUUID</span>"), Identifier for Advertising ("IDFA") and Identifier for Vendor ("<span
+                class="bold">IDFV</span>"), Integrated Circuit Card Identifier ("<span class="bold">ICCID</span>"),
+            Media Access Control ("<span class="bold">MAC</span>") address, the type of device you use, operating system
+            version, a list of mobile applications installed on your device and resolution, which will be used by us for statistical and/or analytical reasons, including
+            without limitation to improve our technical functionality, server load-balancing, analysis of technical data
+            relating to your mobile device so as to optimize the Services and graphics adaptation.</p>
+
+        <p>
+            We may send you push notifications on your mobile device from time to time. If you no longer wish to receive
+            these types of communications, you may turn them off from your mobile device.
+        </p>
+        <p>
+            As stated below in the “Location Information” section, we may collect your location-based information from
+            your mobile device if you choose to share it with us. If you subsequently wish to stop sharing Location
+            Information, you may do so at any time by editing the relevant setting on your mobile device.
+        </p>
+
+        <h2>Mobile Analytics</h2>
+
+        <p>We use mobile analytics software to allow us to better understand and improve the functionality of our
+            Services. Such software may record information such as how often you use the application, the events that
+            occur within the application, aggregated usage, performance data, and where the application was downloaded
+            from.</p>
+
+        <h2>Network Information</h2>
+
+        <p>When you use the Services, we will collect information about the network you use, including the name of the
+            operator and the type of network, so as to understand the distribution of operators and networks used by our
+            users. In addition, we will collect information such as the name of the WiFi network to which you connect,
+            the location of the WiFi network, and the duration of your WiFi connection to understand the environment
+            under which you prefer to use our Services. We may use such information to provide customized services, for
+            example to provide you with location-based advertising through push-notification.</p>
+
+        <h2>Location Information</h2>
+
+        <p>We will collect your Location Information, including the country code, latitude and longitude, network
+            location, IP address and the system country and system time zone recorded on your device. This information
+            will help us understand user distribution and usage scenarios and allow us to provide users with the correct
+            version of our apps, the reappearance of the geo-location or the publishing of the real-time geo-location
+            where you take any photos or shoot any videos, send relevant advertisements to you, and improve the
+            Services. Unless we obtain your consent, location data WILL NOT BE ACQUIRED or USED to identify you
+            individually. Except as otherwise provided in this Policy, we will not share this Location Information with
+            any third parties. If you no longer wish to allow us to collect or use such information, you may turn off
+            your Internet access or GPS, or disable our access to information about your network, GPS and device. Please
+            note that we may still continue to receive some Location Information, such as your Network Information, IP
+            address and system time zone, as a result of you using the Services.</p>
+
+        <h2>
+            Log Information
+        </h2>
+        <p>When you use some of the Services, including generating and browsing certain content, we will automatically
+            collect certain relevant log information stored in BeautyCam ("<span class="bold">Log Information</span>").
+            Log Information may include (i) details on when and how often you use the Services, (ii) device statistics,
+            including critical operation paths, errors, crashes, language and time zone. This Log Information is used to
+            improve the Services and is NOT USED to identify our users individually.</p>
+
+        <h2>Image Information
+        </h2>
+
+        <p>By choosing to use the cloud editing feature of our service, you understand and agree that we must upload
+            your photos to our server for processing before returning processed photos to you for the purposes of
+            providing such service to you and continuous optimization and that we will also receive the EXIF data about
+            your photos (EXIF data may contain GPS coordinates where photos were taken and processed, equipment type,
+            ISO and information about the front and rear cameras and creation time, depending on the equipment
+            manufacturer) for the purpose of further optimizing our Services, such as providing a better match of photo
+            effects to your equipment.</p>
+
+        <h2>Metadata
+        </h2>
+        <p>Metadata refers to technical data associated with user content. Put simply, metadata is data that describes
+            data. For example, metadata can describe the analysis results of facial features, gender, age, race of the
+            characters in photos and other elements contained in photos, which are generated and tagged by the computer
+            algorithm and artificial intelligence. When you use the Services, we will use photo metadata to provide you
+            with certain features including precise "Facial Recognition", "Key-Points Recognition", "Region
+            Segmentation", "Content Tags" and other custom features based on a combination of these basic features. We
+            may use your photo metadata to provide you with more suitable filters and better photo effect when our apps
+            process your photos; we may also make use of the metadata to serve up a more contextually relevant products
+            or services to you.</p>
+        <h2>Face Recognition
+        </h2>
+        <p>In order to provide the Services, apart from utilizing metadata as mentioned above, we use face recognition technology to recognize faces in photos and camera experiences. We may detect and use facial marks to provide face recognition contents and facial manipulation features. Our Services may utilize calculation results of ARKit from Apple in relation to depth of facial mapping information, which may require to use your facial recognition features in order to ensure the face image processing effect and perform feature analysis using the algorithm. The information we collect cannot be used for identifying a specific person, and is used to provide the mentioned features only. When the content recommendation is finished or upon the closing of the application, the facial mapping information is discarded. These information is not shared with any third parties.
+        </p>
+        <p>We will neither use the results for other purposes, nor capture any data in the file nor upload data to the server for recording purposes.
+        </p>
+
+        <h2>Forum
+        </h2>
+        <p>You should be aware that ANY CONTENT OR INFORMATION THAT YOU PROVIDE IN A FORUM WILL BE MADE PUBLIC and may
+            be read, collected, copied, distributed and used by others who access the forums, and may result in
+            unsolicited messages from third parties and further distribution of such content or information. The
+            activities of the third parties who collect your information from such publicly accessible forums are beyond
+            Meitu’s control. As such, you should not post sensitive personal information or any other information that
+            you do not want to be made public. You can remove your personal information from these forums by yourself or
+            by contacting us at compliance@meitu.com (please quote “BeautyCam” in your email title).  In some cases, we may not be able to remove your personal information from the forums, in which case, we will let you know if we are unable to do so and why. However,
+            please be aware that if a third party has collected or otherwise saved the information you have made public,
+            Meitu will not be able to assist you in removing or deleting that information from wherever the third party
+            has stored or posted it.</p>
+
+        <h2>Cookies</h2>
+
+        <p>
+            When you are using the Services, Meitu or a third party designated by Meitu will use cookies, tags and
+            scripts to collect information for the purposes of analyzing trends, managing the Services, tracking users
+            activity on the BeautyCam and collecting demographics on the user base. Information collected may include
+            information about your Internet Protocol (IP) address, browser type, Internet Service Provider (ISP),
+            referring and exit pages, your operating system, dates and timestamps, and clickstream data.
+        </p>
+
+        <h2>Advertising</h2>
+
+        <p>We and our third-party service providers may include advertisements within our Services, and may collect and
+            use information about you such as your Advertising ID, geographic location and IP address for the purpose
+            of delivering and tracking these advertisements. If your device does not have Advertising ID, we may use other persistent identifiers. We may also access your App list and collect the application package names of the applications installed on your device. We use the above information to help us better count track and provide advertisements based on language, geographic location and other details. If you wish to opt out of
+            interest-based advertising, you may opt out as your device permits. For more information, please contact us
+            at compliance@meitu.com (please quote “BeautyCam” in your email title). Please note you will continue to receive generic ads after you opt out of
+            interest-based advertising.</p>
+
+        <h2>Information Collected by Third Party Services</h2>
+        <p>Our Services provided to you may contain our service provider’s Application Programming Interfaces (APIs) or
+            Software Development Kits (SDKs), which may have tracking tools of such service providers. These third
+            parties may use cookies, APIs and SDKs on our Services and collect and analyze user information. In
+            addition, some third-party SDKs may allow advertisers to collect information in order to provide content
+            that is more relevant to you. Third parties may access your information such as your device identifiers,
+            region (defined as the location where a given language is used), location information and IP address under
+            their respective privacy policies. If you want to know more about such third parties, you may send an email
+            to  compliance@meitu.com (please quote “BeautyCam” in your email title).
+        </p>
+        <h2>User Data Supplementation</h2>
+        <p>We may receive information about you from other sources, including publicly available databases or third
+            parties from whom we have purchased data, and combine this data with information we already have about you.
+            This helps us to update, expand and analyze our records, identify new customers, and provide products,
+            services, and advertising that may be of interest to you. If you provide us with personal information about
+            others, or if others give us your information, we will only use that information for the specific reason for
+            which it was provided to us. Examples of the types of personal information that may be obtained from public
+            sources or purchased from third parties and combined with information we already have about you, may
+            include: Purchased marketing data about our customers from third parties that is combined with information
+            we already have about you, to create more tailored advertising and products.</p>
+        <p>If you provide us any personal information of any third party, you shall obtain the consent of such third
+            party for the collection, use and disclosure thereof by Meitu in accordance with these purposes. You further
+            represent and warrant that in relation to any such third party personal information that you provide, you
+            have obtained such consent for such collection, use and disclosure by Meitu.</p>
+
+        <h2>Other Information</h2>
+        <p>We may also collect other information which is not related to your identity. For example, we may collect
+            information on the type and version number of your operating system to better understand system upgrades, we
+            may collect information on your system language for the purpose of language adaptation, and we may collect
+            your App list to understand user preferences. If we choose to collect such information, we will do so for
+            the purpose of improving our Services provided to you.</p>
+
+        <h2>HOW WE USE INFORMATION</h2>
+
+        <p>In addition to the uses listed above, we collect and use your user information and personal information for
+            the following purposes:</p>
+
+        <p>(i) <span class="bol">Services.</span> To provide, process, maintain, improve and develop our Services
+            provided to you, including customer support, and other services provided through our products.</p>
+        <p>(ii) <span class="bol">Statistical analysis.</span> To develop and analyze statistics on the use of our
+            products and Services for the purpose of improving our products and our Services.</p>
+        <p>(iii) <span class="bol">To create an Account.</span> The personal information that we collect when you use or
+            Services to create an Account will be used by us to create your Account and profile.</p>
+        <p>(iv) <span class="bol">To facilitate your use of forums.</span> Your information may be used when we display
+            your profile, when you interact with other users and when you publish forum posts.</p>
+        <p>(v) <span class="bol">To provide location-based services.</span> When you use our Services, we or third party
+            service providers may take advantage of your location information to provide you with advertising, the
+            correct version of our Services and help you gain good user experience.</p>
+        <p>(vi) <span class="bol">To improve user experience.</span> Certain optional features such as user experience
+            programs allow Meitu to analyze data regarding the use of our products and our Services and improve user
+            experience.</p>
+        <p>(vii) <span class="bol">To provide push services.</span> Device information may be used by us to provide push
+            services to assess the performance of adverts and the success of software updates, or provide notifications
+            on new product releases. </p>
+        <p>(viii) <span class="bol">To verify your identity.</span> Verifying your identity using a text message when
+            you log in to your account helps prevent unauthorized logins to your account. </p>
+        <p>(ix) <span class="bol">To collect feedback from you.</span> Your feedback is of great value in helping Meitu
+            improve our Services. To keep track of your feedback, Meitu may use the personal information provided by you
+            to contact you and retain the records.</p>
+        <p>(x) <span class="bol">Other purposes.</span> We will collect, store, maintain and use information about you
+            for purposes under the “The Information We Collect”, and for purposes of running our operations, pursuing
+            our legitimate interests (e.g., direct marketing, research (including marketing research), network and
+            information security, and fraud prevention), and satisfying our legal obligations.</p>
+
+        <h2>INFORMATION SHARING AND DISCLOSURE</h2>
+
+        <p>
+            We may share your information with third parties who provide services on our behalf to help with our business activities. These services may include:
+        </p>
+
+        <p>(i) Fulfilling orders and delivering packages;</p>
+        <p>(ii) Providing you with advertising;</p>
+        <p>(iii) Payment processing;</p>
+        <p>(iv) Providing customer services;</p>
+        <p>(v) Sending marketing communications;</p>
+        <p>(vi) Fulfilling subscription services;</p>
+        <p>(vii) Conducting research and analysis; and</p>
+        <p>(viii) Providing cloud computing infrastructure.</p>
+
+        <p>We will not share with or disclose to third parties (other than our service providers) your personal
+            information in whole or in part except for the purposes of:</p>
+        <p>(i) protecting the security of others or their property;</p>
+        <p>(ii) preventing or dealing with fraud;</p>
+        <p>(iii) safeguarding the legitimate rights and interests of Meitu;</p>
+        <p>(iv) taking action in line with our purposes as described in the "The Information We Collect" or the “How We
+            Use Information” sections; </p>
+        <p>(v) complying with laws and regulations or requests by government departments, judicial authorities, law
+            enforcement, or private parties, which are typically designed to uphold Internet security and the rights,
+            property and safety of us, our users and third parties; and/or</p>
+        <p>(vi) evaluating or completing a transaction where we are involved in a merger, acquisition, financing due
+            diligence, reorganization, bankruptcy, receivership, sale of company assets, or other event where your
+            information may be sold or transferred.</p>
+
+        <h2>THIRD PARTY WEBSITES AND SERVICES</h2>
+
+        <p>The Services may contain links to other websites and services. In addition, other websites and services may
+            reference or link to our Services. These other domains and websites are not controlled by us, and Meitu does
+            not endorse or make any representations about third party websites or services. We encourage our users to
+            read the privacy policies of each and every website and service with which they interact. Visiting these
+            other websites or services is at your own risk.</p>
+
+        <h2>INFORMATION SECURITY</h2>
+        <p>We will take reasonable measures to prevent the loss, improper use of, unauthorized access to or disclosure
+            of information. For example, some of our Services will use encryption techniques (such as SSL) to protect
+            your personal information. However, you understand and accept that (in the Internet industry) even though we
+            take reasonable security measures, we cannot always guarantee that your information is 100% secure. You
+            understand and accept that we cannot ensure or warrant the security of any information you provide to us. We
+            do not accept liability for unintentional disclosure. Further, you understand and accept that the system and
+            communication network used by you to access our Services may fail due to factors beyond our control.</p>
+        <H2>INFORMATION ACCESS AND CONTROL</H2>
+        <p>We will take all reasonable and appropriate technical measures to ensure that you can access, update and
+            correct your personal information or other personal information provided to us by you when using our
+            Services. Before you access, update, correct or remove such personal information, we may verify your
+            identity in order to protect the security of your account.</p>
+        <h2>DATA RETENTION</h2>
+        <p>Subject to applicable laws and regulations and the fulfillment of our business or legal purposes, we will
+            retain your information (including your personal information) for such period as is required for us to
+            continue to provide you with our Services.</p>
+        <h2>PRIVACY RIGHTS</h2>
+        <p>In accordance with applicable law, you may have the right to: (i) request confirmation of whether we are processing your personal information; (ii) obtain access to or a copy of your personal information; (iii) receive an electronic copy of personal information that you have provided to us, or ask us to send that information to another company (the “right of data portability”); (iv) object to or restrict our uses of your personal information; (v) seek correction or amendment of inaccurate, untrue, incomplete, or improperly processed personal information; (vi) withdraw your consent; and (vii) request erasure of personal information held about you by us, subject to certain exceptions prescribed by law.</p>
+        <p>If you wish to exercise your rights, you may send an email to compliance@meitu.com (please quote “BeautyCam” in your email title) or mail your request to Unit 8106B, Level 81, International Commerce Centre, 1 Austin Road West, Kowloon, Hong Kong (attention: Legal Department, Meitu). We will process your request in line with applicable laws within a reasonable period of time after receiving your email or mail, and will cease collecting, using and disclosing your personal information thereafter, subject to certain exceptions prescribed by law. To protect your privacy, we will take steps to verify your identity before fulfilling your request. Please note that if you withdraw your consent or delete your personal information, your use of some of our Services may be affected.</p>
+        <p>California residents have the right not to receive discriminatory treatment by us for the exercise of their rights conferred by the California Consumer Privacy Act.</p>
+        <h2>
+            INFORMATION ABOUT CHILDREN
+        </h2>
+
+        <p class="bold underline">We will not knowingly collect or request personal information from children under 16
+            (or any other age stipulated by law applicable to your region). If you are under 16, please do not send your
+            personal information to us, including your name, address, phone number or email address. If you believe we
+            may have any information about children under 16, you may send an email to compliance@meitu.com (please quote “BeautyCam” in your email title) or send a registered mail to Unit 8106B, Level 81, International Commerce Centre, 1 Austin Road West, Kowloon, Hong Kong
+            (attention: Legal Department, Meitu). If we learn that we have collected personal information from children
+            under 16 (or any other age stipulated by law applicable to your region), we will promptly take steps to
+            delete such information and terminate the associated account.</p>
+        <h2>CROSS-BORDER DATA TRANSFERS</h2>
+        <p class="bold underline">You understand and agree that all information collected via or by Meitu may be
+            transferred, processed, and stored anywhere in the world, including but not limited to, Singapore, China, the
+            United States, the European Union, in the cloud, on our servers, on the servers of our affiliates, or the
+            servers of our service providers, in order to provide the Services.</p>
+
+        <h2>IF YOU ARE A RESIDENT OF CALIFORNIA</h2>
+        <p>The California Consumer Privacy Act (“CCPA”) provides California residents with the right to know what categories of personal information we have collected about them:</p>
+        <table>
+            <tbody>
+            <tr>
+                <td width="70%">
+                    <p class="bold">Category of Personal Information</p>
+                </td>
+                <td width="30%">
+                    <p class="bold">Collected by us?</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Identifiers</p>
+                </td>
+                <td>
+                    <p style="text-align: center">Yes</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Personal information categories listed in Cal. Civ. Code § 1798.80(e)</p>
+                </td>
+                <td>
+                    <p style="text-align: center">No</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Characteristics of protected classifications under California or federal law</p>
+                </td>
+                <td>
+                    <p style="text-align: center">No</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Commercial information</p>
+                </td>
+                <td>
+                    <p style="text-align: center">No</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Biometric information</p>
+                </td>
+                <td>
+                    <p style="text-align: center">No</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Internet activity or electronic network activity information</p>
+                </td>
+                <td>
+                    <p style="text-align: center">Yes</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Geolocation data</p>
+                </td>
+                <td>
+                    <p style="text-align: center">Yes</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Audio, electronic, visual, thermal, olfactory, or similar information</p>
+                </td>
+                <td>
+                    <p style="text-align: center">No</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Professional or employment-related information</p>
+                </td>
+                <td>
+                    <p style="text-align: center">No</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Non-public education information (per the Family Educational Rights and Privacy Act (20 U.S.C. Section 1232g, 34 C.F.R. Part 99))</p>
+                </td>
+                <td>
+                    <p style="text-align: center">No</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Inferences drawn from other personal information to create a profile</p>
+                </td>
+                <td>
+                    <p style="text-align: center">Yes</p>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+        <p>The California Consumer Privacy Act also provides California residents with the right to opt out of the “sale” of their personal information. Under the CCPA, a “sale” is broadly defined as making available personal information to a third-party for valuable consideration. It does not necessarily mean money was exchanged for the transfer of personal information. </p>
+        <p>For purposes of the CCPA, a “sale” may include using targeted advertising services to deliver targeted advertising on the Services or other sites. Like most mobile applications, we use these services, which enable us to provide the Services and relevant offers to you. As a result, Meitu may “sell” the following categories of personal information: identifiers (e.g., advertising IDs); internet activity; geolocation data; and inferences drawn to create a profile.</p>
+        <p>California residents may opt-out of the “sale” of their personal information by turning off the switch next to “Do not sell my personal information”.</p>
+        <p>If you are a resident of California, every year we will provide you free of charge with an opportunity to obtain a list of third parties to which we have disclosed or with whom we have shared your personal information for their direct marketing purposes during the previous year. If you are a resident of California and wish to obtain this list, you may send an email with the subject "BeautyCam - The right to privacy of a California resident" to compliance@meitu.com or send a registered mail to Unit 8106B, Level 81, International Commerce Centre, 1 Austin Road West, Kowloon, Hong Kong (attention: Legal Department, Meitu).</p>
+
+        <h2>GOVERNING LAW</h2>
+
+        <p>This Policy is established, comes into force, and will be enforced and interpreted under the laws of
+            Hong Kong Special Administrative Region of the People's Republic of China, without regard to its conflict of
+            law provisions. Any disputes arising hereunder will also be resolved in accordance with the Terms of
+            Service. We do not represent or warrant that this Policy complies with the privacy law of any jurisdiction.
+            Therefore, you should not interpret this Policy in accordance with such law. </p>
+
+        <h2>AMENDMENTS TO THIS POLICY</h2>
+        <p>You agree that we may update this Policy according to relevant laws and regulations or based on Meitu’s
+            business decisions, and you agree to be bound by any such revisions hereto. We will post any significant
+            changes to this Policy on BeautyCam or notify you by other means as required by law.</p>
+
+        <h2>FOR USERS IN JAPAN</h2>
+        <p>Right to data disclosure, correction, erasure or suspension of use</p>
+        <p>If you are in Japan, as a data subject, you have the right to request the disclosure, correction, erasure or
+            suspension of use of your personal data, and we are obliged to meet your request without undue delay. You
+            may send your request by email to compliance@meitu.com (please quote “BeautyCam” in your email title) or by mail to Unit 8106B, Level 81, International Commerce Centre, 1 Austin Road West, Kowloon, Hong Kong (Attention: Legal Department, Meitu).</p>
+    </div>
+    <div id="zh" class="zh">
+
+        <h1 style="text-align: center">个人信息保护政策</h1>
+        <p style="text-align: right;">最新修改日期：2020年【8】月【14】日 </p>
+        <p>本个人信息保护政策（&ldquo;本政策&rdquo;）旨在向您说明，在使用美颜相机APP（以下称&ldquo;产品&rdquo;或 &ldquo;服务&rdquo;）时，您应了解的内容：</p>
+        <p>一、我们如何收集和使用您的个人信息</p>
+        <p>二、我们如何使用Cookie</p>
+        <p>三、我们如何共享、转让、公开披露您的个人信息</p>
+        <p>四、我们如何保护您的个人信息</p>
+        <p>五、您的权利</p>
+        <p>六、我们如何处理儿童的个人信息</p>
+        <p>七、您的个人信息如何在全球范围转移</p>
+        <p>八、适用法律及管辖</p>
+        <p>九、本政策如何更新</p>
+        <p>十、我们的联系方式</p>
+        <p>十一、附录：权限申请及应用场景</p>
+        <p>我们重视对您的个人信息的保护，我们也致力于维持您对我们的信任，我们承诺将按业界普遍适用的安全标准，采取相应的安全保护措施来保护您的个人信息。但需要特别说明的是，本政策不适用于其他第三方向您提供的产品或服务。如果您使用第三方提供的产品或服务，请关注第三方产品或服务的用户协议及个人信息保护政策。</p>
+        <p>在使用我们的产品和服务前，请您务必仔细阅读并充分了解本政策，并着重阅读斜体加粗字体。</p>
+        <p><strong>一、我们如何收集和使用您的个人信息</strong></p>
+        <p><strong>（一）帮助您注册美图帐号，以成为我们的核心用户</strong></p>
+        <p>在您使用本产品和服务时，我们建议您注册一个美图帐号，以更加充分地使用本产品和服务的全部功能；为此，您需要提供<strong><i>手机号码</i></strong>（用于实名认证）并创建<strong><i>密码、昵称</i></strong>。如您仅需要拍照、美化图片、人像美容此类基本产品功能及服务，您无需注册美图帐号并提供上述信息。您同意美颜相机的《用户协议》和本《个人信息保护政策》并注册后，您可以使用美颜相机的其他产品功能和/服务。如果您在注册帐号时，不提供上述信息，您将无法完成注册并享受到其他产品功能和/或服务，但是您可以退出注册页面后使用基本产品功能及服务。</p>
+        <p><strong>（二）向您提供网络安全及运营安全保障</strong></p>
+        <p>为保障您的帐号、网络、运营及系统安全，预防钓鱼网站欺诈及木马病毒，在您使用本产品的过程中，我们可能会收集您的设备信息，包括不可变更的设备唯一标识（如IMEI号、AndroidID、IDFA、IDFV、ICCID、GUID、OPENUDID、SIM卡IMSI信息）、硬件序列号、MAC地址。</p>
+        <p><strong>（三）向您提供其他相关产品功能和/或服务</strong></p>
+        <p>为实现以下各项产品功能和/或服务，我们可能需要向您收集相对应的个人信息，若您拒绝提供，则无法使用该等特定服务。</p>
+        <ul>
+        <li>1、客户服务。当您向美颜相机提起投诉、进行咨询或申诉时，为了方便与您联系或帮助您解决问题，我们可能需要您提供<strong><i>姓名、手机号码、电子邮件及其他有效的联系方式</i></strong>等个人信息。 如您拒绝提供上述信息，我们可能无法向您及时反馈相关处理结果。</li>
+        <li>
+            2、美颜记忆服务。当您登录使用并调整美颜相机的美颜参数，例如调整了磨皮、大眼等参数，我们会记录您的调整记录，以便下次登录使用时直接给您适合的匹配参数，方便您的使用。
+        </li>
+        <li>3、AI算法优化服务。当您使用相机和图片精修功能拍照时，我们会采用美图人脸点数据技术收集您的皮肤和五官参数，这是为了实现AI算法优化，更准确快速反馈检测报告，使用次数越多，AI算法优化效果越好。这类信息是为提供本服务必须收集的信息，收集后即作去标识化处理，不会用于识别任何特定的用户。</li>
+        <li>4、iOS人脸优化处理效果。我们的服务可能会利用iOS的 ARKit 和 TrueDepth 应用程序接口中人脸映像深度相关资讯运算结果，以达到更好的人脸影像处理效果；在此期间，我们既不会将该等运算结果用于其他目的，也不会以记录为目的，或以其他方式搜集您的脸部映像深度为目的，撷取档案中的任何资料或上传资料到服务器。</li>
+        <li>5、定向推送服务。为了便于您更好地管理您的偏好，获得更轻松的访问体验，我们会基于收集的信息，对您的性别、生日、偏好、习惯、位置、操作习惯、设备信息进行特征分析和用户人群画像，以帮助在工具素材和广告内容推荐上呈现更符合您需求的内容，以减少您对海量互联网内容的筛选时间。为此，我们需要收集的信息包括您的设备识别码、语言及时区、使用本产品浏览器型号、<i>您的应用列表信息。如果您对我们的定向推送不感兴趣，您可以通过本协议明示的方式关闭定向推送功能。</i></li>
+        <li>6、广告播放服务。我们可能收集您的<strong><i>网络运营商及种类、网络类型、WIFI名称</i></strong>，以实现在广告推送过程中帮助您节省网络流量的目的，例如：当我们监测到您处于WIFI环境下，我们可能为您直接播放视频类广告内容；当我们检测您处于无网络、或弱移动网络的环境下，我们将仅为您推送您已经缓存于本地的广告内容。</li>
+        <li>7、维护产品安全及时排除故障。为维护我们服务的正常运行，以及保障您的帐号安全、排查产品故障、改进及优化我们的服务，我们会收集您的EXIF数据、设备型号信息及登陆IP地址、操作日志信息。这类信息是为提供服务必须收集的信息，收集后即作去标识化处理，不会用于识别任何特定的用户。</li>
+        <li>8、保障帐号安全。当您在使用修改密码、安全验证、申诉行为，且操作行为存在异常时，我们可能会要求您提供<strong><em>有效身份信息</em></strong>，以确保上述操作行为的安全性。此为个人敏感信息，我们将采取严格的保密措施，并不会向第三方进行共享。</li>
+        <li>9、用于分享和调起第三方支付等功能。如您将美颜相机中内容分享至第三方平台时，我们会读取您的<strong><em>应用列表信息</em></strong>用以判断该第三方平台是否存在从而达成分享目的；如您使用美颜相机中支付功能时，我们也会读取您的<strong><em>应用列表信息</em></strong>用以判断该第三方支付应用是否存在以完成支付功能。</li>
+        <li>10、附加功能：</li>
+        </ul>
+        <p>（1）游戏类合作伙伴：我们可能会向游戏合作伙伴（游戏开发商、游戏发行商等）提供您的<strong><em>身份证号信息</em></strong>、及<strong><em>是否通过公安部的实名验证</em></strong>，以便协助游戏合作伙伴落实实名注册制度，并有效防止未成年人沉迷网络游戏；还可能向游戏合作伙伴共享您的付款信息，以便于游戏方识别充值用户，用于为充值用户进一步提供充值后的增值服务。如果您不同意共享上述信息，您将无法享受到我们的游戏服务。</p>
+        <p>（2）借钱功能：如果您使用借钱功能，我们会收集您的相关个人信息，并且我们会和第三方互相共享您的相关个人信息。具体详见《<a href="./person_info.html?lang=zh">个人信息使用授权协议</a>》。</p>
+        <p>（3）其他合作伙伴：游戏、钱包业务、保险、电商或其它由第三方提供的功能。基于现代移动互联网产品互联互通的特性，本产品可能接入美图关联公司或外部合作伙伴上线的其它产品或功能，对于游戏、钱包业务、保险、电商类功能，可能需要验证您的身份信息，或涉及您的付款、收货信息。钱包业务的提现功能里，美图会收集您的<strong><i>姓名、身份证号、银行卡号、银行卡绑定手机号、开户行</i></strong>，并共享给云账户（天津）共享经济信息咨询有限公司，以便您能成功提现。我们仅会就为您提供上述功能或接入上述功能之目的存储、保管您的相关信息，并不会将其用于其他用途。如您不愿提供上述信息，仅导致您无法正常使相关附加功能，您仍然可以正常使用本产品基础功能和其它业务功能及服务。产品中还可能接入其它第三方功能，美颜相机仅提供广告合作或接入跳转服务，您需要在使用合作方产品或功能前仔细阅读合作方的用户协议和个人信息保护政策再进行使用，美颜相机不会接触您在使用这些产品或功能所留下的相关个人信息。</p>
+        <ul>
+        <li>11、附加服务：接收产品、服务、营销或调查问卷信息。为更好地让您了解美颜相机的产品和相关服务，我们将会向您的手机推送我们的产品、服务、营销信息或向您进行相关的问卷调查。但如果您不想接收我们给您发送的此类信息，您可通过短信提示回复&ldquo;TD&rdquo;退订或我们提供的其他方式进行退订。</li>
+        </ul>
+        <p><strong>（四）我们可能从第三方间接获取您的个人信息</strong></p>
+        <ul>
+        <li>1、您使用第三方帐号（微博、微信、QQ）登录美颜相机时，可选择授权美颜相机在符合相关法律法规要求的前提下读取并获得您在该第三方平台上登记、公布、记录的公开信息（包括昵称、头像）。</li>
+        <li>2、美颜相机需要您授权从第三方获取上述信息是为了记住您作为美颜相机用户的登录身份，以向您提供更优质的产品和/或服务。我们仅会在您的授权同意的范围内收集并使用您的个人信息。在您使用第三方帐号注册或登录后，您的第三方帐号将会与美图帐号进行绑定，但您可以在【设置&mdash;帐号管理&mdash;绑定第三方帐号】中选择&ldquo;解除绑定&rdquo;，进行取消帐号绑定。</li>
+        </ul>
+        <p><strong>（五）美图基于其它特别情况对您的个人信息的使用</strong></p>
+        <ul>
+        <li>1、如果您认为您的相关权利遭受侵犯，您可通过我们对外公布的联系方式提起投诉、举报。在此过程中，我们将要求您提供<strong><i>个人有效身份信息</i></strong>以核实投诉、举报的真实性。</li>
+        <li>2、请您理解，我们向您提供的功能和服务是不断更新和发展的，如果我们要将您的个人信息用于本政策未载明的其它用途，或基于特定目的将收集的信息用于其它目的，我们将以合理的方式（例如页面提示、交互流程、网站公告等）向您告知，并在使用前再次征得您的同意。</li>
+        </ul>
+        <p><strong>二、我们如何使用Cookie</strong></p>
+        <p>为保证网站正常运行，为帮助您获得更轻松的访问体验，并向您推荐您可能感兴趣的信息，我们会在您的计算机或移动设备上存储名为Cookie的小数据文件。Cookie通常包含标识符、站点名称以及一些号码及字符。借助于Cookie，网站能够存储您的偏好等数据，以此帮助您免去重复填写个人信息、输入历史搜索内容等繁琐；同时我们还可能利用上述技术为您推荐、展示、推送您感兴趣的内容。您可根据自己的偏好管理或删除Cookie，您也可以清除计算机上保存的所有 Cookie。有关详情，请参见AboutCookies.org。我们不会将 Cookie 用于本政策所述目的之外的任何用途。大部分网络浏览器都设有阻止Cookie的功能，您可以通过浏览器设置选项清除计算机上保存的所有Cookie，但如果您这么做，可能会导致您在每一次访问我们的网站时都需要亲自更改用户设置。</p>
+        <p><strong>三、我们如何共享、转让、公开披露您的个人信息</strong></p>
+        <p><strong>（一）共享</strong></p>
+        <p>我们不会与任何公司、组织、个人分享您的个人信息，但以下情况除外：</p>
+        <ul>
+        <li>1、在获取明确同意的情况下共享：获得您的明确同意后，我们会与其他方共享您的个人信息。</li>
+        <li>2、在法定条件下共享：我们可能会根据法律法规规定、诉讼争议解决需要、按照政府主管部门或司法机关依法提出的强制要求，对外共享您的个人信息。</li>
+        <li>3、在法律要求或允许的范围内，为了保护美图及其用户或社会公众的利益、财产或安全免遭损害而有必要提供您的个人信息给第三方。</li>
+        <li>4、与我们的关联公司共享：您的个人信息可能会与我司（厦门鸿天创视科技有限公司）的关联公司进行共享，我们只会在为实现向您提供本产品相关功能和服务的目的下共享必要的个人信息且受本个人信息保护政策所声明目的的约束。关联公司若要改变个人信息的处理目的，将再次征求您的授权同意。我们的关联公司包括：厦门美图网科技有限公司及其分、子公司；厦门美图之家科技有限公司及其分、子公司；厦门美图移动科技有限公司及其分、子公司等。我司及我司关联公司合称&ldquo;美图&rdquo;。</li>
+        <li>5、与授权合作伙伴共享：仅为实现本政策中声明的目的，我们的某些服务将由授权合作伙伴提供。如推广服务、产品分析服务、技术支持服务、电商平台合作、运营商计费充值服务。我们可能会与合作伙伴共享您的某些个人信息，以提供更好的客户服务和用户体验。我们仅会出于合法、正当、必要、特定、明确的目的共享您的个人信息，并且只会共享提供服务所必要的个人信息；同时，对我们与之共享个人信息的公司、组织和个人，我们将依法要求其按照我们的个人信息保护政策以及其他任何相关的保密和安全措施来处理个人信息。我们的合作伙伴无权将共享的个人信息用于任何其他用途。我们的合作伙伴包括以下类型：</li>
+        <li>1）广告服务类合作伙伴。我们可能引入这类合作伙伴如秒针或ADMaster，是为了帮助我们统计、评估在线广告的接触效果，我们将与之共享部分去标识化化处理的个人信息，这些信息为：IP地址、经加密的设备信息（IMEI/IDFA、设备型号及语言、时区）。我们不会将您的个人敏感信息与合作伙伴共享。</li>
+        <li>2）电商类供应商。当您使用美颜相机接入的电商平台如有颜商城服务时，我们可能将您的订单信息等交易有关的必要信息与第三方商家共享，如您的<strong><i>美图GID、订单内容、用户名及联系方式、电话号码、收货地址</i></strong>，以实现您向其购买商品或服务的需求，并促使其可以完成后续的售后服务。</li>
+        <li>3）技术支持类合作伙伴。当您使用美颜相机时，在具体功能应用场景需要合作伙伴提供相关技术支持，我们的应用中会嵌入授权合作伙伴的SDK或其他类似的应用程序。合作方浙江每日互动网络科技股份有限公司需要共享您的设备信息、软件安装列表、网络及位置信息，其目的是帮助分析您的兴趣爱好，实现更准确画像标签，从而为您提供符合您需求的信息，节省您的内容搜索时间。如您在美化图片时希望使用带有地理位置信息的水印素材，需要将您的唯一设备识别码和地理位置信息共享给百度地图运营方；当您使用产品中支付功能时，需要将您的唯一设备识别码共享给支付宝或微信运营方。如您使用华为/小米/魅族手机时，相关手机硬件厂商需要读取您的设备识别码、联网相关信息，用于推送/下发通知栏消息。</li>
+        <li>4）运营商业务信息共享：在美图和运营商（移动、联通、电信）的合作业务中，美图可能会向运营商共享您的手机号，用于用户身份识别和会员服务购买扣费。</li>
+        <li>5）游戏业务信息共享：在美图和腾讯的合作中，美图会向腾讯共享用户openId，用于腾讯识别用户，进行游戏进度存储和支付充值。</li>
+        </ul>
+        <p>此外，某些为我们提供技术分析服务的合作伙伴，会向我们的用户收集基于其信息安全规则完成去标识化处理的少量个人信息，以帮助我们统计产品用户分布、评估产品推广效果，这些信息为设备信息（IMEI/IDFA、设备型号及语言、时区）。我们仅会选择国内管理规范的主流数据供应商，如友盟。</p>
+        <p>我们的合作伙伴可能发生变更，但无论如何，我们会敦促合作方遵守相关信息安全法规，切实保护用户个人数据。</p>
+        <table style="table-layout: fixed" width="100%">
+            <tbody>
+            <tr>
+            <td width="23%">
+            <p>第三方</p>
+            </td>
+            <td width="20%">
+            <p>使用场景</p>
+            </td>
+            <td width="30%">
+            <p>共享的个人信息</p>
+            </td>
+            <td width="27%">
+            <p>备注</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>服务列表</p>
+            </td>
+            <td>
+            <p>描述</p>
+            </td>
+            <td>
+            <p>类型</p>
+            </td>
+            <td></td>
+            </tr>
+            <tr>
+            <td>
+            <p>Bugly</p>
+            </td>
+            <td>
+            <p>用于崩溃日志收集</p>
+            </td>
+            <td>
+            <p>imei;设备mac地址;android id;imsi;iccid</p>
+            </td>
+            <td style="word-wrap:break-word">
+            <p>https://bugly.qq.com/v2/contract</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>友盟</p>
+            </td>
+            <td>
+            <p>数据统计及分析</p>
+            </td>
+            <td>
+            <p>imei;设备mac地址;android id;IDFA;语言;时区</p>
+            </td>
+            <td style="word-wrap:break-word">
+            <p>https://www.umeng.com/policy</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>广点通、穿山甲（今日头条）</p>
+            </td>
+            <td>
+            <p>第三方广告投放</p>
+            </td>
+            <td>
+            <p>imei;设备mac地址;android id;iccid;地理位置</p>
+            </td>
+            <td>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>百度定位</p>
+            </td>
+            <td>
+            <p>用于用户拍照所添加的带有地理位置的水印及素材</p>
+            </td>
+            <td>
+            <p>imei;设备mac地址;android id; 地理位置</p>
+            </td>
+            <td>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>支付宝、微信SDK</p>
+            </td>
+            <td>
+            <p>用于产品中带有支付功能的场景（如付费素材、有颜电商）</p>
+            </td>
+            <td>
+            <p>imei;设备mac地址</p>
+            </td>
+            <td>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>个像SDK</p>
+            </td>
+            <td>
+            <p>用于用户个性化推送、获得更好服务体验</p>
+            </td>
+            <td>
+            <p>imei;设备mac地址;android id；应用列表，地理位置</p>
+            </td>
+            <td style="word-wrap:break-word">
+            <p>http://docs.getui.com/privacy/</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>第三方推送（包括但不限于华为，oppo，vivo，小米，魅族等）</p>
+            </td>
+            <td>
+            <p>为实现本产品的消息推送功能</p>
+            </td>
+            <td>
+            <p>imei;设备mac地址;android id;imsi; 地理位置</p>
+            </td>
+            <td style="word-wrap:break-word">
+            <p>华为推送隐私声明 - https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/push-privacy
+                OPPO 隐私政策 - https://www.oppo.com/cn/service/help/640?id=640&name=%E6%9C%8D%E5%8A%A1%E6%94%BF%E7%AD%96&hdscreen=1
+                VIVO 隐私政策 - https://www.vivo.com.cn/about-vivo/privacy-policy
+                小米推送： https://dev.mi.com/console/doc/detail?pId=1822
+                魅族 - https://i.flyme.cn/privacy?lang=zh_CN</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>讯飞语音识别</p>
+            </td>
+            <td>
+            <p>拍摄视频时可实现语音转化文字的实时字幕功能</p>
+            </td>
+            <td>
+            <p>Imei;android id;个人语音特征</p>
+            </td>
+            <td>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>分享库（微博，微信，QQ，美拍，绿洲，Instagram，Line，Facebook，移动）</p>
+            </td>
+            <td>
+            <p>用于用户自主将拍摄结果分享于第三方平台</p>
+            </td>
+            <td>
+            <p>imei;设备mac地址;android id;imsi;iccid; 地理位置</p>
+            </td>
+            <td style="word-wrap:break-word">
+            <p>微信：https://www.wechat.com/zh_CN/privacy_policy.html
+                QQ: https://privacy.qq.com/
+                微博 https://www.weibo.com/signup/v5/privacy
+                美拍http://www.meipai.com/agreement/privacy</p>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>hockeyapp</p>
+            </td>
+            <td>
+            <p>收集崩溃数据</p>
+            </td>
+            <td>
+            <p>imei;设备mac地址</p>
+            </td>
+            <td>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>秒针、ADMaster</p>
+            </td>
+            <td>
+            <p>统计、评估在线广告的接触效果</p>
+            </td>
+            <td>
+            <p>IP地址;经加密的设备信息（IMEI/IDFA;设备型号及语言;时区）</p>
+            </td>
+            <td>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>微聚未来</p>
+            </td>
+            <td>
+            <p>用户快速登录</p>
+            </td>
+            <td>
+            <p>电话号码</p>
+            </td>
+            <td>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>北京久如技术有限公司</p>
+            </td>
+            <td>
+            <p>用于存储游戏进度</p>
+            </td>
+            <td>
+            <p>登陆用户的美图帐号、未登陆用户的IDFA 、android imei</p>
+            </td>
+            <td>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <p>Firebase</p>
+            </td>
+            <td>
+            <p>收集崩溃错误数据并进行错误日志上报</p>
+            </td>
+            <td>
+            <p>唯一设备标识码</p>
+            </td>
+            <td>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+        <p><strong>（二）转让</strong></p>
+        <p>我们将不会将您的个人信息转让给任何公司、组织和个人，但以下情况除外：</p>
+        <ul>
+        <li>1、在明确获得您的同意的前提下，我们会向其他方转让您的个人信息；</li>
+        <li>2、在涉及合并、收购或破产清算时，如涉及到个人信息转让，我们会在要求新的持有您个人信息的公司、组织等主体继续接受此个人信息保护政策的约束，如果本政策约定的个人信息的收集、处理方式、使用目的等发生改变，我们将要求该公司、组织等主体重新向您征求授权同意。</li>
+        </ul>
+        <p><strong>（三）公开披露</strong></p>
+        <p>我们仅会在以下情况下，收集或公开披露您的个人信息：</p>
+        <ul>
+        <li>1、获得您明确的同意后；</li>
+        <li>2、基于法律法规、司法机关或行政主管部门的强制性要求，我们可能会披露您的个人信息。</li>
+        </ul>
+        <p><strong>（四）不经授权收集、共享、转让或公开披露个人信息的例外</strong></p>
+        <p>根据相关法律法规的规定，在以下情形中，我们可以在不征得您的授权同意的情况下收集、共享、转让或公开披露您的个人信息。</p>
+        <ul>
+        <li>1、与国家安全、国防安全等国家利益直接相关的；</li>
+        <li>2、与公共安全、公共卫生、公众知情等重大公共利益直接相关的；</li>
+        <li>3、与犯罪侦查、起诉、审判和判决执行等直接相关的；</li>
+        <li>4、出于维护您或其他个人的生命、财产、声誉等重大合法权益但又很难得到本人同意的；</li>
+        <li>5、根据您要求签订和履行合同所必需的；</li>
+        <li>6、用于维护所提供的产品或服务的安全稳定运行所必需的，例如发现、处置产品或服务的故障；</li>
+        <li>7、出于公共利益开展统计或学术研究所必要，且其对外提供学术研究或描述的结果时，对结果中所包含的个人信息进行去标识化处理的；</li>
+        <li>8、从合法公开披露的信息中收集到的个人信息的，如合法的新闻报道、政府信息公开等渠道；</li>
+        <li>9、法律法规规定的其他情形。</li>
+        </ul>
+        <p><strong>四、我们如何保护您的个人信息</strong></p>
+        <p>我们已使用符合业界标准的安全防护措施保护您提供的个人信息，防止数据遭到未经授权访问、公开披露、使用、修改、损坏或丢失。我们会采取一切合理可行的措施，保护您的个人信息。例如，在您的浏览器与&ldquo;服务&rdquo;之间交换数据时受SSL加密保护；我们对产品提供的配套Web服务提供HTTPS安全访问方式；我们会使用加密技术确保数据的保密性；我们会使用受信赖的保护机制防止数据遭到恶意攻击；我们会部署访问控制机制，确保只有授权人员才可访问个人信息；以及我们会举办安全和隐私保护培训课程，加强员工对于保护个人信息重要性的认识。</p>
+        <p>我们会采取一切合理可行的措施，确保未收集无关的个人信息。我们承诺将使您的个人信息存储时间始终处于法律要求或实现产品功能和服务所需的合理必要的期限内。对于超出期限的个人信息，我们会立即删除或做匿名化处理。</p>
+        <p>互联网并非绝对安全的环境，而且电子邮件、即时通讯、及与其他用户的交流方式并未加密，我们强烈建议您不要通过此类方式发送个人信息。请使用复杂密码，协助我们保证您的账号安全。</p>
+        <p>互联网环境并非百分之百安全，我们将尽力确保或担保您发送给我们的任何信息的安全性。</p>
+        <p>在不幸发生个人信息安全事件后，我们将按照法律法规的要求，及时向您告知：安全事件的基本情况和可能的影响、我们已采取或将要采取的处置措施、您可自主防范和降低风险的建议、对您的补救措施等。我们将及时将事件相关情况以邮件、信函、电话、推送通知等方式告知您，难以逐一告知个人信息主体时，我们会采取合理、有效的方式发布公告。同时，我们还将按照监管部门要求，主动上报个人信息安全事件的处置情况。</p>
+        <p><strong>五、您的权利</strong></p>
+        <p>按照中国相关的法律、法规、标准，我们保障您对自己的个人信息行使以下权利：</p>
+        <p><strong>（一）访问、删除、更正您的个人信息</strong></p>
+        <ul>
+        <li>1、个人信息访问和更正&mdash;&mdash;您可以通过【美颜相机】-【我】-【头像】-【编辑资料】，来对您美图帐号中的个人信息、昵称、性别、头像、地区、生日等进行访问和更正。</li>
+        <li>2、帐号信息访问与更正&mdash;&mdash;您可在【美颜相机】-【我】-【头像】-【帐号管理】中访问或更换您绑定的手机号、修改密码、登录记录、第三方帐号绑定、注销账号等信息。</li>
+        <li>3、关闭定向推送&mdash;&mdash;您可在【美颜相机】-【我】-【自拍设置】-【个性化展示】中关闭定向推送功能（包括个性化推送素材及定向广告）。</li>
+        <li>4、在以下情形中，您可以向我们提出删除个人信息的请求：</li>
+        <li>1）如果我们处理个人信息的行为违反法律法规；</li>
+        <li>2）如果我们收集、使用您的个人信息，却未征得您的同意；</li>
+        <li>3）如果我们处理个人信息的行为违反了与您的约定；</li>
+        <li>4）如果您不再使用我们的产品或服务，或者您注销了美图帐号；</li>
+        <li>5）如果我们终止服务及运营。</li>
+        </ul>
+        <p>以上删除请求一旦被响应，我们还将同时尽可能通知从美图获得您个人信息的主体，要求其及时删除相应信息，除非法律法规另有规定，或者这些主体获得您的独立授权。当您从我们的服务中删除信息后，我们可能不会立即从备份系统中删除相应的信息，我们将会在备份更新时删除这些信息或者实现匿名化处理。</p>
+        <p><strong>（二）撤回您的授权</strong></p>
+        <p>如果您希望撤销同意我们收集、使用和披露您的其他个人信息或者希望我们更正、更新或删除您的个人信息，可通过本政策中的联系方式与我们联系。我们将会在收到您的电子邮件或者挂号信后的合理时间内处理您的请求并停止收集、使用和披露您的个人信息。</p>
+        <p>但请您理解并同意，当您撤回某些授权时，将导致与之相关的产品功能不可用，我们无法继续为您提供撤回同意或授权所对应的特定功能和/或服务，并且您撤回授权的决定不会影响此前基于您的授权而开展的个人信息处理。</p>
+        <p><strong>（三）注销帐户</strong></p>
+        <p>您可在【美颜相机】-【我】-【头像】-【帐号管理】中进行帐号注销。我们将在验证您的身份并清理帐号中的资产后，为您提供帐号注销服务。您注销成功后，我们将停止为您提供产品或服务，并根据适用法律的要求删除您的个人信息或作匿名化处理。</p>
+        <p><strong>（四）对于您的权利要求的响应</strong></p>
+        <p>为保障安全，在您提出上述权利主张时，您可能需要提供书面请求，或以其他方式证明您的身份。我们将在验证您的身份后再处理您的请求。一般情况下，我们将在【15】天内做出答复。对于您合理的请求，我们原则上不收取费用，但对多次重复、超出合理限度的请求，我们将酌情收取一定费用。对于与您的身份不直接关联的信息、无端重复信息，或者需要过多技术手段（例如，需要开发新系统或从根本上改变现行惯例）、给他人合法权益带来风险或者不切实际的请求，我们可能会予以拒绝。</p>
+        <p>在以下情形中，按照法律法规要求，我们将无法响应您的请求：</p>
+        <ul>
+        <li>1、与国家安全、国防安全有关的；</li>
+        <li>2、与公共安全、公共卫生、重大公共利益有关的；</li>
+        <li>3、与犯罪侦查、起诉、审判和执行判决等有关的；</li>
+        <li>4、有充分证据表明个人信息主体存在主观恶意或滥用权利的；</li>
+        <li>5、响应您的请求将导致您或其他个人、组织的合法权益受到严重损害的；</li>
+        <li>6、涉及商业秘密的。</li>
+        </ul>
+        <p><strong>六、我们如何处理儿童的个人信息</strong></p>
+        <p>我们的产品主要面向成人。如果没有父母或监护人的同意，儿童不应创建自己的个人信息主体帐户。如果您的年龄为14周岁以下，在使用我们的产品和/或服务前，请您务必在监护人的陪同下阅读本政策，并确保已征得您的监护人明确同意后，再使用我们的服务。</p>
+        <p>对于经监护人同意使用我们的产品或服务而收集儿童个人信息的情况，我们只会在法律法规允许、监护人明确同意或者保护儿童所必要的情况下使用、共享、转让或披露此信息。</p>
+        <p>如果您的监护人不同意您按照本政策使用我们的服务或向我们提供个人信息，请您立即终止使用我们的服务并及时通知我们。</p>
+        <p>如果您是父母或者监护人，对您所监护的儿童使用我们的产品/服务或其向我们提供的用户信息有任何疑问时，请您及时与我们联系。</p>
+        <p><strong>七、您的个人信息如何在全球范围内转移</strong></p>
+        <p>我们会按照法律法规的规定，将中华人民共和国境内（以下简称&ldquo;中国&rdquo;）收集的用户个人信息存储于中国境内。</p>
+        <p>由于我们通过遍布全球的资源和服务器向用户提供产品或服务，这意味着，在获得您的授权同意后，您的个人信息可能会被转移到您使用产品或服务所在国家/地区的境外管辖区，或者受到来自这些管辖区的访问。</p>
+        <p>此类管辖区可能设有不同的数据保护法，甚至未设立相关法律。在此类情况下，我们会确保您的个人信息得到在中华人民共和国境内足够同等的保护。例如，我们会请求您对跨境转移个人信息的同意，或者在跨境数据转移之前实施数据去标识化等安全举措。</p>
+        <p><strong>八、适用法律及管辖</strong></p>
+        <p>本个人信息保护政策适用中华人民共和国大陆地区法律。本个人信息保护政策项下争议，由<strong><i>被告住所地法院管辖。</i></strong></p>
+        <p><strong>九、本政策如何更新</strong></p>
+        <p>我们的个人信息保护政策可能会根据业务的调整、法律法规或政策的变化而适时变更。未经您明确同意，我们不会削减您按照本个人信息保护政策所应享有的权利。我们会在专门页面上发布对本政策所作的任何变更。对于重大变更，我们会在产品或服务内通过弹窗、推送等方式向您提示。</p>
+        <p>若您不同意修改后的个人信息保护政策，您有权并应立即停止使用我们的产品和/或服务。如果您继续使用我们的产品和/或服务，则视为您接受我们对本政策相关条款所做的修改。</p>
+        <p>本政策所指的重大变更包括但不限于：</p>
+        <ul>
+        <li>1、我们处理个人信息的目的、处理个人信息的类型、个人信息的使用方式等发生变化；</li>
+        <li>2、您参与个人信息处理方面的权利及其行使方式发生变化；</li>
+        <li>3、个人信息安全影响评估报告表明存在风险时。</li>
+        </ul>
+        <p><strong>十、我们的联系方式</strong></p>
+        <p>我公司为在中华人民共和国境内成立的【厦门鸿天创视科技有限公司】，注册地址：厦门火炬高新区软件园华讯楼C区B1F-055。</p>
+        <p>如果您对本政策内容有任何疑问、意见、建议或进行申诉，您可通过以下方式联系我们：请发送电子邮件至个人信息保护专员：<a href="mailto:legal@meitu.com">legal@meitu.com</a>，也可以挂号信方式寄送至：中华人民共和国厦门市思明区软件园二期望海路6号楼2单元1-3层（收件人：美图公司-法务部）。</p>
+        <p><strong>十一、附录：权限申请及应用场景</strong></p>
+        <p>我们将可能在您使用特定产品功能时，向您申请使用该功能所必须的权限，如您不同意开启该权限，请点击&ldquo;不允许&rdquo;，拒绝该权限的申请仅将影响您对特定产品功能的使用。我们在此向您列举产品将可能收集的权限类型及其使用目的。</p>
+        <table>
+        <tbody>
+        <tr>
+        <td width="20%">
+        <p>APP权限</p>
+        </td>
+        <td width="30%">
+        <p>权限与获取信息描述</p>
+        </td>
+        <td width="50%">
+        <p>权限使用目的及业务场景</p>
+        </td>
+        </tr>
+        <tr>
+            <td>
+            <p>网络访问权限（android）</p>
+            </td>
+            <td>
+            <p>访问网络信息</p>
+            </td>
+            <td >
+            <p>读取手机状态，涉及到用户设备的IMEI信息，用于保障您的帐号、网络、运营及系统安全，预防钓鱼网站欺诈及木马病毒及进行用户数据统计（安装、活跃度等）用于下载和运行游戏。</p>
+            </td>
+            </tr>
+        <tr>
+        <td >
+        <p>电话权限</p>
+        </td>
+        <td >
+        <p>读取手机状态</p>
+        </td>
+        <td >
+        <p>读取手机状态，涉及到用户设备的IMEI信息，用于识别用户、保障您的帐号、网络、运营及系统安全，预防钓鱼网站欺诈及木马病毒及进行用户数据统计（安装、活跃度等）、保存游戏进度（当用户选择使用第三方提供的游戏服务时）、第三方广告投放。。</p>
+        </td>
+        </tr>
+        <tr>
+        <td >
+        <p>存储权限（写入）</p>
+        </td>
+        <td >
+        <p>写入外部存储</p>
+        </td>
+        <td >
+        <p>用于将用户拍摄完毕的图片、视频保存到本地等的文件保存功能。</p>
+        </td>
+        </tr>
+        <tr>
+        <td >
+        <p>地理位置权限</p>
+        </td>
+        <td >
+        <p>通过GPS芯片接收卫星的定位信息，定位精度达10米以内</p>
+        </td>
+        <td >
+        <p>获取精确位置地理位置的权限。用于用户带有地理位置的水印、素材的获取、第三方广告投放。</p>
+        </td>
+        </tr>
+        <tr>
+        <td >
+        <p>录音权限</p>
+        </td>
+        <td >
+        <p>录制声音</p>
+        </td>
+        <td >
+        <p>用于美颜相机的视频录制功能：包括全身模式相机、主拍照相机、电音特效相机中的拍视频功能。</p>
+        </td>
+        </tr>
+        <tr>
+        <td >
+        <p>相机权限</p>
+        </td>
+        <td >
+        <p>允许使用相机</p>
+        </td>
+        <td >
+        <p>用于产品的拍照、视频录制的功能：包括全身模式相机、主拍照相机、超清人像相机、大头贴、发型管家、美老师证件照相机、电音特效相机中的拍照、视频录制功能。</p>
+        </td>
+        </tr>
+        <tr>
+        <td >
+        <p>蓝牙服务</p>
+        </td>
+        <td >
+        <p>允许使用蓝牙服务</p>
+        </td>
+        <td >
+        <p>使用蓝牙权限。用于自拍杆功能。</p>
+        </td>
+        </tr>
+        <tr>
+        <td >
+        <p>存储权限（读取）</p>
+        </td>
+        <td >
+        <p>读取外部存储</p>
+        </td>
+        <td >
+        <p>读取本地图片、视频、游戏包等文件，用于帮助用户进行图片、视频美化、游戏包正常下载和存储。</p>
+        </td>
+        </tr>
+        <tr>
+        <td >
+        <p>通知权限</p>
+        </td>
+        <td >
+        <p>向用户发送通知</p>
+        </td>
+        <td >
+        <p>向用户推送平台活动、营销信息等。</p>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+    <div id="tw" class="tw">
+
+
+        <h1>隱私政策</h1>
+        <p class="bold">更新日期：2020年7月7日</p>
+        <p>我們非常重視您的隱私權！</p>
+        <p>美圖公司及其關聯控制方（「美圖」、「我們」或「我們的」）致力於保護使用者（「使用者」或「您」）的隱私權。本隱私政策（「本政策」）旨在向您說明，在您使用我們的網站和服務時，我們如何收集、儲存、使用、管理和保護您的使用者資訊（包括個人資訊）。收集途徑主要包括：www.meitu.com、www.meipai.com和www.beautyplus.com（「我們的網站」），或其他行動裝置上（如：蘋果裝置和Android裝置）提供的美圖應用程式產品（「我們的服務」），但特定美圖應用程式產品提供獨立的隱私政策的除外。
+        </p>
+        <p>請注意，本政策範圍僅限於您使用我們的網站和服務時，向美圖提交或者由美圖收集的使用者資訊（包括個人資訊）；本政策下「個人資訊」指資訊本身或與美圖能夠存取的個人的其他資訊關聯後，能夠辨識特定個人的資料，包括您的姓名、地址、電話號碼和電子郵件地址。
+        </p>
+        <p class="bold underline">
+            使用我們的網站和服務，即表示您同意本政策，並同意根據本政策中規定的方式對您的使用者資訊（包括您的個人資訊）進行收集、處理、披露和分享。如果您不同意本政策及未來修訂版本的任何條款，請不要使用我們的網站和我們的服務。
+        </p>
+        <p>如您對本政策或任何隱私權相關問題有任何疑問，請透過support@meitu.com或者legal@meitu.com與我們聯絡，或者以掛號信方式將郵件寄送至：美圖公司-法務部，地址為香港柯士甸道西1號環球貿易廣場81樓8106B室。
+        </p>
+
+        <h2>我們收集哪些資訊</h2>
+        <p>為了向您提供我們的網站和服務，我們將在法律允許的範圍內和僅在您瀏覽網站、使用某些功能或者服務時，根據本政策規定收集您的個人資訊和使用者資訊。如果您不提供這些資訊，我們可能無法向您提供我們的產品或服務。</p>
+        <h2>您提供給我們的資訊</h2>
+        <p>在您使用我們的網站和我們的服務時，我們可能會建議您註冊一個美圖帳號，以方便您充分利用我們的網站、我們的服務及其優勢。當您註冊美圖帳號時，我們會收集您所提供資訊以辨識您的身分，其中包括您的帳號名稱、行動電話號碼等註冊美圖帳號的必需資訊。在您在申請開通美拍影片直播功能時，我們將根據法律規定要求您提供本人真實有效的身分資訊（包括但不限於姓名、身分證號碼和手機號碼）以供實名認證。
+        </p>
+        <h2>裝置資訊</h2>
+        <p>當您在行動裝置上使用我們的服務時，我們會收集與您裝置相關的資訊，例如國際行動電話裝置識別碼（「IMEI」）、廣告識別碼（「IDFA」與「IDFV」）、積體電路卡識別碼（「ICCID」）和媒體存取控制（「MAC」）地址、裝置型號與裝置解析度，以便我們統計使用我們產品與服務的裝置數量，並進行裝置機型資料分析與圖形適配分析。
+        </p>
+        <h2>網路資訊</h2>
+        <p>當您在連接網際網路狀態下使用我們的網站或我們的服務時，我們會收集您所使用的電信廠商名稱與網路類型，目的是為了瞭解使用者的電信廠商和網路分布情況。此外，我們還收集連接的WIFI名稱與WIFI連接時間，以瞭解您使用服務的使用者場景。
+        </p>
+        <h2>位置資訊</h2>
+        <p>我們收集您的位置資訊，如國家代碼、經緯度資訊、網路位置、IP地址和系統設定國家及時區資訊。這些資訊有助於我們瞭解使用者分布和使用者使用場景，以利我們提供正確的應用程式版本及更優質的服務。除本政策另有約定外，我們不會與任何第三方分享這些資訊。如果您希望我們停止追蹤或使用具體位置資訊，您可以選擇在裝置上關閉網路、GPS功能，或者停用我們取得您網路、GPS、裝置資訊的權限。
+        </p>
+        <h2>記錄資訊</h2>
+        <p>當您使用我們的某些服務，包括參與、產生、瀏覽與我們的服務相關之內容時，我們將自動收集美圖應用程式產品內某些相關的記錄資訊，這些資訊包括：(1) 關於您的使用時間與使用頻率的詳細資料；(2)
+            裝置統計資訊、關鍵操作路徑、錯誤日誌、當機紀錄、語言和時區等。這些記錄資訊能夠幫助我們充分瞭解和改善服務，並非用於辨識任何特定的個人。</p>
+        <h2>圖片資訊</h2>
+        <p>當您選擇使用我們服務中的雲美化功能時，請您理解並同意，為了向您提供該項服務並持續最佳化，我們須將您的圖片上傳至我們的伺服器處理，處理完畢後再將圖片傳回給您；在此過程中，我們還將同步收到您圖片的 EXIF
+            資訊（根據裝置廠商的不同，EXIF 資訊可能包括圖片拍攝與處理時的 GPS、裝置型號、感光度（ISO）、前後置鏡頭與建立時間資訊等），以便進一步最佳化我們的服務。</p>
+        <h2>詮釋資料</h2>
+        <p>詮釋資料通常是與使用者內容相關聯的技術資料。簡言之，它是描述資料的資料。例如，它可以描述圖片（或同類文件）中包含的地理位置資訊及檔案建立時間，圖片中包含的粗略人物特徵和圖片中包含的內容。當您在使用我們的服務時，我們將利用照片詮釋資料為您提供更精準的「人臉辨識」、「關鍵點標記」、「區域分割」、「內容標籤」，以及由這些基礎功能組合而成的其他自訂功能。正常情況下，這些詮釋資料無法用於辨識任何特定的個人。這些詮釋資料的目的是改進服務，並非用於辨識任何特定的個人。
+        </p>
+        <h2>論壇資訊</h2>
+        <p>我們的部分網站或者應用程式提供面向公眾的社群論壇。請知悉，如果您在這些網站或者應用程式上公開發布了資訊，則任何可登入到該網站的使用者將可以閱讀到您的資訊，或加以收集、使用。如您自己無法將您的個人資訊從社群論壇中刪除，請聯絡我們：support@meitu.com或者legal@meitu.com。有時候，我們可能無法刪除您的個人資訊，在這種情況下我們會告知您情況及其原因。
+        </p>
+        <h2>Cookie</h2>
+        <p>只在您瀏覽我們的網站時，美圖或美圖委託合作第三方會使用cookie、標籤和腳本等技術，收集記錄檔案和本機快取資訊，以用於分析趨勢、管理網站、追蹤使用者的網站活動，並收集關於整個使用者群的人口統計資訊。記錄檔案資訊可能包括網際網路協議
+            (IP) 地址、瀏覽器類型、網際網路服務供應商 (ISP)、引用/退出頁面、作業系統、日期/時間標記和點擊流資料。</p>
+        <h2>廣告資訊</h2>
+        <p>我們可能在服務中放映廣告，並且可能出於追蹤廣告之目的來收集並使用有關您的資訊，例如您的裝置識別碼、MAC地址、IMEI、地理位置及IP地址。這些資訊將用於建立內部使用者編號，以幫助我們更好地計數和追蹤基於語言、地理位置和其他細節的廣告。我們不會將這些資訊出售給第三方。
+        </p>
+        <h2>第三方服務收集的資訊</h2>
+        <p>我們提供的服務可能包括屬於我們的服務供應商之第三方追蹤工具。該第三方可能會在我們提供的服務中使用cookies、API（應用程式介面）以及SDK（軟體開發套件），藉此代表我們收集並分析使用者資訊。第三方可能會存取您的裝置識別碼、MAC（媒體存取控制）地址、IMEI（國際行動設備識別碼）、區域（使用指定語言的特定地點）、地理位置資訊及IP地址等資訊，旨在實現在其各自隱私政策下提供服務。我們的隱私政策不會覆蓋到第三方追蹤工具的使用。我們沒有權限存取或控制這些第三方。若想瞭解更多相應第三方資訊，請傳送電子郵件至support@meitu.com或者legal@meitu.com。
+        </p>
+        <h2>使用者體驗計畫收集的資訊</h2>
+        <p>我們可能在產品中發布相應的使用者體驗計畫，旨在幫助改善產品技術與服務、提升使用者體驗。您可自行選擇參與，並且隨時退出。當您同意參與相應產品的使用者體驗計畫之後，我們將根據相應使用者體驗計畫收集您的資訊，直到您選擇退出該計畫為止。這些資訊是為了幫助我們充分瞭解和改善技術和服務，並非用於辨識任何特定的個人。
+        </p>
+
+        <h2>其他資訊</h2>
+        <p>我們還可能收集其他各類與個人沒有關聯的資訊（例如作業系統類型與版本號），以瞭解系統升級情況、系統語言以用於搭配語言、應用程式列表以瞭解使用者的興趣偏好等。收集此類資訊的目的在於改善我們所提供的服務。此外，我們的服務可能會利用蘋果的
+            ARKit 和 TrueDepth
+            應用程式介面中人臉映射深度相關資訊運算結果，以達到更好的人臉影像處理效果；在此期間，我們既不會將該等運算結果用於其他目的，也不會以記錄為目的，或以其他方式蒐集您的臉部映射深度為目的，擷取檔案中的任何資料或上傳資料到伺服器。中繼資料是指與使用者內容相關的技術資料，是描述資料的資料。 例如，中繼資料可以描述由電腦演算法和人工智慧生成和標記的面部特徵，性別，年齡，照片中人物的種族以及照片中包含的其他元素的分析結果。 當您使用服務時，我們將使用照片中繼資料為您提供某些功能，包括精確的“面部識別”，“關鍵特徵識別”，“區域細分”，“內容標籤”以及其他基於這些功能的自訂功能。 當我們的應用程式處理您的照片時，我們可能會使用您的照片中繼資料為您提供更合適的濾鏡和更好的照片效果； 我們還可能利用中繼資料為您提供與上下文相關的產品或服務。
+        </p>
+
+        <h2>我們如何使用資訊</h2>
+        <p>收集使用者資訊和個人資訊的目的，在於向您提供我們的產品和服務，並且保證我們遵守適用法律。在「我們收集哪些資訊」章節基礎上，我們將您的使用者資訊與個人資訊用於下列目的：</p>
+        <ul>
+            <li><span class="bold">（一）產品服務。</span>提供、處理、維護、改善、開發我們的網站和/或提供給您的服務，包括客戶支援，以及透過裝置或網站提供的其他服務。</li>
+
+            <li><span class="bold">（二）統計分析。</span>分析和開發與我們所推出產品及服務之使用的相關統計資訊，以充分改進我們的產品和服務。</li>
+            <li><span class="bold">（三）建立您的美圖帳號。</span>在透過我們的網站或服務建立美圖帳號時，所收集的個人資訊用於建立使用者的個人美圖帳號和資料頁。</li>
+            <li><span class="bold">（四）方便您使用論壇。</span>與美拍、閃聊或其他美圖社群平台有關的個人資訊，可能用於個人資料頁面展示、與其他使用者互動、發布資訊。</li>
+            <li><span
+                    class="bold">（五）提供基於位置的服務。</span>在使用我們的服務時，我們或第三方服務供應商可能會使用位置資訊，以為您提供正確版本的服務，並且提供準確的位置，以盡可能獲得最佳的使用者體驗。
+            </li>
+            <li><span class="bold">（六）改善使用者體驗。</span>使用者可自行選擇加入部分功能（例如使用者體驗計畫）以允許美圖分析使用者如何使用我們產品和服務的資料，進而改善使用者體驗。</li>
+            <li><span
+                    class="bold">（七）提供推播服務。</span>美圖帳號和裝置資訊可能用於提供美圖推播服務，以評估廣告表現和軟體更新或新產品發布的通知。您可以隨時透過更改「設定」項下的偏好選項來關閉此功能。
+            </li>
+            <li><span class="bold">（八）驗證使用者身分。</span>帳號登入時以簡訊驗證，確保未經授權的人員無法登入；影片直播功能將驗證使用者身分，以符合適用法律要求。</li>
+            <li><span class="bold">（九）收集使用者意見回饋。</span>您的意見回饋對於美圖極為珍貴，有助我們改進服務。為了追蹤您的意見回饋，美圖可能會使用您所提供的個人資訊與您聯絡，並保留紀錄。
+            </li>
+            <li><span class="bold">（十）其他。</span>儲存並維護與您相關的資訊，用於我們營運業務或履行法律義務。</li>
+        </ul>
+
+        <h2>資訊分享與披露</h2>
+        <p>我們不會將任何個人資訊出售給第三方。除非下列情形發生時，否則我們無權向第三方共享和/或披露您的全部或部分個人資訊：</p>
+        <ul>
+            <li>（一）為保護他人的人身或財產安全；</li>
+            <li>（二）為防止或解決網路詐欺；</li>
+            <li>（三）維護美圖公司的合法權利及權益；</li>
+            <li>（四）實現「我們收集哪些資訊」部分所述目的，前提條件為該等披露接收方應同等接受本政策約束，並可以提供資訊充分保護；</li>
+            <li>（五）根據法律、法規的規定，或遵從政府部門、司法機關的要求；通常前述要求都是為了保護網路安全和保護我們、我們的使用者和第三方的權利、財產和安全。</li>
+        </ul>
+
+        <h2>資訊安全保障</h2>
+        <p>我們使用合理措施，以防發生資訊遺失、遭不當使用、未經授權閱覽或披露等狀況。例如，在某些服務中，我們將利用加密技術（例如SSL）保護您的個人資訊。但請您理解，在網際網路行業中，即便竭盡所能加強安全措施，也不可能始終保證資訊百分之百的安全。您必須瞭解，您連接我們的服務所用的系統和通訊網路，有可能因我們可控制範圍外的因素而出現問題。
+        </p>
+
+        <h2>資訊存取與控制</h2>
+        <p>我們將採取一切合理適當的技術手段，保證您可以存取、更新和更正自己的個人資訊，或使用我們的服務時提供的其他個人資訊。在存取、更新、更正和刪除前述個人資訊時，我們可能會要求您進行身分驗證，以保障您的帳號安全。</p>
+
+        <h2>資料保留與刪除</h2>
+        <p>受限於法律法規要求，我們將按照「我們如何使用資訊」章節或者為您提供服務的時間範圍內保留您的資訊（包括個人資訊）。如果您希望取消對於我們收集您的個人資訊之同意意願，或者不再同意我們披露由我們所收集之您的個人資訊，或者希望我們刪除您的個人資訊，請傳送電子郵件至support@meitu.com或者legal@meitu.com，也可以掛號信方式寄送至：美圖公司-法務部，地址為香港柯士甸道西1號環球貿易廣場81樓8106B室。我們將會在收到您的電子郵件或者掛號信後的合理時間內處理您的要求，並且會根據您的要求，在此之後不再收集、使用或披露您的個人資訊。請注意，您取消同意或者刪除您的個人資訊後，可能會影響您使用某些我們的服務。
+        </p>
+
+        <h2>兒童資訊</h2>
+        <p class="bold underline">
+            我們無意向13周歲（或者其他您所在地區適用法律規定的年齡）以下的人群收集或要求個人資訊。如果您低於13周歲，請不要向我們傳送您的個人資訊，包括您的名字、地址、電話號碼或者電子郵件地址。如果您認為我們可能有13周歲以下兒童任何資訊時，請傳送電子郵件至support@meitu.com或者legal@meitu.com，也可以掛號信方式寄送至：美圖公司-法務部，地址為香港柯士甸道西1號環球貿易廣場81樓8106B室。
+        </p>
+
+        <h2>您同意進行跨境傳輸</h2>
+        <p class="bold underline">您理解並同意：(i) 我們可將根據本政策收集的資訊（包括個人資訊）儲存於中國大陸或者其他國家的伺服器上，整個過程需要資訊的跨境傳輸；和 (ii)
+            我們可能將我們收集到之您的資訊，傳送至我們關聯控制公司，或者根據本政策的跨境第三方服務供應商。請注意，上述國家和地區可能沒有與您所在國家或地區一樣的資料保護水準，您在此同意將資訊傳送至中國大陸，並且根據本政策使用和披露關於您的資訊，包括個人資訊。如果您不同意或者您想要瞭解更多資訊，請傳送電子郵件至support@meitu.com或者legal@meitu.com，也可以掛號信方式寄送至：美圖公司-法務部，地址為香港柯士甸道西1號環球貿易廣場81樓8106B室。
+        </p>
+
+        <h2>適用法律</h2>
+        <p>本政策，包括但不限於本政策的訂立、效力、解釋、履行和爭議解決，均應適用中華人民共和國法律（不包括香港特別行政區與澳門特別行政區法律）。我們並未表示或者保證本政策符合任何司法管轄區的隱私權法律，因此，您不應當按照該等法律來解釋本政策。
+        </p>
+
+        <h2>本政策更新</h2>
+        <p>您同意，我們根據法律法規或者美圖商業決策相應更新本政策，您願意受修訂後政策的約束。如果涉及本政策重大變更，在必要時我們將以網站公告或者訊息推播方式做出。</p>
+
+        <h2>如果您是加利福尼亞州居民</h2>
+        <p>如果您是加利福尼亞州居民，且我們在過去一年中向該第三方披露或者共享了您的個人資訊及其目錄，我們將為您提供每年免費一次的第三方清單機會。如果您是加利福尼亞州居民並且希望獲得前述第三方清單，請標明主旨為「加利福尼亞居民隱私權」的電子郵件，傳送至support@meitu.com或者legal@meitu.com，您也可以掛號信方式寄送至：美圖公司-法務部，地址為香港柯士甸道西1號環球貿易廣場81樓8106B室。
+        </p>
+
+    </div>
+    <div id="hk" class="hk">
+
+
+        <h1>私隱政策</h1>
+        <p class="bold">更新日期：2019年6月28日</p>
+        <p>我們非常重視閣下的私隱權！</p>
+        <p>美圖公司及其關聯控制方（「美圖」、「我們」或「我們的」）致力於保護我們用戶（「用戶」或「閣下」）的私隱權。本私隱政策(「本政策」)旨在向閣下說明，在使用我們的網站和我們的服務時，我們如何收集、儲存、使用、管理和保護閣下的用戶資料（包括個人資料）。收集途徑主要包括：www.meitu.com、www.meipai.com和www.beautyplus.com
+            (「我們的網站」)，或其他流動裝置上（如：Apple 裝置和Android裝置）提供的美圖應用程式產品(「我們的服務」)，而提供獨立私隱政策的特定美圖應用程式產品則除外。</p>
+        <p>請注意，本政策範圍僅限於閣下使用我們的網站和我們的服務時向美圖提交或者美圖收集的用戶資料（包括個人資料）；在本政策下，「個人資料」指資料本身或美圖存取個人的其他資料聯絡後，能夠識別特定個人的資料，包括閣下的姓名、地址、電話號碼和電郵地址。
+        </p>
+        <p class="bold underline">
+            使用我們的網站和我們的服務就意味著閣下同意本政策，並同意我們根據本政策中規定的方式對閣下的用戶資料（包括閣下的個人資料）進行收集、處理、披露和分享。如果閣下不同意本政策及未來修訂版本的任何條款，請不要使用我們的網站和我們的服務。
+        </p>
+        <p>如閣下對本政策或任何私隱權相關問題有任何疑問，請通過support@meitu.com或者legal@meitu.com與我們聯絡或者郵寄掛號信至：美圖公司-法務部，地址為香港柯士甸道西1號環球貿易廣場81樓8106B室。
+        </p>
+
+        <h2>我們收集哪些資料</h2>
+        <p>為了向閣下提供我們的網站和我們的服務，我們將在法律允許的範圍內和當且僅當閣下瀏覽網站、使用某些功能或者服務時，根據本政策規定收集閣下的個人資料和用戶資料。如果閣下不提供這些資料，我們可能無法向閣下提供我們的產品或服務。
+        </p>
+        <p class="bold">閣下提供給我們的資料</p>
+        <p>在閣下使用我們的網站和我們的服務時，我們可能會建議閣下註冊一個美圖帳號，以方便閣下充分利用我們的網站、我們的服務及其優勢。當閣下註冊美圖帳號時，我們會收集閣下所提供的可識別閣下身份的資料，這些資料包括閣下的帳號名稱、流動電話號碼等註冊美圖帳號時所需的資料。在閣下申請開通美拍視頻直播功能時，我們將根據法律規定要求閣下提供本人真實有效的身份資料（包括但不限於姓名、身份證號和手機號碼）以供實名認證。
+        </p>
+        <p class="bold">裝置資料</p>
+        <p>當閣下在行動裝置上使用我們的服務時，我們收集與閣下裝置相關的資料。例如，國際移動裝置識別碼（「IMEI」）、廣告識別碼（「IDFA」與「IDFV」）、積體電路卡識別碼（「ICCID」）和媒體存取控制（「MAC」）地址、裝置型號與裝置解析度，方便我們統計使用我們產品與服務的裝置數量並進行裝置機型資料分析與圖形適配分析。
+        </p>
+        <p class="bold">網絡資訊</p>
+        <p>當閣下在連接至網絡的狀態下使用我們的網站或我們的服務時，我們會收集閣下所使用的網絡供應商名稱與網絡類型，目的是了解用戶的網絡供應商和網絡分佈的情況，此外，我們還收集接入WiFi名稱與WiFi接入時間以了解閣下使用服務的用戶情景。
+        </p>
+        <p class="bold">位置資訊</p>
+        <p>我們收集閣下的位置資料，如國家代碼、經緯度資料、網絡位置、IP地址和系統設定國家及時區資料。這些資料有助於我們了解用戶分佈和用戶使用場景，使我們可以為其提供正確的應用程式版本及更優質的服務。除本政策另有約定外，我們不會與任何第三方分享這些資料。如果閣下不再希望我們跟蹤或使用具體位置資料，閣下可以選擇在裝置上關閉網絡、GPS功能或者禁用我們獲取閣下網絡、GPS、裝置資料的許可權。
+        </p>
+        <p class="bold">日誌資料</p>
+        <p>當閣下使用某些我們的服務，包括參與、生成、瀏覽與我們服務相關的內容時，我們將會自動收集美圖應用程式產品內某些相關的日誌資料，這些資料包括：(1)閣下的使用時間與使用頻率的細節；(2)裝置統計資料、關鍵操作路徑、錯誤日誌、閃退記錄、語言和時區等。這些日誌資料能夠幫助我們更好的了解和改善我們的服務，並非用於識別任何特定的個人。
+        </p>
+        <p class="bold">圖片資訊</p>
+        <p>當閣下選擇使用我們服務中的雲端美化功能時，請閣下理解並且同意，為實現向閣下提供該項服務並作持續優化之目的，我們須將閣下的圖片上載至我們的伺服器進行處理，完成後再將處理後的圖片傳回給閣下；在此過程中，我們還將同步收到閣下圖片的EXIF資訊（根據裝置廠商的不同，Exif資訊可能包括圖片拍攝與處理時的GPS、裝置型號、感光度（ISO）、前後置鏡頭與建立時間資訊等），以供進一步優化我們的服務。
+        </p>
+        <p class="bold">元數據</p>
+        <p>元數據通常是與用戶內容相關聯的技術資料，簡而言之，它是描述資料的資料。例如，它可以描述圖片（或同類檔案）中包含的地理位置資料及建立檔案的時間、圖片中包含的粗略人物特徵和圖片中包含的內容。當閣下在使用我們的服務時，我們將利用照片的元數據為閣下提供更精準的「人臉檢測」，「關鍵點標記」，「區域分割」，「內容標籤」以及由這些基礎功能組合而成的其他個人化功能。正常情況下，這些元數據無法用於識別任何特定的個人。這些元數據是以改進服務為目的，並非用於識別任何特定的個人。
+        </p>
+        <p class="bold">討論區資料</p>
+        <p>部分我們的網站或者應用程式提供面向公眾的討論區。請知悉，如果閣下在這些網站或者應用程式上公開發布了資料，任何可登入到該網站的用戶都將可以閱讀到閣下的資料，並進行收集或使用。如閣下無法將自己的個人資料從社區討論區中刪除，請發送電郵至以下電郵地址以聯絡我們：support@meitu.com或者legal@meitu.com。有時，我們可能無法刪除閣下的個人資料，在這種情況下，我們會將這一情況及其原因告知於閣下。
+        </p>
+        <p class="bold">Cookie</p>
+        <p>只有在閣下瀏覽我們的網站時，美圖或美圖委託合作的第三方會使用cookie、標籤和腳本等技術，收集日誌檔和本機快取資料，用於分析趨勢、管理網站、追蹤用戶的網站活動並收集關於整個用戶群的人口統計資料。日誌檔資料可能包括互聯網協定
+            (IP) 地址、瀏覽器類型、互聯網服務供應商 (ISP)、引用/退出頁面、作業系統、日期/時間標記和瀏覽網頁的歷程資料。</p>
+        <p class="bold">廣告資料</p>
+        <p>我們可能在服務中放映廣告並且可能出於追蹤廣告目的收集並使用有關閣下的資料，例如閣下的裝置識別碼、MAC地址、IMEI、地理位置及IP地址。這些資料將用於創建內部用戶編號以幫助我們更好地計數和追蹤基於語言、地理位置和其他細節的廣告。我們不會將這些資料出售給第三方。
+        </p>
+
+        <p class="bold">第三方服務收集的資料</p>
+        <p>我們提供的服務可能包括屬於我們的服務供應商的第三方追蹤工具。該第三方可能會在我們提供的服務中使用cookies、APIs（應用程式介面）及SDKs（軟體開發套件），由此代表我們收集並分析用戶資料。第三方可能會存取諸如閣下的裝置識別碼、MAC（媒體存取控制）地址、IMEI（國際移動裝置識別碼）、區域（使用給定語言的特定地點）、地理位置資料及IP地址等資料，旨在於其各自私隱政策下提供服務。我們的私隱政策不會覆蓋到第三方追蹤工具的使用。我們沒有許可權訪問或控制這些第三方。如果閣下想知道更多相應第三方資料，請發送電郵至support@meitu.com或者legal@meitu.com。
+        </p>
+
+        <p class="bold">用戶體驗計劃收集的資料</p>
+        <p>我們可能在我們產品中發布相應的用戶體驗計劃，旨在幫助改善產品技術與服務、提升用戶體驗。閣下可選擇參與並且隨時退出。當閣下同意參與相應產品的用戶體驗計劃之後，直至閣下選擇退出該計劃之前，我們將根據相應用戶體驗計劃收集閣下的資料。這些資料是為了幫助我們更好的了解及改善我們的技術和服務，並非以識別任何特定的個人為目的。
+        </p>
+
+        <p class="bold">其他資訊</p>
+        <p>我們還可能收集其他各類與個人沒有關聯的資料。例如，作業系統類型與版本以了解系統升級情況、系統語言以用於語言適配、應用清單以了解用戶的興趣偏好等。收集此類資料的目的在於改善我們向閣下提供的服務。此外，我們的服務可能會利用蘋果的
+            ARKit 和 TrueDepth
+            應用程式介面中人臉映射深度相關資訊運算結果，以達到更好的人臉影像處理效果；在此期間，我們既不會將該等運算結果用於其他目的，也不會以記錄為目的，或以其他方式蒐集您的臉部映射深度為目的，擷取檔案中的任何資料或上傳資料到伺服器。
+        </p>
+
+        <h2>我們如何使用資料</h2>
+        <p>收集用戶資料和個人資料的目的在於向閣下提供我們的產品和服務，並且保證我們遵守適用法律。在「我們收集哪些資料」章節的基礎上，我們將閣下的用戶資料與個人資料用於下列目的：</p>
+
+        <ul>
+            <li>（一） <span class="bold">產品服務</span>。提供、處理、維護、改善、開發我們的網站和/或提供給閣下的我們的服務，包括客戶支援，以及通過裝置或網站提供的其他服務。</li>
+            <li>（二） <span class="bold">統計分析</span>。分析和開發與我們產品及我們的服務的使用相關的統計資料，以更好地改進我們的產品和服務。</li>
+            <li>（三） <span class="bold">創建閣下的美圖帳號</span>。在通過我們的網站或我們的服務建立美圖帳號時所收集的個人資料將用於建立用戶的個人美圖帳號和資料頁面。</li>
+            <li>（四） <span class="bold">方便閣下使用討論區</span>。與美拍、閃聊或其他美圖社區平台有關的個人資料可能被用於個人資料頁面展示、與其他用戶互動、發布資料。</li>
+            <li>（五） <span
+                    class="bold">提供基於位置的服務</span>。在使用我們的服務時，我們或第三方服務供應商可能會使用位置資料以為閣下提供正確版本的服務，並且提供準確的位置，以獲得最佳的用戶體驗。</li>
+            <li>（六） <span class="bold">改善用戶體驗</span>。某些選擇性加入功能，例如用戶體驗計劃，允許美圖分析用戶如何使用我們產品和服務的資料，以改善用戶體驗。</li>
+            <li>（七） <span
+                    class="bold">提供推送服務</span>。美圖帳號和裝置資料可能用於提供美圖推送服務，以評估廣告表現和軟體更新或新產品發布的通知。閣下可以隨時通過更改「設定」項下的偏好選項來關閉此功能。
+            </li>
+            <li>（八） <span class="bold">驗證用戶身份</span>。登入帳號時短訊驗證，確保未經授權的人員無法登入；視頻直播功能驗證用戶身份，以符合適用法律要求。</li>
+            <li>（九） <span class="bold">收集用戶意見</span>。閣下的意見對協助美圖改進服務而言極為珍貴。為了跟進閣下的意見，美圖可能會使用閣下所提供的個人資料與閣下聯絡，並保留記錄。</li>
+            <li>（十） <span class="bold">其他</span>。儲存並維護與閣下相關的資料，用於我們營運業務或履行法律義務。</li>
+        </ul>
+
+        <h2>資料分享與披露</h2>
+        <p>我們不會將任何個人資料出售給第三方。除非發生下列情形，否則我們無權向第三方共用和/或披露閣下的全部或部分個人資料：</p>
+        <ul>
+            <li>（一） 為保護他人的人身或財產安全；</li>
+            <li>（二） 為防止或解決網絡欺詐；</li>
+            <li>（三） 維護美圖公司的合法權利及權益；</li>
+            <li>（四） 實現「我們收集哪些資料」部分所述目的，前提條件為該等披露接收方應同等接受本政策約束並可以提供資料充分保護；</li>
+            <li>（五） 根據法律、法規的規定，或遵從政府部門、司法機關的要求；通常前述要求都是為了保護網絡安全和保護我們、我們的用戶和第三方的權利、財產和安全。</li>
+        </ul>
+
+        <h2>資料安全保障</h2>
+        <p>我們使用合理措施，以防資料的丟失、不當使用、未經授權閱覽或披露。例如，在某些服務中，我們將利用加密技術（例如SSL）來保護閣下的個人資料。但請閣下理解（在互聯網行業）即便竭盡所能加強安全措施，也不可能始終保證資料百分之百安全。閣下需要了解，閣下連接至我們的服務所用的系統和通訊網絡，有可能因我們可控範圍外的因素而出現問題。
+        </p>
+
+        <h2>資料存取與控制</h2>
+        <p>我們將採取一切合理適當的技術手段，保證閣下可以存取、更新和更正自己的個人資料或使用我們的服務時提供的其他個人資料。在存取、更新、更正和刪除前述個人資料時，我們可能會要求閣下進行身份驗證，以保障閣下的帳號安全。</p>
+
+        <h2>數據保留與刪除</h2>
+        <p>受限於法律法規要求，我們將按照「我們如何使用資料」章節或者為閣下提供服務的時間範圍內保留閣下的資料（包括個人資料）。如果閣下希望撤銷同意收集、使用、披露我們收集的閣下的個人資料或者希望我們刪除閣下的個人資料，請發送電郵至support@meitu.com或者
+            legal@meitu.com，也可以郵寄掛號信至「美圖公司 -
+            法務部」，地址為香港柯士甸道西1號環球貿易廣場81樓8106B室。我們將在收到閣下的電郵或者掛號信後的合理時間內處理閣下的請求，並且會根據閣下的請求，在此之後不再收集、使用、披露閣下的個人資料。請注意，閣下撤銷同意或者刪除閣下的個人資料後，可能會影響閣下使用我們的某些服務。
+        </p>
+
+        <h2>兒童資料</h2>
+        <p class="bold underline">
+            我們無意向13周歲（或者其他閣下所在地區適用法律規定的年齡）以下的人群收集或請求個人資料。如果閣下低於13周歲，請不要向我們發送閣下的個人資料，包括閣下的名字、地址、電話號碼或者電郵地址。如果閣下認為我們可能有13周歲以下兒童的任何資料時，請發送電郵至support@meitu.com或者
+            legal@meitu.com，也可以郵寄掛號信至「美圖公司 - 法務部」，地址為香港柯士甸道西1號環球貿易廣場81樓8106B室。</p>
+
+        <h2>閣下同意進行跨境傳輸</h2>
+        <p class="bold underline">閣下理解並同意:(i)我們可將根據本政策收集的資料（包括個人資料）儲存於中國大陸或者其他國家的伺服器上，整個過程需要資料的跨境傳輸；和(ii)
+            我們可能將我們收集到的閣下的資料傳送至我們關聯控制公司或者根據本政策的跨境第三方服務供應商。請注意上述國家和地區可能沒有與閣下所在國家或地區一樣的資料保護水平，閣下同意將資料傳送至中國大陸並且根據本政策使用和披露關於閣下的資料，包括個人資料。如果閣下不同意或者閣下想要了解更多資料，請發送電郵至support@meitu.com或者
+            legal@meitu.com，閣下也可以郵寄掛號信至「美圖公司 - 法務部」，地址為香港柯士甸道西1號環球貿易廣場81樓8106B室。</p>
+
+        <h2>適用法律</h2>
+        <p>本政策，包括但不限於本政策的訂立、效力、解釋、履行和爭議解決，均應適用中華人民共和國法律（不包括香港特別行政區與澳門特別行政區法律）。我們並未表示或者保證本政策符合任何司法管轄區的私隱權法律，因此，閣下不應當按照該等法律來解釋本政策。
+        </p>
+
+        <h2>本政策更新</h2>
+        <p>閣下同意，我們根據法律法規或者美圖商業決策相應更新本政策，閣下願意受修訂後政策的約束。如果涉及本政策重大變更，在必要時我們將以於網站公告或者推送相關資料。</p>
+        <h2>如果閣下是加利福尼亞州居民</h2>
+        <p>如果閣下是加利福尼亞州居民，而我們在過去一年中向該第三方披露或者共用了閣下的個人資料及其目錄，我們將於每年為閣下免費提供一次第三方清單機會。如果閣下是加利福尼亞州居民並且希望獲得上述第三方清單，請發送主旨為「加利福尼亞州居民私隱權」的電子郵件至support@meitu.com或者legal@meitu.com，閣下也可以郵寄掛號信至：美圖公司-法務部，地址為香港柯士甸道西1號環球貿易廣場81樓8106B室。
+        </p>
+
+    </div>
+    <script>
+        (function () {
+            function $$(selector) {
+                return document.querySelector(selector);
+            }
+            function getQuery(name) {
+                var queryReg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i'),
+                    queryStr = location.search.substr(1).match(queryReg);
+                if (queryStr != null) {
+                    return unescape(queryStr[2]);
+                }
+                return '';
+            }
+            var lang = getQuery('lang') || 'en';
+            if (lang == 'tw') {
+                document.title = '隱私權政策';
+                $$('#tw').style.display = 'block';
+            } else if (lang == 'zh') {
+                document.title = '个人信息保护政策';
+                $$('#zh').style.display = 'block';
+            } else if (lang == 'hk') {
+                document.title = '隱私權政策';
+                $$('#hk').style.display = 'block';
+            } else {
+                // if language is unkown, use english by default.
+                document.title = 'Privacy Policy';
+                $$('#en').style.display = 'block';
+            }
+        })();
+    </script>
+</body>
+
+</html>

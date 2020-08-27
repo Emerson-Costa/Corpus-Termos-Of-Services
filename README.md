@@ -10,3 +10,8 @@ Trabalho de Conclusão de Curso Emerson J S Costa
 
  * captura dos dados dos apps atraves das requisições feitas pelo spider  
  * criação do arquivo.csv
+ * Salvando as páginas dos termos de privacidade de cada app em uma pasta no projeto
+
+# Não Funcionando
+
+ * Tradução dos termos

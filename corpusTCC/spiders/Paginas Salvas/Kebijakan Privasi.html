@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Anti-flicker snippet (recommended)  -->
+    <style>.async-hide { opacity: 0 !important} </style>
+    <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+            h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+            (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document.documentElement,'async-hide','dataLayer',4000,
+            {'GTM-NNPD77H':true});</script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-68084082-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-68084082-1', { 'optimize_id': 'GTM-NNPD77H'});
+    </script>
+
+    <link rel="icon"
+          type="image/png"
+          href="https://flip.id/aset_gambar/static_page/logo.png">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NWDDVJ7');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Hotjar Tracking Code for https://gomimu.com -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:971046,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <!-- End of Hotjar Tracking Code for https://gomimu.com -->
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-68084082-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window,document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '219514808483036');
+        fbq('init', '1332267440285109');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1"
+             src="https://www.facebook.com/tr?id=219514808483036&ev=PageView
+&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Global site tag (gtag.js) - Google AdWords: 958149595 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-958149595"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-958149595');
+    </script>
+
+    <!-- Event snippet for Daftar Big Flip conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-958149595/T5sACJivrXsQ2-fwyAM',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+
+    <!-- start Mixpanel -->
+    <script type="text/javascript">(function (e, b) {
+            if (!b.__SV) {
+                var a, f, i, g;
+                window.mixpanel = b;
+                b._i = [];
+                b.init = function (a, e, d) {
+                    function f(b, h) {
+                        var a = h.split(".");
+                        2 == a.length && (b = b[a[0]], h = a[1]);
+                        b[h] = function () {
+                            b.push([h].concat(Array.prototype.slice.call(arguments, 0)))
+                        }
+                    }
+
+                    var c = b;
+                    "undefined" !== typeof d ? c = b[d] = [] : d = "mixpanel";
+                    c.people = c.people || [];
+                    c.toString = function (b) {
+                        var a = "mixpanel";
+                        "mixpanel" !== d && (a += "." + d);
+                        b || (a += " (stub)");
+                        return a
+                    };
+                    c.people.toString = function () {
+                        return c.toString(1) + ".people (stub)"
+                    };
+                    i = "disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+                    for (g = 0; g < i.length; g++)
+                        f(c, i[g]);
+                    b._i.push([a, e, d])
+                };
+                b.__SV = 1.2;
+                a = e.createElement("script");
+                a.type = "text/javascript";
+                a.async = !0;
+                a.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+                f = e.getElementsByTagName("script")[0];
+                f.parentNode.insertBefore(a, f)
+            }
+        })(document, window.mixpanel || []);
+        mixpanel.init("28a3090df6e4f61a14821687663339cc");
+        function trackMixpanel(event, properties){
+            var lastEventTracked = localStorage.getItem("lastEventTracked");
+
+            if(!lastEventTracked || lastEventTracked != event){
+                if(properties){
+                    properties["ID User"] = "-";
+                    properties["$time"] = Math.round(new Date()/1000);
+                    mixpanel.track(event, properties);
+                }else{
+                    mixpanel.track(event, {"ID User" : "-", "$time" : Math.round(new Date()/1000)});
+                }
+                localStorage.setItem("lastEventTracked", event);
+            }else{
+                console.log("Tidak perlu track");
+            }
+        }
+    </script><!-- end Mixpanel -->
+
+    <title>Kebijakan Privasi</title>
+    <link rel="android-touch-icon" href="/aset_gambar/logo.png"/>
+    <meta name="msvalidate.01" content="7FD4B929169045C862CA6E54C09E0303" />
+    <meta name="google-play-app" content="app-id=id.flip">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://flip.id/bootstrap/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://flip.id/bootstrap/js/bootstrap.min.js"></script>
+    <meta name="Description" content="Kami sangat serius dengan kerahasiaan datamu.">
+<link href="/assets/cf6b528d4d3bf753bcc7920e21d03fb9/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static_css/flip_style.css" rel="stylesheet">
+<link href="/css/font-awesome.css" rel="stylesheet">
+<link href="/custom_css/kyc-tutorial.css" rel="stylesheet">
+<link href="/custom_css/common.css" rel="stylesheet">
+<link href="/custom_css/style.css" rel="stylesheet">
+<link href="/custom_css/custom-icon.css" rel="stylesheet">
+<script src="/assets/9ecf4bae70ab0927a2f5e3ada3883a7d/jquery.min.js"></script>
+<script src="/assets/5c006f7656398db41129ba3984314012/yii.js"></script>
+<script src="/custom_js/jquery-2.1.4.min.js"></script>
+<script src="/custom_js/modernizr.js" defer="defer"></script>
+<script src="/custom_js/main.js" defer="defer"></script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"217de3a59d",applicationID:"353211926"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(c(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(5),c=e(6),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,n){s[n]=i(p+n,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(l+"tracer",[u.now(),e,t],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&d("lcp",[t[t.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var n=Math.round(e.timeStamp),t={type:e.type};n<=p.now()?t.fid=p.now()-n:n>p.offset&&n<=Date.now()?(n-=p.offset,t.fid=p.now()-n):n=p.now(),g=!0,d("timing",["fi",n,t])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(4),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e){function n(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,n,!1)}n.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],5:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],6:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],7:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function t(t,r,i,o){if(!p.aborted||o){e&&e(t,r,i);for(var a=n(i),c=v(t),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[t]];return d&&d.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(t)}function y(e,n){u(e,function(e,t){n=n||"feature",w[t]=n,n in s||(s[n]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(5),s={},d={},p=n.exports=i();p.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(w,function(n,t){e[n]||(e[n]=t)});var t=a();f("mark",["onload",t+E.offset],null,"api"),f("timing",["load",t]);var r=l.createElement("script");r.src="https://"+e.agent,n.parentNode.insertBefore(r,n)}}function i(){"complete"===l.readyState&&o()}function o(){f("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-E.offset}var c=(new Date).getTime(),f=e("handle"),u=e(5),s=e("ee"),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,y=g&&g.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var h=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1177.min.js"},b=g&&y&&y[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:c,now:a,origin:h,features:{},xhrWrappable:b,userAgent:d};e(1),e(2),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),f("mark",["firstbyte",c],null,"api");var x=0,O=e(7)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(6),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof t?t(r,a):t||{}}catch(u){p([u,"",[r,a,i],c])}s(n+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(n+"err",[r,a,d],c),d}finally{s(n+"end",[r,a,f],c)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<n.length;f++)c=n[f],a=e[c],r(a)||(e[c]=t(a,u?c+i:i,o,c))}function s(t,r,i){if(!f||n){var o=f;f=!0;try{e.emit(t,r,i,n)}catch(a){p([a,t,r,i])}f=o}}function d(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){p([r])}for(var i in e)c.call(e,i)&&(n[i]=e[i]);return n}function p(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+          type="text/css">
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWDDVJ7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-login">
+    <div class="container">
+        <div class="navbar-header pull-left">
+            <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button> -->
+            <a class="navbar-brand" href="/">
+                <img
+                    src="https://flip.id/aset_gambar/static_page/logo-putih-flip.png"
+                    class="logo">
+            </a>
+        </div>
+                    <a href="/site/signup">
+                <button onclick='trackMixpanel("Link Daftar")' class="btn-register-daftar">Daftar</button>
+            </a>
+                </div>
+</nav>
+<div class="content-static">
+    <div class="flip-bg-color">
+  <div class="container container-static">
+    <div class="col-md-6 col-sm-7 col-xs-12 col-centered flip-container-question flip-container-anouncement flip-col-fix">
+      <div class="flip-padding">
+       <h1 class="flip-font-mockup-explainer">Kebijakan Privasi</h1> 
+       <p class="flip-font-icon-home-scn">Kami sangat serius dengan kerahasiaan datamu.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flip-bg-color-grey">
+  <div class="container container-tim">
+    <div class="col-md-10 col-sm-12 col-centered">
+
+      <p style="margin-top:0px" class="flip-tim-faq col-md-8 col-centered">
+        Ketentuan-ketentuan yang ada dalam halaman ini mengatur hal-hal menyangkut data-data para Pengguna Situs yang diberikan oleh para Pengguna Situs kepada Pengelola Situs dalam rangka pemanfaatan fasilitas, fitur, jasa, dan/atau layanan yang ditawarkan oleh Pengelola Situs melalui Situs flip.id. Ketentuan-ketentuan menyangkut data mengikat seluruh Pengguna Situs tanpa terkecuali untuk tunduk dan patuh atas ketentuan-ketentuan yang telah ditetapkan Pengelola Situs.</br></br>
+        Berikut ini ketentuan-ketentuan menyangkut data tersebut:</br></br>
+        1. Atas data-data yang diberikan oleh para Pengguna Situs kepada Pengelola Situs sebagai pemenuhan syarat atas pemanfaatan fasilitas, fitur, jasa, dan/atau layanan yang ditawarkan oleh Pengelola Situs, maka Pengelola Situs berkewajiban untuk:
+        </br></br>
+        a. Menjaga kerahasiaan data-data para Pengguna yang tidak dapat ditampilkan dalam Situs dan/atau diberikan kepada pihak-pihak tertentu atas penggunaan jasa atau layanan Situs selama tidak ada perjanjian tertulis terlebih dahulu kepada Pengguna;</br></br>
+        b. Kerahasiaan data Pengguna yang wajib dijaga oleh Pengelola Situs menjadi tidak berlaku apabila Pengelola Situs dipaksa oleh ketentuan hukum yang berlaku, perintah pengadilan, dan/atau perintah dari aparat/instansi yang berwenang, untuk membuka data-data milik Pengguna tersebut;</br></br>
+        2. Pengelola Situs hanya bertanggung jawab atas data yang diberikan Pengguna Situs kepada Pengelola Situs sebagaimana yang telah ditentukan pada ketentuan sebelumnya;</br></br>
+        3. Pengelola Situs tidak bertanggung jawab atas pemberian atau pertukaran data yang dilakukan sendiri antar Pengguna Situs;
+        </br></br>
+        4. Pengelola berhak untuk mengubah ketentuan menyangkut data-data para Pengguna Situs tanpa pemberitahuan terlebih dahulu dengan tanpa mengabaikan hak para Pengguna Situs untuk dijaga kerahasiaan datanya sebagaimana yang telah ditentukan dalam butir (1).
+      </p>
+
+    </div>
+
+          
+</div>
+</div>
+
+<script>
+  trackMixpanel("Kebijakan Privasi");
+</script></div>
+
+<!-- Block anywhere on the page -->
+<!-- <div id="chatra-wrapper"></div> -->
+
+
+    <script>
+      function initFreshChat() {
+        window.fcWidget.init({
+          token: "b02e61af-6e3e-4f70-854a-778b0a926f9e",
+          host: "https://wchat.au.freshchat.com"
+        });
+      }
+      function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.au.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+    </script>
+
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', function(){
+        var prev_user_id = localStorage.getItem("user_id");
+        var new_user_id = "";
+        if(prev_user_id != new_user_id){
+            localStorage.setItem("user_id", new_user_id);
+        }
+    });
+</script>
+
+<div class="flip-footer">
+    <div class="container">
+        <div class="flip-container-footer col-xs-12 col-sm-12 col-md-10 col-centered">
+
+            <div class="row">
+
+                <div class="col-sm-4 flip-footer-logo">
+                    <img class="img-responsive" src="/aset_gambar/logo_footer.png">
+                    <div class="row container-contact">
+
+                        <div class="col-xs-2 content-contact">
+                            <a target="_blank" href="https://www.facebook.com/haiflip"> <i class="fa fa-facebook-official" aria-hidden="true"></i> </a>
+                        </div>
+
+                        <div class="col-xs-2 content-contact">
+                            <a target="_blank" href="https://line.me/R/ti/p/%40pdl2824t"> <i class="custom-icon-line" aria-hidden="true"></i> </a>
+                        </div>
+
+                        <div class="col-xs-2 content-contact">
+                            <a target="_blank" href="https://twitter.com/flip_id"> <i class="fa fa-twitter" aria-hidden="true"></i> </a>
+                        </div>
+
+                        <div class="col-xs-2 content-contact">
+                            <a target="_blank" href="https://instagram.com/flip_id/?hl=en"> <i class="fa fa-instagram" aria-hidden="true"></i> </a>
+                        </div>
+
+                        <div class="col-xs-2 content-contact">
+                            <a target="_blank" href="https://blog.flip.id"> <i class="fa fa-medium" aria-hidden="true"></i> </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-8 col-xs-12">
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12 flip-footer-hubungi">
+                            <h4 class="flip-footer-title">Jam Layanan</h4>
+                            <p class="flip-footer-text">Setiap Hari:<br>07.00-20.00 WIB</p>
+                        </div>
+
+                        <div class="col-sm-4 hidden-xs flip-footer-hubungi">
+                            <h4 class="flip-footer-title">Tentang Flip</h4>
+                            <a href="/site/signup?utm_source=flip&utm_medium=landing_page&utm_campaign=footer" class="flip-footer-text">Buat Akun</a>
+                            </br>
+                            <a href="/biaya" class="flip-footer-text">Biaya</a>
+                            </br>
+                            <a href="https://big.flip.id" class="flip-footer-text">Bisnis</a>
+                            </br>
+                            <a href="https://flipid.zendesk.com" class="flip-footer-text">Bantuan</a>
+                            </br>
+                            <a href="/tutorial" class="flip-footer-text">Tutorial</a>
+                            </br>
+                            <a href="/syarat-ketentuan" class="flip-footer-text">Syarat & Ketentuan</a>
+                            </br>
+                            <a href="/privacy-policy" class="flip-footer-text">Kebijakan Privasi</a>
+                            </br>
+                            <a href="/testimoni" class="flip-footer-text">Testimoni</a>
+                            </br>
+                            <a href="/team" class="flip-footer-text">Tim</a>
+                            </br>
+                            <a href="https://flip.id/karir" class="flip-footer-text">Karir</a>
+                            </br>
+<!--                            <a target="#" href="https://flip.id/jadwal" class="flip-footer-text">Jadwal Verifikasi</a>-->
+<!--                            </br>-->
+<!--                            <a target="#" href="https://flip.id/roadmap" class="flip-footer-text">Roadmap</a>-->
+<!--                            </br>-->
+                            <a target="_blank" href="https://blog.flip.id" class="flip-footer-text">Blog</a>
+                            </br>
+                            <a href="/resource" class="flip-footer-text">Resource</a>
+                        </div>
+
+                        <div class="col-sm-4 hidden-xs flip-footer-hubungi">
+                            <h4 class="flip-footer-title">Hubungi Flip</h4>
+                            <p class="flip-footer-text">Layanan Pengguna:<br><a href="tel:+62150928829">02150928829</a></p>
+                            <p class="flip-footer-text">
+                                Bisnis & Kerja Sama:
+                                <br>
+                                <a href="tel:08111228317">
+                                    08111228317                                </a>
+                                <br>
+                                <a href="/cdn-cgi/l/email-protection#6a081f1903040f19192a0c06031a44030e">
+                                    <span class="__cf_email__" data-cfemail="82e0f7f1ebece7f1f1c2e4eeebf2acebe6">[email&#160;protected]</span>                                </a>
+                            </p>
+                            <p class="flip-footer-text" style="margin-bottom: 20px">Email:<br><a href="/cdn-cgi/l/email-protection#4e262b2222210e2822273e60272a"><span class="__cf_email__" data-cfemail="1b737e7777745b7d77726b35727f">[email&#160;protected]</span></a></p>
+                            <p class="flip-footer-text" style="margin-bottom: 20px">Alamat:<br>Komp. Timah BB. No. 71, Depok, Jawa Barat</p>
+                            <a href="https://mixpanel.com/f/partner" rel="nofollow">
+                                <img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics"  crossorigin="anonymous"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hidden-sm hidden-md hidden-lg">
+                <div class="accordion-footer top">
+                    <div class="accordion-title" data-target="konten-tentang">
+                        <span>Tentang Flip</span>
+                        <span class="plus-logo">+</span>
+                    </div>
+                    <div class="accordion-content hidden konten-tentang">
+                        <a href="/start" class="flip-footer-text">Buat Akun</a>
+                        </br>
+                        <a href="/biaya" class="flip-footer-text">Biaya</a>
+                        </br>
+                        <a href="https://big.flip.id" class="flip-footer-text">Bisnis</a>
+                        </br>
+                        <a href="https://flipid.zendesk.com" class="flip-footer-text">Bantuan</a>
+                        </br>
+                        <a href="/tutorial" class="flip-footer-text">Tutorial</a>
+                        </br>
+                        <a href="/syarat-ketentuan" class="flip-footer-text">Syarat & Ketentuan</a>
+                        </br>
+                        <a href="/privacy-policy" class="flip-footer-text">Kebijakan Privasi</a>
+                        </br>
+                        <a href="/testimoni" class="flip-footer-text">Testimoni</a>
+                        </br>
+                        <a href="/team" class="flip-footer-text">Tim</a>
+                        </br>
+<!--                        <a target="#" href="https://flip.id/jadwal" class="flip-footer-text">Jadwal Verifikasi</a>-->
+<!--                        </br>-->
+<!--                        <a target="#" href="https://flip.id/roadmap" class="flip-footer-text">Roadmap</a>-->
+<!--                        </br>-->
+                        <a href="https://blog.flip.id" class="flip-footer-text">Blog</a>
+                        </br>
+                        <a href="/resource" class="flip-footer-text">Resource</a>
+                    </div>
+                </div>
+
+                <div class="accordion-footer">
+                    <div class="accordion-title" data-target="konten-hubungi">
+                        Hubungi Flip
+                        <span class="plus-logo">+</span>
+                    </div>
+                    <div class="accordion-content hidden konten-hubungi">
+                        <p class="flip-footer-text">Layanan Pengguna: <a style="padding-left: 0px;padding-right: 0px;" href="tel:+622150928829">02150928829</a></p>
+                        <p class="flip-footer-text">Bisnis & Kerja Sama: <a style="padding-left: 0px;padding-right: 0px;" href="tel:08111228317">08111228317 (Hesti)</a></p>
+                        <p class="flip-footer-text">Email: <a style="padding-left: 0px;padding-right: 0px;" href="/cdn-cgi/l/email-protection#83ebe6efefecc3e5efeaf3adeae7"><span class="__cf_email__" data-cfemail="95fdf0f9f9fad5f3f9fce5bbfcf1">[email&#160;protected]</span></a></p>
+                        <p class="flip-footer-text">Alamat: <span style="padding-left: 0px;padding-right: 0px;">Komp. Timah BB. No. 71, Depok, Jawa Barat</span></p>
+                        <a href="https://mixpanel.com/f/partner" rel="nofollow">
+                            <img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics"  crossorigin="anonymous"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <p class="col-md-12 col-sm-12 col-xs-12 flip-footer-copyright" style="margin-top: 45px;font-weight: 400; line-height:150%">FLIP ADALAH PERUSAHAAN TRANSFER DANA YANG TELAH TERLISENSI OLEH BANK INDONESIA DENGAN NOMOR IZIN <a target="#" class="text-orange" href="https://flip.id/lisensi">18/196/DKSP/68</a> 🎉<br>© 2019 PT. FLIP</p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    $(document).ready(function()
+    {
+        $('.accordion-title').click(function()
+        {
+            $('.' + $(this).data('target')).toggleClass('hidden');
+            if($(this).find('.plus-logo').text() == '+')
+            {
+                $(this).find('.plus-logo').text('_');
+                $(this).find('.plus-logo').addClass('minus');
+            }
+            else
+            {
+                $(this).find('.plus-logo').text('+');
+                $(this).find('.plus-logo').removeClass('minus');
+            }
+        });
+    });
+</script><script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/custom_js/jquery-2.1.4.min.js"></script>
+<script src="/custom_js/flip_script.js"></script>
+<script src="/custom_js/modernizr.js"></script>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"217de3a59d","applicationID":"353211926","transactionName":"b1RbMkpZVhUFV0JYCVYeehNLTFcLS0dfRQMXQUsPTllbHw==","queueTime":0,"applicationTime":5,"atts":"QxNYRAJDRRs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

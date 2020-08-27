@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <meta name="description" content="At TutoTOONS, we create games that cherish the childhood and let kids explore the world while playing what they love!">
+   <meta name="keywords" content="kids games, educational kids games, beautifly designed games, free game making software, build games free, game design software, learn build games for kids, build games on ipad, iphone, create games">
+   <meta name="theme-color" content="#265561">
+   <meta name="google-site-verification" content="DT3O-ntDj2yDSJFHuCgpgj-KfRRRCBonkvVWsD0TB0o" />
+
+      <title>Privacy Policy - TutoTOONS.com</title>
+
+   <!-- base root directory -->
+   <base href="https://tutotoons.com/">
+   <!-- PREALOADER (loads asap)-->
+   <link rel="stylesheet" href="vendor/nprogress/nprogress.css">
+   <script src="vendor/nprogress/nprogress.js"></script>
+   <!-- FAVICON-->
+   <link href="images/favicon.ico" rel="shortcut icon">
+   <link href="images/favicon_32.ico" rel="icon" sizes="32x32">
+   <!-- FONT-->
+   <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+   <!-- ICONS-->
+   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+   <!-- mobile check  -->
+   <script src="vendor/jquery.browser/dist/jquery.browser.js"></script>
+   <!-- var js  -->
+   <script type="text/javascript">
+
+   if ( window.jQBrowser.mobile && top.location != location) top.location.href = document.location.href;
+   </script>
+
+   <!-- VENDOR CSS-->
+   <link rel="stylesheet" href="https://tutotoons.com/vendor/Nivo-Lightbox/nivo-lightbox.css">
+   <link rel="stylesheet" href="https://tutotoons.com/vendor/Nivo-Lightbox/themes/default/default.css">
+   <link rel="stylesheet" href="https://tutotoons.com/vendor/animate.css/animate.css">
+   <link rel="stylesheet" href="https://tutotoons.com/vendor/bootstrap/dist/css/bootstrap.css">
+   <link rel="stylesheet" href="https://tutotoons.com/vendor/sweetalert2/dist/sweetalert2.min.css">
+
+   <!-- SITE CSS-->
+   <link rel="stylesheet" href="https://tutotoons.com/assets/css/frontend_styles.css?v=1.210" id="stylescss">
+   <!--[if lt IE 9]><script src="https://tutotoons.com/assets/js/js/html5shiv.js"></script><script src="js/respond.min.js"></script><![endif]-->
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+   <script src="vendor/wow/dist/wow.js"></script>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-45868014-1', 'tutotoons.com');
+        ga('send', 'pageview');
+
+        // global var
+        var global ={};
+        global.root_path = 'https://tutotoons.com/';
+        //update game greacor window size
+
+        updateScreenDimensions();
+        update_footer();
+
+        function updateScreenDimensions(){
+         // READS AND CALCULATES WINDOW AND VISIBLE CONTENT DIMESNSIONS
+         global.header_height = 55;//$("header").height();
+         global.footer_height = $("footer").height(); // on load footer height do not exist // edge sad fix
+         global.window_height = $(window).height();
+         global.window_width = $(window).width();
+         global.content_width = $(window).width();
+         global.content_height = $(window).height()-global.header_height;
+        }
+        function updateContainersSize(element_id){
+             if(element_id!=undefined){
+                 $(element_id).css({"height":global.content_height,"width":global.content_width});
+             }
+        };
+        function update_footer(){
+            //-1 border
+            $(document).ready(function(){
+                //load cookieBar
+                $('.cookie-message').cookieBar({ closeButton : '.cookie_bar_close_btn' });
+                global.footer_height = $("footer").height();
+                
+            });
+        };
+   </script>
+   <style media="screen">
+     .ui-widget{
+       display:block;
+       position:fixed;
+       bottom:10px;
+       left:10px;
+       z-index:999;
+       margin-left:40px;
+       width: calc( 100% - 190px );
+     }
+     .cookie-content{
+       background:#BFBFBF;
+       padding:5px 30px 5px 40px;
+     }
+     .cookie-message p{
+       font-family: 'Open Sans', sans-serif!important;
+       font-size:18px;
+       font-weight:300;
+     }
+     .cookie-content::before{
+       content: "";
+      display: block;
+      width: 75px;
+      height: 74px;
+      background-image: url(/images/cookie.png);
+      background-size: cover;
+      position: absolute;
+      left: -40px;
+      bottom: 0px;
+     }
+     a.cookie_bar_close_btn {
+      display: block!important;
+      position: absolute;
+      right: -140px;
+      top: 0;
+      padding: 13px;
+      background: transparent;
+      background-image: url('/images/cookie_btn.png');
+      font-family: 'Open Sans', sans-serif!important;
+      font-size:18px;
+      font-weight:bold;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+     a.cookie_bar_close_btn:hover {
+       background-color:transparent;
+       transform:scale(1.1);
+     }
+     
+     @media screen and (max-width:1280px) and (min-width: 300px){
+       .cookie-content::after {
+           content: "";
+           display: block;
+           width: 20px;
+           height: 20px;
+           background: #bfbfbf;
+           transform: rotate(45deg);
+           top: -10px;
+           position: absolute;
+           left: 38px;
+       }/*dialog triangle*/
+     }
+     
+     @media screen and (max-width: 1280px){
+       .ui-widget {
+           max-width: calc( 100% - 95px );
+           width: calc( 100% - 95px );
+           margin-left:75px ;
+       }
+       .cookie-content::before {
+          left: 5px;
+          width: 75px;
+          height: 74px;
+          left: -80px;
+          bottom: auto;
+          top: 10%;
+        }
+       .cookie-content::after {
+        top: 15px;
+        position: absolute;
+        left: -10px;
+      }
+       .cookie-content{
+        padding: 5px 5px 20px 5px;
+        display: block!important;
+        text-align: center;
+        border-radius: 15px;
+        margin-bottom: 10px;
+       }
+       .cookie-message p{
+         font-size: 14px;
+       }  
+       .cookie-message,.cookie-content {
+            width: 100%;
+        }
+        a.cookie_bar_close_btn {
+            background: #ffb153;
+            padding: 10px;
+            right: calc(50% - 85px);
+            top: auto;
+            bottom: -5px;
+            border-radius: 30px;
+        }
+     }
+     @media screen and(max-width: 450px) and (min-width:300px){
+       .ui-widget {
+           max-width: 280px;
+           margin:0;
+       }
+       .cookie-content::before {
+           top: -120px;
+           width: 100px;
+           height: 100px;
+           left: 0;
+       }
+       .cookie-content{
+         padding: 10px;
+         border-radius:15px;
+       }
+       .cookie-message p{display:block;text-align:center;}
+       a.cookie_bar_close_btn {
+           bottom: auto;
+           right: auto;
+           position: relative;
+           margin: auto;
+       }
+     }
+   </style>
+</head>
+
+<body>
+    <!-- cookie bar  -->
+    <div class="ui-widget">
+  		<div class="cookie-message ui-widget-header" style="display:none;">
+      		<div class="cookie-content" style="display:table;">
+                <p>By using this website you allow us to place cookies on your computer. They are harmless and never personally identify you.</p>
+                <a class="cookie_bar_close_btn" href>OK, GOT IT!</a>
+      		</div>
+  		</div>
+    </div>
+    <!-- cookie bar end.  -->
+    <!-- START HEADER-->
+    <header id="header" class="navbar navbar-default navbar-fixed-top navbar-sticky">
+        <!-- START STICKY NAVBAR-->
+
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" data-toggle="collapse" data-target="#navbar-main" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="https://tutotoons.com/" class="navbar-brand">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <!-- MENU-->
+                <div id="navbar-main" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right main-navbar">
+                        <!--
+                        <li class="link"><a href="https://tutotoons.com/"  class="">HOME<span></span></a></li>
+                        <li class="link"><a href="games/"  class="">GAMES<span></span></a></li>
+                        <li class="link"><a href="create/"  class="new " title="Latest version of TutoTOONS Builder">CREATE<span></span></a></li>
+                        <li class="link"><a href="http://tutotoons.tumblr.com">BLOG<span></span></a></li>
+                        <li class="link"><a href="https://tutotoons.zendesk.com/">HELP<span></span></a></li>
+                        <li class="link"><a href="about/"  class="">Team<span></span></a></li>
+                        <li class="link"><a href="jobs/"  class="">JOBS<span></span></a></li>
+-->
+                        <li class="link regular"><a href="">HOME<span></span></a></li><li class="link regular"><a href="games/">GAMES<span></span></a></li><li class="link regular"><a href="http://blog.tutotoons.com">BLOG<span></span></a></li><li class="link regular"><a href="about/">ABOUT<span></span></a></li><li class="link regular"><a href="jobs/">JOBS<span></span></a></li>                    </ul>
+                </div>
+            </div>
+
+        <!-- END STICKY NAVBAR-->
+
+    </header>
+    <!-- END HEADER-->
+    <main id="wrap" class="privacy_policy">
+<style>
+
+p {
+    font-size: 13px !important;
+    font-weight: normal;
+    line-height: 18px;
+    margin-bottom: 9px;
+	line-height: 19px;
+	margin: 0;
+	padding-top: 11px;
+    color: #6b6b6b
+}
+table, table tr th, table tr td {
+    text-align: left;
+    font-size: 14px !important;
+
+    line-height: 18px;
+	line-height: 19px;
+    color: #6b6b6b
+}
+table tr th {
+     font-weight: bold;
+}
+
+ thead {
+     border-bottom: solid 1px #000;
+}
+ table {
+     margin-top: 30px;
+}
+ul {
+	margin-top: 10px;
+	font-size: 13px;
+	font-weight: normal;
+	color: #6b6b6b;
+}
+section {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    border-bottom:1px solid #ccc;
+}
+a.go_to {
+	display: block;
+    font-weight: 800;
+    font-size: 15px;
+    color: #000;
+    cursor: pointer;
+    margin-bottom: 10px;
+ 	text-transform: uppercase;
+}
+a.go_to:hover{
+	color:#a3a3a3;
+
+}
+.privacy_policy a.go_to.no-styling{
+  display:inline;
+  font-weight: normal;
+  font-size: 1em;
+  color:#4a98f0;
+  margin:0;
+  text-transform: none;
+}
+.scroll_top {
+	position: fixed;
+    bottom: 20px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.46);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    border-radius: 10px;
+    z-index: 999;
+    cursor: pointer;
+}
+tr.no-bottom-border td {
+  border-top: none !important;
+}
+section h2 {
+    text-align: center;
+}
+.privacy_policy a.go_to{ color: #555; cursor: pointer; }
+.privacy_policy a.go_to:hover{ color: #bebebe;}
+.privacy_policy a:hover{ color: #111;  }
+.divider { 
+  margin: 20px auto;
+  border-bottom: 1px solid #ececec;
+}
+
+/*.color-1,a.color-1{color:#ff76ce!important}
+.color-2,a.color-2{color:#da93fb!important}
+.color-3,a.color-3{color:#9199fc!important}
+.color-4,a.color-4{color:#92b9fc!important}
+.color-5,a.color-5{color:#5bd3f8!important}
+.color-6,a.color-6{color:#ff86d3!important}
+
+.bg-color-1 h3{background:#ff76ce; color:#fff;}
+.bg-color-2 h3{background:#da93fb; color:#fff;}
+.bg-color-3 h3{background:#9199fc; color:#fff;}
+.bg-color-4 h3{background:#92b9fc; color:#fff;}
+.bg-color-5 h3{background:#5bd3f8; color:#fff;}
+.bg-color-6 h3{background:#ff86d3; color:#fff;}*/
+
+
+
+.bg-for-kids h2{
+  font-size:3.5em;
+  text-align:center;
+}
+.bg-for-kids{
+  font-size:16px;
+  background:#ff86d3;
+  color:#fff!important;
+  padding:100px 20px 100px 20px;
+}
+.bg-for-kids .image-right img{
+  float:right;
+  height:260px;
+  width:400px;
+  margin: 0 0 10px 10px;
+}
+.bg-for-kids div,.bg-for-kids div p{
+  color:#fff;
+  line-height: 1.8;
+  font-size:16px!important;
+}
+
+@media screen and (max-width: 800px){
+  .bg-for-kids{
+    padding:40px 20px 40px 20px;
+  }
+  .bg-for-kids h2{
+    font-size:2em;
+  }
+  .bg-for-kids .image-right img{
+    float:none;
+    display:block;
+    margin:auto;
+    max-width:95%!important;
+    height:initial!important;
+  }
+}
+
+</style>
+<script>
+/* ----------------------------------------------- */
+/* ------          Goto target script      ------- */
+/* ----------------------------------------------- */
+	$(document).on("click",".go_to", function() {
+		var section = $(this).attr("data-id");
+		var offset = $(section).offset().top;
+		var mod = Math.ceil(offset - $("header").height()-10);
+	    $('html, body').animate({
+	        scrollTop: mod
+	    }, 1000);
+	});
+/* ------------------------------------------------------ */
+/* Detect distance from top and show scroll to top button */
+/* ------------------------------------------------------ */
+	$( window ).scroll(function() {
+	  	var mod = $(window).scrollTop();
+		var doc_height = $(window).height();
+		if (mod> doc_height){
+			$(".scroll_top").fadeIn();
+		}else{
+			$(".scroll_top").fadeOut();
+		}
+	});
+	/* ------------------------------------------------------ */
+	/*                  Scroll to top script                  */
+	/* ------------------------------------------------------ */
+	$(document).on("click",".scroll_top", function() {
+		$('html, body').animate({
+			scrollTop: Math.ceil($("#content").offset().top - $("header").height()-20)
+		}, 1000);
+	});
+</script>
+
+<main>
+<div style="display:none" class="scroll_top"><em class="icon-arrow-up"></em></div>
+
+<div class="bg-for-kids">
+  <h2>Children’s Privacy Notice</h2>
+  <div class="container container-small image-right">
+    <img src="/images/panda_final.png" alt="privacy_panda">
+    <div>
+      <p>Hello! We want to tell you a bit about TutoTOONS Ltd. and our games for
+         kids. If you are reading this, you might be playing one right now. :)</p>
+      <p>We are devoted to creating fun mobile games that brighten up your day. 
+        We care about your safety online and want you to have the best time with 
+        our apps.</p>
+      <p>When you play our games, we do not collect any personal information from 
+        you. Personal information can include your full name, address, email or 
+        phone number. We do not have this information about you and therefore we 
+        cannot share it with anyone.</p>
+      <p>We may collect general information, for example, the country you live in, 
+        how much time you spend in our game, mobile devices you use and similar. 
+        This info is not associated with you, we are getting it as a big pile of 
+        impersonalised numbers. This information helps us better understand our 
+        audience and improve our games. </p>
+      <p>In our games, you may see ads. Our team is making sure that all ads are
+         appropriate for children and that no personal information about your 
+         interactions with ads is collected.</p>
+      <p>We are making sure we are doing everything according to COPPA and GDPR 
+        — special laws that are protecting your privacy.</p>
+      <p>The rest of this document is for parents and grown-ups. If you have any
+         questions about privacy, show this to your parents or legal guardians - 
+         they can always contact us at privacy@tutotoons.com for more information.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- *************************************** -->
+<!--                Policy page                -->
+<!-- *************************************** -->
+<section class="white bot_push privacy_policy">
+  
+  
+	<div class="container container-small push_f_top bottom-space">
+    
+    
+    
+			<h1>TutoTOONS	Privacy	Policy</h1>
+			<p>Last Revised: 20 August 2020</p>
+			<section><p><b>TutoTOONS Limited</b> ("TutoTOONS", "we") are committed to protecting your Personal Data. We offer services and games that can
+         collect information from you and your children, so we have prepared a document called the Privacy Policy. In this Privacy Policy, we will 
+         explain what we do with the Personal Data that you provide to us or which we can collect from you in the provision of services to you.  </p>
+              <p>This Privacy Policy is in compliance with the US Children's Online Privacy Protection Act (COPPA) and the European General Data 
+                Protection Regulation (GDPR).</p>
+             </section>
+
+			<section id="content">
+				<h2>Content</h2>
+			</section>
+			<section style="padding:30px 0">
+				<div class="row" style="padding:0 30px">
+  				<div class="col-xs-12 col-sm-6">
+  					<a class="go_to color-1" data-id="#section1">
+  						1. WHO WE ARE?
+  					</a>
+  					<a class="go_to color-2" data-id="#section2">
+  						2. WHAT IS THE PURPOSE OF THIS PRIVACY POLICY?
+  					</a>
+  					<a class="go_to color-3" data-id="#section3">
+  						3. WHAT PERSONAL DATA WE COLLECT?
+  					</a>
+  					<a class="go_to color-4" data-id="#section4">
+  						4. HOW WE COLLECT PERSONAL DATA?
+  					</a>
+  					<a class="go_to color-5" data-id="#section5">
+  						5. HOW WE USE PERSONAL DATA?
+  					</a>
+  					<a class="go_to color-6" data-id="#section6">
+  						6. ON WHAT LEGAL BASIS WE USE PERSONAL DATA?
+  					</a>
+            <a class="go_to color-1" data-id="#section7">
+              7. TUTOTOONS SUBSCRIPTION
+            </a>
+  					<a class="go_to color-2" data-id="#section8">
+  						8. WHAT ARE COOKIES?
+  					</a>
+            <a class="go_to color-3" data-id="#section9">
+                9. HOW CAN WE DISCLOSE YOUR PERSONAL DATA?
+            </a>
+  				</div>
+  			  <div class="col-xs-12 col-sm-6">
+  					<a class="go_to color-4" data-id="#section10">
+  						10. OUR THIRD-PARTY DATA CONTROLLERS AND PROCESSORS
+  					</a>
+            <a class="go_to color-5" data-id="#section11">
+  						11. HOW WE PROTECT YOUR PERSONAL INFORMATION?
+  					</a>
+            
+            <a class="go_to color-6" data-id="#section12">
+  						12. KIDS PRIVACY ASSURED PROGRAM
+  					</a>
+            
+  					<a class="go_to color-1" data-id="#section13">
+  						13. HOW LONG WILL WE USE YOUR PERSONAL DATA?
+  					</a>
+  					<a class="go_to color-2" data-id="#section14">
+  						14. WHERE WE STORE AND HOW WE TRANSFER YOUR DATA?
+  					</a>
+  					<a class="go_to color-3" data-id="#section15">
+  						15. WHAT RIGHTS DO YOU HAVE?
+  					</a>
+  					<a class="go_to color-4" data-id="#section16">
+  						16. HOW TO CONTACT US?
+  					</a>
+  				</div>
+				</div>
+			</section>
+
+			<section id='section1' class="bg-color-1">
+        <h3>1. WHO WE ARE?</h3>
+        <p>TutoTOONS Limited is a company with registered office in Scotland, Summit House, 4-5 Mitchell Street, Edinburgh, EH6 7BD, United Kingdom. </p>
+        <p>We are the Personal Data controllers responsible for your Personal Data. A Personal Data controller is the person who decides for what purposes 
+          Personal Data will be used. </p>
+        <p>Our contact details are as follows:</p>
+        <ul>
+          <li>TutoTOONS	LIMITED</li>
+          <li>Summit House, 4 -5 Mitchell Street Edinburgh, Scotland, EH6 7BD, UK</li>
+          <li>Phone: +37037300833</li>
+          <li>Email: privacy@tutotoons.com</li>
+        </ul>
+        <p>If you have questions about this Privacy Policy or wish to exercise your rights, contact us by email at 
+          privacy@tutotoons.com.</p>
+        </p>
+      </section>
+			<section id='section2' class="bg-color-2">
+          <h3>2. WHAT IS THE PURPOSE OF THIS PRIVACY POLICY?</h3>
+      		<p>While you visit our website at www.tutotoons.com or you play TutoTOONS games ("Services" or "Games"), 
+            we may collect information about you ("Personal Data").  </p>
+          <p>We care about your Personal Data protection, so we have developed this Privacy Policy. </p>
+          <p>By this Privacy Policy, we want to clearly and comprehensibly explain what data we collect, how we use, disclose and transfer it. </p>
+          <p>From time to time, we may change the terms of this Privacy Policy, so do not forget to read this Privacy Policy on a regular basis to 
+            understand how we use your Personal Data. </p>
+          <p>If we make a material change to this policy, we will post a notice on our website prior to making the change. If we have your parent email 
+            address, we will contact you to let you know about the changes.</p>
+      </section>
+			<section id='section3' class="bg-color-3">
+          <h3>3. WHAT PERSONAL DATA WE COLLECT?</h3>
+          <p><b>Note: You must update any mobile applications downloaded before 2018 May 25th</b> </p> 
+      		<p>Personal Data refers to any information about a person which can identify that person. </p>
+      		<p>We may collect, use, store and transfer various Personal Data we have grouped into these categories:</p>
+
+      		<p><b>Contact Information.</b> You can provide us with your Contact Information, such as your phone number and email when you contact us with a
+             question or request.  </p>
+      		
+          <p>If a child under the age of 13 years old in the USA or under the age of 16 years old in the EU has contacted us through email, and we need to communicate with the child more than once to resolve the query, we will ask the child to provide us with the child's parent or guardian's email. Then we will send the parent or guardian a notice telling that his/her child has contacted us. If we do not obtain parental consent after a reasonable time from the date of the data collection, we will delete such data from our records.</p>
+      	
+        	<p><b>Location Data.</b>We do not collect data about your exact location (address) in any case. We can collect data about your location, i.e.
+             city or country. We collect this data automatically when you use our Services or play our Games. </p>
+              
+          <p><b>Technical Data.</b>We may collect such information as your IP address, advertising ID, and other technologies on the devices that you
+             use in our Services or play our Games. We can also collect non-personal Technical Data about the mobile operating system, mobile browser
+              type, screen resolution, device vendor, language. We collect this data automatically when you use our Services or play our Games. </p>
+          
+          <p><b>Usage Data.</b>We can collect statistics on how you use our Services or play our Games. This information does not contain information
+             that will help us identify you. We need this information so that we can provide you with the Services, improve their quality, adapt them 
+             to your needs.  </p>
+           <p>NOTE. If you decide to get TutoTOONS games subscription, we collect and use additional personal data as stated in section 7. TutoTOONS Subscription. </p>
+        
+          <p>We do not collect or store any financial data because the processing of your financial data is done by your chosen payment service provider,
+             such as iTunes, Google Play, etc. </p>
+          <p>We do not collect and do not intend to collect "special categories of data", such as any information about health, race, religion, 
+            political opinions or philosophical beliefs, sexual beliefs or orientation. </p>
+          <p>We do not collect any data that is not necessary for the provision of our services.</p>
+      </section>
+
+			<section id='section4' class="bg-color-4">
+        <h3>4. HOW WE COLLECT PERSONAL DATA?</h3>
+        <p>We use several methods to collect Personal Data discussed further:</p>
+        <p><b>Personal Data is provided directly by you. </b> You provide us with your data when you contact us by email, social networks or
+           phone, ask to answer your question.</p>
+        
+        <p><b>We collect Personal Data automatically.</b>When you use our Services, e.g. visit our website, play our games, we can automatically
+           collect technical information about your IP address, promotional identifiers, equipment, browsing actions and models you use, as well
+            as statistics. We collect this Personal Data using cookies, automated event logs and other similar technologies.  </p>
+      
+        <p><b>We collect Personal Data from third parties.</b> We may receive Personal Data about you from third-party sources, i.e. from another
+           companies and persons (see section Our third party data controllers and processors). </p>
+      </section>
+
+			<section id='section5' class="bg-color-5">
+        <h3>5. HOW WE USE PERSONAL DATA?</h3>
+        <p>We will only use your Personal Data as permitted by law. Usually, we will use your Personal Data in the following circumstances:</p>
+        
+        <p>In order to fulfil our obligations when you use our website or our mobile applications, e.g. to ensure that the Services are provided,
+           to improve the Services, to identify subscribers and manage subscriptions, to personalize the content you use, to respond to your requests and inquiries.  Also, in order to fulfil our 
+           legal obligations, we may ask for the child's parent or guardian's email when we must obtain the consent of parents or guardians to use
+            the child's Personal Data (email and name).</p>
+        
+        <p>When it is necessary to fulfil our contractual obligations or safeguard our legitimate interests, we use your Personal Data, e.g. to
+           provide you with contextual advertising, to analyse your behaviour using our Services, to ensure the security and integrity of our 
+           Services. </p>
+        
+        <p>We may also use your Personal Data to enforce or defend our rights, protect your interests, prevent and/or detect fraud or deceptive 
+          behaviour. </p>
+        
+        <p>We will not use your data to provide you with behavioural advertising, as well as re-marketing, profiling and automated decision making.</p>
+			</section>
+
+			<section id='section6' class="bg-color-6">
+          <h3>6. ON WHAT LEGAL BASIS WE USE PERSONAL DATA?</h3>
+          <p>Generally, we collect and process your personal information only in order to fulfil our obligations to you, use it for legitimate 
+            interests and protect your rights (support for the internal operations), or if we have your consent to do so.</p>
+          
+          <p>Below, we provide you with information on the purposes and grounds for usage of your Personal Data.</p>
+          <table class="table">
+              <col width="35%">
+              <col width="20%">
+              <col width="45%">
+              <thead>
+                  <tr scope="row">
+                      <th >Activity</th>
+                      <th>Data type</th>
+                      <th>Legal basis for data processing </br> according to GDPR / COPPA</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr scope="row">
+                      <td rowspan="3">Manage and protect our website and our mobile applications </td>
+                      <td><b>Contact Data</b></td>
+                      <td>(a) Necessary for our legitimate interests (GDPR)</td>
+                  </tr>
+                  <tr class="no-bottom-border" scope="row">
+                      <td ><b>Technical Data</b></td>
+                      <td style="border-bottom: none">(b)	Necessary for support for the internal operations (COPPA)</td>
+                  </tr>
+                  <tr class="no-bottom-border" scope="row">
+                      <td><b>Usage Data</b></td>
+                      <td></td>
+                  </tr>
+                  <tr scope="row">
+                      <td rowspan="2">Provide Services, improve Services, customize Services for your individual needs</td>
+                      <td><b>Technical Data</b></td>
+                      <td>(a)	Necessary for fulfilling our contractual obligations (GDPR)</td>
+                  </tr>
+                  <tr class="no-bottom-border" scope="row">
+                      <td><b>Usage Data</b></td>
+                      <td>(b)	Necessary for support for the internal operations (COPPA)</td>
+                  </tr>
+                  
+                  <tr scope="row">
+                      <td rowspan="2">Identify games subscribers and manage games subscriptions (only if you get subscription plan)</td>
+                      <td><b>Contact Data</b></td>
+                      <td>(a) Necessary for fulfilling our contractual obligations (GDPR)</td>
+                  </tr>
+                  <tr class="no-bottom-border" scope="row">
+                      <td><b>Usage Data</b></td>
+                      <td>(b) Necessary for fulfilling our contractual obligations (GDPR)</td>
+                  </tr>
+                  
+
+                  <tr scope="row">
+                      <td rowspan="2">Submit contextual advertising to you, analyse your behaviour using our Services</td>
+                      <td><b>Technical Data</b></td>
+                      <td>a)	Necessary for our legitimate interests and for fulfilling our contractual obligations (GDPR)</td>
+                  </tr>
+                  <tr class="no-bottom-border" scope="row">
+                      <td><b>Usage Data</b></td>
+                      <td>b)	Necessary for support for the internal operations (COPPA)</td>
+                  </tr>
+
+                  <tr scope="row">
+                      <td rowspan="2">Reply to your applications, requests, notifications</td>
+                      <td><b>Contact Data</b></td>
+                      <td>a)	Necessary for fulfilling our contractual obligations and for legitimate interests (GDPR) </td>
+                  </tr>
+                  <tr class="no-bottom-border" scope="row">
+                      <td><b>(email, phone)</b></td>
+                      <td>If a child under the age of 13 years old in the USA or under the age of 16 years old in the EU has 
+                        contacted us through email, and we need to communicate with the child more than once to resolve the query,
+                         we will ask the child to provide us with the child's parent or guardian's email. Then we will send the 
+                         parent or guardian a notice telling that his/her child has contacted us. If we do not obtain parental 
+                         consent after a reasonable time from the date of the data collection, we will delete such data from our
+                          records. </td>
+                  </tr>
+
+                  <tr scope="row">
+                      <td rowspan="2">Get the child's parent's or guardian's consent</td>
+                      <td><b>Contact Data</b></td>
+                      <td>a)	Necessary to comply with our legal obligations (GDPR)</td>
+                  </tr>
+                  <tr class="no-bottom-border" scope="row">
+                      <td><b>(email)</b></td>
+                      <td>b)	Exception to prior parental consent (COPPA)</td>
+                  </tr>
+              </tbody>
+          </table>
+          <p>We will use your Personal Data for the purposes for which we have collected them, unless we reasonably believe that we must use it for
+             another purpose that is compatible with the original purpose.</p>
+          <p>Please note that where we must process Personal Data when required by law, we may process your Personal Data without your knowledge or consent.</p>
+      </section>
+
+			<section id='section7' class="bg-color-1">
+        <h3>7. TUTOTOONS SUBSCRIPTION</h3>
+        <p>If you want to get a subscription to selected TutoTOONS games, we need to identify you by creating a subscriber's account. In order to get access to TutoTOONS games subscription, a child's parent or guardian is required to agree to our Terms of Use and Privacy Policy as 
+          well as login by choosing a preferable login method (Google or Apple).</p>
+        <p>If you decide to get TutoTOONS games subscription, we collect and use personal data about chosen login method, email address, current subscription plan, billing, connected devices, unique ID, advertisement ID and device ID. </p>
+        <p>We will use this data only to authenticate a user and manage user’s subscription (e.g. to determine on how many devices subscription has been activated). We process your personal data ourselves, therefore personal information is not disclosed to any third party.</p>
+        <p>With your actively given consent, we may email you and ask for the feedback about TutoTOONS subscription experience. We will not use your email for any advertising purposes. You can always withdraw your consent by signing in to your subscription account and opting-out.</p>
+        <p>Please note that you have the right to cancel your subscription anytime, however your personal data collected before subscription cancellation will be stored in order to comply with our legal obligations.</p>
+      </section>
+			
+      <section id='section8' class="bg-color-2">
+        <h3>8. WHAT ARE COOKIES?</h3>
+        <p>When you use our services, we may use industry-wide technologies such as cookies and/or other technologies, hardware-based device identifiers, flash cookies, operating system-based identifiers and web beacons.</p>
+        <p>Cookies are small text files that we place in visitors’ computer browsers to store their preferences.</p>
+        <p>The cookies are created for each session, they do not include or collect any information about you other than your session key, and they
+         are removed as soon as the session ends (usually done automatically by your web browser).</p>
+         
+        <p>You can disable cookies on your device or set your device to alert you when cookies are being sent to your device.</p>
+        <p>If you do not accept, block or erase cookies, or change the settings, your online experience may be limited.</p>
+        <p>We may also use certain third-party cookies (e.g. Google Authentication). These are a different kind of cookie that is stored on your computer
+         by third parties. This kind of cookie is only read (and is not altered by the Service) each time you use our Services. Third party cookies 
+         store only Usage Data, such as the different pages you have visited strictly within the Service (such the “About” page, the “Contact Us” page,
+        the duration of your browsing session, etc.).</p>
+      </section>
+
+			<section id='section9' class="bg-color-3">
+        <h3>9. HOW CAN WE DISCLOSE YOUR PERSONAL DATA?</h3>
+        <p>We may share your personal information with these persons:</p>
+        <p>(a) Companies of our group, third-party service providers and partners providing data processing services (e.g. to ensure the provision of 
+          our Services, to provide services or to improve our Services security), as well as to those who otherwise process Personal Data for the
+           purposes specified in this Privacy Policy. Here is a list of our current service providers and partners (see section Our third party data 
+           controllers and processors). </p>
+           
+        <p>b) To any competent law enforcement authority, regulatory authority, government agency, court, or other third party, if we consider that 
+          disclosure is necessary (i) in accordance with applicable laws or regulations, (ii) to exercise or to protect our rights, or (iii) to protect
+           our or any other person's interests;</p>
+           
+        <p>(c) A potential or actual buyer (and its representatives and advisers) involved in the purchase, merger or acquisition of a proposed or 
+          actual any part of our business, provided that we inform the buyer that it will have to use your Personal Data only for the purposes specified
+           in this Privacy Policy;</p>
+           
+        <p>(d) Any other person with your consent to disclose information.</p>
+      </section>
+
+			<section id='section10' class="bg-color-4">
+        <h3>10. OUR THIRD-PARTY DATA CONTROLLERS AND PROCESSORS</h3>
+        <p><b>KIDOZ</b>
+        </br>
+        KIDOZ is an advertising service provided by KIDOZ Ltd. KIDOZ uses Personal and Non-Personal Data only for internal purposes.</p>
+        <p> <b>Legal basis of processing:</b> legitimate interests (support for internal operations).</p>
+        <ul>
+            <li>Place of processing: US</li>
+            <li>Privacy policy: http://kidoz.net/website-and-kidoz-sdk-privacy-policy</li>
+            <li>Address: KIDOZ, PO BOX 8517, Poleg Industrial park, Netanya, Israel</li>
+            <li>Phone: +972-9-7716444</li>
+            <li>Contact: support@kidoz.com</li>
+        </ul>
+        <p class="divider"></p>
+        
+        <p><b>Chartboost (Chartboost, Inc.)</b>
+        </br>Chartboost is an advertising service provided by Chartboost, Inc. Chartboost uses Personal and Non-Personal Data only for internal purposes.</p>
+        <p><b>Legal basis of processing:</b> legitimate interest (support for internal operations).</p>
+        <ul>
+            <li>Place of processing: US </li>
+            <li>Privacy policy: https://answers.chartboost.com/en-us/articles/200780269</li>
+            <li>Address: 85 2nd Street, Suite 100, San Francisco, CA 94105, USA</li>
+            <li>Contact: privacy@chartboost.com</li>
+        </ul>
+
+        <p class="divider"></p>
+
+        <p><b>SuperAwesome Trading Ltd.</br></b>
+          SuperAwesome is a contextual advertising service provided by SuperAwesome Trading Ltd. SuperAwesome uses Personal and Non-Personal Data only for internal purposes.</p>
+        <p><b>Legal basis of processing:</b> legitimate interest (support for internal operations).</p>
+        <ul>
+            <li>Place of processing: UK </li>
+            <li>Privacy Policy: https://www.superawesome.tv/privacy-policy</li>
+            <li>Address: Trading Ltd, 22 Long Acre, London WC2E 9LY, United Kingdom</li>
+            <li>Phone: + 44 203 668 6677</li>
+            <li>Contact: privacy@superawesome.tv</li>
+        </ul>
+        <p class="divider"></p>
+
+        <p><b>Flurry, Inc.</b></br>
+          Flurry Inc. is an analytics service provided by Oath (Americas) Inc. Flurry may still be implemented in some TutoTOONS games on Amazon Appstore and Apple App Store but 
+          not actively used. We have been using Flurry’s Restricted Feature Set (RFS) for apps directed to children. Flurry stopped data collection for RFS apps on August 19, 2019 
+          and deleted historical data on August 31, 2019 (more information: https://developer.yahoo.com/flurry/docs/analytics/lexicon/restrictedset/). </p>
+          <p><b>Legal basis of processing:</b> legitimate interests (support for internal operations).</p>
+        <ul>
+            <li>Place of processing: US;</li>
+            <li >Privacy Policy: https://policies.oath.com/us/en/oath/privacy/</li>
+            <li>Address: 701 First Avenue Sunnyvale, CA 94089, US</li>
+            <li>Contact: support@flurry.com</li>
+        </ul>
+        
+        <p class="divider"></p>
+
+        <p><b>Google Analytics (Google Inc.)</b></br>
+          Google Analytics is a web analysis service provided by Google Inc. (“Google”). Google Analytics uses Personal and Non-Personal Data only for internal purposes.
+          <br>
+        <b>Legal basis of processing:</b> legitimate interests (support for internal operations).</p>
+        <ul>
+            <li>Place of processing: US</li>
+            <li>Privacy Policy: https://policies.google.com/privacy?hl=en</li>
+            <li>Address: 1600 Amphitheatre Pkwy, Mountain View, California 94043, US</li>
+            <li>Phone: 650-253-0000</li>
+        </ul>
+
+        <p class="divider"></p>
+
+        <p><b>AdMob by Google (Google Inc.)</b></br>
+          AdMob is a mobile advertising platform which allows developers to monetize their app(s) by displaying in-app ads from other advertisers.
+           AdMob allows to set TFUA (Tag for Users under the Age of Consent in Europe) on ad requests. All ad requests that include TFUA disables ads 
+           personalization for users under the age of consent and collection of data by third party partners. Admob uses Personal and Non-Personal Data only for internal purposes.
+           <br>
+        <b>Legal basis of processing:</b> legitimate interests (support for internal operations).</p>
+
+        <ul>
+            <li>Place of processing: US</li>
+            <li>Privacy Policy: https://policies.google.com/privacy?hl=en</li>
+            <li>Address: 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.</li>
+            <li>Contact: https://support.google.com/policies/troubleshooter/7575787?visit_id=636888632405295138-51672301&hl=en&rd=2</li>
+        </ul>
+        
+        <p class="divider"></p>
+        
+        <p><b>SafeDK Mobile Ltd.</b></p>
+        
+        <p>SafeDK is an online data marketplace of software development kits provided by SafeDK Mobile Ltd. SafeDk uses Personal and Non-Personal Data only for internal purposes.</p>
+        
+        <p><b>Legal basis of processing:</b> legitimate interests (support for internal operations).</p>
+        <ul>
+          <li>Privacy Policy - https://dashboard.safedk.com/privacy </li>
+          <li>Address: 6 Hahoshlim St., Herzliya 4672406, Israel</li>
+          <li>Phone: +972 52-282-9573</li>
+          <li>Contact: contact@safedk.com</li>
+        </ul>
+        
+        <p class="divider"></p>
+        
+        <p> <b>IronSource Mobile Ltd.</b> </p>
+        <p>ironSource Mobile Ltd. is a network that connects app developers with advertisers, and helps app developers to serve ads on their apps, a mediation platform that helps app 
+          developers to manage all the ad providers with which they have a direct relationship and a marketing platform that helps advertisers to create and optimize advertising campaigns. 
+          ironSouce uses Personal and Non-Personal Data only for internal purposes.</p>
+          
+        <p><b>Legal basis of processing:</b> legitimate interests (support for internal operations).</p>
+        
+        <ul>
+          <li>Place of processing: US</li>
+          <li>Privacy Policy: https://developers.ironsrc.com/ironsource-mobile/air/ironsource-mobile-privacy-policy/</li>
+          <li>Address: 121 Menachem Begin Rd., Tel Aviv, Israel</li>
+          <li>Contact: dpo@ironsrc.com  </li>
+        </ul>
+        
+        <p class="divider"></p>
+        
+        <p> <b>Vungle Limited</b> </p>
+        <p>Vungle is an ad network providing a technology platform for clients that want to advertise and/or monetize their applications, games, and other products. Vungle uses Personal and Non-Personal Data only for internal purposes.</p>
+        <p><b>Legal basis of processing:</b> legitimate interests (support for internal operations).</p>
+        
+        <ul>
+          <li>Place of processing: US</li>
+          <li>Privacy Policy: https://vungle.com/privacy/#section-1</li>
+          <li>Address: Clover House, 147-149 Farringdon Road, London, England, EC1R 3AB</li>
+          <li>Contact: privacy@vungle.com</li>
+        </ul>
+        
+        <p class="divider"></p>
+        
+          <p> <b>AdColony, Inc.</b> </p>
+          <p>AdColony is an advertising service provided by AdColony, Inc. AdColony uses Personal and Non-Personal Data only for internal purposes.</p>
+          <p><b>Legal basis of processing:</b> legitimate interests (support for internal operations).</p>
+          <ul>
+            <li>Privacy Policy: https://www.adcolony.com/privacy-policy/</li>
+            <li>Address: 11400 W. Olympic Blvd, 12th Floor Los Angeles, CA 90064</li>
+            <li>Contact: privacy@adcolony.com</li>
+          </ul>
+          
+        <p class="divider"></p>
+        
+          <p> <b>Unity Technologies ApS. </b> </p>
+          <p>Unity Ads is an advertising service provided by Unity Technologies ApS. Unity Ads uses Personal and Non-Personal Data only for internal purposes.</p>
+          <p>Legal basis of processing: legitimate interests (support for internal operations).</p>
+          <ul>
+            <li>Privacy Policy: https://unity3d.com/legal/privacy-policy</li>
+            <li>Address: Unity Technologies Finland OY, Kaivokatu 8 B, 00100 Helsinki, Finland</li>
+            <li>Contact: DPO@unity3d.com</li>
+          </ul>
+          
+        <p class="divider"></p>
+          <p> <b>Unity Analytics (Unity Technologies) </b> </p>
+          <p>Unity Analytics is a data platform that provides analytics. Unity Analytics uses Personal and Non-Personal Data only for internal purposes.</p>
+          <p>Legal basis of processing: legitimate interests (support for internal operations).</p>
+          <ul>
+            <li>Privacy Policy: https://unity3d.com/legal/privacy-policy</li>
+            <li>Address: 30 3rd Street, San Francisco, CA 94103, United States</li>
+            <li>Contact: DPO@unity3d.com</li>
+          </ul>
+          
+        <p class="divider"></p>
+          
+          <p><b>Firebase by Google (Google Inc.)</b> </p>
+            <p>Firebase is a mobile analytics platform which allows developers to analyse crash reporting and retention. Firebase uses Personal and Non-Personal Data only for internal purposes.</p> 
+            <p> <b>Legal basis of processing:</b> legitimate interests (support for internal operations).</p>
+            <ul>
+              <li>Place of processing: US</li>
+              <li>Privacy Policy: https://policies.google.com/privacy?hl=en</li>
+              <li>Address: 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.</li>
+              <li>Contact: https://firebase.google.com/support/troubleshooter/contact/</li>
+            </ul>
+             
+        <p class="divider"></p>
+             
+            <p> <b>AppLovin Corporation</b> </p>
+            <p>AppLovin is an advertising service provided by AppLovin Corporation, a Delaware corporation. AppLovin uses Personal and Non-Personal Data only for internal purposes.</p>
+             
+            <p> <b>Legal basis of processing:</b> legitimate interests (support for internal operations).</p>
+            <ul>
+              <li>Privacy policy: https://www.applovin.com/terms/</li>
+              <li>Address: 849 High St., Palo Alto, California, 94301, United States</li>
+              <li>Contact: care@applovin.com</li>
+            </ul>
+        <p class="divider"></p>
+             
+            <p> <b>Singular</b> </p>
+            <p>Singular is a marketing, attribution and automation services provider. Singular offers the ability to administer, measure and monitor their mobile advertising activities.</p>
+             
+            <p> <b>Legal basis of processing:</b> legitimate interests (support for internal operations).</p>
+            <ul>
+              <li>Privacy policy: https://www.singular.net/privacy-policy</li>
+              <li>Address: 181 South Park Street Suite, Apt 2 San Francisco, CA 94107, United States</li>
+              <li>Contact: privacy@singular.net</li>
+            </ul>
+      
+      </section>
+      
+    	<section id='section11' class="bg-color-5">
+          <h3>11. HOW WE PROTECT YOUR PERSONAL INFORMATION?</h3>
+          <p>We have implemented security measures to ensure that your Personal Data is not lost, used or accessed without authorization, altered
+             or disclosed. We restrict access to your Personal Data to those employees, representatives and other third parties who need to know your
+           details. They will process your Personal Data in accordance with our instructions and will be subject to the confidentiality obligation.</p>
+          <p>We have put in place procedures to combat any alleged breach of Personal Data security and we will inform you and all authorities of 
+            the breaches that we are required to notify about. </p>
+      </section>
+      <section id="section12" class="bg-color-6">
+        <h3>12. KIDS PRIVACY ASSURED PROGRAM</h3>
+        <p>TutoTOONS work with PRIVO on the following apps: Party Popteenies Surprise, Candylocks Hair Salon, Smolsies, My Baby Unicorn, My Baby Unicorn 2, Jungle Animal Hair Salon, Jungle Animal Hair Salon 2, Sweet Baby Girl Cleanup 5, Sweet Baby Girl Summer Fun 2 
+          and Kiki & Fifi Pet Friends. PRIVO is an FTC approved COPPA Safe Harbor and operates a<b>GDPR</b>kids™ Privacy Assured Program.</p>
+        
+        <a href="https://cert.privo.com/#/companies/tutoToons">
+          <img src="https://privohub.privo.com/files/images/certSeal2018/COPPA.png" alt="PRIVO’s COPPA Safe Harbor Certification Seal" width="140px" height="70px">
+        </a>
+        
+        
+        <p><b>Kids Privacy Assured by PRIVO: COPPA Safe Harbor Certification</b></p>
+        <p>TutoTOONS Ltd. is a member of the PRIVO Kids Privacy Assured COPPA Safe Harbor Certification Program (“the Program”). The Program certification applies to the digital properties listed on the validation page that is viewable by clicking on the PRIVO Seal. PRIVO is an independent, 
+          third-party organization committed to safeguarding children's personal information collected online. The PRIVO COPPA certification Seal posted on this page indicates TutoTOONS Ltd. has established COPPA compliant privacy practices and has agreed to submit to PRIVO’s oversight and 
+          consumer dispute resolution process. If you have questions or concerns about our privacy practices, please contact us at +370 37 300 833 or privacy@tutotoons.com. If you have further concerns after you have contacted us, you can contact PRIVO directly at privacy@privo.com.</p>
+
+        <p><b>Information we collect from children</b></p>
+        <p>The apps do not actively collect personal information from children.
+        We may collect technical data including an IP address, equipment, browsing actions,  country code, user agent, App version and Operating System, as well as statistics. We collect this Personal Data using cookies, automated event logs and other similar technologies.</p>
+
+        <p><b>Third party service providers</b></p>
+        <p>We work with third party service providers to help provide you with the best experience in our apps.</p>
+
+        <p>The following third-party service providers are used in the apps listed above that are part of the PRIVO COPPA safe harbor program and/or the GDPRkids™privacy assured program. For more information, please review their privacy policies. These third parties do not share user data.</p>
+
+        <p>We work with ad networks Chartboost, AdMob (Google), KIDOZ and SuperAwesome to serve ads in our apps. These networks are restricted from tracking users and serving
+           behavioural ads.</p>
+        <p>We also work with IronSource, Vungle, Applovin and AdColony. These networks are part of the Google Play certified ad network program. These networks are restricted from tracking users and serving behavioural ads.  For more information about this program please visit the Google Play website: https://play.google.com/about/monetization-ads/ad-network/. 
+          We also work with SafeDK to help monitor and regulate our ad networks. </p> 
+          
+        <ul>
+          <li>KIDOZ Privacy Policy: http://kidoz.net/website-and-kidoz-sdk-privacy-policy </li>
+          <li>Chartboost Privacy Policy: https://answers.chartboost.com/en-us/articles/200780269 </li>
+          <li>Super Awesome Privacy Policy: https://www.superawesome.tv/privacy-policy </li>
+          <li>AdMob (Google) Privacy Policy: https://policies.google.com/privacy?hl=en </li>
+          <li>IronSource Privacy Policy: https://developers.ironsrc.com/ironsource-mobile/air/ironsource-mobile-privacy-policy/</li>
+          <li>Vungle Privacy Policy: https://vungle.com/privacy/</li>
+          <li>Ad Colony Privacy Policy: https://www.adcolony.com/privacy-policy/</li>
+          <li>SafeDK Privacy Policy: https://www.safedk.com/privacy</li>
+          <li>Applovin Privacy Policy: https://www.applovin.com/privacy/</li>
+        </ul>
+
+        <p>We work with analytics provider Google Analytics to help us understand your use of the apps. The restricted feature set is used.</p>
+        <ul>
+          <li>Google Analytics Privacy Policy: https://policies.google.com/privacy</li>
+        </ul>
+        
+        <p>Our apps ar built with Unity and use the Unity In-App Purchases service which requires Unity Analytics to run. Unity Analytics does not share user data. </p>
+        <ul>
+          <li>Unity Analytics Privacy Policy: https://unity3d.com/legal/privacy-policy</li>
+        </ul>
+        
+        <p>We use Firebase analytics and attribution to track installs, in-app purchases and the number of ads watched. Firebase does not collect any personal information to provide us with this information. </p>
+        
+        <ul>
+          <li>Firebase Privacy Policy: https://firebase.google.com/support/privacy</li>
+        </ul>
+        
+        <p>We use Singular as an attribution service provider to help us maximize the effectiveness of our ad campaigns. Singular does not share any personal information with any other third parties.</p>
+        
+        <ul>
+          <li>Singular Privacy Policy: https://www.singular.net/coppa-privacy-notice/</li>
+        </ul>
+        
+        
+        <p>For further information on these providers see <a class="go_to no-styling" data-id="#section10">section 10 above</a>.</p>
+
+        <p> <b>Links</b> </p>
+        <p>We may include links to third parties from the website or services. TutoTOONS isn’t responsible for these companies and because we have a link doesn’t mean we endorse them. Your use of our services may be 
+          subject to the terms and conditions and privacy policies of other services that we don’t control such as mobile app stores, mobile software platforms or payment processors. Please be sure to check their 
+          privacy policies if you decide to visit them.</p>
+
+        <p>If you or your child would like more information on services, please contact us at </p>
+        
+        <ul>
+          <li>TutoTOONS LIMITED</li>
+          <li>Summit House, 4 -5 Mitchell Street Edinburgh, Scotland, EH6 7BD, UK</li>
+          <li>Phone: +37037300833</li>
+          <li>Email: privacy@tutotoons.com</li>
+        </ul>
+
+        <p>Party Popteenies and Candylocks are trademarks of Spin Master Ltd., used under license. © Spin Master Ltd. All rights reserved.</p>
+
+      </section>
+			<section id='section13' class="bg-color-1">
+        <h3>13. HOW LONG WILL WE USE YOUR PERSONAL DATA?</h3>
+        <p>We will only store your Personal Data to the extent required by the purposes of this Privacy Policy and to meet any legal, accounting or reporting requirements.</p>
+        <p>In order to determine the appropriate period of Personal Data storage, we will assess the amount, nature and sensitivity of Personal Data, 
+          the potential risk of harm resulting from the unauthorized use or disclosure of your Personal Data, the purposes for which we process your
+           Personal Data, and whether we can achieve these objectives by other means and applicable legal requirements.</p>
+        <p>You can request to delete your data by emailing us at: privacy@tutotoons.com.</p>
+      </section>
+			<section id='section14' class="bg-color-2">
+        <h3>14. WHERE WE STORE AND HOW WE TRANSFER YOUR DATA?</h3>
+          <p>Your data is stored on rented and properly protected servers in Lithuania operated by company called “Interneto vizija” UAB (see their Privacy Policy). </p>
+          <p>However, your Personal Data may be transferred and processed in a country other than where you live. Personal Data protection in these countries may be 
+            different from the one in which you live.</p>
+          <p>Our service providers and partners operate globally. This means that when we collect your Personal Data, we can process it in any other country.
+             Nevertheless, we will ensure that appropriate measures are taken to protect your Personal Data as provided for in this Privacy Policy.  </p>
+          <p>This means that all our service providers and partners must process their Personal Data in such a way as to comply with the European Union's 
+            General Data Protection Regulation and other legislation.</p>
+      </section>
+
+			<section id='section15' class="bg-color-3">
+        <h3>15. WHAT RIGHTS DO YOU HAVE?</h3>
+  			<p>You have these Personal Data protection rights: </p>
+
+          <ul>
+              <li><b>You have the right to request access to your Personal Data.</b> This allows you to obtain a copy of your Personal Data.</li>
+              <li><b>You have the right to request the change of Personal Data that we have about you.</b> 
+                This allows you to correct any incomplete or inaccurate data that we have.</li>
+              <li><b>You have the right to request the deletion of your Personal Data</b>This allows you to request that we erase or remove your Personal Data.</li>
+              
+              <li><b>You have the right to restrict or suppress processing </b> of your Personal Data where you have a particular reason for wanting restriction.
+                 This means that you can limit the way that we use your data in certain circumstances.</li>
+              <li><b>You have the right to object to processing of your Personal Data where we are relying on legal basis of legitimate interests.</b> 
+                This allows you to ask to stop processing your Personal Data in certain circumstances.</li>
+                
+              <li><b>You have the right to cancel the consent to process your Personal Data at any time</b> when we process your data because you have given the consent</li>
+              
+              <li><b>You have the right to appeal our actions to the Personal Data protection authority</b> regarding the collection and use of Personal Data. 
+                For more information, contact your local data protection authority.</li>
+          </ul>
+
+          <p>If you want to exercise all of the abovementioned rights, contact us at privacy@tutotoons.com.</p>
+
+      </section>
+      
+      <section id='section16' style="border-bottom:none" class="bg-color-4">
+        <h3>16. HOW TO CONTACT US?</h3>
+          <p>You can contact us at any time with any of your Personal Data protection issues at:</p>
+          <ul>
+              <li>TutoTOONS LIMITED</li>
+              <li>Summit House, 4 -5 Mitchell Street Edinburgh, Scotland, EH6 7BD, UK</li>
+              <li>Phone: +37037300833</li>
+              <li>Email: privacy@tutotoons.com</li>
+          </ul>
+          <p>We will respond to all your requests within the shortest possible time.</p>
+      </section>
+      
+    </article>
+  </div>
+</section>
+</main>
+	<!-- START FOOTER-->
+	<footer id="footer" style="color:#fff;">
+      <div class="container-fluid">
+         <div class="row" style="background: #58B7CE; padding-bottom:10px;">
+			<div class="footer-nav">
+
+				<div data-wow-offset="15" data-wow-duration="1.3s" class="wow fadeIn  animated" style="visibility: visible; animation-duration: 1.3s; animation-name: u;">
+
+				<ul class="list-icons">
+		            <li>
+		               <a href="https://twitter.com/TutoTOONS" target="_blank" title="Follow us on Twitter">
+		                  <em class="fa fa-twitter-square"></em>
+		               </a>
+		            </li>
+		            <li>
+		               <a href="https://www.facebook.com/TutoToons" target="_blank" title="Follow us on Facebook">
+		                  <em class="fa fa-facebook-square"></em>
+		               </a>
+		            </li>
+		            <li>
+		               <a href="https://www.instagram.com/tutotoons/" rel="publisher">
+		                  <em class="fa fa-instagram"></em>
+		               </a>
+		            </li>
+		            <li>
+		               <a href="mailto:support@tutotoons.com" title="Contact Us">
+		                  <em class="fa fa-envelope-square"></em>
+		               </a>
+		            </li>
+		            <li>
+		               <a href="https://www.youtube.com/channel/UCkJI9zvI2O-IJ7h8ASFMYjA" title="Follow us on Youtube">
+		                  <em class="fa fa-youtube-square"></em>
+		               </a>
+		            </li>
+
+	         	</ul>
+				<div class="text-center" style="margin: auto;width: 73%;">
+					<ul>
+						<li><a href="https://tutotoons.com/"><span>Home</span></a></li>
+						<li><a href="games/"><span>Games</span></a></li>
+						<li><a href="http://blog.tutotoons.com"><span>Blog</span></a></li>
+						<!--<li><a href=""><span>Support</span></a></li>-->
+						<li><a href="about/"><span>Team</span></a></li>
+						<li><a href="mailto:support@tutotoons.com"><span>Contact Us</span></a></li>
+						<li><a href="terms/"><span>Terms of Use</span></a></li>
+						<li><a href="privacy_policy/"><span>Privacy Policy</span></a></li>
+						<li><a href="jobs/">Job Offers</a></li>
+					</ul>
+					<div class="white_line" style="max-width: 500px;border-bottom:solid 1px white;width:80%;margin: 5px auto;"></div>
+				</div>
+		            <div class="text-center" style="padding: 5px;">
+						2020 TutoTOONS
+		            </div>
+		         </div>
+			</div>
+        </div>
+      </div>
+   </footer>
+	<!-- END FOOTER-->
+
+	<!-- =============== VENDOR SCRIPTS ===============-->
+	<!-- VENDOR SCRIPTS-->
+    <script src="vendor/modernizr/modernizr.custom.js"></script>
+	<script src="vendor/matchMedia/matchMedia.js"></script>
+	<script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+	<script src="vendor/jquery.easing/js/jquery.easing.js"></script>
+	<!-- ANIMO-->
+    <script src="vendor/animo.js/animo.js"></script>
+	<!-- SLIMSCROLL-->
+	<!--<script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>-->
+	<!-- SCREENFULL-->
+	<script src="vendor/screenfull/dist/screenfull.js"></script>
+	<!-- LOCALIZE-->
+	<script src="vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+
+	<script src="vendor/waitForImages/dist/jquery.waitforimages.min.js"></script>
+	<!--<script src="vendor/smoothscroll/smoothscroll.js"></script>-->
+	<script src="vendor/Nivo-Lightbox/nivo-lightbox.js"></script>
+	<script src="vendor/jquery.scrollTo/jquery.scrollTo.js"></script>
+	<!-- MOMENT JS-->
+	<script src="vendor/moment/min/moment-with-locales.min.js"></script>
+	<!-- cookiebar-->
+    <script src="vendor/cookieBar/jquery.cookieBar.js"></script>
+
+	<!-- google-diff-match-patch-->
+     <!-- <script src="vendor/google-diff-match-patch/diff_match_patch.js"></script>-->
+	<script src="vendor/fullscreen/fullscreen.js"></script>
+
+	<script src="vendor/TutoTOONS/input-check-system/script.js"></script>
+    <script src="vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+	<!-- Datatables
+    <script type="text/javascript" src="vendor/datatables-buttons/js/buttons.html5.js"></script>
+    <script type="text/javascript" src="vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+	-->
+	<!-- =============== end-VENDOR SCRIPTS ===============-->
+   <!-- SITE SCRIPTS-->
+   <script src="https://tutotoons.com/assets/js/frontend_scripts.js"></script>
+	<script src="vendor/angle_css/js/app.js"></script>
+
+</body>
+</html>

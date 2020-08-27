@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"366638cd57","applicationID":"46015291","transactionName":"JloNREVXXlVQQBc3XwtUF0JWF2FQW1NMFldfDyJAR1RbWlRGUQtYSnImZBcXQktcRFkHT0pXCltSSlNaUA==","queueTime":0,"applicationTime":1,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"366638cd57",applicationID:"46015291"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(c(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(5),c=e(6),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,n){s[n]=i(p+n,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(l+"tracer",[u.now(),e,t],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&d("lcp",[t[t.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var n=Math.round(e.timeStamp),t={type:e.type};n<=p.now()?t.fid=p.now()-n:n>p.offset&&n<=Date.now()?(n-=p.offset,t.fid=p.now()-n):n=p.now(),g=!0,d("timing",["fi",n,t])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(4),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e){function n(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,n,!1)}n.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],5:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],6:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],7:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function t(t,r,i,o){if(!p.aborted||o){e&&e(t,r,i);for(var a=n(i),c=v(t),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[t]];return d&&d.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(t)}function y(e,n){u(e,function(e,t){n=n||"feature",w[t]=n,n in s||(s[n]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(5),s={},d={},p=n.exports=i();p.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(w,function(n,t){e[n]||(e[n]=t)});var t=a();f("mark",["onload",t+E.offset],null,"api"),f("timing",["load",t]);var r=l.createElement("script");r.src="https://"+e.agent,n.parentNode.insertBefore(r,n)}}function i(){"complete"===l.readyState&&o()}function o(){f("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-E.offset}var c=(new Date).getTime(),f=e("handle"),u=e(5),s=e("ee"),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,y=g&&g.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var h=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1177.min.js"},b=g&&y&&y[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:c,now:a,origin:h,features:{},xhrWrappable:b,userAgent:d};e(1),e(2),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),f("mark",["firstbyte",c],null,"api");var x=0,O=e(7)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(6),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof t?t(r,a):t||{}}catch(u){p([u,"",[r,a,i],c])}s(n+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(n+"err",[r,a,d],c),d}finally{s(n+"end",[r,a,f],c)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<n.length;f++)c=n[f],a=e[c],r(a)||(e[c]=t(a,u?c+i:i,o,c))}function s(t,r,i){if(!f||n){var o=f;f=!0;try{e.emit(t,r,i,n)}catch(a){p([a,t,r,i])}f=o}}function d(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){p([r])}for(var i in e)c.call(e,i)&&(n[i]=e[i]);return n}function p(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+  <title>Top Free Games - Bike Race Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Le styles -->
+  <link href="../assets/css/bootstrap.css" rel="stylesheet">
+  <style>
+  body {
+    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+  }
+  </style>
+  <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Le fav and touch icons -->
+  <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+</head>
+
+<body>
+
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="#">Top Free Games</a>
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li ><a href="/">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero-unit">
+      <h1>Bike Race - Privacy Policy</h1>
+      <p>Last updated: November 28, 2012</p>
+      
+      <p>Protecting your privacy is really important to Top Free Games, limited. (“Top Free Games”, “our”, “us” or “we”). We provide this Privacy Policy to inform you of our policies and procedures regarding the collection, use and disclosure of information we receive from users of our game applications for mobile devices and tablet computers (the “Apps”).  This Privacy Policy applies only to information that you provide to us through the Apps.</p>
+      
+      <h3>How do we collect and use information?</h3>
+      <p>Our primary goals in collecting information are to provide and improve our Apps and related services (collectively, the “Services”), to administer your use of the Services (including your account, if you choose to create an account for your use of the Services), and to enable you to enjoy our Services.</p>
+      
+      <h4>Account Information</h4>
+      <p>In connection with your use of the Services, we do not collect any information that can be used to contact or identify you directly, such as your full name, email address, postal address or phone number (“Personally Identifiable Information” or “PII”).  However, we may collect certain other information that you provide us, such as your nickname, if you use our Services as a guest. If you choose to create an account for your use of the Services through one of your third party social networking accounts (such as Facebook) (“SNS Accounts”), you may have to provide us with your username (or userID) so that your identity can be authenticated by the SNS Account. When the authentication is complete, we’ll be able to link your account with the SNS Account and access certain information, such as your first name, SNS Account profile picture and SNS Account identification number. We don’t receive or store passwords for any of your SNS Accounts.</p>
+      
+      <h4>Information Related to Use of the Services</h4>
+      <p>Our servers automatically record certain information about how a person uses our Services (we refer to this information as “Log Data”), including both account holders and non-account holders (either, a “User”). Log Data may include information such as a User’s Internet Protocol (IP) address, device type, operating system, the links and advertisements on our Services that a User clicked on, the amount of time you interact with the Services and other statistics. We use this information to administer the Services and we analyze (and may engage third parties to analyze) this information to improve and enhance the Services by expanding their features and functionality and tailoring them to our Users’ needs and preferences. We also use the IP Address to generate aggregate, non-identifying information about how our Services are used.</p>
+      <p>We use Flurry analytics to collect, monitor and analyze Log Data in order to increase our Services’ functionality and user-friendliness, and to better tailor our Services to our visitors’ needs.  We also use this information to verify that visitors to the Services meet the criteria required to process their requests. Accordingly, Log Data is shared with Flurry, which has its own privacy policy (accessible at <a href="http://www.flurry.com/about-us/legal/privacy.html">http://www.flurry.com/about-us/legal/privacy.html</a>) addressing how Flurry uses such information.  You may opt out of Flurry Analytics tracking and personalized ads/recommendations from Flurry by <a href="http://www.flurry.com/user-opt-out.html">clicking here</a>.  Please note that the opt-out is specific to Flurry activities and does not affect the activities of other ad networks or analytics providers.</p>
+
+      <h4>Location Information</h4>
+      <p>In some cases we collect and store information about where you are located, such as by converting your IP address into a rough geolocation. We may use location information to improve and personalize our Services for you.</p>
+
+      <h4>Mobile Device Information</h4>
+      <p>When you access the Services via a mobile device, we will collect information related to the mobile device such as the serial number or MAC address and the open UDID of the device. We may use this information to improve and personalize our Services for you.</p>
+
+      <h3>Advertising & Third Party Products and Services</h3>
+      <p>The Services are supported via advertising, and we collect certain data to help the Services serve ads. We may work with analytics companies to help us understand how the Services are being used, such as the frequency and duration of usage.  We work with advertisers and third party advertising networks, who need to know how you interact with advertising provided in the Services which helps us keep the cost of the Services low. Advertisers and advertising networks use some of the information collected by the Services, including the unique identification ID of your mobile device. To protect the anonymity of this information, we use an encryption technology to help ensure that these third parties can’t identify you personally. These third parties may also obtain information about other services  you’ve downloaded to your mobile device, the mobile websites you visit, your non-precise location information (e.g., your zip code), and other non-precise location information in order to help analyze and serve anonymous targeted advertising on the Services and elsewhere. We may also share encrypted versions of information you have provided in order to enable our partners to append other available information about you for analysis or advertising related use.</p>
+      
+      <h3>What Information Do We Share With Third Parties?</h3>
+      <p>We will not share any information that we have collected from you except as described below:</p>
+      
+      <h4>Account holders</h4>
+      <p>If you choose to connect your SNS Account to the Services, other Users of the Services will be able to see your SNS Account first name and profile picture and information related to your use of the Services, such as the number of times you have accessed or used the Services.</p>
+
+      <h4>Guest Users</h4>
+      <p>If you choose to use the Services without connecting to an SNS Account, your nickname and information related to your use of the Services, such as the number of times you have accessed or used the Services, will be viewable by other Users.</p>
+
+      <h4>Information Shared with Our Services Providers</h4>
+      <p>We may engage third party service providers to work with us to administer and provide the Services. These third-party services providers have access to your information only for the purpose of performing services on our behalf and are expressly obligated not to disclose or use your information for any other purpose.</p>
+      
+      <h4>Information Shared with Third Parties</h4>
+      <p>We may share aggregated information and non-identifying information with third parties for industry analysis, demographic profiling and other similar purposes.</p>      
+
+      <h4>Information Disclosed in Connection with Business Transactions</h4>
+      <p>Information that we collect from our users, including PII, is considered to be a business asset. As a result, if we go out of business or enter bankruptcy or if we are acquired as a result of a transaction such as a merger, acquisition or asset sale, your information may be disclosed or transferred to the third-party acquirer in connection with the transaction.</p>
+
+      <h4>Information Disclosed for Our Protection and the Protection of Others</h4>
+      <p>It is our policy to protect you from having your privacy violated through abuse of the legal systems, whether by individuals, entities or government, and to contest claims that we believe to be invalid under applicable law. However, it is also our policy to cooperate with government and law enforcement officials and private parties. Accordingly, we reserve the right to disclose any information about you to government or law enforcement officials or private parties as we, in our sole discretion, believe necessary: (i) to satisfy or comply with any applicable law, regulation or legal process or to respond to lawful requests, including subpoenas, warrants or court orders; (ii) to protect our property, rights and safety and the rights, property and safety of third parties or the public in general; and (iv) to prevent or stop activity we consider to be illegal or unethical.</p>
+
+      <h4>Information We Disclose With Your Consent or at Your Request</h4>
+      <p>We will share your information with third-party sites or platforms, such as social networking sites, if you have expressly requested that we do so via the Services.</p>
+
+      <h3>The Security of Your Information</h3>
+      <p>We take reasonable measures to protect the information that we collect from or about you (including your information) from unauthorized access, use or disclosure. Please be aware, however, that no method of transmitting information over the Internet or storing information is completely secure. Accordingly, we cannot guarantee the absolute security of any information.</p>
+
+      <h3>Links to Other Sites</h3>
+      <p>Our Services may contain links to other websites and services. Any information that you provide on or to a third-party website or service is provided directly to the owner of the website or service and is subject to that party's privacy policy. Our Privacy Policy does not apply to such websites or services and we’re not responsible for the content, privacy or security practices and policies of those websites or services. To protect your information we recommend that you carefully review the privacy policies of other websites and services that you access.</p>
+
+      <h3>Modifying Your Information</h3>
+      <p>You can access and modify the information associated with your account in the “Settings” section of the Services. If you want us to delete your information and your account, please contact us at support@topfreegames.com with your request. We’ll take steps to delete your information as soon as is practicable, but some information may remain in archived/backup copies for our records or as otherwise required by law.</p>
+
+      <h3>International Transfer</h3>
+      <p>Your information may be transferred to, and maintained on, computers located outside of your state, province, country or other governmental jurisdiction where the privacy laws may not be as protective as those in your jurisdiction. If you’re located outside the United States and choose to provide information to us, we may transfer your information to the United States and Brazil and process it there.</p>
+
+      <h3>Our Policy Toward Children</h3>
+      <p>Our Services are not directed to children under 13 and we do not knowingly collect PII from children under 13. If we learn that we have collected PII of a child under 13 we will take steps to delete such information from our files as soon as possible.</p>
+
+      <h3>Changes to Privacy Policy</h3>
+      <p>This Privacy Policy may be updated from time to time for any reason. We will notify you of any changes to our Privacy Policy by posting the new Privacy Policy here. You are advised to consult this Privacy Policy regularly for any changes.</p>
+
+      <h3>Questions?</h3>
+      <p>Please contact us at support@topfreegames.com if you have any questions about our Privacy Policy.</p>
+    </div>
+    <footer>
+      <p>© Top Free Games 2012</p>
+    </footer>
+  </div> <!-- /container -->
+</body>
+</html>

@@ -7,7 +7,7 @@ class CorpusExtract(scrapy.Spider):
     nome_da_categoria = ''
     
 
-    start_urls = ['https://play.google.com/store/apps']
+    start_urls = ['https://play.google.com/store/apps?&hl=pt_BR']
 
     def parse(self, response):
         links = response.css('li.KZnDLd a::attr(href)').getall()
@@ -24,10 +24,14 @@ class CorpusExtract(scrapy.Spider):
             )     
 
     def nomeApp_CatApp(self, response):
-        item = response.css('.R8zArc::text').getall()
+        itens = response.css('.R8zArc::text').getall()
 
-        nomeApp =  item[0]
-        categoriaApp = item[1]
+        nomeApp =  itens[0]
+        categoriaApp = ''
+        for item in itens:
+            if(nomeApp != item):
+                categoriaApp += ' '+item
+            
 
         informacoes = response.css('span.htlgb::text').getall()
         

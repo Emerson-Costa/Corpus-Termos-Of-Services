@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html class="" lang="ko">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"7289017309","applicationID":"15650448","transactionName":"d1xaFhBeWVoEQhdBEVVHXQE9QVRRBEMXQhddRVUBG25FWQ1ZW0s=","queueTime":0,"applicationTime":27,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQUHVVZQChABUVdXBwUDXg==",licenseKey:"7289017309",applicationID:"15650448"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(22),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(23),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(23),a=t(22);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(19),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(22),c=t(23),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(21),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],19:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],20:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],21:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],22:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],23:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],24:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?s(t,c,o):o()}function n(n,r,i,o){if(!l.aborted||o){t&&t(n,r,i);for(var a=e(i),c=m(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([x,n,r,a]),a}}function p(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||i(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:a,aborted:!1};return x}function o(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(22),u={},d={},l=e.exports=i();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+b.offset],null,"api"),s("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){s("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-b.offset}var c=(new Date).getTime(),s=t("handle"),f=t(22),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1177.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:c,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),s("mark",["firstbyte",c],null,"api");var E=0,R=t(24)},{}],"wrap-function":[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var i=t("ee"),o=t(23),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,i){function nrWrapper(){var r,a,c,s;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,i],c])}u(e+"start",[r,a,i],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,i,o){i||(i="");var a,c,s,f="-"===i.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+i:i,o,c))}function u(n,r,i){if(!s||e){var o=s;s=!0;try{t.emit(n,r,i,e)}catch(a){l([a,n,r,i])}s=o}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var i in t)c.call(t,i)&&(e[i]=t[i]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=i),n.inPlace=f,n.flag=a,n}},{}]},{},["loader",2,12,4,3]);</script>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,viewport-fit=cover"/>
+  <meta name="naver-site-verification" content="02b1a3c42ca24420bada54291813fdd604872c89"/>
+  <meta property="fb:admins" content="100006457426639"/>
+  <meta name="google-site-verification" content="d-veBobRNo_in0thN3uOOoIcUWMUOjQZeMidTyItfGk"/>
+  <meta name="google-site-verification" content="AZK3GfRwg4q_EH-0OSbbkCurocEY7okWrPZF93COxYU"/>
+
+  <title>1등 인테리어 집꾸미기 서비스, 오늘의집</title>
+  <meta name="description"
+        content="원룸, 빌라, 아파트 평수별 셀프인테리어, 신혼집 꾸미기 팁, 가구/소품 구매 정보와 사진, 최저가 쇼핑까지 한번에! 원스톱 인테리어 플랫폼, 오늘의집">
+  <meta content="인테리어 집꾸미기는 오늘의집" name="keywords">
+
+  <!-- phone 즐겨찾기 아이콘 설정 -->
+  <link rel="alternate" href="android-app://net.bucketplace/http/ohou.se/deep"/>
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/bookmark_icon/favicon_57x57.png"/>
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/bookmark_icon/favicon_72x72.png"/>
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/bookmark_icon/favicon_114x114.png"/>
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/bookmark_icon/favicon_144x144.png"/>
+  <link rel="shortcut icon" href="/assets/bookmark_icon/favicon_144x144.png"/>
+  <link href="https://d1nyaccf3kuclt.cloudfront.net/assets/favicon-186ac0d991a44c522f984d86e6a50d24c65b7b3a02a004ba7e13f5722aabd952.png" rel="shortcut icon"/>
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="NxyPGH5IYYOJB74iEAOUuPIxUwGGQZyEfOw3WPPJQ8wDGkl+2JATbG83Hp1CnGPc1Iuyq6nuJIsKDh9fOZ2gsg==" />
+  
+  <meta property="fb:app_id" content="185853321610795"/>
+
+    <script>
+    dataLayer = [{
+    }];
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(), event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MK8DN2Q');
+  </script>
+
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    }(window,
+      document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('set', 'autoConfig', 'false', '937204509645248');
+    fbq('init', '937204509645248');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=937204509645248&ev=PageView&noscript=1"
+    /></noscript>
+
+  <script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+  <script type="text/javascript">
+    (function () {
+      var ua = navigator.userAgent.toLowerCase();
+      var mobile = {
+        isAndroid: ua.indexOf('android') > -1,
+        isIos: ua.match(/(ipad|iphone|ipod)/g)
+      };
+
+      var type = '';
+      if (mobile.isAndroid || mobile.isIos) {
+        type = 'm';
+      } else {
+        type = 'd';
+      }
+
+      window.criteo_q = window.criteo_q || [];
+
+      window.criteo_q.push(
+        { event: 'setAccount', account: 50838 },
+        {
+          event: 'setEmail',
+          email: ""
+        },
+        { event: 'setSiteType', type: type },
+      );
+    })();
+  </script>
+
+  <script src="https://d1nyaccf3kuclt.cloudfront.net/assets/v3/logging-69d1a145b1872071cd6479677379b6bbe429e845a932730a150eab3576275e7f.js" async="async"></script>
+  <script>
+    window.bucketLog = window.bucketLog || [];
+  </script>
+  <!-- adinsight 공통스크립트 start -->
+  <script type="text/javascript">
+    var TRS_AIDX = /iPhone|iPad|iPod|Android/.test(navigator.userAgent) ? 11603 : 11598;
+  </script>
+  <script type="text/javascript" src="https://analysis.adinsight.co.kr/emnet/trs_esc.js" defer></script>
+  <!-- adinsight 공통스크립트 end -->
+
+  <!-- Sentry Testing -->
+  <script src="https://cdn.ravenjs.com/3.26.4/raven.min.js" crossorigin="anonymous"></script>
+  <script>
+    Raven.config('https://b8e5cc27b3eb44be8b976b0c81dd4115@sentry.io/271486').install();
+    Raven.setUserContext({});
+  </script>
+
+  <script type="application/ld+json">
+  {
+   "@context": "http://schema.org",
+   "@type": "Organization",
+   "name": "오늘의집",
+   "url": "https://ohou.se",
+   "sameAs": [
+     "https://www.instagram.com/todayhouse/?hl=ko",
+     "https://www.facebook.com/interiortoday",
+     "https://m.post.naver.com/my.nhn?memberNo=202156",
+     "https://itunes.apple.com/kr/app/id1008236892",
+     "https://play.google.com/store/apps/details?id=net.bucketplace&hl=ko",
+     "https://www.youtube.com/channel/UCBKtitA1RwY7F32rCniV1dA/featured"
+   ]
+  }
+  </script>
+
+
+  <!-- webpack vendor module -->
+  <script src="https://d1nyaccf3kuclt.cloudfront.net/dist/js/vendor-8d058d864277ebea4ddf.js"></script>
+  <script src="https://d1nyaccf3kuclt.cloudfront.net/dist/js/utils-ec3c544e0f4eb4194aa0.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap&subset=korean" rel="stylesheet">
+  <link rel="stylesheet" media="all" href="https://d1nyaccf3kuclt.cloudfront.net/assets/v3/components/modal-f0d0d6d3de7c6af277cedf14e63e81f35de21fddb39c29158ee5240d6ef4698a.css" />
+  <link rel="stylesheet" media="all" href="https://d1nyaccf3kuclt.cloudfront.net/assets/v3/components/modal/unsigned_expert_promotion-0e6dfcdbd7a2aff40984568868c2cfb0ac42b6461cb9441fd461b6aaa7738a89.css" />
+  <link rel="stylesheet" media="all" href="https://d1nyaccf3kuclt.cloudfront.net/assets/v3/components/autocomplete-b90e5093fd6272bf968b24073411e196f032d826a99ce7c79f61f975b6cfef98.css" />
+  <link rel="stylesheet" media="all" href="https://d1nyaccf3kuclt.cloudfront.net/assets/v3/bucket_ui/_form-c79020f23c73f20e31215835e55fadfe4ac96dd0627a1200348beaff9ce8da25.css" />
+  <link rel="stylesheet" media="all" href="https://d1nyaccf3kuclt.cloudfront.net/assets/v2/application-2f283cb5765865d3cad12accb499aba9175d6326d0d9700a1f5bf517991ce5bc.css" />
+  <link rel="stylesheet" media="all" href="https://d1nyaccf3kuclt.cloudfront.net/assets/v3/bucket_ui/bucket-icons-666f525bc684b3218656f27b690456c21b5f2dead1e01573259a2a5dd0614170.css" />
+
+  <script src="https://d1nyaccf3kuclt.cloudfront.net/assets/v3/components/toast-314fdee1231f99d8f1ff10cc8d21ffb8e129d20edc30d5160124c80310774b03.js"></script>
+  <script src="https://d1nyaccf3kuclt.cloudfront.net/assets/v2/application-6fe19191f386d1d3b34e3e615e22fde9553f484466232e46098562b05910a3a7.js"></script>
+  <link rel="stylesheet" media="screen" href="https://d1nyaccf3kuclt.cloudfront.net/dist/css/9-6e3e98cb.chunk.css" />
+<link rel="stylesheet" media="screen" href="https://d1nyaccf3kuclt.cloudfront.net/dist/css/21-35504e2c.chunk.css" />
+<link rel="stylesheet" media="screen" href="https://d1nyaccf3kuclt.cloudfront.net/dist/css/LayoutNavigation-8c6ce857.css" />
+  <link rel="stylesheet" media="screen" href="https://d1nyaccf3kuclt.cloudfront.net/dist/css/LayoutFooter-c2c6cfe1.css" />
+
+    <link rel="stylesheet" media="all" href="https://d1nyaccf3kuclt.cloudfront.net/assets/v2/static_pages/article-f0f9d52bf28b70bdfef57e0936ae08cfde52b42120841ff45425c57d1a9bba04.css" />
+
+
+  <!--[if lte IE 9]>
+  <script>
+    alert("본 서비스는 Microsoft Explorer 9 이하는 지원하지 않습니다. 브라우저를 업그레이드하고 사용하시거나 앱을 다운받아 사용하실 수 있습니다. 확인을 누르면 앱 다운로드 링크로 연결됩니다.");
+    window.location.href = "https://play.google.com/store/apps/details?id=net.bucketplace&hl=kor";
+  </script>
+  <![endif]-->
+
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK8DN2Q" height="0" width="0" style="display:none;visibility:hidden" allowfullscreen></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="wrapper" class="aws">
+    <div data-react-class="LayoutNavigation" data-react-props="{&quot;url&quot;:&quot;/privacy&quot;,&quot;user&quot;:null,&quot;admin&quot;:null,&quot;data&quot;:{&quot;app_download_banner&quot;:{&quot;selling&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/banners/download/159772752960693967.png&quot;,&quot;selling_width&quot;:800,&quot;selling_height&quot;:240,&quot;mobile_selling&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/banners/download/159772753461137545.png&quot;,&quot;mobile_selling_width&quot;:1080,&quot;mobile_selling_height&quot;:552,&quot;non_selling&quot;:&quot;https://ohou.se/assets/banners/download-app.jpeg&quot;,&quot;non_selling_width&quot;:0,&quot;non_selling_height&quot;:0,&quot;mobile_non_selling&quot;:&quot;https://ohou.se/assets/banners/download-app.jpeg&quot;,&quot;mobile_non_selling_width&quot;:0,&quot;mobile_non_selling_height&quot;:0,&quot;story&quot;:&quot;https://ohou.se/assets/banners/download-app.jpeg&quot;,&quot;story_width&quot;:0,&quot;story_height&quot;:0,&quot;mobile_story&quot;:&quot;https://ohou.se/assets/banners/download-app.jpeg&quot;,&quot;mobile_story_width&quot;:0,&quot;mobile_story_height&quot;:0,&quot;card&quot;:&quot;https://ohou.se/assets/banners/download-app.jpeg&quot;,&quot;card_width&quot;:0,&quot;card_height&quot;:0,&quot;mobile_card&quot;:&quot;https://ohou.se/assets/banners/download-app.jpeg&quot;,&quot;mobile_card_width&quot;:0,&quot;mobile_card_height&quot;:0,&quot;mobile_navigation&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/banners/download/159772959831542379.png&quot;,&quot;mobile_navigation_width&quot;:1500,&quot;mobile_navigation_height&quot;:300},&quot;store_pc_top_banner&quot;:{&quot;id&quot;:34,&quot;type&quot;:&quot;StoreTopBannerTwoLinkTwoImage&quot;,&quot;contents&quot;:[{&quot;content_type&quot;:&quot;outbound&quot;,&quot;content_id&quot;:1299,&quot;content_url&quot;:&quot;https://ohou.se/exhibitions/1351&quot;,&quot;cover_image_url&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/store/banners/store_top_banners//159825406141337722.png&quot;,&quot;pc_gradient_color&quot;:&quot;#fe611b&quot;},{&quot;content_type&quot;:&quot;outbound&quot;,&quot;content_id&quot;:0,&quot;content_url&quot;:&quot;https://ohou.se/competitions/222&quot;,&quot;cover_image_url&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/store/banners/store_top_banners//159772750527394696.png&quot;,&quot;pc_gradient_color&quot;:&quot;#00c7f5&quot;}]},&quot;store_feeds&quot;:[{&quot;id&quot;:1,&quot;feed_title&quot;:&quot;신혼가구&quot;,&quot;update_alert&quot;:false,&quot;type&quot;:&quot;StoreWeddingFeed&quot;,&quot;content&quot;:{&quot;type&quot;:&quot;inbound&quot;,&quot;id&quot;:null,&quot;url&quot;:&quot;https://ohou.se/productions/feed?theme=wedding&quot;}},{&quot;id&quot;:5,&quot;feed_title&quot;:&quot;특가&quot;,&quot;update_alert&quot;:false,&quot;type&quot;:&quot;StoreFeed&quot;,&quot;content&quot;:{&quot;type&quot;:&quot;TodayDeal&quot;,&quot;id&quot;:null,&quot;url&quot;:&quot;https://ohou.se/commerces/today_deals&quot;}},{&quot;id&quot;:32,&quot;feed_title&quot;:&quot;시즌최대세일&quot;,&quot;update_alert&quot;:true,&quot;type&quot;:&quot;StoreFeed&quot;,&quot;content&quot;:{&quot;type&quot;:&quot;Exhibition&quot;,&quot;id&quot;:1351,&quot;url&quot;:&quot;https://ohou.se/exhibitions/1351&quot;}},{&quot;id&quot;:34,&quot;feed_title&quot;:&quot;위클리300&quot;,&quot;update_alert&quot;:true,&quot;type&quot;:&quot;StoreFeed&quot;,&quot;content&quot;:{&quot;type&quot;:&quot;Exhibition&quot;,&quot;id&quot;:1380,&quot;url&quot;:&quot;https://ohou.se/exhibitions/1380&quot;}}],&quot;store_hamburger&quot;:{&quot;categories&quot;:[{&quot;id&quot;:10000000,&quot;title&quot;:&quot;가구&quot;,&quot;hash&quot;:&quot;0&quot;,&quot;image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--1557904115802_0VKPJ.jpg/1280/none&quot;,&quot;original_image_url&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/category/store_hamburger_categories//1557904115802_0VKPJ.jpg&quot;,&quot;resized_image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--1557904115802_0VKPJ.jpg/1280/none&quot;,&quot;count&quot;:54702,&quot;has_featured_html&quot;:false},{&quot;id&quot;:18050000,&quot;title&quot;:&quot;침구&quot;,&quot;hash&quot;:&quot;1_0&quot;,&quot;image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--157490693067184634.png/1280/none&quot;,&quot;original_image_url&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/category/store_hamburger_categories//157490693067184634.png&quot;,&quot;resized_image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--157490693067184634.png/1280/none&quot;,&quot;count&quot;:10220,&quot;has_featured_html&quot;:false},{&quot;id&quot;:18000000,&quot;title&quot;:&quot;패브릭&quot;,&quot;hash&quot;:&quot;1&quot;,&quot;image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--157490693687318741.png/1280/none&quot;,&quot;original_image_url&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/category/store_hamburger_categories//157490693687318741.png&quot;,&quot;resized_image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--157490693687318741.png/1280/none&quot;,&quot;count&quot;:30197,&quot;has_featured_html&quot;:false},{&quot;id&quot;:11080000,&quot;title&quot;:&quot;조명&quot;,&quot;hash&quot;:&quot;2_0&quot;,&quot;image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--156506730153520142.png/1280/none&quot;,&quot;original_image_url&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/category/store_hamburger_categories//156506730153520142.png&quot;,&quot;resized_image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--156506730153520142.png/1280/none&quot;,&quot;count&quot;:8829,&quot;has_featured_html&quot;:false},{&quot;id&quot;:11000000,&quot;title&quot;:&quot;홈데코&quot;,&quot;hash&quot;:&quot;2&quot;,&quot;image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--1557904172550_YrPh.jpg/1280/none&quot;,&quot;original_image_url&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/category/store_hamburger_categories//1557904172550_YrPh.jpg&quot;,&quot;resized_image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--1557904172550_YrPh.jpg/1280/none&quot;,&quot;count&quot;:50500,&quot;has_featured_html&quot;:false},{&quot;id&quot;:14000000,&quot;title&quot;:&quot;가전&quot;,&quot;hash&quot;:&quot;3&quot;,&quot;image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--1557904180123_LYQ.jpg/1280/none&quot;,&quot;original_image_url&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/category/store_hamburger_categories//1557904180123_LYQ.jpg&quot;,&quot;resized_image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--1557904180123_LYQ.jpg/1280/none&quot;,&quot;count&quot;:9665,&quot;has_featured_html&quot;:false},{&quot;id&quot;:13000000,&quot;title&quot;:&quot;수납/정리&quot;,&quot;hash&quot;:&quot;11&quot;,&quot;image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--156870501110279761.png/1280/none&quot;,&quot;original_image_url&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/category/store_hamburger_categories//156870501110279761.png&quot;,&quot;resized_image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--156870501110279761.png/1280/none&quot;,&quot;count&quot;:9991,&quot;has_featured_html&quot;:false},{&quot;id&quot;:12000000,&quot;title&quot;:&quot;생활용품&quot;,&quot;hash&quot;:&quot;4&quot;,&quot;image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--156880465200709393.png/1280/none&quot;,&quot;original_image_url&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/category/store_hamburger_categories//156880465200709393.png&quot;,&quot;resized_image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--156880465200709393.png/1280/none&quot;,&quot;count&quot;:17806,&quot;has_featured_html&quot;:false},{&quot;id&quot;:16000000,&quot;title&quot;:&quot;주방&quot;,&quot;hash&quot;:&quot;5&quot;,&quot;image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--1557904215840_JtXLLU6E4.jpg/1280/none&quot;,&quot;original_image_url&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/category/store_hamburger_categories//1557904215840_JtXLLU6E4.jpg&quot;,&quot;resized_image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--1557904215840_JtXLLU6E4.jpg/1280/none&quot;,&quot;count&quot;:29731,&quot;has_featured_html&quot;:false},{&quot;id&quot;:19000000,&quot;title&quot;:&quot;DIY/공구&quot;,&quot;hash&quot;:&quot;6&quot;,&quot;image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--1557904218943_dG8q.jpg/1280/none&quot;,&quot;original_image_url&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/category/store_hamburger_categories//1557904218943_dG8q.jpg&quot;,&quot;resized_image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--1557904218943_dG8q.jpg/1280/none&quot;,&quot;count&quot;:5416,&quot;has_featured_html&quot;:false},{&quot;id&quot;:17000000,&quot;title&quot;:&quot;인테리어시공&quot;,&quot;hash&quot;:&quot;7&quot;,&quot;image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--159739342412747444.png/1280/none&quot;,&quot;original_image_url&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/category/store_hamburger_categories//159739342412747444.png&quot;,&quot;resized_image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--159739342412747444.png/1280/none&quot;,&quot;count&quot;:449,&quot;has_featured_html&quot;:false},{&quot;id&quot;:15000000,&quot;title&quot;:&quot;반려동물&quot;,&quot;hash&quot;:&quot;8&quot;,&quot;image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--1557904223978_Omb.jpg/1280/none&quot;,&quot;original_image_url&quot;:&quot;https://bucketplace-v2-development.s3.amazonaws.com/uploads/category/store_hamburger_categories//1557904223978_Omb.jpg&quot;,&quot;resized_image_url&quot;:&quot;https://image.ohou.se/image/resize/bucketplace-v2-development/uploads-category-store_hamburger_categories--1557904223978_Omb.jpg/1280/none&quot;,&quot;count&quot;:6288,&quot;has_featured_html&quot;:false}],&quot;shortcut_items&quot;:[{&quot;id&quot;:89,&quot;link_url&quot;:&quot;https://ohou.se/productions/feed?theme=wedding&quot;,&quot;original_image_url&quot;:&quot;&quot;,&quot;resized_image_url&quot;:&quot;&quot;,&quot;label&quot;:&quot;신혼가구&quot;,&quot;update_alert&quot;:true,&quot;image_url&quot;:&quot;&quot;},{&quot;id&quot;:90,&quot;link_url&quot;:&quot;https://ohou.se/commerces/ranks&quot;,&quot;original_image_url&quot;:&quot;&quot;,&quot;resized_image_url&quot;:&quot;&quot;,&quot;label&quot;:&quot;베스트&quot;,&quot;update_alert&quot;:false,&quot;image_url&quot;:&quot;&quot;},{&quot;id&quot;:93,&quot;link_url&quot;:&quot;https://ohou.se/commerces/today_deals&quot;,&quot;original_image_url&quot;:&quot;&quot;,&quot;resized_image_url&quot;:&quot;&quot;,&quot;label&quot;:&quot;오늘의딜&quot;,&quot;update_alert&quot;:true,&quot;image_url&quot;:&quot;&quot;},{&quot;id&quot;:92,&quot;link_url&quot;:&quot;https://ohou.se/exhibitions&quot;,&quot;original_image_url&quot;:&quot;&quot;,&quot;resized_image_url&quot;:&quot;&quot;,&quot;label&quot;:&quot;기획전&quot;,&quot;update_alert&quot;:false,&quot;image_url&quot;:&quot;&quot;},{&quot;id&quot;:94,&quot;link_url&quot;:&quot;https://ohou.se/competitions/feed&quot;,&quot;original_image_url&quot;:&quot;&quot;,&quot;resized_image_url&quot;:&quot;&quot;,&quot;label&quot;:&quot;이벤트&quot;,&quot;update_alert&quot;:false,&quot;image_url&quot;:&quot;&quot;}]},&quot;cart_count&quot;:0,&quot;unseen_notification&quot;:0,&quot;login_user&quot;:null}}" data-hydrate="t" class="layout-navigation-wrap"><div class="layout-top-banner"><div class="layout-top-banner-mobile"><button class="layout-top-banner-mobile__button" type="button" aria-label="오늘의집 앱으로 보기"><div class="layout-top-banner-mobile__button__image" style="background-image:url(&#x27;https://image.ohou.se/i/bucketplace-v2-development/uploads/banners/download/159772959831542379.png?gif=1&amp;w=480&#x27;);background-size:contain;background-repeat:no-repeat"></div></button><button class="layout-top-banner-mobile__close" type="button" aria-label="닫기"><svg class="icon" width="12" height="12" fill="currentColor" viewBox="0 0 12 12" preserveAspectRatio="xMidYMid meet"><path d="M6.8 6l4.2 4.2-.8.8L6 6.8 1.8 11l-.8-.8L5.2 6 1 1.8l.8-.8L6 5.2 10.2 1l.8.8L6.8 6z"></path></svg></button></div><div class="layout-top-banner-pc"><a class="layout-top-banner-pc__backdrop-left" tabindex="-1" draggable="false" style="background-color:#fe611b" href="/exhibitions/1351"></a><a class="layout-top-banner-pc__backdrop-right" tabindex="-1" draggable="false" style="background-color:#00c7f5" href="/competitions/222"></a><div class="layout-top-banner-pc__content"><a class="layout-top-banner-pc__item" style="background-image:url(https://bucketplace-v2-development.s3.amazonaws.com/uploads/store/banners/store_top_banners//159825406141337722.png);background-color:#fe611b" href="/exhibitions/1351"></a><a class="layout-top-banner-pc__item" style="background-image:url(https://bucketplace-v2-development.s3.amazonaws.com/uploads/store/banners/store_top_banners//159772750527394696.png);background-color:#00c7f5" href="/competitions/222"></a></div><button class="layout-top-banner-pc__close" type="button" aria-label="닫기"><svg class="icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><path d="M12 11.3l8.13-8.14.7.7L12.72 12l8.13 8.13-.7.7L12 12.72l-8.13 8.13-.7-.7L11.28 12 3.16 3.87l.7-.71L12 11.29z"></path></svg></button></div></div><header class="layout-navigation-bar"><div data-sticky-enabled="false" data-sticky-always="true" data-direction="top" data-offset="0" class="sticky-container layout-navigation-primary-wrap"><div class="sticky-child layout-navigation-primary" style="position:relative"><div class="layout-navigation-primary__content"><div class="layout-navigation-primary__leftmost"><button class="layout-navigation-bar-icon layout-navigation-bar-drawer-button" title="메뉴" aria-label="메뉴" type="button"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><path fill="currentColor" d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path></svg></button></div><div class="layout-navigation-primary__left"><a class="layout-navigation-logo layout-navigation__bar__logo" aria-label="오늘의집" href="/"><svg class="icon" width="74" height="30" viewBox="0 0 74 30" preserveAspectRatio="xMidYMid meet"><g fill="none" fill-rule="evenodd"><path fill="#000" d="M14.2 25.17H9.28V20.7a1.45 1.45 0 0 0-2.9 0v4.47H1.44a1.45 1.45 0 1 0 0 2.9H14.2a1.45 1.45 0 0 0 0-2.9M4.5 9.15c0-4.6 2.08-5.28 3.33-5.28 1.24 0 3.33.69 3.33 5.28v.36c0 4.6-2.09 5.28-3.33 5.28-1.25 0-3.34-.69-3.34-5.28v-.36zm3.33 8.54c3.84 0 6.23-3.13 6.23-8.18v-.36c0-5.05-2.39-8.18-6.23-8.18-3.85 0-6.24 3.13-6.24 8.18v.36c0 5.05 2.39 8.19 6.24 8.19zm25.54-7.34H17.81a1.45 1.45 0 0 0 0 2.9h15.56a1.45 1.45 0 1 0 0-2.9m-1.55 15.5c-7.08 1.83-9.45.79-10.14.25-.45-.35-.65-.8-.65-1.48v-.87h10.25c.8 0 1.46-.65 1.46-1.45v-5.08c0-.8-.66-1.45-1.46-1.45h-11.7a1.45 1.45 0 1 0 0 2.9h10.25v2.18H19.57c-.8 0-1.45.65-1.45 1.45v2.32a4.6 4.6 0 0 0 1.78 3.78c1.2.93 2.94 1.39 5.21 1.39 2.05 0 4.54-.38 7.44-1.13a1.45 1.45 0 1 0-.73-2.82M20.3 7.83h10.8a1.45 1.45 0 1 0 0-2.9h-9.35V1.45a1.45 1.45 0 1 0-2.9 0v4.93c0 .8.65 1.45 1.45 1.45"></path><rect width="3" height="15" x="70" fill="#000" rx="1.5"></rect><path fill="#000" d="M64.5 13.28a1.45 1.45 0 0 0 2.73-1c-.05-.13-1-2.68-3.38-4.5l3.7-4.1a1.45 1.45 0 0 0-1.09-2.42h-9.05a1.45 1.45 0 1 0 0 2.9h5.8l-6.88 7.64a1.45 1.45 0 1 0 2.16 1.95l3.41-3.8a8 8 0 0 1 2.6 3.33M69.56 26.52h-7.01a.82.82 0 0 1-.82-.82v-1.95h8.65v1.95c0 .45-.37.82-.82.82m2.27-9.37c-.8 0-1.45.65-1.45 1.45v2.25h-8.65V18.6a1.45 1.45 0 1 0-2.9 0v7.1a3.73 3.73 0 0 0 3.72 3.72h7.01a3.73 3.73 0 0 0 3.72-3.72v-7.1c0-.8-.65-1.45-1.45-1.45M42.46 3.87c2.22 0 2.33 4.24 2.33 5.08 0 .85-.11 5.09-2.33 5.09-2.21 0-2.32-4.24-2.32-5.08 0-.86.11-5.09 2.32-5.09m0 13.07c1.76 0 3.23-.93 4.14-2.62.71-1.34 1.1-3.2 1.1-5.36s-.39-4.02-1.1-5.37A4.6 4.6 0 0 0 42.46.97c-1.76 0-3.22.93-4.13 2.62-.72 1.35-1.1 3.2-1.1 5.37s.38 4.01 1.1 5.36a4.59 4.59 0 0 0 4.13 2.62"></path><path fill="#000" d="M51.4.49c-.8 0-1.45.65-1.45 1.45v17.78c-1.93.6-5.75 1.13-10.38 1.13h-2.2a1.45 1.45 0 0 0 0 2.9h2.2c2.64 0 7.21-.23 10.38-1.02v4.84a1.45 1.45 0 0 0 2.9 0V1.94c0-.8-.65-1.45-1.45-1.45"></path></g></svg></a></div><nav class="layout-navigation-primary__menu"><a class="layout-navigation-primary__menu__item" href="/">커뮤니티</a><a class="layout-navigation-primary__menu__item" href="/store">스토어</a><a class="layout-navigation-primary__menu__item" href="/experts">인테리어시공</a></nav><div class="layout-navigation-primary__right"><div class="layout-navigation-bar-search"><div class="layout-navigation-search" id="id-1"><div class="layout-navigation-search__header"><div id="id-1-combobox" class="layout-navigation-search__combobox" role="combobox" aria-haspopup="listbox" aria-expanded="false"><div class="layout-navigation-search__input"><input type="text" class="layout-navigation-search__input__text" value="" autoComplete="off" size="1" id="id-1-input" aria-autocomplete="list" placeholder="오늘의집 통합검색" aria-label="오늘의집 통합검색"/><svg class="layout-navigation-search__input__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" preserveAspectRatio="xMidYMid meet"><path d="M22 22l-5-5"></path><circle cx="11" cy="11" r="8"></circle></svg></div></div></div></div></div><a class="layout-navigation-bar-upload-button" href="/upload_select">글쓰기</a><button class="layout-navigation-bar-icon layout-navigation-bar-search-button" title="검색" aria-label="검색" type="button"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" preserveAspectRatio="xMidYMid meet"><path d="M22 22l-5-5"></path><circle cx="11" cy="11" r="8"></circle></svg></button><a class="layout-navigation-bar-icon" title="장바구니" aria-label="장바구니" href="/cart"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linejoin="round" stroke-width="2" preserveAspectRatio="xMidYMid meet"><path stroke-linecap="round" d="M4 5h18l-2.6 10.5a2 2 0 0 1-2 1.5H8.6a2 2 0 0 1-2-1.5L4 5zm4 15.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 1 1-3 0zm7 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 1 1-3 0z"></path><path d="M1 2h3v3"></path></svg></a><div class="layout-navigation-bar-login"><a class="layout-navigation-bar-login__item" href="/users/sign_in?redirect_to=%2Fprivacy">로그인</a><a class="layout-navigation-bar-login__item" href="/normal_users/new">회원가입</a></div></div></div></div></div><div data-sticky-enabled="true" data-sticky-always="true" data-direction="top" data-offset="0" class="sticky-container layout-navigation-secondary-wrap" style="position:relative;top:-50px;height:nullpx;transition:.1s top"><div class="sticky-child layout-navigation-secondary" style="position:fixed;transform:scaleZ(0px);left:0px;right:0px;top:-51px"><div class="layout-navigation-secondary__content"><nav class="layout-navigation-secondary__menu"></nav><div class="layout-navigation-app-download layout-navigation__bar__app-download"><a class="layout-navigation-app-download__link" href="/app"><svg class="icon" width="20" height="20" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet"><g fill="none" fill-rule="evenodd"><path fill="#35C5F0" d="M16.41 0H3.59A3.59 3.59 0 0 0 0 3.59v12.82A3.59 3.59 0 0 0 3.59 20h12.82A3.59 3.59 0 0 0 20 16.41V3.59A3.59 3.59 0 0 0 16.41 0"></path><path fill="#FFF" d="M14.75 10.34c-.74 0-1.33-.6-1.33-1.34 0-.74.6-1.34 1.33-1.34s1.32.6 1.32 1.34c0 .74-.59 1.34-1.32 1.34zm-1 3.53H6.12V8.75l3.82-2.7 2.2 1.55a3.01 3.01 0 0 0-.35 1.4 3 3 0 0 0 1.98 2.83v2.04zm1-7.87c-.34 0-.66.06-.97.17l-3.17-2.24a1.18 1.18 0 0 0-1.35 0L4.5 7.28a1.2 1.2 0 0 0-.51.98v6.54c0 .66.53 1.2 1.19 1.2h9.5a1.2 1.2 0 0 0 1.18-1.2v-3.02A3 3 0 0 0 17.7 9c0-1.65-1.32-3-2.96-3z"></path></g></svg>앱다운로드</a></div></div></div></div><div class="toast-message-root"></div></header><div class="toast-message-root"></div></div>
+
+  <div id="body" class="static_pages privacy_policy" data-s_id="e44e4a34056a3a40d08c6249051461d1">
+    
+<div class="article">
+  <style>
+  #body {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  table.privacy_table {
+    width: 100%;
+  }
+
+  table.privacy_table th {
+    border-top: 1px solid #bdbdbd;
+    text-align: center;
+    background: #f1f2f2;
+  }
+
+  table.privacy_table th, table.privacy_table td {
+    border-right: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
+    padding: 5px;
+  }
+
+  table.privacy_table .start {
+    border-left: 1px solid #bdbdbd;
+  }
+
+  table.privacy_table th.first {
+    width: 15%;
+  }
+
+  table.privacy_table th.second {
+    width: 25%;
+  }
+
+  table.privacy_table th.third {
+    width: 30%;
+  }
+
+  table.privacy_table th.forth {
+    width: 30%;
+  }
+
+  table.privacy_table th.half {
+    width: 50%;
+  }
+</style>
+
+오늘의집 서비스 개인정보 처리방침
+
+버킷플레이스(이하 "회사"라 합니다)는 회사가 제공하는 오늘의집 서비스(이하 "서비스"라 합니다) 회원의 개인정보보호를 매우 중요시하며, 『정보통신망 이용촉진 및 정보보호 등에 관한 법률』등 개인정보와 관련된 법령 상의 개인정보보호규정을 준수하고 있습니다.
+회사는 아래와 같이 개인정보처리방침을 명시하여 회원이 회사에 제공한 개인정보가 어떠한 용도와 방식으로 이용되고 있으며 개인정보보호를 위해 어떠한 조치를 취하는지 알려드립니다.
+회사의 서비스 개인정보처리방침은 정부의 법률 및 지침의 변경과 당사의 약관 및 내부 정책에 따라 변경될 수 있으며 이를 개정하는 경우 회사는 변경사항에 대하여 즉시 서비스 화면에 게시합니다. 회원님께서는 사이트 방문 시 수시로 확인하시기 바랍니다.
+
+
+<b>1. 오늘의집은 이용하는 서비스의 형태에 따라 다음과 같은 개인정보를 수집 및 이용∙제공∙파기하고 있습니다.</b>
+
+① 회사는 회원기반 서비스 제공을 위해 다음과 같이 개인정보를 수집, 이용, 파기합니다.
+<table class="privacy_table">
+  <thead>
+  <tr>
+    <th class="first start">수집방법</th>
+    <th class="second">수집항목</th>
+    <th class="third">수집 및 이용목적</th>
+    <th class="forth">보유 및 이용기간</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="start">회원가입(필수)</td>
+    <td>닉네임, 이메일 주소</td>
+    <td>서비스 이용 및 상담을 위한 이용자 식별</td>
+    <td rowspan="4">회원에서 탈퇴한 후 회원 재가입, 임의해지 등을 반복적으로 행하여 회사가 제공하는 할인쿠폰, 이벤트 혜택 등으로 경제상의 이익을 취하거나 이 과정에서 명의를 무단으로 사용하는
+      편법과 불법행위를 하는 회원을 차단 하고자 회원 탈퇴 후 1개월 동안 보관합니다.
+    </td>
+  </tr>
+  <tr>
+    <td class="start" rowspan="2">회원가입(선택)</td>
+    <td>페이스북 카카오톡 사용자 ID</td>
+    <td>페이스북, 카카오톡 등 SNS 계정을 통한 간편 가입시</td>
+  </tr>
+  <tr>
+    <td>프로필사진, 생년월일, 성별, 거주지 유형 및 크기, 인테리어 관심사, 이용자 홈페이지 주소, 가족 구성</td>
+    <td>맞춤형 콘텐츠 및 상품 추천 등 마케팅 활용</td>
+  </tr>
+  <tr>
+    <td class="start">휴대전화 인증</td>
+    <td>휴대전화 번호</td>
+    <td>상품 구매 및 포인트(적립금) 지급 시 본인 인증</td>
+  </tr>
+
+  </tbody>
+</table>
+② 회사는 비회원의 서비스 제공을 위해 다음과 같이 개인정보를 수집, 이용, 파기 합니다.
+<table class="privacy_table">
+  <thead>
+  <tr>
+    <th class="first start">수집방법</th>
+    <th class="second">수집항목</th>
+    <th class="third">수집 및 이용목적</th>
+    <th class="forth">보유 및 이용기간</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td rowspan="2" class="start">상품구매</td>
+    <td>1) 구매자정보(이름, 휴대전화 번호, 이메일 주소)<br/>2) 수령인정보(이름, 휴대전화 번호, 이메일 주소)</td>
+    <td>상품 주문 확인 및 이용자 식별 서비스 이용 및 상담</td>
+    <td rowspan="4">5년 (계약 및 철회, 결제 및 공급)</td>
+  </tr>
+  <tr>
+    <td>개인통관고유부호</td>
+    <td>해외 배송상품 구매 시 배송 및 관세법에 따른 통관 절차에 이용</td>
+  </tr>
+  <tr>
+    <td rowspan="2" class="start">결제 및 환불</td>
+    <td>카드사명, 카드번호</td>
+    <td>신용카드 간편결제 서비스</td>
+  </tr>
+  <tr>
+    <td>환불 계좌번호, 은행명, 예금주명</td>
+    <td>결제 서비스 환불</td>
+  </tr>
+  <tr>
+    <td class="start">전문가 상담신청</td>
+    <td>이름, 시공종류, 휴대전화번호, 지역, 주거유형<br/>예산범위, 시공완료 날짜, 상담내용<br/>서비스 이용 내역</td>
+    <td>이용자 식별, 회원관리, 본인여부 확인</td>
+    <td>서비스 이용 및 상담 종료 시까지<br/>단, 법령이 정한 시점까지 보존</td>
+  </tr>
+  <tr>
+    <td class="start">고객센터</td>
+    <td>이름, 이메일, 휴대전화번호</td>
+    <td>오늘의집 서비스 이용 고객 상담</td>
+    <td>3년</td>
+  </tr>
+  </tbody>
+</table>
+③ 회사는 전문가 회원에 대한 서비스 제공을 위해 다음과 같이 개인정보를 수집, 이용 파기 합니다.
+<table class="privacy_table">
+  <thead>
+  <tr>
+    <th class="first start">수집방법</th>
+    <th class="second">수집항목</th>
+    <th class="third">수집 및 이용목적</th>
+    <th class="forth">보유 및 이용기간</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="start">회원가입(필수)</td>
+    <td>이름, 아이디(이메일), 비밀번호, 이메일 주소<br/>휴대전화번호, 업체명, 업체주소, 사업자등록번호<br/>대표 전화번호, 대표 팩스번호</td>
+    <td>이용자 식별, 회원관리, 본인여부 확인, 서비스 민원사항<br/>고충 처리 결과 안내</td>
+    <td>회원 탈퇴 시점으로부터 1개월간 보관하고 파기합니다.</td>
+  </tr>
+  <tr>
+    <td class="start">상품구매</td>
+    <td>1) 구매자정보(이름, 휴대전화 번호, 이메일 주소)<br/>2) 수령인정보(이름, 휴대전화 번호, 이메일 주소)</td>
+    <td>유료 상품 구매, 일부 콘텐츠 및 서비스 이용<br/>금융거래 시 관련 법령에 따른 본인 확인<br/>서비스 부정사용 방지, 서비스 장애 발생시 신속한 민원 처리</td>
+    <td rowspan="3">5년 (계약 및 철회, 결제 및 공급)</td>
+  </tr>
+  <tr>
+    <td class="start">결제정보</td>
+    <td>무통장 입금(가상계좌), 실시간계좌이체<br/> 계좌정보(은행명, 계좌번호, 예금주 이름)<br/>정산 신청자 정보(이름, 전화번호, 이메일 주소)</td>
+    <td>현금 환불 처리, 관련 법령에 따른 보존 의무 이행</td>
+  </tr>
+  <tr>
+    <td class="start">고객센터</td>
+    <td>이름, 아이디, 휴대전화번호, 업체명, 업체주소<br/>사업자등록증, 은행계좌정보 등</td>
+    <td>서비스 이용관련 문의, 상담, 환불, 장애 대응 등 민원처리</td>
+  </tr>
+  </tbody>
+</table>
+④ 회사는 상품구매 및 배송 등 서비스 및 고객상담 제공을 위해 다음과 같이 개인정보를 수집, 이용, 파기 합니다.
+<table class="privacy_table">
+  <thead>
+  <tr>
+    <th class="first start">수집방법</th>
+    <th class="second">수집항목</th>
+    <th class="third">수집 및 이용목적</th>
+    <th class="forth">보유 및 이용기간</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td rowspan="2" class="start">상품구매</td>
+    <td>1) 구매자정보(이름, 휴대전화 번호, 이메일 주소)<br/>2) 수령인정보(이름, 휴대전화 번호, 이메일 주소)</td>
+    <td>상품 주문 확인 및 이용자 식별 서비스 이용 및 상담</td>
+    <td rowspan="4">5년 (계약 및 철회, 결제 및 공급)</td>
+  </tr>
+  <tr>
+    <td>개인통관고유부호</td>
+    <td>해외 배송상품 구매 시 배송 및 관세법에 따른 통관 절차에 이용</td>
+  </tr>
+  <tr>
+    <td rowspan="2" class="start">결제 및 취소·환불</td>
+    <td>카드사명, 카드번호</td>
+    <td>신용카드 간편결제 서비스</td>
+  </tr>
+  <tr>
+    <td>환불 계좌번호, 은행명, 예금주명</td>
+    <td>결제 서비스 환불</td>
+  </tr>
+  <tr>
+    <td class="start">고객상담</td>
+    <td>이름, 휴대전화 번호(회원 확인 필요 시) 아이디, 닉네임</td>
+    <td>오늘의집 서비스 이용 고객 상담</td>
+    <td>3년</td>
+  </tr>
+  </tbody>
+</table>
+⑤ 회사는 회원에 전문가 상담 서비스 제공을 위해 다음과 같이 개인정보를 수집, 이용, 파기합니다.
+<table class="privacy_table">
+  <thead>
+  <tr>
+    <th class="first start">수집방법</th>
+    <th class="second">수집항목</th>
+    <th class="third">수집 및 이용목적</th>
+    <th class="forth">보유 및 이용기간</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="start">전문가 상담</td>
+    <td>이름, 시공종류, 휴대전화번호, 지역, 주거형태<br/>예산범위, 시공완료 날짜, 상담내용, 서비스 이용 내역</td>
+    <td>이용자 식별, 회원관리, 본인여부 확인</td>
+    <td>회원 탈퇴 시점으로부터 1개월간 보관하고 파기합니다.</td>
+  </tr>
+  <tr>
+    <td class="start">고객센터</td>
+    <td>이름, 이메일, 휴대전화번호</td>
+    <td>서비스 이용관련 문의, 상담, 통화내용 녹음, 장애 대응 등 민원처리</td>
+    <td>3년</td>
+  </tr>
+  </tbody>
+</table>
+⑥ 회사는 회원의 이벤트참여에 따라 아래와 같이 개인정보를 수집, 이용, 파기 합니다.
+<table class="privacy_table">
+  <thead>
+  <tr>
+    <th class="first start">수집방법</th>
+    <th class="second">수집항목</th>
+    <th class="third">수집 및 이용목적</th>
+    <th class="forth">보유 및 이용기간</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="start">이벤트 참여</td>
+    <td>오늘의집 닉네임 및 아이디<br/>소셜미디어 아이디</td>
+    <td>이벤트 참여자 식별 및 당첨자 선정</td>
+    <td rowspan="2">회원 탈퇴 시 즉시 삭제 및 법령에 따른 처리기간 준수</td>
+  </tr>
+  <tr>
+    <td class="start">이벤트 당첨</td>
+    <td>이름, 휴대전화 번호, 이메일 주소, 주소</td>
+    <td>이벤트 당첨에 따른 경품 전달</td>
+  </tr>
+  <tr>
+    <td colspan="4" class="start" style="white-space: normal">
+      ※ 이벤트 참여 회원이라 함은 오늘의집에서 운영하는 소셜미디어(페이스북, 카카오스토리, 인스타그램, 블로그 등) 및 오늘의집 사이트 및 앱 등을 통하여 진행하는 이벤트에 참여한 회원을 의미합니다.
+    </td>
+  </tr>
+  </tbody>
+</table>
+⑦ 회사는 회원 혹은 비회원이 동의하는 경우 이벤트 및 마케팅 홍보를 위한 목적으로 아래와 같이 개인정보를 수집, 이용, 파기합니다.
+<table class="privacy_table">
+  <thead>
+  <tr>
+    <th class="first start">수집방법</th>
+    <th class="second">수집항목</th>
+    <th class="third">수집 및 이용목적</th>
+    <th class="forth">보유 및 이용기간</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="start">이벤트/마케팅 홍보</td>
+    <td>이름, 아이디, 휴대전화번호, 이메일</td>
+    <td>당사 및 제휴사 상품 안내, 이벤트 등 광고성 정보 전달 및 참여기회 제공, 회원 대상 각종 마케팅 활동, 서비스 이용내역, 서비스 내 구매 및 결제 내역</td>
+    <td>개인정보 이용목적 달성 시, 동의철회(제휴업체는 제휴계약 종료 시) 및 관계법령에 따른 보관기간까지</td>
+  </tr>
+  </tbody>
+</table>
+⑧ 서비스 이용 과정에서 IP 주소, 쿠키, 서비스 이용 기록, 기기정보, 위치정보, ADID 및 IDFA 가 생성되어 수집될 수 있습니다. 구체적으로
+1) 서비스 이용 과정에서 이용자에 관한 정보를 정보통신서비스 제공자가 자동화된 방법으로 생성하여 이를 저장(수집)하거나,
+2) 이용자 기기의 고유한 정보를 원래의 값을 확인하지 못 하도록 안전하게 변환한 후에 수집하는 경우를 의미합니다.
+
+⑨ 회사는 이용자의 개인정보를 수집 목적 달성 후 지체 없이 안전한 방법으로 파기 하고 있습니다. 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각하여 파기 하며, 전자적 파일 형태로 저장된 개인정보는 기록을 복구, 재생할 수 없는 기술적 방법을 사용하여 삭제 합니다. 단, 아래와 같이 다른 법령 또는 회사 내부 방침에 의해 보관해야 하는 정보는 법령에서 규정하고 있는 기간 동안 별도의 DB에서 안전하게 보관 후 파기 합니다. 이렇게 별도로 보관하는 개인정보는 법령에서 정한 경우가 아니고서는 절대 다른 목적으로 이용되지 않습니다.
+<table class="privacy_table">
+  <thead>
+  <tr>
+    <th class="first start">법률/내부 방침</th>
+    <th class="second">수집항목</th>
+    <th class="third">수집 및 이용목적</th>
+    <th class="forth">보유 및 이용기간</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="start" rowspan="2">통신비밀보호법</td>
+    <td rowspan="2">법원의 영장을 받은 수사기관 요청 시 제공</td>
+    <td>로그기록, IP 등</td>
+    <td>3개월</td>
+  </tr>
+  <tr>
+    <td>전기통신일시, 발신기지국의 위치추적 자료 등</td>
+    <td>12개월</td>
+  </tr>
+  <tr>
+    <td class="start" rowspan="3">전자상거래 등에서의 소비자 보호에 관한 법률</td>
+    <td>대금결제/재화 등의 공급 기록</td>
+    <td>대금결제 및 재화 등의 공급에 관한 기록</td>
+    <td>5년</td>
+  </tr>
+  <tr>
+    <td>소비자 식별정보 계약/청약철회 기록</td>
+    <td>계약 또는 청약철회 등에 관한 기록</td>
+    <td>5년</td>
+  </tr>
+  <tr>
+    <td>소비자 식별정보 분쟁처리기록</td>
+    <td>소비자의 불만 또는 분쟁처리에 관한 기록</td>
+    <td>3년</td>
+  </tr>
+  <tr>
+    <td class="start">회사 내부 방침</td>
+    <td>아이디, 이름, 연계정보(CI)</td>
+    <td>임의해지 등을 반복적으로 행하는 등 회사가 제공하는 할인쿠폰, 이벤트 혜택 등의 경제상의 이익을 불·편법적으로 수취하는 행위 및 명의도용 등의 불·편법 행위 차단</td>
+    <td>6개월</td>
+  </tr>
+  </tbody>
+</table>
+⑩ 1년 이상 서비스 이용 기록이 없는 이용자의 정보는 정보통신망 이용촉진 및 정보보호 등에 관한 법률에 따라 휴면계정으로 전환됩니다.
+- 휴면계정 전환 최소 30일 전, 등록된 이메일을 통해 전환 예정 일자를 안내해 드리며, 휴면계정으로 전환을 원하지 않으시는 경우에는 안내 메일을 확인하신 후 로그인 하시면 정상적으로 서비스를 이용하실 수 있습니다.
+- 휴면계정으로 전환된 이용자의 정보는 별도의 DB에 분리 저장되어 안전하게 관리되며, 이렇게 휴면계정으로 전환되었더라도 로그인 후 간단한 휴면 해제 절차를 통해 언제든지 정상적으로 서비스를 이용하실 수 있습니다.
+
+⑪ 회사는 만 14세 미만 아동의 개인정보를 보호하기 위하여 회원가입은 만14세 이상만 가능하도록 함으로써 아동의 개인정보를 수집하지 않습니다. 단, 법정대리인의 동의를 얻은 경우에는 만 14세 미만 이용자의 개인정보를 수집∙이용할 수 있습니다.
+
+
+<b>2. 서비스의 제공 또는 법령에 정해진 책임의 준수를 위하여 회사가 보관하고 있는 개인정보가 제3자에게 수집 목적 범위 내에서 제공될 수 있습니다.</b>
+
+① 회사는 이용자의 개인정보를 회사에서 제공하는 서비스 이용과 관련한 목적 외로 이용하거나 타인 또는 타기업이나 타 기관에 제공하지 않습니다. 그러나 보다 나은 서비스의 제공을 위하여 이용자의 개인정보를 협력업체 등과 공유할 필요가 있는 경우에는 제공받는 자, 제공 목적, 제공 정보 항목, 이용 및 보유 기간 등을 이용자에게 고지하여 동의를 구합니다.
+
+② 회사는 서비스 제공 및 배송, 본인확인 등 거래의 이행을 위하여 필요한 최소한의 개인정보만을 서비스 제공 업체에게 제공하고 있습니다. 이용자 서비스 구매 시 제3자 제공에 동의하는 경우, 해당 서비스 제공 업체에게 아래의 개인정보가 제공됩니다.
+<table class="privacy_table">
+  <thead>
+  <tr>
+    <th class="first start">제공받는 자</th>
+    <th class="second">제공목적</th>
+    <th class="third">제공하는 개인정보 항목</th>
+    <th class="forth">개인정보 보유 및 이용기긴</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="start"><u><a target="_blank" href="/sellers">판매자</a></u></td>
+    <td>상품 및 경품(서비스) 배송(전송), 제품 설치, 반품, 환불, 고객상담 등 정보통신서비스제공계약 및 전자상거래(통신판매)계약의 이행을 위해 필요한 업무의 처리</td>
+    <td>1) 구매자정보(닉네임, 이름, 휴대폰번호, 이메일주소)<br>2) 수령인정보(이름, 휴대폰번호, 주소)<br>3) 상품 구매, 취소, 반품, 교환정보<br>4) 송장정보<br>5) 개인통관고유부호 (해외배송상품 구매시)</td>
+    <td>상품 제공 완료 후 3개월</td>
+  </tr>
+  </tbody>
+</table>
+③ 회사는 이용자가 서비스에 등록된 특정 전문가에게 상담을 신청한 경우, 최소한의 개인정보만을 해당 전문가에게 제공하고 있습니다. 이용자 전문가 상담 신청 시 제3자 제공에 동의하는 경우, 해당 전문가에게 아래의 개인정보가 제공됩니다.
+<table class="privacy_table">
+  <thead>
+  <tr>
+    <th class="first start">제공받는 자</th>
+    <th class="second">제공목적</th>
+    <th class="third">제공하는 개인정보 항목</th>
+    <th class="forth">개인정보 보유 및 이용기간</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="start"><u><a target="_blank" href="/info/expert_users">전문가</a></u></td>
+    <td>전문가 서비스 이용 및 상담을 위한 정보 확인 (견적상담, 방문견적, 계약체결, 상담대리접수) 등 정보통신서비스제공계약의 이행을 위해 필요한 업무의 처리</td>
+    <td>1) 이름<br>2) 연락처<br>3) 시공지역<br>4) 상담내용</td>
+    <td>서비스 이용 및 상담 종료 시까지<br>단, 관계 법령이 정한 시점까지 보존</td>
+  </tr>
+  </tbody>
+</table>
+④ 이용자는 개인정보의 제3자 제공에 대하여 동의를 하지 않을 수 있고, 언제든지 제3자 제공 동의를 철회할 수 있습니다. 동의를 거부하시는 경우에도 회원가입서비스는 이용하실 수 있으나, 제 3자 제공에 기반한 관련 서비스의 이용 및 제공이 제한될 수 있습니다.
+
+<b>3. 회사는 서비스 향상과 효과적인 업무처리를 위하여 다음과 같이 개인정보를 처리 위탁하고 있습니다.</b>
+
+① 회사는 원활하고 향상된 서비스를 위하여 개인정보 처리를 타인에게 위탁할 수 있습니다. 이 경우 회사는 사전에 다음 각 호의 사항 모두를 이용자에게 미리 알리고 동의를 받습니다.
+(1) 개인정보 처리위탁을 받는 자
+(2) 개인정보 처리위탁을 하는 업무의 내용
+
+② 회사는 개인정보의 처리와 관련하여 아래와 같이 업무를 위탁하고 있으며, 관계법령에 따라 위탁 계약 시 개인정보가 안전하게 관리될 수 있도록 필요한 조치를 하고 있습니다. 회사는 위탁 계약 시 수탁자의 개인정보 보호조치 능력을 고려하고, 개인정보의 안전한 관리 및 파기 등 수탁자의 의무 이행 여부를 주기적으로 확인합니다. 또한 위탁처리하는 정보는 원활한 서비스를 제공하기 위하여 필요한 최소한의 정보에 국한됩니다.
+<table class="privacy_table">
+  <thead>
+  <tr>
+    <th class="half start">수탁업체</th>
+    <th class="half">위탁업무 내용</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="start">나이스정보통신 주식회사</td>
+    <td>전자 결제 대행</td>
+  </tr>
+  <tr>
+    <td class="start">㈜케이지모빌리언스</td>
+    <td>휴대전화 결제 대행</td>
+  </tr>
+  <tr>
+    <td class="start">㈜네이버</td>
+    <td>네이버페이 결제 서비스 제공 업체</td>
+  </tr>
+  <tr>
+    <td class="start">LG CNS</td>
+    <td>스마일페이 결제 서비스 제공 업체</td>
+  </tr>
+  <tr>
+    <td class="start">㈜한국코퍼레이션</td>
+    <td>고객 및 주문정보 이용관리 등 콜센터 업무의 일체</td>
+  </tr>
+  <tr>
+    <td class="start">㈜엔에이치엔페이코</td>
+    <td>페이코 결제 서비스 제공 업체</td>
+  </tr>
+  <tr>
+    <td class="start">braze Inc.</td>
+    <td>고객 분석 및 메시지 발송 플랫폼 서비스 제공 업체</td>
+  </tr>
+  <tr>
+    <td class="start">㈜NHN (토스트)</td>
+    <td>SMS 발송 및 카카오 알림톡/친구톡 서비스 제공 업체</td>
+  </tr>
+  <tr>
+    <td class="start">Amazon Web Services(AWS Kor)</td>
+    <td>클라우드 IT인프라 제공</td>
+  </tr>
+  <tr>
+    <td class="start">㈜차이코퍼레이션</td>
+    <td>차이페이 결제 서비스 제공 업체</td>
+  </tr>
+  <tr>
+    <td class="start">㈜비바리퍼블리카</td>
+    <td>토스 결제 서비스 제공 업체</td>
+  </tr>
+  <tr>
+    <td class="start">㈜NHN한국사이버결제</td>
+    <td>전자 결제 대행</td>
+  </tr>
+  <tr>
+    <td class="start">㈜카카오페이</td>
+    <td>카카오페이 결제 서비스 제공 업체</td>
+  </tr>
+  </tbody>
+</table>
+
+<b>4. 회사는 이용자에게 다른 회사의 웹사이트 또는 자료에 대한 링크를 제공할 수 있습니다.</b>
+
+회사가 이용자에게 다른 회사의 웹사이트 또는 자료에 대한 링크를 제공하는 경우, 회사는 외부사이트 및 자료에 대한 아무런 통제권이 없으므로 그로부터 제공받는 서비스나 자료의 유용성에 대해 책임질 수 없으며 보증할 수 없습니다.
+
+회사가 포함하고 있는 링크를 클릭(click)하여 타사이트(site)의 페이지로 옮겨 갈 경우 해당 사이트의 개인정보보호정책은 회사와 무관하므로 새로 방문한 사이트의 정책을 검토해보시기 바랍니다.
+
+
+<b>5. 이용자 및 법정대리인은 아래와 같은 권리를 행사할 수 있습니다.</b>
+
+① 이용자 및 법정대리인은 언제든지 수집 정보에 대하여 수정, 동의철회, 삭제 등을 요청하실 수 있습니다. 다만, 동의 철회․삭제시 서비스의 일부 또는 전부 이용이 제한될 수 있습니다.
+
+② (조회/수정 및 정정) 홈페이지에서 ‘마이홈>설정>회원정보수정’ 메뉴 또는 1:1 상담을 이용하여 처리할 수 있습니다. 처리가 완료될 때까지 해당 정보를 이용하거나 타인에게 제공하지 않을 것입니다. 또한 합리적인 사유로 잘못된 개인정보를 제3자에게 이미 제공한 경우, 정정 처리의 결과를 지체 없이 제3자에게 통지하여 정정하도록 조치합니다.
+
+③ (동의 철회/삭제) 1:1 상담을 이용하여 수집 정보에 대한 동의 철회 및 삭제를 요청하실 수 있습니다. 다만, 수집정보에 대한 동의 철회․삭제시 서비스의 일부 또는 전부 이용이 제한될 수 있으며, 다른 법령에 따라 수집하는 정보의 경우에는 동의 철회가 어려울 수 있습니다.
+
+④ (회원 탈퇴) 홈페이지의 ‘마이홈>설정>회원정보수정>회원탈퇴’ 메뉴를 이용하여 편리하게 직접 탈퇴를 진행하시거나, 1:1상담을 통하여 진행할 수 있습니다.
+
+⑤ (서비스 재이용) ‘아이디 찾기’를 통하여 미이용자 여부를 확인할 수 있으며, 반드시 비밀번호를 변경하신 후 계정 재이용이 가능합니다. 문의사항은 고객센터 1670-0876을 이용하시기 바랍니다.
+
+⑥ (상담/문의) 회사는 개인정보의 수집 및 이용 목적에 따라 이용자와 상담원 간의 통화내용을 녹음할 수 있으며 고객센터를 통한 소비자 상담/문의 시 녹음 등에 대한 안내는 고객센터 상담 전 안내 멘트를 통해 확인하실 수 있습니다.
+
+
+<b>6. 자동 수집되는 개인정보 및 거부에 관한 사항은 다음과 같습니다.</b>
+
+회사는 이용자의 정보를 수시로 저장하고 찾아내는 쿠키(cookie) 등을 운용합니다. 쿠키는 웹사이트가 이용자의 컴퓨터 브라우저에 보내는 아주 작은 텍스트 파일로 이용자의 컴퓨터 하드디스크에 저장됩니다.
+
+① 쿠키의 사용 목적
+- 회원과 비회원의 접속 빈도나 방문 시간 등의 분석, 이용 형태 및 관심분야 파악, 자취 추적, 각종 이벤트 참여 정도, 방문 횟수 파악 등을 통한 타겟 마케팅 등 개인별 맞춤 서비스를 제공하기 위해 쿠키를 사용 합니다.
+
+② 쿠키의 설치, 운영과 거부
+- 이용자는 쿠키 설치에 대한 선택권을 가지고 있으며, 언제든지 이러한 쿠키의 저장을 거부하거나 삭제할 수 있습니다.
+- 쿠키의 설정은 웹브라우저별 옵션 선택을 통해 ①모든 쿠키를 허용, ②쿠키가 저장될 때 마다 확인, ③모든 쿠키의 저장을 거부 할 수 있습니다.
+- 이러한 쿠키의 설정 방법은 웹브라우저에 따라 차이가 있으므로, 자세한 사항은 각 브라우저별 도움말을 참고해 주시기 바랍니다.
+- Internet Explorer : 도구 메뉴 선택 > 인터넷 옵션 선택 > 개인정보 탭 클릭 > 개인정보처리 수준 설정
+- Chrome : 설정 메뉴 선택 > 고급 설정 표시 선택 > 개인정보-콘텐츠 설정 선택 > 쿠키 수준 설정
+- firefox : 옵션 메뉴 선택 > 개인정보 선택 > 방문기록-사용자 정의 설정 > 쿠키 수준 설정
+- safari : 환경설정 메뉴 선택 > 개인정보 탭 선택 > 쿠키 및 웹 사이트 데이터 수준 설정
+- 단, 쿠키의 저장을 거부하였을 경우에는 로그인이 필요한 서비스 등 일부 서비스 이용에 어려움이 있을 수 있습니다.
+
+
+<b>7. 회사는 이용자들의 개인정보를 처리함에 있어 개인정보의 기술적/관리적 보호 대책을 마련하여 정보보호를 위해 노력하고 있습니다.</b>
+
+회사는 이용자들의 개인정보를 처리함에 있어 개인정보가 분실, 도난, 유출, 변조 또는 훼손되지 않도록 안전성 확보를 위하여 다음과 같은 기술적/관리적 보호대책을 강구하고 있습니다.
+
+① 비밀번호의 암호화
+- 이용자의 비밀번호는 일방향 암호화하여 저장 및 관리되고 있으며, 개인정보의 확인 및 변경은 비밀번호를 알고 있는 본인에 의해서만 가능합니다.
+
+② 해킹 등에 대비한 대책
+- 회사는 해킹이나 바이러스 등 회사 정보통신망 침입에 의한 이용자 개인정보의 분실, 도난, 유출, 변조 또는 훼손 등 피해 방지를 위해 침입탐지 및 침입차단 시스템을 24시간 가동하고 있으며, 만일의 사태에 대비하여 모든 침입탐지 시스템과 침입차단 시스템은 이중화로 구성하여 운영하고 있습니다.
+- 개인정보의 훼손 피해에 대비하여 중요한 데이터를 주기적으로 백업하고 있으며, 백신 프로그램을 이용하여 개인정보나 중요한 데이터의 유출 방지를 위해 노력하고 있습니다.
+- 민감한 개인정보는 정보통신망을 통해 주고받는 과정에서 암호화 통신을 적용하여 개인정보를 안전하게 전송할 수 있도록 하고 있습니다.
+- 이 외에도 보안 시스템 도입 및 전문인력 확충 등 보안성 확보를 위해 지속적으로 노력하고 있습니다.
+
+③ 개인정보 처리자의 최소화 및 주기적인 교육
+- 회사의 개인정보 관련 처리자는 담당자로 한정하여 개인정보 처리자를 최소화 하고 있으며, 퇴직 및 직무변경 등 인사이동이 있는 경우 지체 없이 권한을 변경, 말소 하여 개인정보 접근 권한을 통제 하고 있습니다.
+- 개인정보 처리자에 대해 주기적으로 교육을 진행하여 개인정보보호의 중요성을 인식시키고, 안전하게 관리 할 수 있도록 최선의 노력을 다하고 있습니다.
+
+
+<b>8. 오늘의집은 귀하의 안전한 개인정보 보호를 위해 개인정보 보호책임자를 지정하고 있습니다.</b>
+
+① 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 이용자의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.
+<table class="privacy_table">
+  <thead>
+  <tr>
+    <th class="half start">개인정보보호책임자</th>
+    <th class="half">개인정보 민원처리 담당부서</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="start">성명 : 김 진 식<br>연락처 : 1670 - 0876, contact@bucketplace.net</td>
+    <td>부서명 : 고객센터<br>연락처 : 1670 - 0876, contact@bucketplace.net</td>
+  </tr>
+  </tbody>
+</table>
+② 회사가 제공하는 서비스(또는 사업)를 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 고객지원센터로 문의하실 수 있으며, 버킷플레이스는 이런 문의에 대해 지체 없이 답변 및 처리 할 것입니다
+
+③ 개인정보가 침해 신고나 상담이 필요하신 경우에는 아래 기관에 문의하시기 바랍니다.
+▶ 개인정보 침해신고센터 (한국인터넷진흥원 운영) : (국번없이) 118 / privacy.kisa.or.kr
+▶ 대검찰청 사이버범죄수사단 : (국번없이) 1301 / www.spo.go.kr
+▶ 경찰청 사이버안전국 : (국번없이) 182 / www.cyber.go.kr
+▶ 전자거래분쟁조정위원회 (https://www.ecmc.or.kr / 1661-5714)
+
+
+<b>9. 개인정보 처리방침 변경에 관한 정책은 다음과 같습니다.</b>
+
+이 개인정보 처리방침은 시행일로부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 변경사항의 시행 7일 전부터 공지사항을 통하여 고지할 것입니다. 또한 관련 법령이나 회사 정책의 변경으로 불가피하게 처리방침을 변경해야 하는 경우, 웹사이트 공지사항을 통해 빠르게 알려드리고 있으니 참고하여 주시기 바랍니다.
+
+- 최초시행 : 2018. 02. 06 
+- 개정일자 : 2020. 04. 28
+
+<u><a target="_blank" href="/policy/privacy_policy_8">▷ 이전 개인정보 처리방침 보기 (2019년 7월 14일 ~ 2020년 4월 27일)</a></u>
+</div>
+
+  </div>
+</div>
+  <div id="scroll_to_top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45"><g fill="none" fill-rule="evenodd"><circle cx="22.5" cy="22.5" r="22.5" fill="#FEFFFE" fill-opacity="90%"/><path d="M12.5 12.5h20v20h-20z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 20l6.5-6 6.5 6m-6.5-5v15.999"/></g></svg>
+  </div>
+<div id="flash_messages"></div>
+<div id="modal-root"></div>
+<div id="toast-message-root"></div>
+<script src="https://d1nyaccf3kuclt.cloudfront.net/dist/js/2-ba4748b8c5cb86415249.chunk.js"></script>
+<script src="https://d1nyaccf3kuclt.cloudfront.net/dist/js/5-81ef834eb6e9ac440c09.chunk.js"></script>
+<script src="https://d1nyaccf3kuclt.cloudfront.net/dist/js/8-7670c61d7ddd2df350b6.chunk.js"></script>
+<script src="https://d1nyaccf3kuclt.cloudfront.net/dist/js/9-9e34ed8f8a8dc66dcfa5.chunk.js"></script>
+<script src="https://d1nyaccf3kuclt.cloudfront.net/dist/js/11-2f49b9e644d84b3362de.chunk.js"></script>
+<script src="https://d1nyaccf3kuclt.cloudfront.net/dist/js/21-35d2f37e939ab9028bcd.chunk.js"></script>
+<script src="https://d1nyaccf3kuclt.cloudfront.net/dist/js/LayoutNavigation-6d23162bcc78c8293166.js"></script>
+
+
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+
+
+  
+
+  <script type="text/javascript" src="https://wcs.naver.net/wcslog.js"></script>
+  
+  <script>
+    if (window.wcs != null) {
+      if (!window.wcs_add) window.wcs_add = {};
+      window.wcs_add["wa"] = "s_2e85116be219";
+      if (!_nasa) var _nasa = {};
+      wcs.inflow();
+      wcs_do(_nasa);
+    }
+  </script>
+
+  <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+    <script>
+      if (window.kakaoPixel != null) {
+        kakaoPixel('7919701595446099671').pageView();
+      }
+    </script>
+
+
+<script>
+  function handleEnlipleLoad () {
+    var rf = new EN();
+    rf.setData('userid', 'bucketplace');
+    rf.setSSL(true);
+    rf.sendRf();
+    if (typeof handleEnlipleLoadShop === 'function') {
+      handleEnlipleLoadShop();
+    }
+  }
+</script>
+<script src="https://cdn.megadata.co.kr/js/en_script/3.5/enliple_min3.5.js" async="async" onload="handleEnlipleLoad()"></script>
+
+<div id="wp_tg_cts" style="display: none;"></div>
+<script>
+  window.wptg_tagscript_vars = window.wptg_tagscript_vars || [];
+  window.wptg_tagscript_vars.push(function () {
+    return {
+      wp_hcuid: '',
+      ti: '47350',
+      ty: 'Home',
+      device: navigator.userAgent.match(/ios|iphone|ipad|android/i) ? 'mobile' : 'web',
+    };
+  });
+</script>
+<script type="text/javascript" async="async" src="//cdn-aitg.widerplanet.com/js/wp_astg_4.0.js"></script>
+
+</body>
+</html>

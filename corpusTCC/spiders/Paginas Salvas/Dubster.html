@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Dubster</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color:white
+}
+
+.demo {
+  margin: 0 auto;
+  padding-top: 1px;
+  max-width: 640px;
+  width: 94%;
+  text-align: left;
+}
+
+.demo h1 {
+  margin-top: 0;
+}
+
+.demo .c4 {
+  margin-top: 0;
+  font-size: 120%;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.demo .s0 {
+  margin-bottom:1.5em;
+}
+
+.demo .c3 {
+  text-decoration: underline;
+}
+
+.demo .c5 {
+  font-weight:bold;
+}
+
+/**
+ * Footer Styles
+ */
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #black;
+  text-align: center;
+ border-top: 1px solid #888;
+}
+
+.footer a {
+margin-right: 10px;
+margin-left: 10px;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+p {
+    padding-top:10px;
+}
+
+a {
+    color: #aaf;
+    text-decoration: none;
+}
+
+</style>
+<link rel="icon" type="image/png" href="images/favIcon.png"/>
+
+<style>
+
+body {
+    background: #e83e6e; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, #a22839, #e83e6e); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #a22839, #e83e6e); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #a22839, #e83e6e); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #a22839, #e83e6e); /* Standard syntax */
+}
+
+ 
+</style>
+
+</head>
+
+<!--
+<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">@import url('https://themes.googleusercontent.com/fonts/css?kit=fpjTOVmNbO4Lz34iLyptLUXza5VhXqVC6o75Eld_V98');.lst-kix_list_2-6>li:before{content:"\0025cf  "}.lst-kix_list_2-7>li:before{content:"o  "}ul.lst-kix_list_1-0{list-style-type:none}.lst-kix_list_2-4>li:before{content:"o  "}.lst-kix_list_2-5>li:before{content:"\0025aa  "}.lst-kix_list_2-8>li:before{content:"\0025aa  "}ul.lst-kix_list_2-8{list-style-type:none}ul.lst-kix_list_1-3{list-style-type:none}ul.lst-kix_list_2-2{list-style-type:none}.lst-kix_list_1-0>li:before{content:"\0025cf  "}ul.lst-kix_list_1-4{list-style-type:none}ul.lst-kix_list_2-3{list-style-type:none}ul.lst-kix_list_1-1{list-style-type:none}ul.lst-kix_list_2-0{list-style-type:none}ul.lst-kix_list_1-2{list-style-type:none}ul.lst-kix_list_2-1{list-style-type:none}ul.lst-kix_list_1-7{list-style-type:none}ul.lst-kix_list_2-6{list-style-type:none}.lst-kix_list_1-1>li:before{content:"o  "}.lst-kix_list_1-2>li:before{content:"\0025aa  "}ul.lst-kix_list_1-8{list-style-type:none}ul.lst-kix_list_2-7{list-style-type:none}ul.lst-kix_list_1-5{list-style-type:none}ul.lst-kix_list_2-4{list-style-type:none}ul.lst-kix_list_1-6{list-style-type:none}ul.lst-kix_list_2-5{list-style-type:none}.lst-kix_list_1-3>li:before{content:"\0025cf  "}.lst-kix_list_1-4>li:before{content:"o  "}.lst-kix_list_1-7>li:before{content:"o  "}.lst-kix_list_1-5>li:before{content:"\0025aa  "}.lst-kix_list_1-6>li:before{content:"\0025cf  "}.lst-kix_list_2-0>li:before{content:"\0025cf  "}.lst-kix_list_2-1>li:before{content:"o  "}.lst-kix_list_1-8>li:before{content:"\0025aa  "}.lst-kix_list_2-2>li:before{content:"\0025aa  "}.lst-kix_list_2-3>li:before{content:"\0025cf  "}ol{margin:0;padding:0}table td,table th{padding:0}.c3{-webkit-text-decoration-skip:none;color:#000000;font-weight:400;text-decoration:underline;vertical-align:baseline;text-decoration-skip-ink:none;font-size:11pt;font-family:"Calibri";font-style:normal}.c4{-webkit-text-decoration-skip:none;color:#000000;font-weight:700;text-decoration:underline;vertical-align:baseline;text-decoration-skip-ink:none;font-size:11pt;font-family:"Calibri";font-style:normal}.c13{-webkit-text-decoration-skip:none;color:#0000ff;font-weight:400;text-decoration:underline;vertical-align:baseline;text-decoration-skip-ink:none;font-size:11pt;font-family:"Calibri";font-style:normal}.c12{background-color:#ffff00;color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Calibri";font-style:italic}.c2{margin-left:36pt;padding-top:0pt;padding-left:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c5{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Calibri";font-style:normal}.c1{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Calibri";font-style:normal}.c9{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Calibri";font-style:italic}.c11{padding-top:0pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center}.c0{padding-top:0pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c16{padding-top:0pt;padding-bottom:12pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c7{background-color:#ffffff;max-width:415.3pt;padding:72pt 90pt 72pt 90pt}.c8{margin-left:36pt;padding-left:0pt}.c6{padding:0;margin:0}.c15{color:inherit;text-decoration:inherit}.c10{height:11pt}.c14{background-color:#ffff00}.title{padding-top:24pt;color:#000000;font-weight:700;font-size:36pt;padding-bottom:6pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:18pt;color:#666666;font-size:24pt;padding-bottom:4pt;font-family:"Georgia";line-height:1.1500000000000001;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Calibri"}p{margin:0;color:#000000;font-size:11pt;font-family:"Calibri"}h1{padding-top:24pt;color:#000000;font-weight:700;font-size:24pt;padding-bottom:6pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-weight:700;font-size:18pt;padding-bottom:4pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:14pt;color:#000000;font-weight:700;font-size:14pt;padding-bottom:4pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:12pt;color:#000000;font-weight:700;font-size:12pt;padding-bottom:2pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:11pt;color:#000000;font-weight:700;font-size:11pt;padding-bottom:2pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:10pt;color:#000000;font-weight:700;font-size:10pt;padding-bottom:2pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}</style></head>
+-->
+<body class="c7">
+<div class="demo">
+<h1 class="c11" id="h.gjdgxs"><span class="c4">Privacy Policy</span></h1><p class="c0"><span class="c5">Last modified</span><span class="c1">: Aug. 19, 2018</span></p><p class="c0"><span class="c1">Your privacy is important to us. When you use the Dramaton&rsquo;s Mobile applications (the &quot;</span><span class="c5">App</span><span class="c1">&quot;) you are subject to this privacy policy (the &quot;</span><span class="c5">Privacy Policy</span><span class="c1">&quot;). Sometimes we need information to provide services that you request. This Privacy Policy describes the information collected by Dramaton through our mobile applications and how we use that information. We are committed to protecting the privacy of all visitors, Users and others who access our application (&ldquo;</span><span class="c5">you</span><span class="c1">,&rdquo; or &ldquo;</span><span class="c5">Users</span><span class="c1">&rdquo;).</span></p><p class="c0"><span class="c4">Our Privacy Policy Explains</span><span class="c1">:</span></p><ul class="c6 lst-kix_list_1-0 start"><li class="c2"><span class="c1">What information we collect and why we collect it.</span></li><li class="c2"><span class="c1">How we use that information.</span></li><li class="c2"><span class="c1">The choices we offer, including how to access and update information.</span></li></ul><p class="c0"><span class="c1">If you do not agree with this policy, do not use our App or provide Dramaton with your information.</span></p><p class="c0"><span class="c4">General</span></p><p class="c0"><span class="c1">Users can access the App through our Applications on Devices. A &ldquo;</span><span class="c5">Device</span><span class="c1">&rdquo; is any computer used to access the App, including without limitation a desktop, laptop, mobile phone, tablet, or other consumer electronic device. This Privacy Policy governs your access to the App, regardless of how you access it. By using our App you consent to the collection, transfer, processing, storage, disclosure and other uses described in this Privacy Policy.</span></p><p class="c0"><span class="c4">Children&#39;s Privacy</span></p><p class="c0"><span class="c1">We acknowledge the importance in protecting the privacy of children when collecting their Personal Information through our APP. Please note that children can choose whether to share their information with us, and we will not require a child to provide more information than is reasonably necessary in order to participate in the APP&#39;s activities. We encourage parents to assist us in making their children&#39;s information secure, by instructing their children to provide their personal information upon their parental permission. </span></p><p class="c0"><span class="c1">When we collect the Personal Information of children, we take the necessary steps to assure the protection of their information by;</span></p><ul class="c6 lst-kix_list_2-0 start"><li class="c2"><span class="c1">Limiting the collection of children&#39;s Personal Information to the extent necessary to provide them with the required services.</span></li><li class="c2"><span class="c1">We will not transfer Children&#39;s Personal Information for any reason other than provided in this Privacy Policy.</span></li><li class="c0 c8"><span class="c1">We will provide access to parents, who wish to review the Personal Information we hold about their children, as well as comply with their request for erasure and rectification of the information, if such is required.</span></li></ul><p class="c0"><span class="c1">If you are under the age of 18, you should read this Privacy Policy with you parents or legal guardians, and ask questions about the things in this Privacy Policy that you do not understand. If you are under the age of 13, please ask your parents or legal guardian for permission before you provide us with any of your Personal Information. </span></p><p class="c0"><span class="c4">Collection of Information</span></p>
+<!--
+<p class="c0"><span class="c3">Registration</span><span class="c1">&nbsp;</span><span class="c12">[is there a registration process?]</span></p><p class="c0 c10"><span class="c1"></span></p>
+-->
+<p class="c0"><span class="c3">Record Audio from your Device</span></p><p class="c0"><span class="c1">Some of our Application may request microphone permissions, which is considered a &quot;</span><span class="c5">Sensitive Permission</span><span class="c1">&quot;. Therefore, while using the App, you may be asked to provide us with access to your microphone. This permission allows us to use the device&rsquo;s microphone to record audio. If you do not wish to share your audio records, you can choose to deny such access. </span></p><p class="c16"><span class="c3">Take Photos and Videos</span></p><p class="c16"><span class="c1">Some of our Apps </span><span>may </span><span class="c1">request camera permissions, which is considered a &quot;</span><span class="c5">Sensitive Permission</span><span class="c1">&quot;. This permission allows you to take photos/videos and turn ON/OFF Camera Flash. If you do not wish to share your photos and videos, you can choose to deny such access.</span></p><p class="c0"><span class="c1">From this point, information from which you can be personally identified, including, </span><span class="c9">inter alia</span><span class="c1">, Sensitive Information, shall be referred to as &quot;</span><span class="c5">Personal Information</span><span class="c1">&quot;.</span></p><p class="c0"><span class="c1">You are not required by law to provide us with any of the above information; however, if you do not provide certain information, you may not be able to use the App.</span></p><p class="c0"><span class="c4">Use of Information</span><span class="c1">:</span></p><p class="c0"><span class="c1">We may use Personal Information submitted by you for the following purposes: Help us develop, deliver, and improve our products and services and supply higher quality service; manage online surveys and other activities you have participated in.</span></p><p class="c0"><span class="c1">We may further collect and use non-personal information in the following circumstances: to have a better understanding of the User&rsquo;s behavior, solve problems regarding products and services, improve our products, services and advertising. We may collect and process further anonymized information and data that is not processed by reference to a specific individual.</span></p><p class="c0"><span class="c4">Sharing Information with Others:</span></p><p class="c0"><span class="c1">We may use certain reliable third party companies and individuals to help us provide, analyze, and improve the services, for the purposes described in this policy. These third parties may be located in countries other than your own, and we may send them information we receive. These third parties may have access to your Personal Information only for purposes of performing these tasks on our behalf and under obligations similar to those in this Privacy Policy. In such cases, these third parties must abide by our data privacy and security requirements and are not allowed to use Personal Information they receive from us for any other purpose. </span></p><p class="c0"><span class="c1">We may also disclose Personal Information as part of a corporate transaction such as a merger or sale of assets. When we transfer Personal Information, we use a variety of legal mechanisms, including contracts, to help ensure your rights and protections travel with your data. We will transfer Personal Information within assuring the appropriate and suitable safeguards.</span></p><p class="c0"><span class="c1">In addition, Dramaton may share your Personal Information with others, without your explicit consent and to the extent necessary in Dramaton&#39;s good-faith discretion, for the following purposes:</span></p>
+<ul class="c6 lst-kix_list_1-0 start">
+<li class="s0">
+<span class="c1">When it is necessary to facilitate the functionality of the App and to provide you with the App, or to protect our customers;</span>
+</li>
+<li class="s0">
+<span class="c1">If Dramaton reasonably believes that you have breached the Terms of Use, or abused your rights to use the App, or performed any act or omission that Dramaton reasonably believes to be violating any applicable law, rules, or regulations. Dramaton may share your information in these cases, with law enforcement agencies and other competent authorities and with any third party, as may be required as a result of your wrongdoing;</span>
+</li>
+<li class="s0">
+<span class="c1">If the disclosure is necessary to comply with an applicable law or to respond to a valid legal process required by a law enforcement or governmental agency;</span>
+</li>
+<li class="s0">
+<span class="c1">In any case of dispute, or legal proceeding of any kind between you and Dramaton, or between you and other Users with respect to, or in relation to the App;</span>
+</li>
+<li class="s0">
+<span class="c1">In any case where Dramaton reasonably believes that sharing information is necessary to prevent imminent harm, physical damage or damage to property;</span>
+</li>
+<li class="s0">
+<span class="c1">If Dramaton changes the operation of the App providing a different framework, or through another legal structure or entity, or if Dramaton enters into bankruptcy, or if Dramaton and/or any of its business is acquired by, or merged into or with another entity, provided however, that those entities agree to be bound by the provisions of this policy, with respective changes taken into consideration;</span>
+</li>
+<li class="s0">
+<span class="c1">To help our merchants and partners target the audience they want to reach and to provide you with potentially interesting offers;</span>
+</li>
+<li class="s0">
+<span class="c1">Dramaton may also share Personal Information with companies or organizations connected, or affiliated with Dramaton, such as subsidiaries, sister-companies and parent companies, and other partners, with the express provision that their use of such information must comply with this policy;</span>
+</li>
+</ul>
+<p class="c0"><span class="c4">Your Rights and Data Retention</span></p><p class="c0"><span class="c1">You can request the deletion of the </span><span class="c1">Personal Information</span><span class="c1">&nbsp;</span><span class="c1">Dramaton has collected or withdraw your consent to the processing of such information, and disable its future collection by contacting us </span><span class="c9">at info@dramaton.com</span><span class="c1">. From that point, we shall not have the right to process your Personal Information, and you&#39;ll not be allowed to use our App. Note, however, that you may withdraw consent at any time, without affecting the lawfulness of data processing we carried out based on your consent before such withdrawal. </span></p><p class="c0"><span class="c1">If you are located within the European Union (the &quot;</span><span class="c5">EU</span><span class="c1">&quot;), you may be entitled with some additional rights. For further information and/or for the exercising of such rights, please contact us at </span><span class="c9">info@dramaton.com.</span></p><p class="c0"><span class="c1">Dramaton does not retain information longer than required to provide the App and for its reasonable business needs, or for other essential purposes such as complying with our legal obligations, resolving disputes, and enforcing our agreements.</span></p><p class="c0"><span class="c1">Dramaton may at all times review, retain and disclose any other information as Dramaton deems necessary to satisfy any applicable law, regulation, legal process or governmental request and Dramaton&#39;s needs and necessities. By doing so, Dramaton does not either expressly or impliedly endorse, affirm or in any manner assume any responsibility for such communications.</span></p><p class="c0"><span class="c4">Information Security</span></p><p class="c0"><span class="c1">Dramaton considers information security to be a top priority, and is committed to protecting the security of your Personal Information. Dramaton implements systems, applications and procedures to secure Personal Information, to minimize the risks of theft, damage, loss of information, or unauthorized access or use of information. In particular, such security measures are taken where the processing involves the transmission of data through a public network, and to prevent all other unlawful forms of processing. When we transmit highly confidential data over the Internet, we protect it through the use of encryption. However, these measures are unable to provide absolute assurance.</span></p><p class="c0"><span class="c1">Personal Information collected by Dramaton may be stored and processed in various locations (also using cloud services), such as Google Firebase, which are chosen in order to operate efficiently, improve performance, and to create redundancies to protect the data in the event of an outage or any other problem. We take steps to ensure that the data we collect under this Privacy Policy is processed according to the provisions of this Policy and the requirements of any applicable law wherever the data is located. Personal Information collected on our Applications (which includes, inter alia, medical records) may be stored on our cloud services or on our partner&#39;s cloud service, based on the contract between us and the specific partner. </span></p><p class="c0"><span class="c1">Therefore, although Dramaton takes great efforts to protect your Personal Information, Dramaton cannot guarantee and you cannot reasonably expect that Dramaton&#39;s databases will be immune from any wrongdoings, malfunctions, unlawful interceptions or access, or other kinds of abuse and misuse.</span></p><p class="c0"><span class="c1">Questions about the security of Personal Information can be directed to Mr. Gil Meir, email: </span><span class="c13"><a class="c15" href="mailto:info@dramaton.com">info@dramaton.com</a></span><span class="c1">.</span></p>
+<p class="c0"><span class="c4">Contact Dramaton / Abuse Reports</span></p><p class="c0"><span class="c1">If you have a privacy concern, complaint, or a question or believe that your privacy has been compromised by any person, in the course of using the App, or any other requests, responses, questions and complaints, then please contact Dramaton via info@dramaton.com. &nbsp;</span></p><p class="c0"><span class="c4">Changes to this Privacy Policy</span></p><p class="c0"><span class="c1">We may change this Privacy Policy from time to time, when necessary to reflect customer feedback and changes in our App. When we post changes to this policy, we will revise the &quot;last modified&quot; date at the top of the policy. If we make a change to this Privacy Policy that we believe materially reduces your rights, we will provide a notice prior to the change becoming effective. We encourage you to periodically review this page for the latest information on our privacy practices. We may provide notice of changes in other circumstances as well. By continuing to use the App after those changes become effective, you agree to be bound by the revised Privacy Policy.</span></p>
+<p class="c0"></p>
+</div>
+</body>
+
+<div class="footer">
+<a href="mailto:info@dramaton.com" target="_top">
+<img border="0" alt="Email" src="images/email.png" width="64" height="64">
+</a>
+</div>
+</body>
+
+</html>

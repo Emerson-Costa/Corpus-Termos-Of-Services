@@ -1,0 +1,555 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="ss_tests" value="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"80752ce357","applicationID":"726436553","transactionName":"YVxWMhRZW0JYBhVYXFgWeTAlF2dUVwEEQ35AWncJCExHXlUJBEMccVxaAxRRVnZLDAVhUlFc","queueTime":0,"applicationTime":25,"agent":"","atts":"TRtVRFxDF0NcFBRUQEIXRgMAXUdUS0dbExxFTVsUAxdUQUkWTlVWQlhdChUaGRNIEAREVmlOVQ8SZ0FYVAA+XEAUAxZWRBQXX0tLFUNaRnBQRFwaBwAMVFcDAXUIA14nD3MGAUccTA=="}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UAcAUVNUGwQCUlVRAQQCVQ==",licenseKey:"80752ce357",applicationID:"726436553"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(22),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(23),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(23),a=t(22);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(19),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(22),c=t(23),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(21),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],19:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],20:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],21:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],22:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],23:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],24:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?s(t,c,o):o()}function n(n,r,i,o){if(!l.aborted||o){t&&t(n,r,i);for(var a=e(i),c=m(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([x,n,r,a]),a}}function p(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||i(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:a,aborted:!1};return x}function o(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(22),u={},d={},l=e.exports=i();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+b.offset],null,"api"),s("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){s("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-b.offset}var c=(new Date).getTime(),s=t("handle"),f=t(22),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1177.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:c,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),s("mark",["firstbyte",c],null,"api");var E=0,R=t(24)},{}],"wrap-function":[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var i=t("ee"),o=t(23),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,i){function nrWrapper(){var r,a,c,s;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,i],c])}u(e+"start",[r,a,i],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,i,o){i||(i="");var a,c,s,f="-"===i.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+i:i,o,c))}function u(n,r,i){if(!s||e){var o=s;s=!0;try{t.emit(n,r,i,e)}catch(a){l([a,n,r,i])}s=o}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var i in t)c.call(t,i)&&(e[i]=t[i]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=i),n.inPlace=f,n.flag=a,n}},{}]},{},["loader",2,12,4,3]);</script>
+    <link rel="shortcut icon" href="https://static.trainlinecontent.com/content/WEB/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://static.trainlinecontent.com/content/WEB/images/apple-touch-icon-152x152.png" />
+    <link rel="stylesheet" type="text/css" href="https://static.trainlinecontent.com/content/WEB/fonts/tl-circular-1.0.1/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://static.trainlinecontent.com/content/WEB/fonts/open-sans-1.0.0/index.css" />
+        <meta name="robots" content="index,follow" />
+    <title>Terms and Conditions - thetrainline.com</title>
+
+
+    <link href="/cms/legacy/uk/css/v-637340349166740749/app.min.css" rel="stylesheet" media="screen">
+    <script src="/cms/legacy/uk/scripts/v-637340349166867651/picturefill.min.js" async></script>
+
+    <script src="/cms/legacy/uk/scripts/apps/v-637340349198847832/vendors.js"></script>
+
+    
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PRSJ985');</script>
+<!-- End Google Tag Manager -->
+
+    
+
+  <script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false"}]);</script>
+    <script>!function(){function o(n,i){if(n&&i)for(var r in i)i.hasOwnProperty(r)&&(void 0===n[r]?n[r]=i[r]:n[r].constructor===Object&&i[r].constructor===Object?o(n[r],i[r]):n[r]=i[r])}try{var n=decodeURIComponent("%7B%0A%0A%20%20%20%20%22ResourceTiming%22%3A%20%7B%0A%0A%20%20%20%20%20%20%20%20%22clearOnBeacon%22%3A%20true%0A%0A%20%20%20%20%7D%0A%0A%7D");if(n.length>0&&window.JSON&&"function"==typeof window.JSON.parse){var i=JSON.parse(n);void 0!==window.BOOMR_config?o(window.BOOMR_config,i):window.BOOMR_config=i}}catch(r){window.console&&"function"==typeof window.console.error&&console.error("mPulse: Could not parse configuration",r)}}();</script>
+  <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="2HR59-U4W7W-B25X5-Y2L2K-QVXN6",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(c){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"2HR59-U4W7W-B25X5-Y2L2K-QVXN6";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="cookiepresent",a="welow3dincuasx2gubzq-f-22927c112-clientnsv4-s.akamaihd.net",i={"ak.v":"28","ak.cp":"879033","ak.ai":parseInt("447167",10),"ak.ol":"0","ak.cr":23,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"c23eb0c","ak.r":34634,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"177.22.235.0","ak.cport":60138,"ak.gh":"104.77.168.5","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1598464115","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==b2Q8U4HQLB2NyDkm2FOiYCloHYwMOTw4+X1yGnpaDIGcwjt8dZzVsEzGNlKXZ9tZYdKiIaZAWchk+uyh3pJuJX254TREeSKq59WYkR4JA8XjLKORDd1l8lLgr9secyFtExlDuQyeiIvhqGwaGYMK9/NNHA5aYO9cafHBF5rzNL0qPyy42sj9av49CTvKKpF0QYD9xLn5UDkUY+Oc9Mk+PnqbvNhBqBi31l+JTW6lpKuO+uDL1oWceJUFUBtgjIYGLOPCp/Fhrk2qMqyTb1M7zAisuH0ImXTVN+X+z/G9qzsSUPcM2txcuvVU1QXuHbXfFQ3YMRxp/hsrdDx/h5ZX2qGrOCdoyWGyyVukgeWXMadATRmHU7e/4JVkLNK+Jm5FVGv9bTsNtAv1wfIw26nj80eqPR5ZzQ369U8hWIBYTis=","ak.pv":"256","ak.dpoabenc":""};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!o.i){var e=BOOMR.subscribe;e("before_beacon",o.av,null,null),e("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<body class="bodyDarkBlue" >
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="width:0;height:0;visibility:hidden;">
+    <symbol viewBox="0 0 181 180" id="icon-accordion-active"><title>Untitled</title><desc>Created with Sketch.</desc> <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->    <g id="accordion-active-Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="accordion-active-ICONs_Accordian" sketch:type="MSLayerGroup" transform="translate(89.077446, 89.507864) rotate(-45.000000) translate(-89.077446, -89.507864) translate(0.577446, 1.507864)"> <g id="accordion-active-Group" sketch:type="MSShapeGroup"> <path d="M88.802,18 C50.204,18 18.802,49.402 18.802,88 C18.802,126.598 50.204,158 88.802,158 C127.4,158 158.802,126.598 158.802,88 C158.802,49.402 127.4,18 88.802,18 L88.802,18 Z M143.971,93 L94,93 L94,142.971 C94,145.732 91.761,147.971 89,147.971 C86.239,147.971 84,145.732 84,142.971 L84,93 L34.029,93 C31.268,93 29.029,90.761 29.029,88 C29.029,85.239 31.268,83 34.029,83 L84,83 L84,33.029 C84,30.268 86.239,28.029 89,28.029 C91.761,28.029 94,30.268 94,33.029 L94,83 L143.971,83 C146.732,83 148.971,85.239 148.971,88 C148.971,90.761 146.732,93 143.971,93 L143.971,93 Z" id="accordion-active-Shape" /> <path d="M88.802,0 C40.201,0 0.802,39.399 0.802,88 C0.802,136.601 40.201,176 88.802,176 C137.403,176 176.802,136.601 176.802,88 C176.802,39.399 137.403,0 88.802,0 L88.802,0 Z M88.802,158 C50.204,158 18.802,126.598 18.802,88 C18.802,49.402 50.204,18 88.802,18 C127.4,18 158.802,49.402 158.802,88 C158.802,126.598 127.4,158 88.802,158 L88.802,158 Z" id="accordion-active-Shape" fill="#48D5B5" /> </g> <path d="M135.721,81.25 L95.75,81.25 L95.75,41.279 C95.75,37.557 92.722,34.529 89,34.529 C85.278,34.529 82.25,37.557 82.25,41.279 L82.25,81.25 L42.279,81.25 C38.557,81.25 35.529,84.278 35.529,88 C35.529,91.722 38.557,94.75 42.279,94.75 L82.25,94.75 L82.25,134.722 C82.25,138.444 85.278,141.472 89,141.472 C92.722,141.472 95.75,138.444 95.75,134.722 L95.75,94.75 L135.722,94.75 C139.444,94.75 142.472,91.722 142.472,88 C142.472,84.278 139.443,81.25 135.721,81.25 L135.721,81.25 Z" id="accordion-active-Shape" fill="#48D5B5" sketch:type="MSShapeGroup" /> </g> </g> </symbol>
+    <symbol viewBox="0 0 177 176" id="icon-accordion-inactive"><title>Untitled</title><desc>Created with Sketch.</desc> <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->    <g id="accordion-inactive-Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="accordion-inactive-ICONs_Accordian" sketch:type="MSLayerGroup"> <g id="accordion-inactive-Group" sketch:type="MSShapeGroup"> <path d="M88.802,18 C50.204,18 18.802,49.402 18.802,88 C18.802,126.598 50.204,158 88.802,158 C127.4,158 158.802,126.598 158.802,88 C158.802,49.402 127.4,18 88.802,18 L88.802,18 Z M143.971,93 L94,93 L94,142.971 C94,145.732 91.761,147.971 89,147.971 C86.239,147.971 84,145.732 84,142.971 L84,93 L34.029,93 C31.268,93 29.029,90.761 29.029,88 C29.029,85.239 31.268,83 34.029,83 L84,83 L84,33.029 C84,30.268 86.239,28.029 89,28.029 C91.761,28.029 94,30.268 94,33.029 L94,83 L143.971,83 C146.732,83 148.971,85.239 148.971,88 C148.971,90.761 146.732,93 143.971,93 L143.971,93 Z" id="accordion-inactive-Shape" /> <path d="M88.802,0 C40.201,0 0.802,39.399 0.802,88 C0.802,136.601 40.201,176 88.802,176 C137.403,176 176.802,136.601 176.802,88 C176.802,39.399 137.403,0 88.802,0 L88.802,0 Z M88.802,158 C50.204,158 18.802,126.598 18.802,88 C18.802,49.402 50.204,18 88.802,18 C127.4,18 158.802,49.402 158.802,88 C158.802,126.598 127.4,158 88.802,158 L88.802,158 Z" id="accordion-inactive-Shape" fill="#FFFFFF" /> </g> <path d="M135.721,81.25 L95.75,81.25 L95.75,41.279 C95.75,37.557 92.722,34.529 89,34.529 C85.278,34.529 82.25,37.557 82.25,41.279 L82.25,81.25 L42.279,81.25 C38.557,81.25 35.529,84.278 35.529,88 C35.529,91.722 38.557,94.75 42.279,94.75 L82.25,94.75 L82.25,134.722 C82.25,138.444 85.278,141.472 89,141.472 C92.722,141.472 95.75,138.444 95.75,134.722 L95.75,94.75 L135.722,94.75 C139.444,94.75 142.472,91.722 142.472,88 C142.472,84.278 139.443,81.25 135.721,81.25 L135.721,81.25 Z" id="accordion-inactive-Shape" fill="#FFFFFF" sketch:type="MSShapeGroup" /> </g> </g> </symbol>
+    <symbol viewBox="0 0 190 190" id="icon-footer-accordion">
+        <title>footer-accordion</title>
+        <g>
+            <path fill="none" d="M94.802,25c-38.598,0-70,31.402-70,70s31.402,70,70,70s70-31.402,70-70S133.4,25,94.802,25z M149.971,100H100
+		v49.971c0,2.761-2.239,5-5,5s-5-2.239-5-5V100H40.029c-2.761,0-5-2.239-5-5s2.239-5,5-5H90V40.029c0-2.761,2.239-5,5-5s5,2.239,5,5
+		V90h49.971c2.761,0,5,2.239,5,5S152.732,100,149.971,100z" />
+        </g>
+        <path d="M141.721,88.25H101.75V48.279c0-3.722-3.028-6.75-6.75-6.75s-6.75,3.028-6.75,6.75V88.25H48.279
+	c-3.722,0-6.75,3.028-6.75,6.75s3.028,6.75,6.75,6.75H88.25v39.972c0,3.722,3.028,6.75,6.75,6.75s6.75-3.028,6.75-6.75V101.75
+	h39.972c3.722,0,6.75-3.028,6.75-6.75S145.443,88.25,141.721,88.25z" />
+    </symbol>
+    <symbol viewBox="0 0 300 245" id="icon-icon-twitter"><title>icon-twitter</title> <image xlink:href="data:img/png;base64,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" width="300" height="245" /> </symbol>
+    <symbol viewBox="0 0 147.2 31.8" id="icon-logo-trainline"><title>logo-trainline</title><path fill="#48d5b5" d="M141.6 18.4c-.1-2.1-1.4-4.1-4.7-4.1-2.9 0-4.5 2.2-4.7 4.1h9.4zm5.3 6.8c-1.1 3.6-4.4 6.6-9.5 6.6-5.7 0-10.8-4.1-10.8-11.1 0-6.6 4.9-11 10.2-11 6.4 0 10.3 4.1 10.3 10.8 0 .8-.1 1.7-.1 1.7h-14.9c.1 2.8 2.5 4.7 5.2 4.7 2.6 0 4.1-1.3 4.7-3.2l4.9 1.5zm-36.3-6c0-2.4 1.4-4.3 3.9-4.3 2.7 0 3.9 1.8 3.9 4.1v12.1h5.6V18c0-4.6-2.4-8.3-7.5-8.3-2.2 0-4.7 1-6 3.1v-2.6H105V31h5.6V19.2zm-14.7-8.9h5.6v20.8h-5.6V10.3zM98.7 0c1.9 0 3.5 1.6 3.5 3.5s-1.5 3.4-3.5 3.4c-1.9 0-3.5-1.6-3.5-3.4 0-1.9 1.6-3.5 3.5-3.5M67.4 19.2c0-2.4 1.4-4.3 3.9-4.3 2.7 0 3.9 1.8 3.9 4.1v12.1h5.6V18c0-4.6-2.4-8.3-7.5-8.3-2.2 0-4.7 1-6 3.1v-2.6h-5.5V31h5.6V19.2zm-14.9-8.9h5.6v20.8h-5.6V10.3zM55.2 0c1.9 0 3.5 1.6 3.5 3.5s-1.5 3.4-3.5 3.4c-1.9 0-3.5-1.6-3.5-3.4.1-1.9 1.6-3.5 3.5-3.5m-16 27.6c-1.8 0-2.7-1.2-2.7-2.4 0-1.6 1.1-2.4 2.6-2.6l4.7-.7v.9c0 3.6-2.2 4.8-4.6 4.8m-8.3-2.1c0 3.3 2.7 6.3 7.2 6.3 3.1 0 5.1-1.4 6.1-3.1 0 .8.1 1.9.2 2.5h5.2c-.1-.7-.3-2.2-.3-3.3V17.6c0-4.2-2.5-7.9-9.1-7.9-5.6 0-8.6 3.6-8.9 6.9l5 1.1c.2-1.8 1.5-3.4 4-3.4 2.4 0 3.5 1.2 3.5 2.7 0 .7-.4 1.3-1.6 1.5l-5.1.8c-3.5.4-6.2 2.5-6.2 6.2m-1.7-9.6c-.6-.1-1.2-.2-1.7-.2-2.9 0-5.4 1.4-5.4 5.9v9.5h-5.6V10.3H22v3.1c1.3-2.8 4.1-3.3 5.9-3.3.5 0 .9 0 1.3.1v5.7zm-15.8-5.3v4.9H6.9c.6-.3 1.1-.8 1.6-1.2 1-1 1.7-2.2 2.2-3.7h2.7zM1.6 15.5H0v-4.9h9.1c-.6 1.5-1.5 2.7-2.8 3.6-1.2.8-2.8 1.2-4.7 1.3m10.1 11c.7 0 1.4-.1 1.7-.2V31c-.5.2-1.5.5-3.1.5-4 0-6.5-2.4-6.5-6.4v-8.3h5.5v7.4c0 1.7.8 2.3 2.4 2.3M9.3 9.3V4.4h-5v2.9c0 .8-.2 1.5-.6 2h5.6zm83.5 17.2h-1c-1.6 0-2.4-.6-2.4-2.4V.9h-5.5v24.2c0 4 2.5 6.4 6.5 6.4 1 0 1.8-.1 2.4-.3v-4.7z" /></symbol>
+</svg>
+
+
+<header class="site-header">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only" data-dictionary-item="Global/Header/ToggleNavigation">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <i class="logo logo-trainline"></i>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right nav-secondary">
+                            <li><a href="https://www.thetrainline.com/en/help/" >Help</a></li>
+                            <li><a href="/business" >Business Account</a></li>
+                            <li><a href="/my-account/register" >Register</a></li>
+                            <li><a href="/book/login" class="last">Sign In</a></li>
+                </ul>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="nav navbar-nav navbar-right nav-primary">
+                                        <li><a href="/live">Live departures</a></li>
+                                        <li><a href="https://www.thetrainline.com/trains/europe">European Rail</a></li>
+                                        <li><a href="/information">Tools &amp; Apps</a></li>
+                                        <li><a href="/deals-discounts">Deals</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    
+
+    <div class="content">
+        <section class="introduction grey-bg">
+
+                <div class="container hidden-xs">
+        <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">
+                    <li>
+                        <a href="https://www.thetrainline.com/"><span>Home</span></a>
+                    </li>
+                    <li itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement" class="active">
+                        <a href="https://www.thetrainline.com/terms" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+                            <span itemprop="name">Terms and conditions</span>
+                        </a>
+                        <meta itemprop="position" content="1"/>
+                    </li>
+        </ol>
+    </div>
+
+
+
+
+            
+
+<!--Banner Image-->
+    <div class="bannerimage jumbotron hidden-xs jumbotron-image-holder">
+        
+    </div>
+
+
+<div class="umb-grid">
+<div class="grid-section row">
+<div class="col-md-12 column">
+<div class="container">
+<div >
+<div class="row clearfix">
+<div class="col-md-12 column">
+<div >
+<h2>TERMS AND CONDITIONS</h2>
+<p><span>Last updated on 27 April 2020</span></p>
+<p><strong>Coronavirus (COVID-19) – Find exchange, refund and more info <a href="https://www.thetrainline.com/trains/coronavirus-travel-information">on our dedicated page</a></strong></p>
+<p> </p>
+<p>We’ve done our best to make them as easy to understand as possible, so we’re crystal clear. We know they may not be as page turning as a bestselling novel, but all we ask is that you take the time to read them fully – make a coffee, put your feet up and dive right in.</p>
+<p>For our American customers, we’d like to draw your attention to section 15, as there’s some important info there that relates just to you.</p>
+<p>Ready? Ok, then let’s begin…</p>
+<ol>
+<li><span class="Trainline_Mint"><strong>Who are We?</strong></span></li>
+</ol>
+<p>The Trainline Group, that’s us, is made up of –</p>
+<ul>
+<li><strong>Trainline.com Limited</strong>, a company registered in England (company registration number 3846791) with a registered office in the heart of the city at 120 Holborn, London, EC1N 2TD.</li>
+<li><strong>Trainline SAS</strong>, a simplified joint-stock company (number 512 277 450 in the Trade and Companies Register of Paris), with a registered office in the chic French capital, Paris (75009). You can find our Paris office at 20 rue Saint-Georges.
+<ul>
+<li>Registration Atout France 79-81, rue de Clichy, 75009 Paris IM078100022</li>
+<li>Financial guarantee Atradius Crédit Insurance NV can be found at 44 avenue Georges Pompidou – 92300 Levallois Perret CEDEX</li>
+<li>Civil liability insurance MMA IARD can be found at 14 boulevard Marie et Alexandre Oyon – 72030 Le Mans</li>
+</ul>
+</li>
+<li><strong>Trainline International Limited</strong> a company registered in England (company registration number 06881309) with a registered office at 120 Holborn, London, EC1N 2TD.</li>
+</ul>
+<p>Whenever we say “us” we mean The Trainline Group and whenever we say “you” then we’re referring to a “user” or “customer” of our booking service.</p>
+<p>Through our website www.thetrainline.com (for ease, we’ll just call it “our website” from now on) and iOS and Android mobile applications (for ease, we’ll just call them “our apps” from now on), you can check timetables and ticket prices for a selected train, coach or bus journey and book tickets directly (we’ll call this “our booking service”).</p>
+<p>Our booking service is offered to anyone aged 16 and over. If you’re between 16 and 17, you’ll need your parent or guardian’s permission. Making an order on our website or our apps makes you a “user” or a “customer”.</p>
+<p>We’re an official agent on behalf of train, coach and bus operators (we’ll collectively call them “the operators” from now on), but we don’t run these services ourselves. We’re only responsible for our booking service, to the extent laid out in these Terms and Conditions. And, when you use our booking service (even if it’s just browsing), you’re acknowledging that you’ve read and understood that your use is subject to these Terms and Conditions and our <a href="https://www.thetrainline.com/terms/privacy">Privacy Policy</a>.</p>
+<p>Also, just to note when we capitalise ‘Terms and Conditions’ it’s because we’re talking about ours, the ones you’re reading right now, and when it’s lowercase that means we’re talking about ones separate to these, like terms and conditions of the operators or third-parties. </p>
+<ol start="2">
+<li><span class="Trainline_Mint"><strong>How</strong><strong> </strong><strong>to get in touch with us</strong></span></li>
+</ol>
+<p><strong>2.1 Drop us an email</strong></p>
+<p>Fill out an <a href="https://www.thetrainline.com/en/help/contact/email">online form</a> with as much detail as possible, so we can get your query to the right person and give you the best answer. We'll aim to get back to you within seven days, so if you need a quick answer then we recommend calling instead.</p>
+<p><strong>2.2 Give us a call</strong></p>
+<p><u>For UK journeys</u></p>
+<p>Call us between 08:00 and 22:00 UK time any day of the week.</p>
+<p>To make a booking, call us on 0871 244 1545. Calls cost £0.13 per minute plus your phone company's access charge. Calls from outside the UK may cost more.</p>
+<p>For help with existing bookings, call us on 0333 202 2222, unless you're calling us from outside the UK where you'll need to dial (+44) 333 202 2222. Just so you know, we can only discuss booking details with the person who made the booking, for data protection reasons. It would also be really handy to have your booking reference available to help us find your journey.</p>
+<p><u>For Eurostar and European journeys</u></p>
+<p>Please call Monday to Friday between 08:00 and 18:00 UK time on +44 333 202 2222.</p>
+<p><u>Business account</u></p>
+<p>Call us Monday to Friday between 08:00 and 18:00 UK time on 0870 3333 555* Calls cost £0.2 per minute plus your phone company's access charges. Calls from outside the UK may cost more.</p>
+<ol start="3">
+<li><span class="Trainline_Mint"><strong>Our Operators and third-party products or services</strong></span></li>
+</ol>
+<p><strong>3.1 Booking with us</strong></p>
+<p>We sell tickets through our booking service on behalf of several operators, so any tickets you buy with us will also be subject to their terms and conditions. You can read the terms and conditions for your ticket at the order stage and before you make a payment, to make sure you’re happy with what you’re buying.</p>
+<p><strong>3.2 Third-party products or services</strong></p>
+<p>You can buy third-party products and services (both rail and non-rail related), via our booking service and sometimes we’ll link directly to the booking pages of third-party providers, to make it easier for you to buy these goods or services. But remember, these third-party suppliers are independent from us and we’re not responsible for any errors in the content on their websites. We don’t sell, organise, or arrange any packages.</p>
+<p>Before booking with a third party it’s important you read their terms and conditions, because any booking made, either on their website or directly through our booking service, creates a contract between you and the relevant third-party supplier. That means you need to arrange any cancellations, changes or issues directly with them.</p>
+<p>Trainline.com Limited is an appointed representative of Fogg Travel Insurance Services Limited, which is regulated and authorised by the Financial Conduct Authority with registration number 307304. The insurance is underwritten by ETI International Travel Protection who is the UK branch of Europäische Reiseversicherung AG (ERV), registered at Companies House FC 25660, BR 007939. ERV is regulated and authorised by the Bundesanstalt für Finanzdienstleistungsaufsicht (BAFIN - <a href="http://www.bafin.de">www.bafin.de</a>) and the Prudential Regulation Authority and subject to limited regulation by the Financial Conduct Authority and Prudential Regulation Authority with registration number 220041.</p>
+<div id="linked-travel-arrangements"></div>
+<p><strong>3.3 Linked Travel Arrangements</strong></p>
+<p>Where you buy a rail or coach journey via our booking service then go on to buy an additional travel service for your trip or holiday via links we display to you (for example at the confirmation page), you will not benefit from rights applying to packages under the Package Travel and Linked Travel Arrangements Regulations 2018 and we will not be responsible for the proper performance of those additional travel services. In case of problems please contact the relevant service provider.</p>
+<p>However, if you do book additional travel services via those links within 24 hours of receiving the confirmation of your rail or coach booking, those travel services will become part of a “linked travel arrangement” (as defined in the Linked Travel Arrangements Regulations 2018).</p>
+<p>Please note that, in the unlikely event of our insolvency any rail or coach tickets purchased through us will still be honoured by the rail or coach carrier.  Accordingly, we has not taken out any additional protection to refund you for your rail or coach tickets in the event of our insolvency.</p>
+<p>For more information please see <a href="https://www.legislation.gov.uk/uksi/2018/634/contents/made">The Package Travel and Linked Travel Arrangements Regulations 2018</a>.</p>
+<ol start="4">
+<li><span class="Trainline_Mint"><strong>How the booking service works</strong></span></li>
+</ol>
+<p>We always try to give you the key information on the tickets we sell on behalf of the operators, so you can make an informed choice.</p>
+<p><strong>4.1 You – the customer</strong></p>
+<p>When you book tickets with us, you can either check out as a guest or create a personal account (we’ll call this “your account” from now on). We can refuse the creation of your account, or access to our booking service, for any legitimate reason.</p>
+<p>To create your account, you must make sure that the information you give us is correct and regularly updated. You might be given the option to create an account using information from your Facebook or Google account. If you go for this option, just be aware that Facebook and Google will fill in your details automatically, so you’ll need to double check it’s been completed correctly. Please note that signing in via social media automatically creates a Trainline account.</p>
+<p>Like with everything these days, you’ll need a password to create your account. We know you must have a few but it’s important you keep this safe and confidential, as you’re responsible for anything that happens in your account using this password. Let us know as soon as possible if your password’s lost or stolen. If you’ve opted to use your Facebook or Google account as a basis for your account with us, we’ll just let you use your Facebook or Google password – that’s one less thing to have to remember.</p>
+<p>Unless you’re using our Trainline for Business service, you accept that you’ll only use our booking service for personal use and you’ll only book tickets on behalf of yourself or someone you have the permission of. You’re also agreeing that the card you pay with is yours (the card holder), or that you have the right to use the payment card if it’s not owned by you.</p>
+<p>The email address you give us must be correct, because we’ll use it to send your ticket confirmations and important travel information – no <a href="mailto:test@test.com">test@test.com</a> false addresses please. Please check that our emails aren’t blocked by your internet service provider or sent to your spam folder.</p>
+<p>This next bit’s quite wordy, sorry, but it’s very important.</p>
+<p>By making a booking via our booking service, you’re telling us that you’re not currently subject to any economic, financial, territorial or sectoral sanctions, trade embargoes or individual asset freezes.</p>
+<p>You’re also telling us that neither you nor the person you’re buying tickets for are listed on any sanctions-related list of designated or blocked persons imposed, administered or enforced from time to time by the EU and implemented by its Member States, the United Nations Security Council, Her Majesty’s Treasury of the United Kingdom, the US government, including those administered by the US Treasury, Office of Foreign Assets Control, or any other relevant authorities with jurisdiction over you or us from time to time that would prohibit you from using our booking service.</p>
+<p><strong>4.2 Passenger information for group bookings</strong></p>
+<p>You can book tickets for a group of people (we’ll refer to them as “passengers” collectively and individually as “passenger”) through our booking service. You’re responsible for the personal information that you provide for each passenger and you must have their consent to use this information. Details such as passenger names may be used to issue your tickets, so make sure what you’re providing is correct as we can’t be held responsible for any spelling mistakes or dodgy typos that you make when completing this information.</p>
+<p>Also, remember you can only apply loyalty and/or discount cards for eligible passengers. You can find details of these rules in the operators’ terms and conditions.</p>
+<p><strong>4.3 Selection of tickets</strong></p>
+<p>Although we take the greatest care to give you search results that are accurate in both price and description we can’t guarantee that all the information in our booking service will be correct. This is because timetables, live journey information, platform data, transport network conditions and fares are provided by the operators and any errors made by them could be mirrored in our content.</p>
+<p>All operators have different pricing systems, which could mean that prices may change between the time we show them to you as a search result and your final page before payment. But, don’t worry, we’ll let you know before you pay if the price you’ve chosen is no longer available.</p>
+<p><strong>4.4  UK Season Tickets </strong></p>
+<p><span>Before you buy a UK Season Ticket, you’ll need to make sure you have a valid Photocard (with details that match your UK Season Ticket) to use as ID. You’ll need to have both your UK Season Ticket and Photocard with you at all times when travelling.</span></p>
+<p><strong>4.5 “Mention Me” (Refer-a-Friend Scheme)</strong></p>
+<p>We offer a Refer-a-Friend scheme, which is managed by our partner, Mention Me. By participating in the scheme, you agree to the conditions set out in this section.</p>
+<p><span>In summary, when you refer an eligible friend to book a trip totalling at least 30€ (or 50$ in the United States, both amounts excluding booking fees) on Trainline's app for the first time, you will get a 10€ (or, in the United States, 10$) Amazon Gift Card and your friend will get a 5€ (or, in the United States, 5$) Amazon Gift Card.</span></p>
+<p><span>In order to qualify for the scheme, each friend you refer (as a Referrer) must be a new Trainline customer, be over the age of 18 and live in Italy, Spain Germany or the United States. Provided your friend (the Referred Friend) doesn’t cancel their booking, both Amazon Gift Cards will be fulfilled by Giftcloud, on behalf of Trainline. Only share this scheme with friends who you know would like to receive this offer.</span></p>
+<p>Please see <a href="https://trainline.mention-me.com/me/terms/91707/uweoqphm?nodeId=201936990" data-anchor="?nodeId=201936990">the full terms and conditions</a> of the refer a friend scheme. The Amazon Gift Card is subject to <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=201936990" data-anchor="?nodeId=201936990">Amazon’s terms and conditions</a>. Trainline reserves the right to refuse the issue of any reward to any Referred Friend or Referrer at any time and to vary any and all elements of this scheme at any time without notice.</p>
+<p><strong>4.6 Payment methods</strong></p>
+<p>These are our accepted payment methods –</p>
+<p><strong>GBP (£)</strong></p>
+<ul>
+<li>Card payments (Visa, MasterCard, American Express, Diners Club, Maestro)</li>
+<li>PayPal</li>
+<li>Apple Pay</li>
+</ul>
+<p><strong>Euros (€)</strong></p>
+<ul>
+<li>Card payments (Visa, MasterCard, American Express, Maestro)</li>
+<li>PayPal</li>
+<li>Apple Pay</li>
+</ul>
+<p><strong>US Dollar ($) / Australian Dollar (A$) / Canadian Dollar (C$) / Swiss Franc (CHF) / Swedish Krone (SEK) / Danish Krone (DKK) / Norwegian Krone (NOK) / Japanese Yen (JPY)</strong></p>
+<ul>
+<li>Card payments (Visa, MasterCard, Maestro)</li>
+<li>PayPal (except for NOK, JPY and DKK at this stage)</li>
+<li>Apple Pay</li>
+</ul>
+<p>We do not accept payment by cash or cheques in any currency.</p>
+<p>Before paying, you must accept our Terms and Conditions as well as the operator’s that you’ll be travelling with.</p>
+<p>Your order will only be complete when we’ve sent you a confirmation by email and after the full price has been paid. We have the right to cancel or refuse your current order if you’ve not paid for a previous order in full.</p>
+<p>Once you’ve booked, you can choose to securely register your card details in your account. It’ll make your future bookings speedier. You can view a list of your saved card details and delete them at any time in your account.</p>
+<p>Please note that if you choose to pay in any currency other than euros, Visa and Mastercard transactions will be processed by Trainline.com Limited, 120 Holborn, London, EC1N 2TD (company number: 03846791). If you choose to pay in euros, Visa and Mastercard transactions will be processed by Trainline SAS, Paris (75009) – 20 rue Saint-Georges (company number 512 277 450).</p>
+<p><strong>4.7 Multi-currency Booking Feature</strong></p>
+<p>We show you prices in the currency that we think is the most relevant for you. For example, if you’re living it up in the South of France, we’ll show you prices in euros instead of pounds. Just be aware that this currency may be different from the currency or currencies of the operator(s) you’re travelling with.</p>
+<p>We also show you our prices in other currencies as part of our booking service.</p>
+<p>Any refunds you receive, either full or partial, along with any relating fees, will be calculated from the amount you paid at the time and in the currency that you paid.</p>
+<p>If you buy your ticket using a credit or debit card that’s linked to a bank account set up in a different currency, you may be charged a fee by your bank (for example, commissions). And, if you ask for a refund, just be aware that you may be subject to foreign currency fluctuations between the time you bought your ticket and the time of refund. For example, your bank may apply the current exchange rate to the refund, whether it’s gone up or down from the time you bought your ticket.</p>
+<p>Please have a look at our FAQ page for more information.</p>
+<p><strong>4.8 Booking fees</strong></p>
+<p>We may charge you fees on top of your ticket price, but we’ll highlight these to you during the booking process. Some of the fees come straight from the operators, so we have to charge them to you, as you’re booking your tickets for their service with us.</p>
+<p><strong>4.9 Ticket collection</strong></p>
+<p>We offer a range of ways for you to get your tickets, outlined below. The options we give you may differ, depending on things like your ticket type, operator, payment method, and whether or not there’s enough time for us to post your tickets reliably. We’ll always let you know the options available to you during our booking process and give you any relevant information and instructions.</p>
+<p>Once you’ve booked, we’ll do our best to get your tickets to you as soon as possible and before your train, coach or bus departs. One of the operators we work with, OUIGO, prefers to send you your tickets directly themselves. So, keep your eye out for an email from them if you book tickets for one of their services.</p>
+<p>Whichever method you choose to get your ticket, you’ll need to have the tickets before boarding the train, coach or bus. If you don’t show a valid ticket when asked, you’ll be responsible for paying for your full fare as well as a penalty fine –and, let’s face it, nobody wants that! Tickets are non-transferable, unless we or the operators’ terms state clearly that they are. That means you mustn’t let anyone else print out a copy of your ticket.</p>
+<p><u>Postage</u></p>
+<p>Whichever postage method you choose, we’ll send your tickets to the delivery address you give us, so make sure it’s correct.</p>
+<ul>
+<li>UK normal post</li>
+<li>UK Next day delivery – We use Royal Mail Special Delivery. You’ll need to sign for the tickets upon delivery. Please note that due to Royal Mail restrictions it may take longer to deliver to remote locations. For more information, read our FAQ page – <a href="https://www.thetrainline.com/en/help/question/1180/are-there-any-postcode-restrictions-for-next-day-delivery">Are there any postcode restrictions for Next Day Delivery?</a></li>
+<li>If you live outside the UK, we’ll send you your tickets by International Signed For.</li>
+</ul>
+<p><u>Collecting tickets at the station</u></p>
+<p>Even if you’re the type to leave things to the last minute, you must give yourself enough time to collect your tickets before boarding the train, bus or coach. To collect your tickets, you’ll need your collection reference and (unless we say otherwise) the credit/debit card used to make the booking. Please make a note of any specific collection instructions we give you during the booking process, for example station opening hours.</p>
+<p>If you’re unable to collect your tickets (for example, if the station’s ticket machine is out of order) then ask staff at the station for help.</p>
+<p><u>Print-Your-Own tickets </u></p>
+<p>Print-Your-Own tickets must be printed clearly on A4 paper and taken with you when you travel. If these tickets aren’t printed, they’re not valid and you won’t be able to use the excuse that your printer’s ink ran dry or your dog ate them.</p>
+<p>If your Print-Your-Own tickets have your name on them, you must carry an ID matching the same name, otherwise your tickets won’t be valid. Some operators apply restrictions to Print-Your-Own tickets and you must read these during our booking process.</p>
+<p><u>Mobile Tickets</u></p>
+<p><a href="https://www.thetrainline.com/information/mobile-tickets">Mobile Tickets</a> aren’t available on all devices or routes, so before you book make sure your device is compatible. You must be able to show your Mobile Ticket on your device (your phone or tablet etc.), so it can be clearly read and you may need to activate your Mobile Ticket before boarding the train, coach or bus to make it valid. If Mobile Tickets have been booked for more than one passenger, then all passengers must travel together.</p>
+<p><u>etickets</u></p>
+<p>etickets are emailed as a PDF attachment to you, meaning you’ll need a mobile device that can open PDFs and has internet access to receive the email. You can use them in one of the following ways –</p>
+<ul>
+<li>Open the PDF attachment and show the ticket on your mobile device.</li>
+<li>Print the eticket.</li>
+<li>Download the eticket on our app.</li>
+<li>Download and show the eticket in your Apple Wallet if you are using an Apple Wallet enabled Apple device – there’ll be a live link in the email we send you.</li>
+</ul>
+<p>An eticket can only be used by one customer for one valid journey and it’s a criminal offence to amend and/or reproduce an eticket for fraudulent use. If two passengers show the same eticket for travel, they’ll could both be treated as invalid. You’re responsible for any fraudulent use of your eticket.</p>
+<p><u>Smartcard</u></p>
+<p>For some bookings you can have your ticket delivered to your Smartcard. If you’re using an existing Smartcard, you must make sure you enter the correct reference number as we can’t change this once payment’s been taken. You must carry your Smartcard with you when you travel and make sure you validate it at the start and end of your journey by using the ticket barriers.</p>
+<p>For more information on the ticket types, we recommend you read the terms and conditions for the operator you’ll be travelling with.</p>
+<ol start="5">
+<li><span class="Trainline_Mint"><strong>Changes, Refunds and Cancellations</strong></span></li>
+</ol>
+<p><strong>Coronavirus (COVID-19) – Find exchange, refund and more info <a href="https://www.thetrainline.com/trains/coronavirus-travel-information">on our dedicated page</a></strong></p>
+<p>Depending on your operator and ticket type, you may be able to either cancel and refund your ticket or change your ticket.</p>
+<p>Each operator has various conditions, which you’ll need to meet to be eligible. We’ll tell you the key conditions before you select the tickets, but it’s important you also check the operator’s terms and conditions directly, to make sure you’re buying the ticket that’s right for you.</p>
+<p>You may need to pay a fee to change or cancel your ticket and this fee will be deducted from any refund. These fees are determined by the operators and you can find these in the terms and conditions for your ticket type, which will be available to you during our booking process.</p>
+<p>Naturally, we won’t change, cancel, replace or refund fraudulent tickets.</p>
+<p>If you have any questions about changes, cancellations or refunds, or if you think there’s an error with your booking, please <a href="https://www.thetrainline.com/en/help/question/5121/how-to-contact-us-by-phone-chat-or-email">contact us</a>. If we agree that the error in your booking was made by us, we’ll give you a replacement ticket, or sort things out at our discretion.</p>
+<p><strong>5.1 The below section refers to rail travel in the UK (RDG)</strong></p>
+<p>If you’re a customer travelling on UK rail, we’ll charge a <a href="https://www.thetrainline.com/en/help/question/5162/content">processing fee</a> for any changes, refunds or cancellations.</p>
+<p><u>Automatic refunds for UK rail products (RDG)</u></p>
+<p>If you’ve booked a refundable ticket (for example, an Anytime or Off-Peak ticket) and you’ve selected “ticket on departure” and not collected your tickets by the expiry date, you could be eligible for an automatic refund. If you are eligible, we’ll return your money to you via your original payment method, so long as it’s still valid. If your payment method’s no longer valid (for example, if your card’s expired), you’ll need to follow our <a href="https://www.thetrainline.com/en/help/question/5221/how-do-i-cancel-my-booking">cancellation process</a>.</p>
+<p>Please allow up to 5 days for your refund to clear and the money to reach your account.</p>
+<p>We may charge a <a href="https://www.thetrainline.com/en/help/question/5162/content">processing fee</a> for any automatic refunds.</p>
+<p><u>Cancelling/refunding your ticket for UK rail products (RDG)</u></p>
+<p>If you’ve booked a refundable ticket (for example, an Anytime of Off-Peak ticket) and you need to cancel or refund it, please follow our <a href="https://www.thetrainline.com/en/help/question/5221/how-do-i-cancel-my-booking">cancellation process</a>. Unused Anytime and Off-Peak tickets may be refunded up to 28 days after the expiry of the ticket. If you already have your original tickets, you’ll need to return them to us, unused, before we can refund you and you’ll need to cover any costs to return your tickets to us. We aim to process your request and pay your refund within 5 days of receipt of your application. If your refund is approved, we will process your payment back onto the card used to make the purchase (minus our processing fee if applicable).</p>
+<p>We may charge a <a href="https://www.thetrainline.com/en/help/question/5221/how-do-i-cancel-my-booking-for-a-refund">processing fee</a> for cancelling/refunding your ticket.</p>
+<p><u>Changing your ticket for UK rail products (RDG)</u></p>
+<p>If your ticket is changeable but not refundable (for example, Advance tickets), you can change the travel date and time but not the stations you’ve chosen to travel between. Changes must be made before your original journey departs. As well as paying for any difference in ticket cost, you’ll need to pay a standard charge to change your journey.</p>
+<p>If you already have your original tickets, you’ll need to return them to us, unused, before we can refund you and you’ll need to cover any costs to return your tickets to us. We’ll aim to sort any refunds for difference in ticket cost within 5 days.</p>
+<p>We may charge a <a href="https://www.thetrainline.com/en/help/question/5016/how-do-i-change-my-booking">processing fee</a> for changing your ticket.</p>
+<p><strong>5.2 The below section refers to journeys outside of the UK</strong></p>
+<p>Our customers travelling outside of the UK may be charged a processing fee directly by the operator.</p>
+<p><u>Full cancellation for journeys outside of the UK</u></p>
+<p>If you’ve booked a refundable ticket (you’ll get this info during our booking process), and you meet the operator’s terms for a self-service refund, we’ll arrange one if you decide to follow the self-service process.</p>
+<p>We’ll return your money to you via your original payment method, so long as it’s still valid. If your payment method’s no longer valid (for example, if your card’s expired), you’ll need to follow our <a href="https://www.thetrainline.com/en/help/question/5221/how-do-i-cancel-my-booking">cancellation process</a>.</p>
+<p>Please allow several working days for your refund to clear and the money to reach your account.</p>
+<p><u>Partial cancellation and changing your ticket for journeys outside of the UK</u></p>
+<p>If you’ve booked a refundable or changeable ticket (you’ll get this info during our booking process), and you need to cancel it, please call us on +44 333 202 2222. For travel on Eurostar and around mainland Europe, the support hours are 08:00-18:00 UK time Monday to Friday.</p>
+<p><strong>If you’d like to change or partially cancel your ticket outside of these opening hours, or less than two hours before your train departs, please <a href="https://www.thetrainline.com/en/help/question/5843/Contact-details-of-European-train-carriers">contact the relevant operator directly</a>.</strong></p>
+<p>If your ticket is changeable, as well as paying for any difference in ticket cost, you may need to pay a standard charge to change your journey.</p>
+<p>If you already have your original tickets, you may need to return them to us, unused, before we can refund you and you’ll need to cover any costs to return your tickets to us.</p>
+<p><strong>5.3 Compensation for delayed or cancelled journeys</strong></p>
+<p>We know how frustrating it is when you’re stuck on a delayed train. So, if the service you’ve booked a ticket for is cancelled or majorly disrupted, you may be able to get a refund or compensation. It’ll depend on the terms and conditions of the operators, you’ll find these in our booking process before you make a payment.</p>
+<p>We’ll issue you a refund or compensation on behalf of the operator, if they allow us to do so. If not, we can give you their details for you to claim directly with them.</p>
+<p style="padding-left: 30px;"><span class="Trainline_Mint"><span class="Trainline_Black">6.</span> <strong>Liability</strong></span></p>
+<p>We act as an official agent on behalf of the operators. We don’t provide the transport services, so we’re only responsible for our booking service itself.</p>
+<p>The transport services you book tickets for with us are run by various operators. That means, their terms and conditions will apply to all the transport services and will depend on the type of ticket you’ve booked. It’s important you read the operator’s terms and conditions carefully before booking your tickets with us.</p>
+<p>You’ll be financially liable for all bookings made with us through your account, as well as any losses we incur if you breach the Terms and Conditions or misuse our booking service. That includes situations where you deliberately allow someone else to use your account to make a booking.</p>
+<p>To the extent allowed by applicable law, Trainline shall not be liable to the customer for any indirect or consequential loss.</p>
+<p style="padding-left: 30px;">7. <span class="Trainline_Mint"><strong>Right of withdrawal</strong></span></p>
+<p>Under consumer legislation, tickets aren’t subject to the right of withdrawal. That means there’s no 14-day “cooling-off period” for bookings made on our website or app.</p>
+<p style="padding-left: 30px;">8. <span class="Trainline_Mint"><strong>Hyperlinks</strong></span></p>
+<p>Sometimes, our website and apps will have links out to other websites and third-party apps. These websites and apps aren’t controlled by us, so we’re not liable for their content. We give you these links to make things easier for you, but that doesn’t necessarily mean we suggest or recommend you use the website or app, or that we’re associated with it.</p>
+<p style="padding-left: 30px;"><span class="Trainline_Mint"><span class="Trainline_Black">9.</span><strong> Disputes</strong></span></p>
+<p>All disputes which could arise from these Terms and Conditions concerning their validity, interpretation, execution, cancellation, consequences and results must be communicated beforehand to Trainline in order to reach a mutual agreement.</p>
+<p style="padding-left: 30px;"><span class="Trainline_Mint"><span class="Trainline_Black">10. </span><strong>Alternative Dispute Resolution </strong></span></p>
+<p>If you chat to us about an issue and we’re not able to resolve things through our internal complaints procedure, please follow <a href="https://www.thetrainline.com/en/help/question/4767/what-is-the-european-commission-online-dispute-resolution-platform">this link</a> to take things further.</p>
+<p style="padding-left: 30px;"><span class="Trainline_Mint"><span class="Trainline_Black">11. </span><strong>Proof</strong></span></p>
+<p>Any data in our systems can be used as proof for things like orders, requests and anything else that relates to your use of our website or apps. This data can be used in legal proceedings, in the same way as any written document.</p>
+<p style="padding-left: 30px;"><span class="Trainline_Mint"><span class="Trainline_Black">12. </span><strong>Acceptance of the Terms and Conditions</strong></span></p>
+<p>By making a booking with us, you’re agreeing that you’ve received these Terms and Conditions in a way that you can understand clearly. You also agree that you accept them fully and are committed to paying for the tickets you order.   </p>
+<p>We like to stay relevant, so these Terms and Conditions may change sometime in the future. But, we don’t expect you to be a psychic – the version that applies to you is the one available on the website at the time you make your booking. If you don’t agree with and accept the most recent Terms and Conditions, you’ll have to stop using our booking service, website and apps.</p>
+<p>By accepting these Terms and Conditions, you’re agreeing that there’s no partnership, employment or agency relationship between us. Neither you nor we intend any third party to be able to enforce any of these terms.</p>
+<p style="padding-left: 30px;"><span class="Trainline_Mint"><span class="Trainline_Black">13. </span><strong>Trainline for Business</strong></span></p>
+<p>This section only applies to self-managed Trainline for Business accounts which are available via Trainline.com.  If your employer has a corporate travel services agreement with us, the terms agreed by your employer will prevail over this section.</p>
+<p>Trainline offers a self-managed Trainline for Business service, exclusively aimed at professionals (hereinafter referred to as “the Professionals”).  Our Terms and Conditions apply to the self-managed Trainline for Business service in addition to the specific provisions set out in this section. If these provisions are inconsistent with the Terms and Conditions, the specific provisions will prevail in such case.  To use the self-managed Trainline for Business service, the professional must set up a Professional Account, providing the name of his/her company and other information in the dedicated area of the website (hereinafter referred to as “the Organisation”). The professional may then invite his/her colleagues to use the service. The professional will ensure that his/her colleagues are made aware of this Terms and Conditions. The colleagues will also be subject to the Terms and Conditions. Trainline will not be liable for any unreasonable and unforeseeable costs that the professionals and/or their colleagues may incur and Trainline liability will be limited to the value of the relevant ticket(s) purchased by the professional and/or their colleagues over the past 12 months. Trainline will in no circumstances pay or be responsible for any indirect loss. Either party may terminate the service at any time. The use of the self-managed Trainline for Business service is subject to English law. Any disputes which cannot be resolved in this manner will be referred to the English Courts.</p>
+<p style="padding-left: 30px;"><span class="Trainline_Mint"><span class="Trainline_Black">14.</span><strong> Use of our website and apps</strong></span></p>
+<p><strong>14.1 Your use of our booking service</strong></p>
+<p>You can download, install and use our apps on your mobile device to access our booking service in line with these Terms and Conditions. The apps must be downloaded from the App Store or Google Play.</p>
+<p>You’ll have to pay for any costs involved with accessing our booking service (for example, internet access fees and mobile data costs). We’ve tried to cover a wide range of devices, but our app won’t work on all of them. The list of devices our app will work with is available to you before downloading.</p>
+<p>Of course, we do everything we can to make sure our website and apps don’t have any viruses or malicious programs. But, it’s important that you’re protected against all computer viruses and software that could affect your device after using our website or a third-party website, just in case anything is missed. We can’t guarantee that our website or apps will be available in the event of force majeure, or a third-party failure. And, you’re agreeing that you understand we may take our website, app or booking service offline, if we feel it’s necessary for maintenance purposes.</p>
+<p>Our tech teams are always bringing out new features, which means we regularly update our apps to make sure you can use them to their full extent. We recommend that you download and install all published updates.</p>
+<p>You’re not allowed to do any of the below activity –</p>
+<ul>
+<li>Using any device, software, automated agents, scripts or routine to hack, or attempt to hack, into or interfere with our booking service or the security of our websites or apps, or to create multiple accounts, or to strip, scrape, or mine data from our booking service.</li>
+<li>Changing, destroying or uploading content on our booking service, that goes for attempts to change, destroy or upload something too.</li>
+<li>Using, or attempting to use, any engine, software, tool, agent or other device or mechanism (except the search mechanisms we provide, or other third-party commercially available web browsers) to navigate or search our booking service.</li>
+<li>Using our booking service to collect or store personal data about other users without their consent.</li>
+<li>Changing, copying, disassembling, reverse compiling or reverse engineering any part of our booking service, or accessing our booking service to build a similar or competitive site or service.</li>
+<li>Using any electronic means, including, without limitation, robots, spiders, scripts or other automatic devices, to use our booking service. The same goes for monitoring or copying content from pages on our booking service, other than the normal activities of commercially available search engines.</li>
+</ul>
+<p><strong>14.2 Intellectual property</strong></p>
+<p>Access to our website and apps doesn’t give you any intellectual property rights relating to them, other than a right to use them in line with these Terms and Conditions. You can’t under any circumstance copy, represent, change, transmit, or publish any part of our website or app (regardless of your device) without clear written permission from us, or the companies in our group, first. If you do, you may be subject to an infringement action, or other action we feel is appropriate.</p>
+<p>Contains information from OpenStreetMap, which is made available here under the Open Database License (ODbL).</p>
+<p style="padding-left: 30px;"><span class="Trainline_Mint"><span class="Trainline_Black">15. </span><strong>Customers from the United-States of America</strong></span></p>
+<p>By exception to the terms in this document, the following terms apply to US residents buying a journey or a product on our website or our apps.</p>
+<p>PLEASE READ THIS AGREEMENT CAREFULLY. IT SETS FORTH THE LEGALLY BINDING TERMS AND CONDITIONS FOR YOUR USE OF OUR SERVICE, SUCH AS YOUR GRANTS AND WAIVERS OF RIGHTS, THE LIMITATIONS OF OUR LIABILITY, YOUR INDEMNITY OF US, AND ARBITRATION OF CERTAIN DISPUTES.</p>
+<p><strong>15.1 Disclaimer, limitation of liability, and indemnity</strong></p>
+<p>OUR SITE, AND ALL CONTENTS, PRODUCTS AND SERVICES INCLUDED ON OR OTHERWISE MADE AVAILABLE TO YOU THROUGH OUR SITE ARE PROVIDED ON AN ‘AS IS’ AND ‘AS AVAILABLE’ BASIS. WE MAKE NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, AS TO THE OPERATION OF OURSITE OR THE CONTENTS OR SERVICES INCLUDED ON OR OTHERWISE MADE AVAILABLE TO YOU THROUGH OUR SITE, UNLESS OTHERWISE SPECIFIED IN WRITING. WE DO NOT WARRANT THAT YOUR USE OF OUR SITE WILL BE UNINTERRUPTED OR ERROR FREE, OR THAT OUR SITE OR ITS SERVER ARE FREE OF VIRUSES OR OTHER HARMFUL ELEMENTS. YOU EXPRESSLY AGREE, BY YOUR USE OF OUR SITE, THAT YOUR USE OF OUR SITE IS AT YOUR SOLE RISK, AND THAT YOU ASSUME FULL RESPONSIBILITY FOR ALL COSTS ASSOCIATED WITH ALL NECESSARY SERVICING OR REPAIRS OF ANY EQUIPMENT YOU USE IN CONNECTION WITH YOUR USE OF OUR SITE.</p>
+<p>TO THE FULLEST EXTENT PERMISSIBLE BY APPLICABLE LAW, WE AND OUR AFFILIATES DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. TO THE FULLEST EXTENT PERMISSIBLE BY APPLICABLE LAW, WE AND OUR AFFILIATES SHALL NOT BE LIABLE FOR DAMAGES, INJURY, CLAIM OR LIABILITY ARISING FROM OR RELATED TO YOUR USE OF, OR INABILITY TO USE, OUR SITE, OR FROM ANY INFORMATION, CONTENT, MATERIALS, PRODUCTS (INCLUDING SOFTWARE) OR SERVICES INCLUDED ON, OR OTHERWISE MADE AVAILABLE TO YOU THROUGH, OUR SITE, INCLUDING, BUT NOT LIMITED TO, DIRECT OR INDIRECT LOST PROFITS OR LOST BUSINESS DAMAGES, INDIRECT, INCIDENTAL, PUNITIVE AND CONSEQUENTIAL DAMAGES. TO THE FULLEST EXTENT PERMISSIBLE BY APPLICABLE LAW, YOU AGREE TO INDEMNIFY, DEFEND AND HOLD US, OUR AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES AND AGENTS, HARMLESS FROM AND AGAINST ANY AND ALL THIRD PARTY CLAIMS, DEMANDS, LIABILITIES, COSTS OR EXPENSES, INCLUDING REASONABLE ATTORNEYS' FEES, ARISING FROM OR RELATED TO THE PROHIBITED USES OF THIS SITE BY YOU, AND ANY OTHER BREACH OF THESE TERMS OF USE BY YOU. THE FOREGOING “DISCLAIMER, LIMITATION OF LIABILITY AND INDEMNITY” PROVISION MAY NOT APPLY TO CONSUMERS WITHIN THE STATE OF NEW JERSEY OR IN OTHER JURISDICTIONS WHERE PROHIBITED BY LAW.</p>
+<p> IF YOU ARE DISSATISFIED WITH OUR SITE OR ANY MATERIALS ON OUR SITE, OR WITH ANY OF OUR TERMS OF USE, YOUR SOLE AND EXCLUSIVE REMEDY IS TO DISCONTINUE USING OUR SITE.</p>
+<p>You duly note that you will be financially liable for all bookings made through our booking service from your account as well as all reasonable and foreseeable losses we suffer owing to a breach of the Terms and Conditions by you or your negligence when using our booking service (including when you have deliberately or negligently allowed other persons to use your account).</p>
+<p><strong>15.2 Arbitration; class action waiver</strong></p>
+<p>The Federal Arbitration Act and federal arbitration law apply to this agreement.</p>
+<p>You agree that the arbitration will be conducted by the American Arbitration Association (‘AAA’), https://www.adr.org, or 1.800.778.7879. You can contact AAA to find out more information on how to commence an arbitration proceeding. Payment of all filing, administration and arbitrator fees will be governed by the AAA’s applicable rules. You may choose to have the arbitration conducted by phone, based on written submissions, or in person in the county where you live or at another mutually agreed-upon location.</p>
+<p>CLASS ACTION AND JURY TRIAL WAIVERS. You and we agree to bring any dispute in arbitration on an individual basis only, and not on a class, consolidated, aggregated, representative or collective action basis. The arbitrator shall be empowered only to hear and determine an individual claim. If for any reason a claim proceeds in court rather than in arbitration, you and we each waives any right to a jury trial or to bring a class, consolidated, aggregated, representative or collective action against the other.</p>
+<p>ARBITRATIONS AND COURT ACTIONS DIFFER. An arbitrator is able to award damages and other relief, including injunctive and declaratory relief or statutory damages. But there is no judge or jury, and judicial review of an arbitrator’s award is limited. Discovery in arbitration is also limited in accord with AAA rules. In addition, as set forth above, you are waiving any ability for an arbitrator to oversee or determine class, consolidated, aggregated, representative or collective actions.</p>
+<p> IMPORTANT: THIS SECTION LIMITS CERTAIN RIGHTS, INCLUDING THE RIGHT TO MAINTAIN A COURT ACTION, THE RIGHT TO A JURY TRIAL, AND THE RIGHT TO PARTICIPATE IN ANY FORM OF CLASS, CONSOLIDATED, AGGREGATED, REPRESENTATIVE OR COLLECTIVE ACTION. OTHER RIGHTS AND REMEDIES THAT YOU OR BUSA WOULD HAVE IN COURT ALSO MAY NOT BE AVAILABLE IN ARBITRATION.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+        </section>
+        
+    </div>
+
+
+<footer class="footer">
+	<div class="container">
+
+			<nav class="footer-links row" role="navigation">
+					<dl class="col-xs-12 col-sm-12 col-md-2 mobile-accordion">
+						<dt>
+							Need some help?
+						</dt>
+						<div class="mobile-accordion__options">
+									<dd><a href="https://www.thetrainline.com/en/help/">Contact us</a></dd>
+									<dd><a href="/en/help/">Help pages</a></dd>
+									<dd><a href="https://www.thetrainline.com/en/help/question/5187/refunds-changes-and-cancellations">Amend / Cancel tickets</a></dd>
+									<dd><a href="https://www.thetrainline.com/en/help/question/2825/fees">Fees</a></dd>
+									<dd><a href="https://www.thetrainline.com/en/help/question/5148/my-train-was-delayed-can-i-claim-compensation">Delay repay</a></dd>
+									<dd><a href="https://www.thetrainline.com/en/help/question/5165/what-are-the-different-ticket-types-available">Ticket types explained</a></dd>
+									<dd><a href="/information/digital-tickets">Digital Tickets</a></dd>
+									<dd><a href="https://www.thetrainline.com/en/help/question/4578/what-assistance-is-available-for-disabled-passengers">Assisted travel</a></dd>
+									<dd><a href="/deals-discounts/rail-passes/eurail">Eurail Passes</a></dd>
+									<dd><a href="/deals-discounts/rail-passes/interrail">Interrail Passes</a></dd>
+						</div>
+					</dl>
+					<dl class="col-xs-12 col-sm-12 col-md-2 mobile-accordion">
+						<dt>
+							About us
+						</dt>
+						<div class="mobile-accordion__options">
+									<dd><a href="/about-us">About us</a></dd>
+									<dd><a href="http://www.thetrainlinejobs.com/">Careers</a></dd>
+									<dd><a href="/via">Blog</a></dd>
+									<dd><a href="/information/apps">Mobile apps</a></dd>
+									<dd><a href="/terms">Terms &amp; Conditions</a></dd>
+									<dd><a href="/terms/privacy">Privacy</a></dd>
+									<dd><a href="/terms/your-data">Cookie Policy</a></dd>
+									<dd><a href="/about-us/affiliates">Affiliates &amp; Partnerships</a></dd>
+									<dd><a href="https://static.trainlinecontent.com/content/WEB/documents/Trainline-MSA-statement-2017-08.pdf">Modern Slavery Act</a></dd>
+									<dd><a href="https://media.trainline.com/">Press</a></dd>
+						</div>
+					</dl>
+					<dl class="col-xs-12 col-sm-12 col-md-2 mobile-accordion">
+						<dt>
+							Information
+						</dt>
+						<div class="mobile-accordion__options">
+									<dd><a href="/stations">Train stations</a></dd>
+									<dd><a href="https://www.thetrainline.com/trains/great-britain/split-tickets">SplitSave</a></dd>
+									<dd><a href="/price-prediction">Price Prediction</a></dd>
+									<dd><a href="/information/cheap-train-tickets">Cheap Train Tickets</a></dd>
+									<dd><a href="/train-companies">Train Companies</a></dd>
+									<dd><a href="/buses">Coach Tickets</a></dd>
+									<dd><a href="/buytickets/advancedsearch.aspx?slp_supp=0">Sleeper Search</a></dd>
+									<dd><a href="/farefinder/">Best Fare Finder</a></dd>
+									<dd><a href="https://www.thetrainline.com/en/train-companies/eurostar">Eurostar</a></dd>
+									<dd><a href="/bus-companies/national-express">National Express</a></dd>
+									<dd><a href="/airport-transfers">Airport Transfers</a></dd>
+									<dd><a href="/deals-discounts">Deals &amp; Offers</a></dd>
+						</div>
+					</dl>
+					<dl class="col-xs-12 col-sm-12 col-md-2 mobile-accordion">
+						<dt>
+							Train times
+						</dt>
+						<div class="mobile-accordion__options">
+									<dd><a href="/train-times/london-to-manchester">London to Manchester</a></dd>
+									<dd><a href="/train-times/leeds-to-london">Leeds to London</a></dd>
+									<dd><a href="/train-times/london-to-birmingham">London to Birmingham</a></dd>
+									<dd><a href="/train-times/london-to-newcastle">London to Newcastle</a></dd>
+									<dd><a href="/train-times/york-to-london">York to London</a></dd>
+									<dd><a href="/train-times/london-to-edinburgh-waverley">London to Edinburgh</a></dd>
+									<dd><a href="https://www.thetrainline.com/en/train-times/london-to-amsterdam">London to Amsterdam</a></dd>
+									<dd><a href="https://www.thetrainline.com/en/train-times/rome-to-milan">Rome to Milan</a></dd>
+									<dd><a href="https://www.thetrainline.com/en/train-times/london-to-paris">London to Paris</a></dd>
+									<dd><a href="/train-times/off-peak">Off-peak train times</a></dd>
+									<dd><a href="/season-tickets">Season Tickets</a></dd>
+						</div>
+					</dl>
+					<dl class="col-xs-12 col-sm-12 col-md-2 mobile-accordion">
+						<dt>
+							Journey Planner
+						</dt>
+						<div class="mobile-accordion__options">
+									<dd><a href="/nearest-station">Trains to UK Attractions</a></dd>
+									<dd><a href="https://www.thetrainline.com/trains/europe">Trains in Europe</a></dd>
+									<dd><a href="/buses/london-to-brighton">London to Brighton bus</a></dd>
+									<dd><a href="/buses/london-to-manchester">London to Manchester bus</a></dd>
+									<dd><a href="/buses/london-to-edinburgh">London to Edinburgh bus</a></dd>
+									<dd><a href="/buses/coventry-to-london">Coventry to London bus</a></dd>
+									<dd><a href="/stations/london-paddington">London Paddington</a></dd>
+									<dd><a href="/stations/manchester-piccadilly">Manchester Piccadilly</a></dd>
+									<dd><a href="/stations/london-kings-cross">London King&#39;s Cross</a></dd>
+						</div>
+					</dl>
+					<dl class="col-xs-12 col-sm-12 col-md-2 mobile-accordion">
+						<dt>
+							Popular destinations
+						</dt>
+						<div class="mobile-accordion__options">
+									<dd><a href="/destinations/trains-to-london">Trains to London</a></dd>
+									<dd><a href="/destinations/trains-to-manchester">Trains to Manchester</a></dd>
+									<dd><a href="/destinations/trains-to-birmingham">Trains to Birmingham</a></dd>
+									<dd><a href="/destinations/trains-to-edinburgh">Trains to Edinburgh</a></dd>
+									<dd><a href="/airport-transfers/united-kingdom/trains-to-heathrow-airport">Trains to Heathrow</a></dd>
+									<dd><a href="/airport-transfers/united-kingdom/trains-to-gatwick-airport">Trains to Gatwick</a></dd>
+									<dd><a href="/airport-transfers/united-kingdom/trains-to-stansted-airport">Trains to Stansted</a></dd>
+									<dd><a href="/stations/london-st-pancras-international">St Pancras International</a></dd>
+									<dd><a href="/stations/edinburgh-waverley">Edinburgh Waverley</a></dd>
+									<dd><a href="/stations/london-euston">London Euston</a></dd>
+						</div>
+					</dl>
+			</nav>
+			<hr class="footer-hr"/>
+		<div class="row">
+				<div class="col-xs-12 col-sm-3">
+					<div class="footer-social-links">
+						<span class="follow-us" data-dictionary-key="Global / Footer / FollowUs">Follow us: </span>
+							<a href="https://www.facebook.com/TrainlineUK" class=" footer-social-links__facebook" title="Follow us on facebook">
+								<span class="fa-stack fa-lg">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class=" fa fa-facebook fa-stack-1x fa-inverse"></i>
+							</span>
+							</a>
+							<a href="https://twitter.com/thetrainline" class=" footer-social-links__twitter" title="Follow us on twitter">
+								<span class="fa-stack fa-lg">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class=" fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+							</a>
+					</div>
+				</div>
+			<div class="col-xs-12 col-sm-9">
+				<i class="icon icon-footer-logos"></i>
+			</div>
+		</div>
+	</div>
+</footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//maps.google.com/maps/api/js?key=AIzaSyDg3eF4li7wPDovjmAQrpcL-k-Vek8dv4Q"></script>
+
+    
+    
+    <script src="/cms/legacy/uk/scripts/v-637340349166896953/scripts.min.js"></script>
+    
+
+            <script type="text/javascript">
+            var __ANALYTICS__ = {"coreProperties":{"appVersion":"cms v3.44.1","platform":"responsive","siteSection":"landing page","loginStatus":"unknown","contextAliasId":null,"customerId":null,"currencyCode":"GBP","siteSubSection":"uk generic grid","productLanguage":"en-gb","pageName":"uk generic grid - terms"}};
+        </script>
+
+
+    <script src="/cms/legacy/uk/scripts/apps/v-637340349198789356/start-analytics.js"></script>
+    <script type="text/javascript">
+        var tagData = {"appName":"CMS","application":"Vulcan","pageName":"CMS - UK - terms","previousPageName":"","search":{"daysUntilTravel":0,"destinationName":null,"destinationStationCode":null,"hoursUntilTravel":0,"id":"","journeyType":"single","originName":null,"originStationCode":null,"outboundDate":"26/08/2020","outboundTime":"19:15","passengers":{"adults":1,"children":0,"railcards":[]},"returnDate":null,"returnTime":null},"user":{"customerId":null,"customerLoginState":"Logged out","userType":null},"language":"en-gb","currency":"GBP"};
+        tagData.viewPrefix = window.innerWidth < 768 ? "mobile" : "desktop";
+
+        window.startAnalytics.default(tagData);
+
+        if (typeof s_t !== 'undefined') {
+            s_t.useForcedLinkTracking = false;
+        }
+        if (typeof _satellite !== 'undefined') {
+            _satellite.pageBottom();
+        }
+    </script>
+    
+<script type="text/javascript" >var _cf = _cf || []; _cf.push(['_setFsp', true]);  _cf.push(['_setBm', true]);  _cf.push(['_setAu', '/static/5d66834d840ti166fdb84d03441e331ae']); </script><script type="text/javascript"  src="/static/5d66834d840ti166fdb84d03441e331ae"></script></body>
+</html>
