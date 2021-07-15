@@ -1,6 +1,9 @@
 # Corpus-Termos-Of-Services
 
-Trabalho de Conclusão de Curso Emerson J S Costa
+Trabalho de Conclusão de Curso, projeto descontinuado por mudança de tema e orientado do TCC, o projeto 
+se baseia em um crawl dsenvolvido em python onde captura as informações de todos os aplicativos da google
+play, o objetivo deste projeto era avaliar os termos de uso de cada aplicação e verificar se eles estão 
+de acordo com as lei aplicadas a LGPD (Lei Geral de Proteção de Dados).
 
 # Comandos 
   * Rodar o comando no terminal: scrapy crawl 'nomer_spider'
