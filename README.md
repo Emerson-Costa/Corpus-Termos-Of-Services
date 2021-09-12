@@ -18,3 +18,6 @@ de acordo com as lei aplicadas a LGPD (Lei Geral de Proteção de Dados).
 # Não Funcionando
 
  * Tradução dos termos
+
+* Linkedin: https://www.linkedin.com/in/emerson-costa-199995169/
+
